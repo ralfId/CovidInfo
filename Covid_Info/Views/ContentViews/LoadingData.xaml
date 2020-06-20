@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             mc:Ignorable="d"
+             x:Class="Covid_Info.Views.ContentViews.LoadingData"
+             Visual="Default">
+  <ContentView.Content>
+        <Grid>
+            <StackLayout VerticalOptions="Center">
+                <lottie:AnimationView
+                    x:Name="animationView"
+                    Animation="{Binding AnimationJSON}"
+                    Loop="True"
+                    IsPlaying="True"
+                    AutoPlay="True"
+                    WidthRequest="200" HeightRequest="200"/>
+                <!--<ActivityIndicator Color="{StaticResource BaseBlueColor}"
+                                    IsRunning="True"
+                                    WidthRequest="50" HeightRequest="50"/>-->
+                <Label Text="{Binding LoadMessage}"
+                       FontSize="Large" 
+                       FontAttributes="Bold" 
+                       TextColor="{StaticResource BaseFontColor}"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

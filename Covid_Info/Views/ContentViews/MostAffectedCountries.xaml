@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:Covid_Info.Converters"
+             xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+             mc:Ignorable="d"
+             x:Class="Covid_Info.Views.ContentViews.MostAffectedCountries"
+             Visual="Material">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:ToUpperCaseConverter x:Key="ToUpperCaseConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <ContentView.Content>
+
+        <Frame>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0"
+                       
+                       FontAttributes="Bold"
+                       FontSize="{StaticResource BaseTitleFontSize}"
+                       TextColor="{StaticResource BaseFontColor}"
+                       Margin="10,5">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{i18n:Translate mostAffectedcountries}" />
+                            <Span Text=" ("/>
+                            <Span Text="{i18n:Translate deathsCases}"/>
+                            <Span Text=")"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <StackLayout Grid.Row="1"   BindableLayout.ItemsSource="{Binding obCountryInfo}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Margin="0,5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Column="0" Grid.Row="0" Aspect="AspectFill" WidthRequest="100" HeightRequest="60">
+                                        <Image.Source>
+                                            <UriImageSource Uri="{Binding countryInfo.flag}" CachingEnabled="True" CacheValidity="15"/>
+                                        </Image.Source>
+                                    </Image>
+
+                                    <Grid Grid.Row="0" Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="{Binding country}"
+                                               FontSize="Body"
+                                               TextColor="{StaticResource BaseFontColor}"
+                                               FontAttributes="Bold" HorizontalOptions="Center"/>
+                                        <Label Grid.Row="1" Text="{Binding deaths, StringFormat='{0:0,0}'}"
+						                       FontSize="25"
+						                       TextColor="{StaticResource BaseFontColor}"
+						                       FontAttributes="Bold" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </Grid>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+            </Grid>
+        </Frame>
+        
+    </ContentView.Content>
+</ContentView>

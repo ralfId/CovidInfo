@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:TemplatePage 
+             xmlns:views="clr-namespace:Covid_Info.Views"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
+             xmlns:i18n="clr-namespace:Resx;assembly=Resx" xmlns:renderercontrols="clr-namespace:Covid_Info.RendererControls"
+             xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Covid_Info.Views.AllCountries"
+             Visual="Material"
+             Title="{Binding Title}">
+    
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                     IsVisible="{Binding IsVisibleCountries}">
+
+            <pkv:PancakeView CornerRadius="0,0,30,30">
+                <StackLayout Padding="10,5" BackgroundColor="{StaticResource BaseBlueColor}">
+                    
+                    <SearchBar BackgroundColor="{StaticResource WhiteColor}" 
+                               Text="{Binding Searched, Mode=TwoWay}"
+                               Placeholder="{i18n:Translate searchPlaceHolder}"
+                               TextColor="{StaticResource BaseFontColor}"
+                               CancelButtonColor="{StaticResource BaseFontColor}"
+                               PlaceholderColor="{StaticResource BaseFontColor}"
+                               SearchCommand="{Binding SearchCountry}" />
+                    
+                    <Label TextColor="{StaticResource BaseWhiteColor}"
+                           FontAttributes="Bold"
+                           FontSize="Body"
+                           HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{i18n:Translate lastUpdta}"/>
+                                <Span Text="{Binding LastUpdateDateTime}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    
+                </StackLayout>
+            </pkv:PancakeView>
+
+            <CollectionView Grid.Row="1" 
+                            ItemsSource="{Binding obCountryInfo}" Margin="10,0,10,10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <contentViews:CountriesTemplate/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+        
+        
+        <contentViews:LoadingData  AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       IsVisible="{Binding IsVisibleLoadingPage}"/>
+    </AbsoluteLayout>
+    
+</views:TemplatePage>

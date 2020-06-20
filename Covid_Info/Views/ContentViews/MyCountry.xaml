@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:converters="clr-namespace:Covid_Info.Converters"
+             xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+             mc:Ignorable="d"
+             x:Class="Covid_Info.Views.ContentViews.MyCountry"
+             Visual="Material">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:ToUpperCaseConverter x:Key="ToUpperCaseConverter"/>
+            <converters:GeneralInfoConverter x:Key="GeneralInfoConverter"/>
+            <converters:GlobalInfoConverter x:Key="GlobalInfoConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        <Frame>
+            <StackLayout>
+                <!--Cases-->
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"
+                               Text="{Binding MyCountryInfo.country}"
+                               FontSize="{StaticResource BaseTitleFontSize}"
+                              TextColor="{StaticResource BaseFontColor}"
+                              FontAttributes="Bold" />
+                        <Frame Grid.Column="1" BackgroundColor="{StaticResource BaseFontColor}" Padding="10,5">
+                            <Label Text="View more"
+                                   FontSize="Default"
+                                   FontAttributes="Bold"
+                                   TextColor="White"
+                                   />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goMyCountryDetails}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </Grid>
+                    
+
+                    <Grid Grid.Row="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--confirmed-->
+                        <Frame Grid.Column="0" Grid.Row="0"  HasShadow="False"  BorderColor="{StaticResource ConfirmedColor}" >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="1"
+                               Text="{i18n:Translate confirmedCases}"
+                               FontAttributes="Bold"
+                               FontSize="Body"
+                               TextColor="{StaticResource ConfirmedColor}"
+                               HorizontalOptions="Center"/>
+                                <Label Grid.Row="0"
+                               Text="{Binding MyCountryInfo.cases, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                               FontAttributes="Bold"
+                               FontSize="{StaticResource MainNumbFS}"
+                               TextColor="{StaticResource ConfirmedColor}"
+                               HorizontalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                        <!--active-->
+                        <Frame Grid.Column="1" Grid.Row="0"   HasShadow="False" BorderColor="{StaticResource ActiveColor}" >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="1"
+                               Text="{i18n:Translate activeCases}"
+                               FontAttributes="Bold"
+                               FontSize="Body"
+                               TextColor="{StaticResource ActiveColor}"
+                               HorizontalOptions="Center"/>
+                                <Label Grid.Row="0"
+                               Text="{Binding MyCountryInfo.active, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                               FontAttributes="Bold"
+                               FontSize="{StaticResource MainNumbFS}"
+                               TextColor="{StaticResource ActiveColor}"
+                               HorizontalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                        <!--recovered-->
+                        <Frame Grid.Column="0" Grid.Row="1" HasShadow="False" BorderColor="{StaticResource RecoveredColor}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="1"
+                               Text="{i18n:Translate recoveredCases}"
+                               FontAttributes="Bold"
+                               FontSize="Body"
+                               TextColor="{StaticResource RecoveredColor}"
+                               HorizontalOptions="Center"/>
+                                <Label Grid.Row="0"
+                               Text="{Binding MyCountryInfo.recovered, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                               FontAttributes="Bold"
+                               FontSize="{StaticResource MainNumbFS}"
+                               TextColor="{StaticResource RecoveredColor}"
+                               HorizontalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                        <!--deaths-->
+                        <Frame Grid.Column="1" Grid.Row="1"  HasShadow="False" BorderColor="{StaticResource DeathsColor}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="1"
+                               Text="{i18n:Translate deathsCases}"
+                               FontAttributes="Bold"
+                               FontSize="Body"
+                               TextColor="{StaticResource DeathsColor}"
+                               HorizontalOptions="Center"/>
+                                <Label Grid.Row="0"
+                               Text="{Binding MyCountryInfo.deaths, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                               FontAttributes="Bold"
+                               FontSize="{StaticResource MainNumbFS}"
+                               TextColor="{StaticResource DeathsColor}"
+                               HorizontalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                    <!--reports today-->
+                    <Grid Grid.Row="2" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0"
+                           Text="{i18n:Translate 24Report}"
+                           FontSize="Body"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource BaseFontColor}"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <!--today confirmed-->
+                            <Frame Grid.Column="0"  HasShadow="False" BorderColor="{StaticResource ActiveColor}" Padding="3">
+                                <Label Text="{Binding MyCountryInfo.todayCases, StringFormat='{0:0,0}', Converter={StaticResource GlobalInfoConverter}}"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ActiveColor}"
+                                   HorizontalOptions="Center"/>
+                            </Frame>
+                            
+                            <!--today recovered-->
+                            <Frame Grid.Column="1"  HasShadow="False" BorderColor="{StaticResource RecoveredColor}" Padding="3">
+                                <Label Text="{Binding MyCountryInfo.todayRecovered, StringFormat='{0:0,0}', Converter={StaticResource GlobalInfoConverter}}"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource RecoveredColor}"
+                                   HorizontalOptions="Center"/>
+                            </Frame>
+                            
+                            <!--today deaths-->
+                            <Frame Grid.Column="2"  HasShadow="False" BorderColor="{StaticResource DeathsColor}" Padding="3">
+                                <Label Text="{Binding MyCountryInfo.todayDeaths, StringFormat='{0:0,0}', Converter={StaticResource GlobalInfoConverter}}"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource DeathsColor}"
+                                   HorizontalOptions="Center"/>
+                            </Frame>
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+                
+                <!--Covid Test number-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="{i18n:Translate covidTests}" 
+                               FontSize="Body"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource BaseFontColor}"/>
+                    <Label Grid.Column="1" Text="{Binding MyCountryInfo.tests, StringFormat='{0:N0}', Converter={StaticResource GeneralInfoConverter}}"
+                               FontSize="Body"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource BaseFontColor}"
+                               HorizontalOptions="End"/>
+                </Grid>
+                
+                <BoxView BackgroundColor="#eceff1" HeightRequest="2" />
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

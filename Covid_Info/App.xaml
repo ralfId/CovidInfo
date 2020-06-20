@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+             x:Class="Covid_Info.App">
+	<Application.Resources>
+
+        <!--my frame font color and backgoundpage color-->
+        <Color x:Key="FrameFontColor">#EEF4F7</Color>
+
+        <!--Colors-->
+        <Color x:Key="ActiveColor">#607d8b</Color>
+        <Color x:Key="ConfirmedColor">#00bcd4</Color>
+        <Color x:Key="RecoveredColor">#4caf50</Color>
+        <Color x:Key="DeathsColor">#f44336</Color>
+        <Color x:Key="BaseFontColor">#000a12</Color>
+        <Color x:Key="BaseWhiteColor">#eef1f6</Color>
+        <Color x:Key="WhiteColor">#FFFFFF</Color>
+        <Color x:Key="BaseBlueColor">#0026ca</Color>
+        <Color x:Key="BackgroundColorPage">#cfd8dc</Color>
+
+        <!--Font sizes-->
+        <x:Double x:Key="MainNumbFS">25</x:Double>
+        <x:Double x:Key="BaseTitleFontSize">20</x:Double>
+        
+        <!--Page backgrouncolor-->
+        <Style x:Key="PageStyle" TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="#cfd8dc" />
+        </Style>
+        
+        <!--navbarstyle-->
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#0026ca"/>
+        </Style>
+
+        <!--My own titles-->
+        <!--<x:Double x:Key="BaseTitleFontSize">20</x:Double>
+        <Color x:Key="BlueDColorBase">#1072a3</Color>
+        <Color x:Key="NavBarTextColor">#eef1f6</Color>-->
+
+    </Application.Resources>
+</prism:PrismApplication>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="stayhome" xml:space="preserve">
+    <value>Rimanete a casa!</value>
+  </data>
+  <data name="globalInfo" xml:space="preserve">
+    <value>Informazioni globali</value>
+  </data>
+  <data name="confirmedCases" xml:space="preserve">
+    <value>Confermato</value>
+  </data>
+  <data name="activeCases" xml:space="preserve">
+    <value>Attività</value>
+  </data>
+  <data name="recoveredCases" xml:space="preserve">
+    <value>Recuperato</value>
+  </data>
+  <data name="deathsCases" xml:space="preserve">
+    <value>Morti</value>
+  </data>
+  <data name="continents" xml:space="preserve">
+    <value>Continenti</value>
+  </data>
+  <data name="countries" xml:space="preserve">
+    <value>Paesi</value>
+  </data>
+  <data name="mostAffectedcountries" xml:space="preserve">
+    <value>Paesi maggiormente colpiti</value>
+  </data>
+  <data name="oficialInformation" xml:space="preserve">
+    <value>Informazioni ufficiali</value>
+  </data>
+  <data name="FAQS" xml:space="preserve">
+    <value>Domande e risposte(CHI)</value>
+  </data>
+  <data name="DONATIONS" xml:space="preserve">
+    <value>Donazioni(CHI)</value>
+  </data>
+  <data name="MYTHS" xml:space="preserve">
+    <value>Miti e consigli(CHI)</value>
+  </data>
+  <data name="messaConnectToInternet" xml:space="preserve">
+    <value>Si prega di connettersi ad una rete Internet per ottenere dati aggiornati!</value>
+  </data>
+  <data name="updating" xml:space="preserve">
+    <value>Aggiornamento...</value>
+  </data>
+  <data name="currentTest" xml:space="preserve">
+    <value>Test eseguiti</value>
+  </data>
+  <data name="enableGPSPermissions" xml:space="preserve">
+    <value>Si prega di abilitare i permessi GPS dell'applicazione per visualizzare le statistiche del vostro paese! Questo è richiesto solo una volta</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Accetta</value>
+  </data>
+  <data name="disabledGPS" xml:space="preserve">
+    <value>Abilitate il GPS del vostro dispositivo per visualizzare le statistiche del vostro paese!</value>
+  </data>
+  <data name="searchPlaceHolder" xml:space="preserve">
+    <value>Ricerca...</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Caricamento...</value>
+  </data>
+  <data name="lastUpdta" xml:space="preserve">
+    <value>Ultimo aggiornamento: </value>
+  </data>
+  <data name="24Report" xml:space="preserve">
+    <value>Segnalati di recente</value>
+  </data>
+  <data name="covidTests" xml:space="preserve">
+    <value>COVID19 TEST</value>
+  </data>
+  <data name="countriesStats" xml:space="preserve">
+    <value>Statistiche per ogni paese</value>
+  </data>
+  <data name="officialInformation" xml:space="preserve">
+    <value>Informazioni ufficiali </value>
+  </data>
+  <data name="goesInfo" xml:space="preserve">
+    <value>Informazioni ufficiali GOES</value>
+  </data>
+  <data name="noInter" xml:space="preserve">
+    <value>Nessuna connessione a Internet</value>
+  </data>
+  <data name="limitedConnection" xml:space="preserve">
+    <value>Internet limitato! Non è possibile ottenere gli ultimi dati aggiornati</value>
+  </data>
+  <data name="contatDeveloper" xml:space="preserve">
+    <value>Se il problema persiste, contattare lo sviluppatore</value>
+  </data>
+  <data name="developer" xml:space="preserve">
+    <value>Informazioni su</value>
+  </data>
+  <data name="devInfo1" xml:space="preserve">
+    <value>Informazioni su COVIDINFO.</value>
+  </data>
+  <data name="devInfo2" xml:space="preserve">
+    <value>Salve, mi chiamo Rafael Ibañez.</value>
+  </data>
+  <data name="devInfo3" xml:space="preserve">
+    <value>COVIDINFO è un progetto personale, creato per fornire informazioni ufficiali e affidabili sull'andamento della pandemia COVID-19, mostrando il progresso del numero di casi in ogni paese e il numero di casi in tutto il mondo. Se l'applicazione ha i permessi per l'accesso alla vostra posizione GPS, mostrerà le statistiche dello sviluppo della pandemia nel vostro paese. </value>
+  </data>
+  <data name="devInfo4" xml:space="preserve">
+    <value>Per qualsiasi tipo di informazione o suggerimento potete inviarmi una mail a questo indirizzo: rafael.ideveloper@gmail.com</value>
+  </data>
+  <data name="dataInfo1" xml:space="preserve">
+    <value>Fonte dei dati</value>
+  </data>
+  <data name="dataInfo2" xml:space="preserve">
+    <value>Tutte le informazioni mostrate nell'applicazione provengono dal servizio NOVEL COVID API. Questo servizio fornisce un'ampia gamma di informazioni dettagliate sulla pandemia COVID-19, che vanno dalla descrizione dei dati globali ai dati specifici della città/regione. Fornisce anche dati ufficiali del governo di alcuni paesi. </value>
+  </data>
+  <data name="dataInfoBtn" xml:space="preserve">
+    <value>Vedi documentazione ufficiale</value>
+  </data>
+  <data name="dataInfo3" xml:space="preserve">
+    <value>Per ulteriori informazioni, consultare la documentazione ufficiale di NOVEL COVID API.</value>
+  </data>
+</root>

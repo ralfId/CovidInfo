@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+       mc:Ignorable="d"
+       x:Class="Covid_Info.Views.ContentViews.CountriesTemplate">
+
+    
+    <Grid Margin="0" IsClippedToBounds="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2"
+                                             Orientation="Horizontal">
+            <!--Flag-->
+            <Image Aspect="AspectFill" Margin="0">
+                <Image.Source>
+                    <UriImageSource Uri="{Binding countryInfo.flag}" CachingEnabled="True" CacheValidity="15"/>
+                </Image.Source>
+            </Image>
+            <!--Country name-->
+            <Label  Text="{Binding country}"
+                    FontAttributes="Bold" FontSize="{StaticResource BaseTitleFontSize}" TextColor="{StaticResource BaseFontColor}" VerticalOptions="Center"/>
+        </StackLayout>
+
+
+        <!--Confirmed cases-->
+        <Label Grid.Row="1"  Grid.Column="0"  FontAttributes="Bold"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource ConfirmedColor}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{i18n:Translate confirmedCases}"/>
+                    <Span Text=":"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Grid.Row="1"  Grid.Column="1" Text="{Binding cases, StringFormat='{0:0,0}'}"
+									   FontAttributes="Bold" Padding="10,0,10,0"
+									   FontSize="Body" HorizontalOptions="End"
+									   TextColor="{StaticResource ConfirmedColor}"/>
+
+        <!--Active cases-->
+        <Label Grid.Row="2"  Grid.Column="0" FontAttributes="Bold"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource ActiveColor}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{i18n:Translate activeCases}"/>
+                    <Span Text=":"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Grid.Row="2"  Grid.Column="1" Text="{Binding active, StringFormat='{0:0,0}'}"
+									   FontAttributes="Bold" HorizontalOptions="End"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource ActiveColor}"/>
+
+        <!--Recovered cases-->
+        <Label Grid.Row="3"  Grid.Column="0" FontAttributes="Bold"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource RecoveredColor}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{i18n:Translate recoveredCases}"/>
+                    <Span Text=":"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Grid.Row="3"  Grid.Column="1" Text="{Binding recovered, StringFormat='{0:0,0}'}"
+									   FontAttributes="Bold" HorizontalOptions="End"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource RecoveredColor}"/>
+
+        <!--Deaths cases-->
+        <Label Grid.Row="4"  Grid.Column="0"  FontAttributes="Bold"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource DeathsColor}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{i18n:Translate deathsCases}"/>
+                    <Span Text=":"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Grid.Row="4"  Grid.Column="1"  Text="{Binding deaths, StringFormat='{0:0,0}'}"
+									   FontAttributes="Bold" HorizontalOptions="End"
+									   FontSize="Body" Padding="10,0,10,0"
+									   TextColor="{StaticResource DeathsColor}"/>
+
+        <!--Total test-->
+
+        <Grid  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                                      Padding="10,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" FontAttributes="Bold"
+									   FontSize="Default" 
+									   TextColor="{StaticResource BaseFontColor}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{i18n:Translate covidTests}"/>
+                        <Span Text=":"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Grid.Column="1" Text="{Binding tests, StringFormat='{0:0,0}'}"
+									   FontAttributes="Bold" 
+									   FontSize="Body"
+									   TextColor="{StaticResource BaseFontColor}"
+                                           HorizontalOptions="End"/>
+        </Grid>
+    </Grid>
+</Frame>

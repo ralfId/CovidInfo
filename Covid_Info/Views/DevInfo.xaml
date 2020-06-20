@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+             xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Covid_Info.Views.DevInfo" 
+             Visual="Material"
+             Title="{Binding Title}">
+    <!--<popup:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </popup:PopupPage.Animation>-->
+    <ScrollView Padding="20,15">
+
+        <Grid RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+                    <Label Text="{i18n:Translate devInfo1}"
+                               FontSize="Large"
+					           FontAttributes="Bold"
+					           TextColor="{StaticResource BaseFontColor}"/>
+                    <Label FontSize="Body"
+					           TextColor="{StaticResource BaseFontColor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{i18n:Translate devInfo2}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{i18n:Translate devInfo3}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{i18n:Translate devInfo4}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Grid Grid.Row="1" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <lottie:AnimationView Grid.Column="0"
+                            x:Name="animationView"
+                            Animation="coffeelike.json"
+                            Loop="True"
+                            IsPlaying="True"
+                            AutoPlay="False"
+                            WidthRequest="100" HeightRequest="100"/>
+
+                    <Frame Grid.Column="1" VerticalOptions="Center" Padding="10" BackgroundColor="{StaticResource BaseBlueColor}">
+                        <Label Text="¡Invitame a un café!"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   Padding="0"
+                                   TextColor="{StaticResource WhiteColor}"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GotoPaypalMe}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label Text="{i18n:Translate dataInfo1}" 
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource BaseFontColor}"/>
+
+                    <Label FontSize="Body"
+                               TextColor="{StaticResource BaseFontColor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{i18n:Translate dataInfo2}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{i18n:Translate dataInfo3}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Text="{i18n:Translate dataInfoBtn}"
+                                Command="{Binding goNovelCovidApi}"
+                                BackgroundColor="{StaticResource BaseBlueColor}"
+                                Margin="5,20"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
