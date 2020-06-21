@@ -7,7 +7,7 @@
              x:Class="Covid_Info.Views.TemplatePage"
              Style="{StaticResource PageStyle}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="refresh" Command="{Binding UpdateData}"/>
-        <ToolbarItem Text="COVIDINFO?" IconImageSource="loop" Command="{Binding navDevInfo}" Order="Secondary"/>
+        <ToolbarItem IconImageSource="update" Command="{Binding UpdateData}"/>
+        <ToolbarItem Text="COVIDINFO?"  Command="{Binding navDevInfo}" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 </ContentPage>

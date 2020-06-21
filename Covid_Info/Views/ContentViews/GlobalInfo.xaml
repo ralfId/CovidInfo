@@ -218,7 +218,7 @@
                                TextColor="{StaticResource BaseFontColor}"
                                HorizontalOptions="End"/>
                 </Grid>
-                <BoxView BackgroundColor="#eceff1" HeightRequest="2" Margin="0,10,0,0"/>
+                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
             </StackLayout>
         </Frame>
     </ContentView.Content>

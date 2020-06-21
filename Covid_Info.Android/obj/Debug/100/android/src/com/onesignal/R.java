@@ -127,9 +127,9 @@ public final class R {
 		public static final int common_google_signin_btn_text_light_focused = 0x7f070094;
 		public static final int common_google_signin_btn_text_light_normal = 0x7f070095;
 		public static final int common_google_signin_btn_text_light_normal_background = 0x7f070096;
-		public static final int googleg_disabled_color_18 = 0x7f07009f;
-		public static final int googleg_standard_color_18 = 0x7f0700a0;
-		public static final int ic_os_notification_fallback_white_24dp = 0x7f070151;
+		public static final int googleg_disabled_color_18 = 0x7f0700a0;
+		public static final int googleg_standard_color_18 = 0x7f0700a1;
+		public static final int ic_os_notification_fallback_white_24dp = 0x7f070152;
 		public static final int notification_action_background = 0x7f070181;
 		public static final int notification_bg = 0x7f070182;
 		public static final int notification_bg_low = 0x7f070183;

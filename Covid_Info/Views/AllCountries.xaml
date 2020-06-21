@@ -17,7 +17,7 @@
                         AbsoluteLayout.LayoutFlags="All"
                      IsVisible="{Binding IsVisibleCountries}">
 
-            <pkv:PancakeView CornerRadius="0,0,30,30">
+            <pkv:PancakeView CornerRadius="0,0,10,10">
                 <StackLayout Padding="10,5" BackgroundColor="{StaticResource BaseBlueColor}">
                     
                     <SearchBar BackgroundColor="{StaticResource WhiteColor}" 
@@ -28,7 +28,7 @@
                                PlaceholderColor="{StaticResource BaseFontColor}"
                                SearchCommand="{Binding SearchCountry}" />
                     
-                    <Label TextColor="{StaticResource BaseWhiteColor}"
+                    <!--<Label TextColor="{StaticResource BaseWhiteColor}"
                            FontAttributes="Bold"
                            FontSize="Body"
                            HorizontalOptions="Center">
@@ -38,13 +38,13 @@
                                 <Span Text="{Binding LastUpdateDateTime}" />
                             </FormattedString>
                         </Label.FormattedText>
-                    </Label>
+                    </Label>-->
                     
                 </StackLayout>
             </pkv:PancakeView>
 
             <CollectionView Grid.Row="1" 
-                            ItemsSource="{Binding obCountryInfo}" Margin="10,0,10,10">
+                            ItemsSource="{Binding obCountryInfo}" Margin="15,0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <contentViews:CountriesTemplate/>
