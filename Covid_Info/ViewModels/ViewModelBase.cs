@@ -4,6 +4,7 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace Covid_Info.ViewModels
@@ -16,6 +17,8 @@ namespace Covid_Info.ViewModels
         private string _lastUpdateDateTime;
         private readonly IApiService _apiService;
 
+
+        public string currentCulture;
         public string Title
         {
             get { return _title; }
@@ -34,6 +37,8 @@ namespace Covid_Info.ViewModels
 
             navDevInfo = new DelegateCommand(async () => await NavigationService.NavigateAsync("DevInfo"));
             navSettings = new DelegateCommand(async () => await NavigationService.NavigateAsync("Settings"));
+
+            currentCulture = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
         }
 
         public DelegateCommand navDevInfo { get; private set; }

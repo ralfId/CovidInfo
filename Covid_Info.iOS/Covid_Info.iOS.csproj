@@ -358,5 +358,14 @@
   <ItemGroup>
     <BundleResource Include="Resources\global.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fakenews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\qa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\donate.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

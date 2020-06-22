@@ -62,6 +62,7 @@ namespace Covid_Info
             containerRegistry.RegisterForNavigation<TemplatePage, TemplatePageViewModel>();
             containerRegistry.RegisterForNavigation<MyCountryDetails, MyCountryDetailsViewModel>();
             containerRegistry.RegisterForNavigation<GlobalDetails, GlobalDetailsViewModel>();
+            containerRegistry.RegisterForNavigation<ExternalInfo, ExternalInfoViewModel>();
         }
 
         //async void OneSignalInit()

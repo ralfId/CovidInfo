@@ -12,6 +12,15 @@
              x:Class="Covid_Info.Views.MainPage"
              Visual="Material"
              Title="{Binding Title}">
+
+    <views:TemplatePage.Resources>
+        <ResourceDictionary>
+            <xamanimation:ScaleToAnimation
+                x:Key="ScaleToAnimation"
+                Target="{x:Reference attentionJSON}"
+                Scale="2"/>
+        </ResourceDictionary>
+    </views:TemplatePage.Resources>
     <AbsoluteLayout>
         
         <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -94,9 +103,34 @@
                     <!--most affeccted countries-->
                     <contentViews:MostAffectedCountries Grid.Row="5" IsVisible="{Binding IsVisibleMAC}" Margin="10,0,0,30"/>
                     <!--external info-->
-                    <contentViews:ExternalInfo Grid.Row="6" />
+                    <!--<contentViews:ExternalInfo Grid.Row="6" />-->
+
+                    
                 </Grid>
             </ScrollView>
+
+            <Frame Padding="10,5" Margin="-5" HeightRequest="125" BackgroundColor="#eeeeee" >
+                <Grid HorizontalOptions="Center" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.15*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+
+                    <Icons:IconLabel x:Name="attentionJSON"
+                            Grid.Column="0"
+                               Text="fas-angle-up"
+                               FontSize="Title"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource BaseFontColor}" VerticalOptions="Center" HorizontalOptions="Center" Margin="0"/>
+                    <Label Grid.Column="1" Text="Presiona para conocer mas de COVID19" FontSize="Body" VerticalOptions="Center" TextColor="{StaticResource BaseFontColor}"/>
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding goExternalInfo}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+
         </StackLayout>
 
         <contentViews:LoadingData  AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"

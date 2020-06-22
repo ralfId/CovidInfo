@@ -33,9 +33,9 @@
         <StackLayout>
             
             <pkv:PancakeView Padding="10" HasShadow="True" >
-                <pkv:PancakeView BackgroundColor="DarkGray" HeightRequest="5" WidthRequest="50" HorizontalOptions="Center" CornerRadius="20"/>
+                <pkv:PancakeView BackgroundColor="{StaticResource BaseFontColor}" HeightRequest="5" WidthRequest="70" HorizontalOptions="Center" CornerRadius="20"/>
                 <pkv:PancakeView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CloseCountryDetails}"/>
+                    <TapGestureRecognizer />
                 </pkv:PancakeView.GestureRecognizers>
             </pkv:PancakeView>
 

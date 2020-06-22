@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -30,8 +31,7 @@ namespace Covid_Info.ViewModels
         private readonly IApiService _apiService;
         private readonly ILocationServices _locationServices;
         private readonly IConverModels _converModels;
-
-
+        private readonly INavigationService _navigationService;
         private GlobalInfo _globalInfo;
         private Country _country;
         private Country _myCountryInfo;
@@ -44,6 +44,7 @@ namespace Covid_Info.ViewModels
         private string _loadMessage;
         private string _animationJSON;
         private bool _isVisibleSVINFO;
+
         
 
         public MainPageViewModel(
@@ -60,19 +61,16 @@ namespace Covid_Info.ViewModels
                 _apiService = apiService;
                 _locationServices = locationServices;
                 _converModels = converModels;
+                _navigationService = navigationService;
 
                 Title = "COVID-INFO";
                 lstCountriesInfo = new List<Country>();
                 
 
-                navAllCountries = new DelegateCommand(async () => await NavigationService.NavigateAsync("AllCountries"));
-                goSVCovidInfo = new DelegateCommand(async () => await webSvCovidInfo());
-                goWHOCovidFaqs = new DelegateCommand(async () => await webWHOCovidFaqs());
-                goWHODonations = new DelegateCommand(async () => await webWHODonations());
-                goCovidWHOMyths = new DelegateCommand(async () => await webCovidWHOMyths());
+                navAllCountries = new DelegateCommand(async () => await _navigationService.NavigateAsync("AllCountries"));
                 UpdateData = new DelegateCommand(async () => await ReloadAllData());
                 DownloaderCommand = new DelegateCommand(async ()=> await OpenUrlUpdater());
-
+                goExternalInfo = new DelegateCommand(async ()=> await _navigationService.NavigateAsync("ExternalInfo"));
                 goMyCountryDetails = new DelegateCommand(async () => await navContryDetails());
                 goGlobalDetails = new DelegateCommand(async () => await navGlobalDetails());
 
@@ -84,22 +82,21 @@ namespace Covid_Info.ViewModels
                 Debug.Print(ex.ToString());
             }
 
+            
         }
 
        
 
         public DelegateCommand navAllCountries { get; private set; }
-        public DelegateCommand goSVCovidInfo { get; private set; }
-        public DelegateCommand goWHOCovidFaqs { get; private set; }
-        public DelegateCommand goWHODonations { get; private set; }
-        public DelegateCommand goCovidWHOMyths { get; private set; }
         public DelegateCommand UpdateData { get; private set; }
         public DelegateCommand DownloaderCommand { get; private set; }
         public DelegateCommand goMyCountryDetails { get; private set; }
         public DelegateCommand goGlobalDetails { get; private set; }
+        public DelegateCommand goExternalInfo { get; private set; }
+
 
         #region PUBLIC PROPERTIES
-        
+
         public bool IsVisibleSVINFO
         {
             get { return _isVisibleSVINFO; }
@@ -310,67 +307,21 @@ namespace Covid_Info.ViewModels
         }
 
 
-        //open web tab to El Salvador Info
-        private async Task webSvCovidInfo()
-        {
-            String svInfo = "https://covid19.gob.sv/";
-            await Browser.OpenAsync(svInfo, new BrowserLaunchOptions
-            {
-                LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
-                PreferredToolbarColor = Color.Black,
-            });
-        }
-
-        //open web tab to WHO covid19 fqas
-        private async Task webWHOCovidFaqs()
-        {
-            String HOCovidFaqs = "https://www.who.int/news-room/q-a-detail/q-a-coronaviruses";
-            await Browser.OpenAsync(HOCovidFaqs, new BrowserLaunchOptions
-            {
-                LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
-                PreferredToolbarColor = Color.Black,
-            });
-        }
-
-        //open web tab to WHO donations
-        private async Task webWHODonations()
-        {
-            String WHODonations = "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate";
-            await Browser.OpenAsync(WHODonations, new BrowserLaunchOptions
-            {
-                LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
-                PreferredToolbarColor = Color.Black,
-            });
-        }
-
-        //open web tab to WHO covid19 myths
-        private async Task webCovidWHOMyths()
-        {
-            String CovidWHOMyths = "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters";
-            await Browser.OpenAsync(CovidWHOMyths, new BrowserLaunchOptions
-            {
-                LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
-                PreferredToolbarColor = Color.Black,
-            });
-        }
+  
         
         //navigate to GlobalDetails
         private async Task navGlobalDetails()
         {
             var navParameters = new NavigationParameters();
             navParameters.Add("globaldetails", globalInfo);
-            await NavigationService.NavigateAsync("GlobalDetails", navParameters);
+            await _navigationService.NavigateAsync("GlobalDetails", navParameters);
         }
         //Navigate to MyCountryDetails
         private async Task navContryDetails()
         {
             var navParameters = new NavigationParameters();
             navParameters.Add("contrydetails", MyCountryInfo);
-            await NavigationService.NavigateAsync("MyCountryDetails", navParameters);
+            await _navigationService.NavigateAsync("MyCountryDetails", navParameters);
         }
 
         private async Task OpenUrlUpdater()

@@ -148,6 +148,8 @@
     <AndroidAsset Include="Assets\contactDev.json" />
     <AndroidAsset Include="Assets\loader.json" />
     <AndroidAsset Include="Assets\coffeelike.json" />
+    <AndroidAsset Include="Assets\line.json" />
+    <AndroidAsset Include="Assets\attention.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidAsset Include="Assets\covid19loading.json" />
@@ -209,6 +211,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\global.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\donate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fakenews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\qa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

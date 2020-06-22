@@ -15,5 +15,11 @@ namespace Covid_Info.Views
         {
             InitializeComponent();
         }
+
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
     }
 }

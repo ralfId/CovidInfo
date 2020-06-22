@@ -17,7 +17,7 @@
         </ResourceDictionary>
     </ContentView.Resources>
 
-    <StackLayout>
+    <StackLayout Spacing="0">
 
         <pkv:PancakeView   Padding="0">
             <Grid Padding="15,0">
@@ -36,21 +36,22 @@
             </Grid>
         </pkv:PancakeView>
 
-        <Grid>
+        <Grid Margin="0,5" HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="125"/>
             </Grid.ColumnDefinitions>
             <!--confirmed-->
-            <Frame Grid.Column="0" BorderColor="{StaticResource ConfirmedColor}" HasShadow="False" Padding="0,5" >
+            <Frame Grid.Column="0" BorderColor="{StaticResource ConfirmedColor}" HasShadow="False" Padding="5" >
                 <StackLayout Spacing="0">
                     <Label   Text="{Binding cases, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource ConfirmedColor}" HorizontalOptions="Center"/>
+        
                     <Label Text="{i18n:Translate confirmedCases}" FontSize="Body" TextColor="{StaticResource ConfirmedColor}" HorizontalOptions="Center"/>
                 </StackLayout>
             </Frame>
 
             <!--Active cases-->
-            <Frame Grid.Column="1" BorderColor="{StaticResource ActiveColor}" HasShadow="False" Padding="0,5">
+            <Frame Grid.Column="1" BorderColor="{StaticResource ActiveColor}" HasShadow="False" Padding="5">
                 <StackLayout Spacing="0">
                     <Label Text="{Binding active, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource ActiveColor}" HorizontalOptions="Center"/>
                     <Label Text="{i18n:Translate activeCases}" FontSize="Body" TextColor="{StaticResource ActiveColor}" HorizontalOptions="Center"/>
@@ -59,10 +60,10 @@
             </Frame>
         </Grid>
 
-        <Grid>
+        <Grid HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="125"/>
             </Grid.ColumnDefinitions>
             <!--Recovered cases-->
             <Frame Grid.Column="0" BorderColor="{StaticResource RecoveredColor}" HasShadow="False" Padding="0,5">
@@ -83,13 +84,11 @@
        
 
         <!--Total test-->
-        <Frame BorderColor="{StaticResource BaseFontColor}" HasShadow="False" Padding="0">
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" Margin="10,5,10,0">
                 <Label Padding="5" Text="{i18n:Translate covidTests}" FontSize="Default" TextColor="{StaticResource BaseFontColor}"/>
                 <Label Padding="10,5,5,5"  Text="{Binding tests, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
-        </Frame>
-        
+            <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" Margin="15,0"/>
 
     </StackLayout>
 </Frame>

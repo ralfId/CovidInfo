@@ -21,7 +21,7 @@ namespace Covid_Info.Utils
         //public const string BaseUrl_herokuapp = "https://coronavirus-19-api.herokuapp.com";
         //public const string GetGlobal_herokuapp = "/all";
         //public const string GetCountries_herokuapp = "/countries";
-
+        public const string currentLang = "user_language";
         public const string PlayerID = "playerId";
         public const string urlUpdater = "urlUpdaterApp";
         public const string IsUpdated = "IsUpdated";
