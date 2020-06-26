@@ -2,12 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
-             xmlns:i18n="clr-namespace:Resx;assembly=Resx" 
+             xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+             xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Covid_Info.Views.TemplatePage"
-             Style="{StaticResource PageStyle}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="update" Command="{Binding UpdateData}"/>
-        <ToolbarItem Text="COVIDINFO?"  Command="{Binding navDevInfo}" Order="Secondary"/>
-    </ContentPage.ToolbarItems>
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#cfd8dc">
 </ContentPage>

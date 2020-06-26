@@ -127,21 +127,21 @@ public final class R {
 		public static final int common_google_signin_btn_text_light_focused = 0x7f070094;
 		public static final int common_google_signin_btn_text_light_normal = 0x7f070095;
 		public static final int common_google_signin_btn_text_light_normal_background = 0x7f070096;
-		public static final int googleg_disabled_color_18 = 0x7f0700a2;
-		public static final int googleg_standard_color_18 = 0x7f0700a3;
-		public static final int ic_os_notification_fallback_white_24dp = 0x7f070154;
-		public static final int notification_action_background = 0x7f070183;
-		public static final int notification_bg = 0x7f070184;
-		public static final int notification_bg_low = 0x7f070185;
-		public static final int notification_bg_low_normal = 0x7f070186;
-		public static final int notification_bg_low_pressed = 0x7f070187;
-		public static final int notification_bg_normal = 0x7f070188;
-		public static final int notification_bg_normal_pressed = 0x7f070189;
-		public static final int notification_icon_background = 0x7f07018a;
-		public static final int notification_template_icon_bg = 0x7f07018b;
-		public static final int notification_template_icon_low_bg = 0x7f07018c;
-		public static final int notification_tile_bg = 0x7f07018d;
-		public static final int notify_panel_notification_icon_bg = 0x7f07018e;
+		public static final int googleg_disabled_color_18 = 0x7f0700a3;
+		public static final int googleg_standard_color_18 = 0x7f0700a4;
+		public static final int ic_os_notification_fallback_white_24dp = 0x7f070155;
+		public static final int notification_action_background = 0x7f070184;
+		public static final int notification_bg = 0x7f070185;
+		public static final int notification_bg_low = 0x7f070186;
+		public static final int notification_bg_low_normal = 0x7f070187;
+		public static final int notification_bg_low_pressed = 0x7f070188;
+		public static final int notification_bg_normal = 0x7f070189;
+		public static final int notification_bg_normal_pressed = 0x7f07018a;
+		public static final int notification_icon_background = 0x7f07018b;
+		public static final int notification_template_icon_bg = 0x7f07018c;
+		public static final int notification_template_icon_low_bg = 0x7f07018d;
+		public static final int notification_tile_bg = 0x7f07018e;
+		public static final int notify_panel_notification_icon_bg = 0x7f07018f;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f080028;

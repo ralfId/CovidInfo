@@ -36,13 +36,13 @@ namespace Covid_Info.ViewModels
             LastUpdateDateTime = LastUpdate();
 
             navDevInfo = new DelegateCommand(async () => await NavigationService.NavigateAsync("DevInfo"));
-            navSettings = new DelegateCommand(async () => await NavigationService.NavigateAsync("Settings"));
+            goBackAsync = new DelegateCommand(async () => await NavigationService.GoBackAsync());
 
             currentCulture = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
         }
 
         public DelegateCommand navDevInfo { get; private set; }
-        public DelegateCommand navSettings { get; private set; }
+        public DelegateCommand goBackAsync { get; private set; }
 
         public virtual void Initialize(INavigationParameters parameters)
         {

@@ -44,8 +44,8 @@
                            TextColor="{StaticResource WhiteColor}"
                            HorizontalOptions="Center"/>
             </pkv:PancakeView>
-            <ScrollView Margin="15,5">
-                <Grid >
+            <ScrollView Margin="15">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
@@ -54,106 +54,86 @@
                         <RowDefinition Height="5"/>
                     </Grid.RowDefinitions>
                     <!--ELSALVADOR INFO-->
-                    <Frame Grid.Row="0" BackgroundColor="{StaticResource WhiteColor}" Opacity="0.9" Padding="10" IsVisible="{Binding IsVisibleGOES}">
+                    <pkv:PancakeView Grid.Row="0" BackgroundColor="{StaticResource WhiteColor}"  IsVisible="{Binding IsVisibleGOES}" CornerRadius="4" Elevation="15">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
+                            <pkv:PancakeView Grid.Column="0" >
+                                <Image Grid.Column="0" Source="sv" WidthRequest="75" HeightRequest="75" BackgroundColor="{StaticResource CustomNavBarColor}"/>
+                            </pkv:PancakeView>
+                            <Label Grid.Column="1"
                                Text="{i18n:Translate goesInfo}"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start"/>
-                            <Icons:IconLabel Grid.Column="1"
-                               Text="fas-arrow-circle-right"
-                               FontSize="Large"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource BaseFontColor}"
-                               HorizontalOptions="End"/>
+                               Padding="5"
+                                   VerticalTextAlignment="Center"/>
                         </Grid>
-                        <Frame.GestureRecognizers>
+                        <pkv:PancakeView.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goSVCovidInfo}"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
+                        </pkv:PancakeView.GestureRecognizers>
+                    </pkv:PancakeView>
 
                     <!--Q&A-->
-                    <Frame Grid.Row="1" BackgroundColor="{StaticResource WhiteColor}" Opacity="0.9" Padding="10">
+                    <pkv:PancakeView Grid.Row="1" BackgroundColor="{StaticResource WhiteColor}" CornerRadius="4" Elevation="15">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
+                            <Image Grid.Column="0" Source="question" WidthRequest="75" HeightRequest="75"/>
+                            <Label Grid.Column="1"
                                Text="Preguntas y respuestas sobre la enfermedad por coronavirus (COVID-19)"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start"/>
-                            <Icons:IconLabel Grid.Column="1"
-                               Text="fas-arrow-circle-right"
-                               FontSize="Large"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource BaseFontColor}"
-                               HorizontalOptions="End"/>
+                               Padding="5"/>
                         </Grid>
-                        <Frame.GestureRecognizers>
+                        <pkv:PancakeView.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
+                        </pkv:PancakeView.GestureRecognizers>
+                    </pkv:PancakeView>
 
                     <!--WHO DONATIONS-->
-                    <Frame Grid.Row="2" BackgroundColor="{StaticResource WhiteColor}" Opacity="0.9" Padding="10">
+                    <pkv:PancakeView Grid.Row="2" BackgroundColor="{StaticResource WhiteColor}" CornerRadius="4" Elevation="15">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
+                            <Image Grid.Column="0" Source="donate" WidthRequest="75" HeightRequest="75"/>
+                            <Label Grid.Column="1"
                                Text="Donar al fondo de Respuesta a la COVID-19"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start"/>
-                            <Icons:IconLabel Grid.Column="1"
-                               Text="fas-arrow-circle-right"
-                               FontSize="Large"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource BaseFontColor}"
-                               HorizontalOptions="End"/>
+                               Padding="5"/>
                         </Grid>
-                        <Frame.GestureRecognizers>
+                        <pkv:PancakeView.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goWHODonations}"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
+                        </pkv:PancakeView.GestureRecognizers>
+                    </pkv:PancakeView>
 
                     <!--WHO COVID MYTHS-->
-                    <Frame Grid.Row="3" BackgroundColor="{StaticResource WhiteColor}" Opacity="0.9" Padding="10">
+                    <pkv:PancakeView Grid.Row="3" BackgroundColor="{StaticResource WhiteColor}" CornerRadius="4" Elevation="15">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
+                            <Image Grid.Column="0" Source="fake" WidthRequest="75" HeightRequest="75" BackgroundColor="Black" Margin="0"/>
+                            <Label Grid.Column="1"
                                Text="Consejos para la población acerca de los rumores sobre el nuevo coronavirus"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start"/>
-                            <Icons:IconLabel Grid.Column="1"
-                               Text="fas-arrow-circle-right"
-                               FontSize="Large"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource BaseFontColor}"
-                               HorizontalOptions="End"/>
+                               Padding="5"/>
                         </Grid>
-                        <Frame.GestureRecognizers>
+                        <pkv:PancakeView.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goCovidWHOMyths}"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
+                        </pkv:PancakeView.GestureRecognizers>
+                    </pkv:PancakeView>
                 </Grid>
             </ScrollView>
+            
         </StackLayout>
 
     </pkv:PancakeView>
