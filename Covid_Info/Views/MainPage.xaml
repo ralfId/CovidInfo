@@ -11,7 +11,7 @@
              xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="Covid_Info.Views.MainPage"
              Visual="Material"
-             Title="{Binding Title}" >
+             Title="{Binding Title}">
 
     <views:TemplatePage.Resources>
         <ResourceDictionary>
@@ -25,7 +25,7 @@
     <StackLayout Spacing="0">
 
         <!--my navigation bar-->
-        <pkv:PancakeView Padding="10,0,0,0" Margin="0" BackgroundColor="#1a1d3e" >
+        <pkv:PancakeView Padding="15,0,0,0" Margin="0" BackgroundColor="{StaticResource CustomNavBarColor}" >
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -69,7 +69,7 @@
             </Grid>
         </pkv:PancakeView>
         <!--main content-->
-        <StackLayout Padding="-5" Spacing="0" VerticalOptions="FillAndExpand">
+        <StackLayout Margin="-5,-3,-5,0" Spacing="0" VerticalOptions="FillAndExpand">
             <ScrollView>
                 <StackLayout>
                     <Frame CornerRadius="0"  Padding="20,0" Margin="0" BackgroundColor="#1a1d3e">
@@ -145,7 +145,7 @@
                     <contentViews:LoadingData IsVisible="False" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
             </ScrollView>
-            <Grid Margin="0" BackgroundColor="#eeeeee" Padding="10" VerticalOptions="EndAndExpand" IsVisible="True">
+            <Grid Margin="0" Padding="10" VerticalOptions="EndAndExpand" IsVisible="True" BackgroundColor="#cfd8dc">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>

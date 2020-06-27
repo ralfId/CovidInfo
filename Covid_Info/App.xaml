@@ -17,7 +17,7 @@
         <Color x:Key="BaseWhiteColor">#eef1f6</Color>
         <Color x:Key="WhiteColor">#FFFFFF</Color>
         <Color x:Key="BaseBlueColor">#0026ca</Color>
-        <Color x:Key="BackgroundColorPage">#e0e0e0</Color>
+        <Color x:Key="BackgroundColorPage">#eceff1</Color>
         <Color x:Key="CustomNavBarColor">#1a1d3e</Color>
 
         <!--Font sizes-->
@@ -26,7 +26,7 @@
         
         <!--Page backgrouncolor-->
         <Style x:Key="PageStyle" TargetType="ContentPage">
-            <Setter Property="BackgroundColor" Value="#e0e0e0" />
+            <Setter Property="BackgroundColor" Value="#eceff1" />
         </Style>
         
         <!--navbarstyle-->

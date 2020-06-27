@@ -13,9 +13,9 @@
              Title="{Binding Title}">
     
     <AbsoluteLayout>
-        <StackLayout Spacing="0">
+        <StackLayout>
             <!--my navigation bar-->
-            <pkv:PancakeView Margin="0,0,0,10" BackgroundColor="#1a1d3e">
+            <pkv:PancakeView BackgroundColor="#1a1d3e" >
                 <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
@@ -67,7 +67,7 @@
                         </Icons:IconLabel>
 
                     </Grid>
-                    <Frame Grid.Row="1" Padding="0" Margin="20,0,20,5" IsVisible="True"> 
+                    <Frame Grid.Row="1" Padding="0" Margin="20,0,20,5" IsVisible="True">
                         <SearchBar BackgroundColor="{StaticResource WhiteColor}" 
                                Text="{Binding Searched, Mode=TwoWay}"
                                Placeholder="{i18n:Translate searchPlaceHolder}"
@@ -80,7 +80,7 @@
             </pkv:PancakeView>
 
             <CollectionView Grid.Row="1"  IsVisible="True"
-                            ItemsSource="{Binding obCountryInfo}" Margin="15,0">
+                            ItemsSource="{Binding obCountryInfo}" Margin="15,0" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <contentViews:CountriesTemplate/>

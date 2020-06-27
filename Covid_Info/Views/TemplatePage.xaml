@@ -8,5 +8,5 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Covid_Info.Views.TemplatePage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#cfd8dc">
+             Style="{StaticResource PageStyle}">
 </ContentPage>
