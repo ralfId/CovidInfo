@@ -56,7 +56,7 @@
             },
             "Com.OneSignal": {
               "target": "Package",
-              "version": "[3.8.2, )"
+              "version": "[3.9.0, )"
             },
             "Microcharts": {
               "target": "Package",
@@ -84,15 +84,23 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
+            },
+            "Syncfusion.Xamarin.SfBusyIndicator": {
+              "target": "Package",
+              "version": "[18.1.0.59, )"
             },
             "Syncfusion.Xamarin.SfChart": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
             },
             "Syncfusion.Xamarin.SfDataGrid": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xam.Plugin.Iconize": {
               "target": "Package",
@@ -144,7 +152,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.847, )"
+              "version": "[4.7.0.1080, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
@@ -152,7 +160,7 @@
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[4.6.0.847, )"
+              "version": "[4.7.0.1080, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -216,7 +224,7 @@
             },
             "Com.OneSignal": {
               "target": "Package",
-              "version": "[3.8.2, )"
+              "version": "[3.9.0, )"
             },
             "Microcharts": {
               "target": "Package",
@@ -250,15 +258,23 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
+            },
+            "Syncfusion.Xamarin.SfBusyIndicator": {
+              "target": "Package",
+              "version": "[18.1.0.59, )"
             },
             "Syncfusion.Xamarin.SfChart": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
             },
             "Syncfusion.Xamarin.SfDataGrid": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xam.Plugin.Iconize": {
               "target": "Package",
@@ -278,7 +294,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.847, )"
+              "version": "[4.7.0.1080, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
@@ -286,7 +302,7 @@
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[4.6.0.847, )"
+              "version": "[4.7.0.1080, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -303,7 +319,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -347,6 +363,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.442, )"
+            },
             "Microcharts": {
               "target": "Package",
               "version": "[0.7.1, )"
@@ -357,17 +377,21 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Syncfusion.Xamarin.SfBusyIndicator": {
+              "target": "Package",
+              "version": "[18.1.0.59, )"
+            },
             "Syncfusion.Xamarin.SfChart": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
             },
             "Syncfusion.Xamarin.SfDataGrid": {
               "target": "Package",
-              "version": "[18.1.0.55, )"
+              "version": "[18.1.0.59, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.847, )"
+              "version": "[4.7.0.1080, )"
             }
           },
           "imports": [
@@ -380,7 +404,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

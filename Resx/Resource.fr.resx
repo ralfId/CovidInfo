@@ -148,13 +148,13 @@
     <value>Informations officielles</value>
   </data>
   <data name="FAQS" xml:space="preserve">
-    <value>Questions et réponses(OMS)</value>
+    <value>Questions et réponses sur les maladies à coronavirus (COVID-19)</value>
   </data>
   <data name="DONATIONS" xml:space="preserve">
-    <value>Dons(OMS)</value>
+    <value>Faites un don au Fonds de réponse COVID-19</value>
   </data>
   <data name="MYTHS" xml:space="preserve">
-    <value>Mythes et conseils(OMS)</value>
+    <value>Conseils pour le public concernant les rumeurs sur le nouveau coronavirus</value>
   </data>
   <data name="messaConnectToInternet" xml:space="preserve">
     <value>Veuillez vous connecter à un réseau Internet pour obtenir des données actualisées !</value>
@@ -187,16 +187,16 @@
     <value>Récemment rapporté</value>
   </data>
   <data name="covidTests" xml:space="preserve">
-    <value>TESTS COVID19</value>
+    <value>Tests COVID-19</value>
   </data>
   <data name="countriesStats" xml:space="preserve">
-    <value>Statistiques pour chaque pays</value>
+    <value>Voir les statistiques pour chaque pays</value>
   </data>
   <data name="officialInformation" xml:space="preserve">
     <value>Informations officielles </value>
   </data>
   <data name="goesInfo" xml:space="preserve">
-    <value>Informations officielles GOES</value>
+    <value>Information officielle du gouvernement de la République d'El Salvador.</value>
   </data>
   <data name="noInter" xml:space="preserve">
     <value>Pas de connexion Internet</value>
@@ -233,5 +233,155 @@
   </data>
   <data name="dataInfo3" xml:space="preserve">
     <value>Pour plus d'informations, voir la documentation officielle de l'API NOVEL COVID.</value>
+  </data>
+  <data name="symptoms" xml:space="preserve">
+    <value>Symptômes</value>
+  </data>
+  <data name="advices" xml:space="preserve">
+    <value>Conseils</value>
+  </data>
+  <data name="viewmore" xml:space="preserve">
+    <value>Voir plus</value>
+  </data>
+  <data name="bannerTitle" xml:space="preserve">
+    <value>Combattons COVID-19 ensemble !</value>
+  </data>
+  <data name="bannerDescription" xml:space="preserve">
+    <value>Suivez les conseils des autorités sanitaires nationales et locales compétentes ou de votre employeur sur la manière de vous protéger et de protéger les autres</value>
+  </data>
+  <data name="btnExternalInfo" xml:space="preserve">
+    <value>En savoir plus sur COVID-19</value>
+  </data>
+  <data name="greatApp" xml:space="preserve">
+    <value>Si cette application a été à votre goût</value>
+  </data>
+  <data name="buyCoffee" xml:space="preserve">
+    <value>Offrez-moi une tasse de café !</value>
+  </data>
+  <data name="symptoms1" xml:space="preserve">
+    <value>Fièvre</value>
+  </data>
+  <data name="symptoms2" xml:space="preserve">
+    <value>Toux sèche</value>
+  </data>
+  <data name="symptoms3" xml:space="preserve">
+    <value>Fatigue</value>
+  </data>
+  <data name="symptoms4" xml:space="preserve">
+    <value>Douleurs corporelles</value>
+  </data>
+  <data name="symptoms5" xml:space="preserve">
+    <value>Mal de gorge</value>
+  </data>
+  <data name="symptoms6" xml:space="preserve">
+    <value>Diarrhée</value>
+  </data>
+  <data name="symptoms7" xml:space="preserve">
+    <value>Conjonctivite</value>
+  </data>
+  <data name="symptoms8" xml:space="preserve">
+    <value>Maux de tête</value>
+  </data>
+  <data name="symptoms9" xml:space="preserve">
+    <value>Perte de l'odorat ou du goût</value>
+  </data>
+  <data name="symptoms10" xml:space="preserve">
+    <value>Éruptions cutanées ou perte de couleur sur les doigts ou les orteils</value>
+  </data>
+  <data name="symptoms11" xml:space="preserve">
+    <value>Difficulté à respirer ou sensation d'essoufflement</value>
+  </data>
+  <data name="symptoms12" xml:space="preserve">
+    <value>Douleurs ou pressions à la poitrine</value>
+  </data>
+  <data name="symptoms13" xml:space="preserve">
+    <value>Incapacité de parler ou de bouger</value>
+  </data>
+  <data name="AdvT1" xml:space="preserve">
+    <value>Rester à la maison</value>
+  </data>
+  <data name="AdvD1" xml:space="preserve">
+    <value>Ne quittez pas votre domicile sauf pour consulter un médecin, faire le plein de nourriture, de médicaments ou d'autres articles ménagers importants</value>
+  </data>
+  <data name="AdvT2" xml:space="preserve">
+    <value>Pratiquer la distanciation sociale</value>
+  </data>
+  <data name="AdvD2" xml:space="preserve">
+    <value>Gardez au moins 1 mètre (3 pieds) loin de vous et des autres</value>
+  </data>
+  <data name="AdvT3" xml:space="preserve">
+    <value>Portez un masque facial</value>
+  </data>
+  <data name="AdvD3" xml:space="preserve">
+    <value>Utilisez des masques dans les lieux publics. L'utilisation de masques devrait faire partie d'une stratégie globale comprenant des mesures pour éliminer la transmission et sauver des vies; l'utilisation d'un masque n'est pas suffisante pour fournir un niveau de protection adéquat contre le COVID-19</value>
+  </data>
+  <data name="AdvT4" xml:space="preserve">
+    <value>Évitez de toucher vos yeux, votre nez et votre bouche</value>
+  </data>
+  <data name="AdvD4" xml:space="preserve">
+    <value>Les mains touchent de nombreuses surfaces et peuvent soulever des virus. Une fois contaminées, les mains peuvent transmettre le virus aux yeux, au nez ou à la bouche</value>
+  </data>
+  <data name="AdvT5" xml:space="preserve">
+    <value>Couvrez-vous le nez et la bouche lorsque vous toussez et éternuez</value>
+  </data>
+  <data name="AdvD5" xml:space="preserve">
+    <value>Couvrez-vous la bouche et le nez avec un mouchoir lorsque vous toussez ou éternuez, ou utilisez l'intérieur de votre coude</value>
+  </data>
+  <data name="AdvT6" xml:space="preserve">
+    <value>Lavez-vous les mains fréquemment</value>
+  </data>
+  <data name="AdvD6" xml:space="preserve">
+    <value>Lavez-vous souvent les mains à l'eau et au savon pendant au moins 20 secondes, surtout après avoir été dans un lieu public, ou après vous être mouché, tousser ou éternuer</value>
+  </data>
+  <data name="AdvT7" xml:space="preserve">
+    <value>Utilisez de l'alcool ou du gel d'alcool</value>
+  </data>
+  <data name="AdvD7" xml:space="preserve">
+    <value>Utilisez un désinfectant pour les mains à base d'alcool contenant au moins 60% d'alcool et couvrez toute la surface de vos mains en les frottant jusqu'à ce qu'elles soient sèches</value>
+  </data>
+  <data name="AdvT8" xml:space="preserve">
+    <value>Nettoyer et désinfecter</value>
+  </data>
+  <data name="AdvD8" xml:space="preserve">
+    <value>Nettoyez et désinfectez fréquemment les surfaces de contact quotidiennes, c'est-à-dire les tables, les boutons de porte, les robinets d'éclairage, les comptoirs, les poignées, les bureaux, les téléphones, les claviers, les toilettes, les robinets et les éviers</value>
+  </data>
+  <data name="AdvT9" xml:space="preserve">
+    <value>Surveillez votre santé au quotidien</value>
+  </data>
+  <data name="AdvD9" xml:space="preserve">
+    <value>Surveillez l'apparition des symptômes. Suivez les instructions de soins de votre fournisseur de soins de santé et du service de santé local. Les autorités sanitaires locales vous indiqueront comment vérifier vos symptômes et communiquer les informations</value>
+  </data>
+  <data name="sintomasGTitle" xml:space="preserve">
+    <value>Symptômes graves</value>
+  </data>
+  <data name="sintomasGDescription" xml:space="preserve">
+    <value>Si vous présentez des symptômes graves, consultez immédiatement un médecin. Cependant, vous devez toujours appeler votre médecin ou votre centre de santé avant de vous présenter à l'endroit en question</value>
+  </data>
+  <data name="sintomasCTitle" xml:space="preserve">
+    <value>Symptômes courants</value>
+  </data>
+  <data name="sintomasCDescription" xml:space="preserve">
+    <value>Il est recommandé que les personnes qui souffrent de symptômes bénins et qui ont un bon état de santé général soient confinées à la maison</value>
+  </data>
+  <data name="sintomasHTitle" xml:space="preserve">
+    <value>Symptômes habituels</value>
+  </data>
+  <data name="sintomasHDescription" xml:space="preserve">
+    <value>Les personnes infectées commencent à présenter des symptômes dans les 5 à 6 jours suivant leur infection, mais cela peut prendre jusqu'à 14 jours</value>
+  </data>
+  <data name="sintomasSource" xml:space="preserve">
+    <value>Pour en savoir plus, consultez le site de l'Organisation mondiale de la santé</value>
+  </data>
+  <data name="lessAffectedCountries" xml:space="preserve">
+    <value>Pays moins touchés</value>
+  </data>
+  <data name="orderBy" xml:space="preserve">
+    <value>Sélectionnez le tri</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="casesPercentage" xml:space="preserve">
+    <value>Pourcentage de cas</value>
   </data>
 </root>

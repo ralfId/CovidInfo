@@ -8,24 +8,21 @@
              x:Class="Covid_Info.Views.ContentViews.LoadingData"
              Visual="Default">
   <ContentView.Content>
-        <Grid BackgroundColor="CadetBlue" VerticalOptions="FillAndExpand">
-            <StackLayout VerticalOptions="FillAndExpand">
-                <!--<lottie:AnimationView
+        <Grid>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <lottie:AnimationView
                     x:Name="animationView"
                     Animation="{Binding AnimationJSON}"
                     Loop="True"
                     IsPlaying="True"
-                    AutoPlay="True"
-                    WidthRequest="200" HeightRequest="200"/>-->
-                <Image Source="donate"/>
-                <!--<ActivityIndicator Color="{StaticResource BaseBlueColor}"
-                                    IsRunning="True"
-                                    WidthRequest="50" HeightRequest="50"/>-->
+                    AutoPlay="False"
+                    WidthRequest="50" HeightRequest="50"/>
                 <Label Text="{Binding LoadMessage}"
                        FontSize="Large" 
                        FontAttributes="Bold" 
-                       TextColor="{StaticResource BaseFontColor}"
-                       HorizontalOptions="Center"/>
+                       TextColor="{StaticResource WhiteColor}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="EndAndExpand"/>
             </StackLayout>
         </Grid>
     </ContentView.Content>

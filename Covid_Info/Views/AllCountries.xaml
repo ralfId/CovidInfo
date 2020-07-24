@@ -1,97 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<views:TemplatePage 
-             xmlns:views="clr-namespace:Covid_Info.Views"
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
-             xmlns:i18n="clr-namespace:Resx;assembly=Resx" xmlns:renderercontrols="clr-namespace:Covid_Info.RendererControls"
-             xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+<views:TemplatePage
+    xmlns:views="clr-namespace:Covid_Info.Views"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx" 
+    xmlns:renderercontrols="clr-namespace:Covid_Info.RendererControls"
+    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+    xmlns:controls="clr-namespace:Covid_Info.Controls" 
+    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Covid_Info.Views.AllCountries"
-             Visual="Material"
-             Title="{Binding Title}">
-    
-    <AbsoluteLayout>
-        <StackLayout>
-            <!--my navigation bar-->
-            <pkv:PancakeView BackgroundColor="#1a1d3e" >
-                <Grid RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" ColumnSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Icons:IconLabel Grid.Column="0"
-                                     Text="fas-arrow-circle-left"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand">
-                            <Icons:IconLabel.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding goBackAsync}"/>
-                            </Icons:IconLabel.GestureRecognizers>
-                        </Icons:IconLabel>
-                        <Label Grid.Column="1" 
-                           Text="{Binding Title}"
-                           FontSize="Large"
-                           Padding="0"
-                           TextColor="{StaticResource WhiteColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontAttributes="Bold"/>
-                        <Icons:IconLabel Grid.Column="2"
-                                     Text="fas-sync-alt"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand"  Margin="0">
-                            <Icons:IconLabel.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding UpdateData} "/>
-                            </Icons:IconLabel.GestureRecognizers>
-                        </Icons:IconLabel>
-                        <Icons:IconLabel Grid.Column="3"
-                                     Text="fas-info-circle"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand"  Margin="0">
-                            <Icons:IconLabel.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding navDevInfo}"/>
-                            </Icons:IconLabel.GestureRecognizers>
-                        </Icons:IconLabel>
+    x:Class="Covid_Info.Views.AllCountries"
+    Visual="Material"
+    Title="{Binding Title}">
 
-                    </Grid>
-                    <Frame Grid.Row="1" Padding="0" Margin="20,0,20,5" IsVisible="True">
-                        <SearchBar BackgroundColor="{StaticResource WhiteColor}" 
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Spacing="0">
+                <!--my navigation bar-->
+                <pkv:PancakeView BackgroundColor="{StaticResource CustomNavBarColor}" Padding="20,0,10,10" IsVisible="{Binding IsVisibleCountries}">
+                    <Grid ColumnDefinitions="*,auto" ColumnSpacing="15">
+                        <Frame Margin="0" Padding="0">
+                            <SearchBar
                                Text="{Binding Searched, Mode=TwoWay}"
                                Placeholder="{i18n:Translate searchPlaceHolder}"
                                TextColor="{StaticResource BaseFontColor}"
                                CancelButtonColor="{StaticResource BaseFontColor}"
                                PlaceholderColor="{StaticResource BaseFontColor}"
                                SearchCommand="{Binding SearchCountry}" TranslationY="5"/>
-                    </Frame>
-                </Grid>
-            </pkv:PancakeView>
+                        </Frame>
+                        <Icons:IconLabel Grid.Column="1" Text="fas-filter" FontSize="Large" 
+                                     TextColor="{StaticResource WhiteColor}" VerticalOptions="CenterAndExpand" >
+                            <Icons:IconLabel.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goFiltersView}" />
+                            </Icons:IconLabel.GestureRecognizers>
+                        </Icons:IconLabel>
+                    </Grid>
+                </pkv:PancakeView>
 
-            <CollectionView Grid.Row="1"  IsVisible="True"
-                            ItemsSource="{Binding obCountryInfo}" Margin="15,0" >
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <contentViews:CountriesTemplate/>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-            <contentViews:LoadingData  IsVisible="False"/>
-        </StackLayout>
-        
-        
-        
+
+                <ListView ItemsSource="{Binding obCountryInfo}" HasUnevenRows="True" SeparatorVisibility="None" SelectionMode="Single" SelectedItem="{Binding SelectedCountry}" CachingStrategy="RecycleElement" IsVisible="{Binding IsVisibleCountries}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid RowDefinitions="auto,*">
+                                    <BoxView BackgroundColor="Transparent" HeightRequest="9" />
+                                    <contentViews:CountriesTemplate Grid.Row="1" Margin="20,0"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <contentViews:LoadingData IsVisible="{Binding IsVisibleLoadingPage}" />
+        </Grid>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"  AbsoluteLayout.LayoutFlags="All" BackgroundColor="#661a1d3e" IsVisible="{Binding SFIndicator}">
+            <busyindicator:SfBusyIndicator x:Name="busyindicator" 
+                                           IsVisible="{Binding SFIndicator}"
+                                           IsBusy="{Binding SFIndicator}"
+                                           AnimationType="RollingBall"
+                                           HeightRequest="100"
+                                           WidthRequest="100"
+                                           BackgroundColor="Transparent"
+                                           TextColor="White" TextSize="20"
+                                           Title="{i18n:Translate loading}"/>
+        </Grid>
     </AbsoluteLayout>
     
 </views:TemplatePage>

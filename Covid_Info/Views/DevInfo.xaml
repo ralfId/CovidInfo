@@ -10,95 +10,52 @@
              xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Covid_Info.Views.DevInfo" 
-             Visual="Material" NavigationPage.HasNavigationBar="False">
-    <!--<popup:PopupPage.Animation>
-        <animations:ScaleAnimation 
-            PositionIn="Center"
-            PositionOut="Center"
-            ScaleIn="1.2"
-            ScaleOut="0.8"
-            DurationIn="400"
-            DurationOut="300"
-            EasingIn="SinOut"
-            EasingOut="SinIn"
-            HasBackgroundAnimation="True"/>
-    </popup:PopupPage.Animation>-->
-    <StackLayout>
-        <!--my navigation bar-->
-        <pkv:PancakeView Margin="0" BackgroundColor="#1a1d3e" >
-            <Grid RowSpacing="0">
+             Visual="Material" 
+             Title="{Binding Title}">
+    <ScrollView Padding="20,15">
+
+        <Grid RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" ColumnSpacing="0">
+
+                <Grid Grid.Row="0"
+                      RowDefinitions="auto, auto">
+                    <Label Grid.Row="0" Text="{i18n:Translate devInfo1}"
+                               FontSize="Large"
+					           FontAttributes="Bold"
+					           TextColor="{StaticResource BaseFontColor}"/>
+                    <Label Grid.Row="1" FontSize="Body"
+					           TextColor="{StaticResource BaseFontColor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{i18n:Translate devInfo2}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{i18n:Translate devInfo3}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{i18n:Translate devInfo4}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+                <Label Grid.Row="1" Text="{i18n:Translate greatApp}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
+                <Grid Grid.Row="2" HorizontalOptions="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Icons:IconLabel Grid.Column="0"
-                                     Text="fas-arrow-circle-left"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand">
-                        <Icons:IconLabel.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goBackAsync}"/>
-                        </Icons:IconLabel.GestureRecognizers>
-                    </Icons:IconLabel>
-                    <Label Grid.Column="1" 
-                           Text="{Binding Title}"
-                           FontSize="Large"
-                           Padding="0"
-                           TextColor="{StaticResource WhiteColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontAttributes="Bold"/>
 
-                </Grid>
-            </Grid>
-        </pkv:PancakeView>
-
-        <ScrollView Padding="20,15">
-
-            <Grid RowSpacing="30">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-
-                    <StackLayout Grid.Row="0">
-                        <Label Text="{i18n:Translate devInfo1}"
-                               FontSize="Large"
-					           FontAttributes="Bold"
-					           TextColor="{StaticResource BaseFontColor}"/>
-                        <Label FontSize="Body"
-					           TextColor="{StaticResource BaseFontColor}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{i18n:Translate devInfo2}"/>
-                                    <Span Text="&#10;"/>
-                                    <Span Text="&#10;"/>
-                                    <Span Text="{i18n:Translate devInfo3}"/>
-                                    <Span Text="&#10;"/>
-                                    <Span Text="&#10;"/>
-                                    <Span Text="{i18n:Translate devInfo4}"/>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-
-                    <Grid Grid.Row="1" HorizontalOptions="Center">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <lottie:AnimationView Grid.Column="0"
+                    <lottie:AnimationView Grid.Column="0"
                             x:Name="animationView"
                             Animation="coffeelike.json"
                             Loop="True"
@@ -106,49 +63,48 @@
                             AutoPlay="False"
                             WidthRequest="100" HeightRequest="100"/>
 
-                        <Frame Grid.Column="1" VerticalOptions="Center" Padding="10" BackgroundColor="{StaticResource BaseBlueColor}">
-                            <Label Text="¡Invitame a un café!"
+                    <Frame Grid.Column="1" VerticalOptions="Center" Padding="10" BackgroundColor="{StaticResource BaseBlueColor}">
+                        <Label Text="{i18n:Translate buyCoffee}"
                                    FontSize="Body"
                                    FontAttributes="Bold"
                                    VerticalOptions="Center"
                                    Padding="0"
                                    TextColor="{StaticResource WhiteColor}"/>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding GotoPaypalMe}"/>
-                            </Frame.GestureRecognizers>
-                        </Frame>
-                    </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GotoPaypalMe}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
                 </Grid>
+            </Grid>
 
-                <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout Grid.Row="0">
-                        <Label Text="{i18n:Translate dataInfo1}" 
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label Text="{i18n:Translate dataInfo1}" 
                                FontSize="Large"
                                FontAttributes="Bold"
                                TextColor="{StaticResource BaseFontColor}"/>
 
-                        <Label FontSize="Body"
+                    <Label FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{i18n:Translate dataInfo2}"/>
-                                    <Span Text="&#10;"/>
-                                    <Span Text="&#10;"/>
-                                    <Span Text="{i18n:Translate dataInfo3}"/>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Button Text="{i18n:Translate dataInfoBtn}"
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{i18n:Translate dataInfo2}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{i18n:Translate dataInfo3}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Text="{i18n:Translate dataInfoBtn}"
                                 Command="{Binding goNovelCovidApi}"
                                 BackgroundColor="{StaticResource BaseBlueColor}"
                                 Margin="5,20"/>
-                    </StackLayout>
-                </Grid>
+                </StackLayout>
             </Grid>
-        </ScrollView>
-    </StackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

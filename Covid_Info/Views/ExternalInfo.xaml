@@ -12,7 +12,7 @@
                  Visual="Material">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation 
-            PositionIn="Center"
+            PositionIn="Top"
             PositionOut="Bottom"
             ScaleIn="1.2"
             ScaleOut="0.8"
@@ -23,24 +23,27 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
 
-    <pkv:PancakeView  BackgroundColor="{StaticResource BackgroundColorPage}"  CornerRadius="10,10,0,0"  HasShadow="True" Margin="0,10,0,0">
+    <pkv:PancakeView  BackgroundColor="{StaticResource WhiteColor}"  CornerRadius="10,10,0,0"  HasShadow="True" Margin="0,10,0,0">
         <pkv:PancakeView.GestureRecognizers>
-            <SwipeGestureRecognizer Direction="Down" />
+            <SwipeGestureRecognizer Direction="Down" Command="{Binding ClosePopup}"/>
         </pkv:PancakeView.GestureRecognizers>
         
         <StackLayout>
 
-            <pkv:PancakeView Padding="10" HasShadow="True" >
-                <pkv:PancakeView BackgroundColor="{StaticResource BaseFontColor}" HeightRequest="5" WidthRequest="70" HorizontalOptions="Center" CornerRadius="20"/>
+            <pkv:PancakeView HeightRequest="30" Padding="0,5,0,0" BackgroundColor="{StaticResource BackgroundColorPage}" >
+                <StackLayout Margin="0" Padding="0">
+                    <pkv:PancakeView BackgroundColor="{StaticResource BaseFontColor}" HeightRequest="5" WidthRequest="70" HorizontalOptions="Center" CornerRadius="20" VerticalOptions="CenterAndExpand"/>
+                    <BoxView BackgroundColor="#cfd8dc" HeightRequest="2" VerticalOptions="EndAndExpand"/>
+                </StackLayout>
                 <pkv:PancakeView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CloseCountryDetails}"/>
+                    <TapGestureRecognizer Command="{Binding ClosePopup}"/>
                 </pkv:PancakeView.GestureRecognizers>
             </pkv:PancakeView>
 
             <pkv:PancakeView >
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10" Padding="15,5,15,10">
-                    <Label Text="¡Quedate en casa!"
+                    <Label Text="{i18n:Translate stayhome}"
                            FontSize="Large"
                            FontAttributes="Bold"
                            TextColor="{StaticResource BaseFontColor}"
@@ -50,12 +53,11 @@
                            HorizontalOptions="Center"/>
                 </StackLayout>
             </pkv:PancakeView>
-            <BoxView BackgroundColor="LightGray" HeightRequest="1"/>
-            
-            <ScrollView >
+
+            <ScrollView>
                 <StackLayout Spacing="15" Padding="0,10">
                     <!--ELSALVADOR INFO-->
-                    <StackLayout   IsVisible="{Binding IsVisibleGOES}" Padding="15,0">
+                    <StackLayout   IsVisible="{Binding IsVisibleGOES}" Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -83,9 +85,9 @@
                             <TapGestureRecognizer Command="{Binding goSVCovidInfo}"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1"/>
+                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
                     <!--Q&A-->
-                    <StackLayout Grid.Row="1"  Padding="15,0">
+                    <StackLayout Grid.Row="1"  Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -93,10 +95,10 @@
                                 <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
                             <pkv:PancakeView Grid.Column="0" CornerRadius="5" BackgroundColor="Red">
-                                <Image  Source="qa" WidthRequest="75" HeightRequest="75" Margin="0"/>
+                                <Image  Source="question" WidthRequest="75" HeightRequest="75" Margin="0"/>
                             </pkv:PancakeView>
                             <Label Grid.Column="1"
-                               Text="Preguntas y respuestas sobre la enfermedad por coronavirus (COVID-19)"
+                               Text="{i18n:Translate FAQS}"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
                                Padding="5"/>
@@ -111,9 +113,9 @@
                             <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1"/>
+                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
                     <!--WHO DONATIONS-->
-                    <StackLayout Grid.Row="2"  Padding="15,0">
+                    <StackLayout Grid.Row="2"  Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -124,7 +126,7 @@
                                 <Image  Source="donate" WidthRequest="75" HeightRequest="75" Margin="0"/>
                             </pkv:PancakeView>
                             <Label Grid.Column="1"
-                               Text="Donar al fondo de Respuesta a la COVID-19"
+                               Text="{i18n:Translate DONATIONS}"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
                                Padding="5"/>
@@ -139,10 +141,10 @@
                             <TapGestureRecognizer Command="{Binding goWHODonations}"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1"/>
+                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
                     
                     <!--WHO COVID MYTHS-->
-                    <StackLayout Grid.Row="3" Padding="15,0">
+                    <StackLayout Grid.Row="3" Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -150,10 +152,10 @@
                                 <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
                             <pkv:PancakeView Grid.Column="0" CornerRadius="5">
-                                <Image  Source="fake" WidthRequest="75" HeightRequest="75" BackgroundColor="Black" Margin="0"/>
+                                <Image  Source="fakeNews" WidthRequest="75" HeightRequest="75" BackgroundColor="Black" Margin="0"/>
                             </pkv:PancakeView>
                             <Label Grid.Column="1"
-                               Text="Consejos para la población acerca de los rumores sobre el nuevo coronavirus"
+                               Text="{i18n:Translate MYTHS}"
                                FontSize="Body"
                                TextColor="{StaticResource BaseFontColor}"
                                Padding="5"/>
@@ -168,7 +170,7 @@
                             <TapGestureRecognizer Command="{Binding goCovidWHOMyths}"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1"/>
+                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
                 </StackLayout>
             </ScrollView>
             

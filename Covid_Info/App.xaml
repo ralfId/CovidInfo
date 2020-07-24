@@ -19,6 +19,7 @@
         <Color x:Key="BaseBlueColor">#0026ca</Color>
         <Color x:Key="BackgroundColorPage">#eceff1</Color>
         <Color x:Key="CustomNavBarColor">#1a1d3e</Color>
+        <Color x:Key="BoxSeparator">#b0bec5</Color>
 
         <!--Font sizes-->
         <x:Double x:Key="MainNumbFS">25</x:Double>
@@ -31,7 +32,7 @@
         
         <!--navbarstyle-->
         <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="Transparent"/>
+            <Setter Property="BarBackgroundColor" Value="#1a1d3e"/>
         </Style>
 
         <!--My own titles-->

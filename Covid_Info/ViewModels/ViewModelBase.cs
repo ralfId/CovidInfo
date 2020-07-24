@@ -16,9 +16,9 @@ namespace Covid_Info.ViewModels
         private string _title;
         private string _lastUpdateDateTime;
         private readonly IApiService _apiService;
-
-
         public string currentCulture;
+
+
         public string Title
         {
             get { return _title; }
@@ -36,13 +36,12 @@ namespace Covid_Info.ViewModels
             LastUpdateDateTime = LastUpdate();
 
             navDevInfo = new DelegateCommand(async () => await NavigationService.NavigateAsync("DevInfo"));
-            goBackAsync = new DelegateCommand(async () => await NavigationService.GoBackAsync());
-
+            ClosePopup = new DelegateCommand(async () => await NavigationService.ClearPopupStackAsync());
             currentCulture = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
         }
 
         public DelegateCommand navDevInfo { get; private set; }
-        public DelegateCommand goBackAsync { get; private set; }
+        public DelegateCommand ClosePopup { get; set; }
 
         public virtual void Initialize(INavigationParameters parameters)
         {

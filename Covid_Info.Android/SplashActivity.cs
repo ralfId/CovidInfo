@@ -19,8 +19,8 @@ namespace Covid_Info.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            //Task.Run(() => { RunOnUiThread(() => { StartActivity(typeof(MainActivity)); }); });
-            StartActivity(typeof(MainActivity));
+            var mainActivityIntent = new Intent(this, typeof(MainActivity));
+            StartActivity(mainActivityIntent);
             Finish();
         }
 

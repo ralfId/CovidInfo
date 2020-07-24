@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <views:TemplatePage
+xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:views="clr-namespace:Covid_Info.Views"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -10,8 +11,7 @@
              xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
              xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="Covid_Info.Views.MainPage"
-             Visual="Material"
-             Title="{Binding Title}">
+             Visual="Material">
 
     <views:TemplatePage.Resources>
         <ResourceDictionary>
@@ -22,150 +22,113 @@
         </ResourceDictionary>
     </views:TemplatePage.Resources>
 
-    <StackLayout Spacing="0">
+    <AbsoluteLayout>
+        <RefreshView  Command="{Binding refreshCommand}" IsRefreshing="{Binding IsRefreshing}" 
+                  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 
-        <!--my navigation bar-->
-        <pkv:PancakeView Padding="15,0,0,0" Margin="0" BackgroundColor="{StaticResource CustomNavBarColor}" >
-            <Grid RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" ColumnSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
+                <Grid RowDefinitions="*,auto" RowSpacing="0"
+              BackgroundColor="{StaticResource BackgroundColorPage}">
+                    <ScrollView>
+                        <Grid RowDefinitions="auto,*">
+                            <Grid RowDefinitions="auto, auto">
+                                <!--covid banner-->
+                                <pkv:PancakeView Grid.Row="0" CornerRadius="0"  Padding="5,0,5,6" Margin="0" BackgroundColor="{StaticResource CustomNavBarColor}">
+                                    <Grid ColumnDefinitions="auto,*" 
+                              RowDefinitions="auto">
+                                        <Image Grid.Column="0" Grid.Row="0" Source="fcovid" Aspect="AspectFit" WidthRequest="75" Margin="3,0" />
+                                        <Grid Grid.Column="1" Grid.Row="0"
+                                RowDefinitions="auto,auto">
+                                            <Label Grid.Row="0" Text="{i18n:Translate bannerTitle}"  TextColor="White"  FontSize="Small" FontAttributes="Bold" />
+                                            <Label Grid.Row="1" Text="{i18n:Translate bannerDescription}"  TextColor="White"  FontSize="Small" LineBreakMode="WordWrap"/>
+                                        </Grid>
+                                    </Grid>
+                                </pkv:PancakeView>
 
-                    <Label Grid.Column="0" 
-                           Text="{Binding Title}"
-                           FontSize="Large"
-                           Padding="0"
-                           TextColor="{StaticResource WhiteColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontAttributes="Bold"/>
-                    <Icons:IconLabel Grid.Column="1"
-                                     Text="fas-sync-alt"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand"  Margin="0">
-                        <Icons:IconLabel.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding UpdateData}"/>
-                        </Icons:IconLabel.GestureRecognizers>
-                    </Icons:IconLabel>
-                    <Icons:IconLabel Grid.Column="2"
-                                     Text="fas-info-circle"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand"  Margin="0">
-                        <Icons:IconLabel.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding navDevInfo}"/>
-                        </Icons:IconLabel.GestureRecognizers>
-                    </Icons:IconLabel>
+                                <!--advices and symt-->
+                                <contentViews:AdvicesAndSymp Grid.Row="1" Margin="20,10"/>
+                            </Grid>
+                            <StackLayout Grid.Row="1" IsVisible="{Binding IsVisibleMainPage}"  Margin="20,10,20,20" Spacing="25">
 
-                </Grid>
-            </Grid>
-        </pkv:PancakeView>
-        <!--main content-->
-        <StackLayout Margin="-5,-3,-5,0" Spacing="0" VerticalOptions="FillAndExpand">
-            <ScrollView>
-                <StackLayout>
-                    <Frame CornerRadius="0"  Padding="20,0" Margin="0" BackgroundColor="#1a1d3e">
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="fcovid" Aspect="AspectFit" WidthRequest="100"/>
-                            <Label Text="Sigue las indicaciones que proporcionan las instituciones oficiales de salud y gubernamentales." VerticalOptions="Center" Padding="10,5" TextColor="White" HorizontalTextAlignment="Center" FontSize="Small" />
-                        </StackLayout>
-                    </Frame>
-                    <ScrollView Padding="20,5" Margin="0" IsVisible="True">
-                        <Grid RowSpacing="15">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-
-                            <!--Notification panel-->
-                            <!--<contentViews:UpdaterViewer Grid.Row="0" IsVisible="{Binding IsVisibleUpdaterViwer}"/>-->
-
-                            <!--current country info-->
-                            <contentViews:MyCountry Grid.Row="1" IsVisible="{Binding IsVisibleMyCountry}"/>
-                            <!--global info-->
-                            <contentViews:GlobalInfo Grid.Row="2"/>
+                                <!--<Label Text="{Binding MyTimer}" FontSize="Large" TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="20"/>-->
+                                <!--current country info-->
+                                <contentViews:MyCountry IsVisible="{Binding IsVisibleMyCountry}"/>
+                                <!--global info-->
+                                <contentViews:GlobalInfo />
 
 
-                            <Frame Grid.Row="3"   Padding="0" CornerRadius="2">
-                                <Grid Margin="10,5" ColumnSpacing="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="auto"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <lottie:AnimationView
-                            Grid.Column="0"
-                            WidthRequest="70" HeightRequest="70" 
-                            Margin="0"
-                            x:Name="LottieView" 
-                            Animation="globe-rotation.json" 
-                            Loop="True" 
-                            AutoPlay="True"
-                            VerticalOptions="FillAndExpand"
-                            HorizontalOptions="FillAndExpand" />
-
-                                    <Label Grid.Column="1" Text="{i18n:Translate countriesStats}"
-                        FontAttributes="Bold"
-                           FontSize="Body"
-                        TextColor="{StaticResource BaseFontColor}"
-                           HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="Center"/>
-                                    <Icons:IconLabel Grid.Column="2"
+                                <!--all countries-->
+                                <pkv:PancakeView BackgroundColor="{StaticResource CustomNavBarColor}" CornerRadius="7">
+                                    <pkv:PancakeView.Shadow>
+                                        <pkv:DropShadow Color="#000000" Opacity="0.3" Offset="10,10" BlurRadius="10" />
+                                    </pkv:PancakeView.Shadow>
+                                    <Grid>
+                                        <Image Source="countries" Aspect="AspectFill" HorizontalOptions="FillAndExpand"/>
+                                        <Grid BackgroundColor="{StaticResource CustomNavBarColor}" Opacity="0.7"  VerticalOptions="End">
+                                            <Grid Padding="15,5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Padding="0" Text="View statistic from each country" TextColor="{StaticResource WhiteColor}" FontSize="Body"/>
+                                                <Icons:IconLabel Grid.Column="1"
                                Text="fas-arrow-circle-right"
                                FontSize="Large"
                                FontAttributes="Bold"
-                               TextColor="{StaticResource BaseFontColor}"
-                               HorizontalOptions="End"
-                                         VerticalOptions="Center"/>
-                                </Grid>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding navAllCountries}"/>
-                                </Frame.GestureRecognizers>
-                            </Frame>
+                               TextColor="{StaticResource WhiteColor}"
+                                         VerticalOptions="Center" />
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <pkv:PancakeView.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding navAllCountries}"/>
+                                    </pkv:PancakeView.GestureRecognizers>
+                                </pkv:PancakeView>
 
-                            <!--most affeccted countries-->
-                            <contentViews:MostAffectedCountries Grid.Row="4" IsVisible="{Binding IsVisibleMAC}"/>
-
-
-
+                                <!--most affeccted countries-->
+                                <contentViews:MostAffectedCountries  IsVisible="{Binding IsVisibleMAC}"/>
+                            </StackLayout>
+                            <contentViews:LoadingData Grid.Row="1" IsVisible="{Binding IsVisibleLoadingPage}" />
                         </Grid>
+
                     </ScrollView>
-                    <contentViews:LoadingData IsVisible="False" VerticalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </ScrollView>
-            <Grid Margin="0" Padding="10" VerticalOptions="EndAndExpand" IsVisible="True" BackgroundColor="#cfd8dc">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <pkv:PancakeView >
-                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand">
-                        <Icons:IconLabel x:Name="attentionJSON"
+
+
+                    <!--BTN External info-->
+                    <Grid Grid.Row="1" Margin="0" Padding="10" VerticalOptions="EndAndExpand" IsVisible="True" BackgroundColor="#cfd8dc">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <pkv:PancakeView >
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                <Icons:IconLabel x:Name="attentionJSON"
                                Text="fas-angle-up"
                                FontSize="Title"
                                FontAttributes="Bold"
                                TextColor="{StaticResource BaseFontColor}" VerticalOptions="Center" HorizontalOptions="Center" Margin="0"/>
-                        <Label Text="Presiona para conocer mas de COVID19" FontSize="Body" VerticalOptions="Center" TextColor="{StaticResource BaseFontColor}"/>
-                    </StackLayout>
-                    <pkv:PancakeView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding goExternalInfo}"/>
-                    </pkv:PancakeView.GestureRecognizers>
-                </pkv:PancakeView>
-            </Grid>
-            
-        </StackLayout>
-    </StackLayout>
+                                <Label Text="{i18n:Translate btnExternalInfo}" FontSize="Body" VerticalOptions="Center" TextColor="{StaticResource BaseFontColor}"/>
+                            </StackLayout>
+                            <pkv:PancakeView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goExternalInfo}"/>
+                            </pkv:PancakeView.GestureRecognizers>
+                        </pkv:PancakeView>
+                    </Grid>
+
+                </Grid>
+
+        </RefreshView>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"  AbsoluteLayout.LayoutFlags="All" BackgroundColor="#661a1d3e" IsVisible="{Binding SFIndicator}">
+            <busyindicator:SfBusyIndicator x:Name="busyindicator" 
+                                           IsVisible="{Binding SFIndicator}"
+                                           IsBusy="{Binding SFIndicator}"
+                                           AnimationType="RollingBall"
+                                           HeightRequest="100"
+                                           WidthRequest="100"
+                                           BackgroundColor="Transparent"
+                                           TextColor="White" TextSize="20"
+                                           Title="{i18n:Translate loading}"/> 
+        </Grid>
+       
+    </AbsoluteLayout>
 
 
 </views:TemplatePage>

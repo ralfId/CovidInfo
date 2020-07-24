@@ -27,8 +27,6 @@ namespace Covid_Info.Data
             }
         }
 
-
-
         private SQLiteAsyncConnection _connection;
 
         public DBConnection()
@@ -37,6 +35,8 @@ namespace Covid_Info.Data
             _connection.CreateTableAsync<CurrentCountry>().Wait();
             _connection.CreateTableAsync<GeoCoords>().Wait();
             _connection.CreateTableAsync<MyCountry>().Wait();
+            _connection.CreateTableAsync<Advices>().Wait();
+            _connection.CreateTableAsync<Symptoms>().Wait();
         }
 
 
@@ -154,6 +154,61 @@ namespace Covid_Info.Data
                 try
                 {
                     return this._connection.Table<GeoCoords>().ToListAsync();
+                }
+                catch (Exception ex)
+                {
+                    Debug.Print(ex.ToString());
+                    return null;
+                }
+            }
+        }
+
+        public Task<bool> insertAllAsync(IEnumerable<object> items)
+        {
+            lock(locker)
+            {
+                try
+                {
+                    if (_connection.InsertAllAsync(items).Result == 1)
+                    {
+                        return Task.FromResult(true);
+                    }
+                    else
+                    {
+                        return Task.FromResult(false);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.Print(ex.ToString());
+                    return Task.FromResult(false);
+                }
+            }
+        }
+
+        public Task<List<Advices>> getAdvices()
+        {
+            lock (locker)
+            {
+                try
+                {
+                    return this._connection.Table<Advices>().ToListAsync();
+                }
+                catch (Exception ex)
+                {
+                    Debug.Print(ex.ToString());
+                    return null;
+                }
+            }
+        }
+
+        public Task<List<Symptoms>> getSymptoms()
+        {
+            lock (locker)
+            {
+                try
+                {
+                    return this._connection.Table<Symptoms>().ToListAsync();
                 }
                 catch (Exception ex)
                 {

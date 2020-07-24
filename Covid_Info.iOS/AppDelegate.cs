@@ -1,3 +1,4 @@
+using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Syncfusion.SfDataGrid.XForms.iOS;
 using Syncfusion.SfChart.XForms.iOS.Renderers;
 using Com.OneSignal;
@@ -32,6 +33,7 @@ namespace Covid_Info.iOS
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjM5NzIwQDMxMzgyZTMxMmUzMFlNbUVjYTNzeGM3Z053YnEzMjR4SDMwa2E5YmJBdUo3L1FjTEIvbThJbW89");
             global::Rg.Plugins.Popup.Popup.Init();
 global::Xamarin.Forms.Forms.Init();
+SfBusyIndicatorRenderer.Init();
 SfDataGridRenderer.Init();
             SfChartRenderer.Init();
             global::Xamarin.Forms.FormsMaterial.Init();

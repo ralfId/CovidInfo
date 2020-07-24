@@ -6,6 +6,7 @@ Lottie.Android
 Lottie.Forms
 Microcharts.Droid
 OneSignal.Android.Binding
+Plugin.Connectivity
 Plugin.Iconize
 Plugin.Iconize.FontAwesome
 Prism.Forms
@@ -17,6 +18,8 @@ SkiaSharp.Views.Forms
 SQLitePCLRaw.lib.e_sqlite3.android
 Square.OkIO
 Syncfusion.Core.XForms.Android
+Syncfusion.SfBusyIndicator.Android
+Syncfusion.SfBusyIndicator.XForms.Android
 Syncfusion.SfChart.XForms.Android
 Syncfusion.SfComboBox.XForms.Android
 Syncfusion.SfDataGrid.XForms.Android

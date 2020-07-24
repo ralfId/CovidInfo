@@ -37,8 +37,8 @@
                                FontAttributes="Bold"
                                TextColor="{StaticResource BaseFontColor}"
                                VerticalOptions="Center"/>
-                        <Frame Grid.Column="1" BackgroundColor="{StaticResource BaseFontColor}" Padding="10,5">
-                            <Label Text="View more"
+                        <Frame Grid.Column="1" BackgroundColor="{StaticResource CustomNavBarColor}" Padding="10,5">
+                            <Label Text="{i18n:Translate viewmore}"
                                    FontSize="Default"
                                    FontAttributes="Bold"
                                    TextColor="White"
@@ -218,7 +218,7 @@
                                TextColor="{StaticResource BaseFontColor}"
                                HorizontalOptions="End"/>
                 </Grid>
-                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                <BoxView BackgroundColor="LightGray" HeightRequest="1"/>
             </StackLayout>
         </Frame>
     </ContentView.Content>

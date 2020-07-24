@@ -1,20 +1,19 @@
-﻿using Covid_Info.Helpers.CovertModels;
+﻿using Acr.UserDialogs;
+using Covid_Info.Helpers;
+using Covid_Info.Helpers.CovertModels;
 using Covid_Info.Models;
 using Covid_Info.Services;
 using Covid_Info.Utils;
-using Microcharts;
+using ImTools;
+using Plugin.Connectivity;
 using Prism.Commands;
 using Prism.Navigation;
 using Resx;
-using SkiaSharp;
-using Syncfusion.SfChart.XForms;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -27,11 +26,12 @@ namespace Covid_Info.ViewModels
 
         private bool IsThereData = false;
         private List<Country> lstCountriesInfo;
-        private ObservableCollection<Country> _obCountryInfo;
+        private ObservableCollection<Country> _obMostCountries;
         private readonly IApiService _apiService;
         private readonly ILocationServices _locationServices;
         private readonly IConverModels _converModels;
         private readonly INavigationService _navigationService;
+        private readonly IApiRequest _apiRequest;
         private GlobalInfo _globalInfo;
         private Country _country;
         private Country _myCountryInfo;
@@ -44,17 +44,19 @@ namespace Covid_Info.ViewModels
         private string _loadMessage;
         private string _animationJSON;
         private bool _isVisibleSVINFO;
-
-        
+       // bool isBuilt;
+        bool hasData;
+        string countryname;
+        string countryISOcode;
 
         public MainPageViewModel(
             INavigationService navigationService,
             IApiService apiService,
             ILocationServices locationServices,
-            IConverModels converModels)
+            IConverModels converModels,
+            IApiRequest apiRequest)
             : base(navigationService, apiService)
         {
-
 
             try
             {
@@ -62,30 +64,31 @@ namespace Covid_Info.ViewModels
                 _locationServices = locationServices;
                 _converModels = converModels;
                 _navigationService = navigationService;
+                _apiRequest = apiRequest;
 
                 Title = "COVID-INFO";
                 lstCountriesInfo = new List<Country>();
                 
 
                 navAllCountries = new DelegateCommand(async () => await _navigationService.NavigateAsync("AllCountries"));
-                UpdateData = new DelegateCommand(async () => await ReloadAllData());
+                UpdateData = new DelegateCommand(async () => await loadDataValidation());
                 DownloaderCommand = new DelegateCommand(async ()=> await OpenUrlUpdater());
                 goExternalInfo = new DelegateCommand(async ()=> await _navigationService.NavigateAsync("ExternalInfo"));
                 goMyCountryDetails = new DelegateCommand(async () => await navContryDetails());
                 goGlobalDetails = new DelegateCommand(async () => await navGlobalDetails());
-
-                ReloadAllData();
-
+                goAdvices = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Advices"));
+                goASymptoms = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Symptoms"));
+                refreshCommand = new DelegateCommand(async () => await refreshUIonRefresViewCommand());
+                Task.Run(async () => { await loadDataValidation(); });
+               
             }
             catch (Exception ex)
             {
                 Debug.Print(ex.ToString());
             }
 
-            
         }
 
-       
 
         public DelegateCommand navAllCountries { get; private set; }
         public DelegateCommand UpdateData { get; private set; }
@@ -93,10 +96,31 @@ namespace Covid_Info.ViewModels
         public DelegateCommand goMyCountryDetails { get; private set; }
         public DelegateCommand goGlobalDetails { get; private set; }
         public DelegateCommand goExternalInfo { get; private set; }
+        public DelegateCommand goAdvices { get; private set; }
+        public DelegateCommand goASymptoms { get; private set; }
+        public DelegateCommand refreshCommand { get; private set; }
 
 
         #region PUBLIC PROPERTIES
+        private bool _sfIndicator;
+        public bool SFIndicator
+        {
+            get { return _sfIndicator; }
+            set { SetProperty(ref _sfIndicator, value); }
+        }
+        private bool _isRefrshing;
+        public bool IsRefreshing
+        {
+            get { return _isRefrshing; }
+            set { SetProperty(ref _isRefrshing, value); }
+        }
 
+        private string _timer;
+        public string MyTimer
+        {
+            get { return _timer; }
+            set { SetProperty(ref _timer, value); }
+        }
         public bool IsVisibleSVINFO
         {
             get { return _isVisibleSVINFO; }
@@ -146,10 +170,10 @@ namespace Covid_Info.ViewModels
             get { return _isvisibleUpdaterViwer; }
             set { SetProperty(ref _isvisibleUpdaterViwer, value); }
         }
-        public ObservableCollection<Country> obCountryInfo
+        public ObservableCollection<Country> ObMostaAffectedCountries
         {
-            get { return _obCountryInfo; }
-            set { SetProperty(ref _obCountryInfo, value); }
+            get { return _obMostCountries; }
+            set { SetProperty(ref _obMostCountries, value); }
         }
 
         public GlobalInfo globalInfo
@@ -182,45 +206,77 @@ namespace Covid_Info.ViewModels
 
         #endregion
 
+        //public  override void OnNavigatedTo(INavigationParameters parameters)
+        //{
+        //    base.OnNavigatedTo(parameters);
+        //    if(isBuilt)  Task.Run(async () => { await refresUI(); });
+        //    isBuilt = true;
+        //}
 
-        //get global info data
-        async Task getGlobalInfo()
+        private async Task loadDataValidation()
         {
             try
             {
-                var urlglobalninja = Constants.BaseUrl_corona_lmao_ninja + Constants.GetGlobal_corona_lmao_ninja;
-                var response = await _apiService.Get<GlobalInfo>(urlglobalninja);
-                if (response != null)
+
+                SFIndicator = true;
+                var InterCon = Connectivity.NetworkAccess;
+
+                AnimationJSON = string.Empty;
+                LoadMessage = string.Empty;
+                IsVisibleLoadingPage = false;
+                IsVisibleMainPage = false;
+
+                if (InterCon == NetworkAccess.None)
                 {
-                    globalInfo = response;
-                    IsThereData = true;
+                    AnimationJSON = Constants.NoConnectionJSON;
+                    LoadMessage = Resource.noInter;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleMainPage = false;
+                    SFIndicator = false;
+                    return;
                 }
-                
-                //TODO local update logic
-                //var upd = await SecureStorage.GetAsync(Constants.urlUpdater);
-                //if (!string.IsNullOrEmpty(upd) && upd == Constants.IsUpdatedNO)
-                //{
-                //    IsVisibleUpdaterViwer = true;                         
-                //}
+
+                await loadData();
+
+                if (globalInfo == null  && !lstCountriesInfo.Any())
+                {
+                    AnimationJSON = Constants.LimitedConnectionJSON;
+                    LoadMessage = Resource.limitedConnection;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleMainPage = false;
+                    SFIndicator = false;
+                    return;
+                }
+
+                IsVisibleLoadingPage = false;
+                IsVisibleMainPage = true;
+                LoadMessage = string.Empty;
+                AnimationJSON = string.Empty;
+                SFIndicator = false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error ------" + ex.Message.ToString());
+                Debug.Print(ex.ToString());
             }
         }
 
-        //get most affected countries
-        async Task getMostAffectedCountries()
+        private async Task loadData()
         {
 
             try
             {
-                var urlcountriesninja = Constants.BaseUrl_corona_lmao_ninja + Constants.GetCountries_corona_lmao_ninja;
-                 var countriesList = await _apiService.Get<List<Country>>(urlcountriesninja);
-
-                if (countriesList.Count > 0)
+                //GET GLOBAL INGO
+                var globalData = await _apiRequest.globalInfoAPIRequest();
+                if (globalData != null)
                 {
-                    IsThereData = true;
+                    globalInfo = globalData;
+                }
+
+                //GET ALL COUNTRIES INFO
+                var countriesList = await _apiRequest.countriesInfoAPIRequest();
+
+                if (countriesList.Any())
+                {
                     var orderList = countriesList.OrderByDescending(d => d.deaths).Take(5).Select(c => new Country
                     {
                         country = c.country,
@@ -228,28 +284,25 @@ namespace Covid_Info.ViewModels
                         countryInfo = new Countryinfo { flag = c.countryInfo.flag }
                     });
 
-                    obCountryInfo = new ObservableCollection<Country>(orderList);
+                    ObMostaAffectedCountries = new ObservableCollection<Country>(orderList);
                     if (orderList.Any()) IsVisibleMAC = true;
 
                     var placemark = await _locationServices.GetMyCountryInfo();
 
                     if (placemark != null)
                     {
-
+                        countryname = placemark.CountryName;
+                        countryISOcode = placemark.CountryCode;
                         IsVisibleMyCountry = true;
                         MyCountryInfo = countriesList.FirstOrDefault(c => c.country == placemark.CountryName || c.countryInfo.iso2 == placemark.CountryCode);
-                        //MyCountryInfo = _converModels.converCountryToCurrentCountry(countryExistInApy);
 
-
-                        
-
-                        if (MyCountryInfo.country.ToLower() == Constants.ElSalvador.ToLower())
-                        {
-                            IsVisibleSVINFO = true;
-                        }
+                        if (MyCountryInfo.country.ToLower() == Constants.ElSalvador.ToLower()) IsVisibleSVINFO = true;
 
                     }
                 }
+
+                //validate if data on bindable properties
+                if (globalData != null && countriesList.Any()) hasData = true;
 
             }
             catch (Exception ex)
@@ -258,57 +311,44 @@ namespace Covid_Info.ViewModels
             }
         }
 
-        
-
-        //Update data Data
-        private async Task ReloadAllData()
+        private async Task refreshUIonRefresViewCommand()
         {
-            var InterCon = Connectivity.NetworkAccess;
-
-            AnimationJSON = Constants.loadingJSON;
-            LoadMessage = Resource.updating;
-            IsVisibleLoadingPage = true;
-            IsVisibleMainPage = false;
-
-            if (InterCon == NetworkAccess.None)
+            if (hasData)
             {
-                AnimationJSON = Constants.NoConnectionJSON;
-                LoadMessage = Resource.noInter;
-                IsVisibleLoadingPage = true;
-                IsVisibleMainPage = false;
-                return;
+                IsRefreshing = true;
+                if (globalInfo == null && !lstCountriesInfo.Any() )
+                {
+                    await loadData();
+                }
+                await refresUI();
+                IsRefreshing = false;
             }
-            if (InterCon == NetworkAccess.ConstrainedInternet)
-            {
-                AnimationJSON = Constants.LimitedConnectionJSON;
-                LoadMessage = Resource.limitedConnection;
-                IsVisibleLoadingPage = true;
-                IsVisibleMainPage = false;
-                return;
-            }
-            var mAC = getMostAffectedCountries();
-            var gGI = getGlobalInfo();
+            return;
+        }
 
-            await Task.WhenAll(mAC, gGI);
+        private async Task refresUI()
+        {
+            int nn = 0;
 
-            if (!IsThereData)
+            var globalInfoUI = await _apiRequest.globalInfoAPIRequest();
+            var countriesUI = await _apiRequest.countriesInfoAPIRequest();
+            if (globalInfoUI.cases > 0)
             {
-                AnimationJSON = Constants.ContactDev;
-                LoadMessage = Resource.contatDeveloper;
-                IsVisibleLoadingPage = true;
-                IsVisibleMainPage = false;
-                return;
+                globalInfo = globalInfoUI;
             }
 
-            IsVisibleLoadingPage = false;
-            IsVisibleMainPage = true;
-            LoadMessage = string.Empty;
-            AnimationJSON = string.Empty;
+            if (countriesUI.Any())
+            {
+                ObMostaAffectedCountries = new ObservableCollection<Country>(countriesUI.OrderByDescending(d => d.deaths).Take(5));
+                MyCountryInfo = countriesUI.FirstOrDefault(n => n.country == countryname || n.countryInfo.iso2 == countryISOcode);
+            }
+            MyTimer = nn++.ToString();
+
         }
 
 
-  
-        
+
+        #region methods for navigation to external info
         //navigate to GlobalDetails
         private async Task navGlobalDetails()
         {
@@ -316,6 +356,7 @@ namespace Covid_Info.ViewModels
             navParameters.Add("globaldetails", globalInfo);
             await _navigationService.NavigateAsync("GlobalDetails", navParameters);
         }
+
         //Navigate to MyCountryDetails
         private async Task navContryDetails()
         {
@@ -335,7 +376,8 @@ namespace Covid_Info.ViewModels
             });
             IsVisibleUpdaterViwer = false;
         }
+        #endregion
 
-
+       
     }
 }

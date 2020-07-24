@@ -1,55 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com" 
-             xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             xmlns:microCharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
-             xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
-             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
-             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-             xmlns:i18n="clr-namespace:Resx;assembly=Resx"
-             prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Covid_Info.Views.GlobalDetails"
-                 Visual="Material">
+<pages:PopupPage
+    x:Class="Covid_Info.Views.GlobalDetails"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:microCharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Visual="Material">
 
-    
-   
+
+
     <pages:PopupPage.Animation>
-        <animations:ScaleAnimation 
-            PositionIn="Center"
-            PositionOut="Bottom"
-            ScaleIn="1.2"
-            ScaleOut="0.8"
+        <animations:ScaleAnimation
             DurationIn="400"
             DurationOut="300"
             EasingIn="SinOut"
             EasingOut="SinIn"
-            HasBackgroundAnimation="True"/>
+            HasBackgroundAnimation="True"
+            PositionIn="Top"
+            PositionOut="Bottom"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
     </pages:PopupPage.Animation>
 
-    <pkv:PancakeView BackgroundColor="{StaticResource BackgroundColorPage}"  CornerRadius="10,10,0,0">
+    <pkv:PancakeView BackgroundColor="{StaticResource BackgroundColorPage}" CornerRadius="10,10,0,0">
         <pkv:PancakeView.GestureRecognizers>
-            <SwipeGestureRecognizer Direction="Down" Command="{Binding CloseGlobalDetails}"/>
+            <SwipeGestureRecognizer Command="{Binding ClosePopup}" Direction="Down" />
         </pkv:PancakeView.GestureRecognizers>
 
-        <StackLayout>
+        <StackLayout Spacing="0">
 
-            <pkv:PancakeView Padding="10" HasShadow="True" >
-                <pkv:PancakeView BackgroundColor="DarkGray" HeightRequest="5" WidthRequest="50" HorizontalOptions="Center" CornerRadius="20"/>
+            <pkv:PancakeView Padding="0,5,0,0" HeightRequest="30">
+                <StackLayout Margin="0" Padding="0">
+                    <pkv:PancakeView
+                        BackgroundColor="{StaticResource BaseFontColor}"
+                        CornerRadius="20"
+                        HeightRequest="5"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="70" />
+                    <BoxView
+                        BackgroundColor="#cfd8dc"
+                        HeightRequest="2"
+                        VerticalOptions="EndAndExpand" />
+                </StackLayout>
                 <pkv:PancakeView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CloseGlobalDetails}"/>
+                    <TapGestureRecognizer Command="{Binding ClosePopup}" />
                 </pkv:PancakeView.GestureRecognizers>
             </pkv:PancakeView>
 
-            <pkv:PancakeView BackgroundColor="{StaticResource WhiteColor}" Padding="5">
-                <Grid Padding="15,0">
+            <pkv:PancakeView Padding="5" BackgroundColor="{StaticResource WhiteColor}">
+                <Grid Padding="15,5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.Column="0" Text="Global Report" TextColor="{StaticResource BaseFontColor}" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <Image Grid.Column="1" Source="global" Aspect="AspectFit" WidthRequest="125" HorizontalOptions="End"/>
+                    <Label
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text="Global Report"
+                        TextColor="{StaticResource BaseFontColor}"
+                        VerticalOptions="Center" />
+                    <Image
+                        Grid.Column="1"
+                        Aspect="AspectFit"
+                        HeightRequest="100"
+                        HorizontalOptions="End"
+                        Source="global"
+                        WidthRequest="100" />
                 </Grid>
             </pkv:PancakeView>
 
@@ -57,98 +83,269 @@
                 <StackLayout>
 
                     <StackLayout Margin="10,0" Padding="5,20,5,0">
-                        <!--Grid today reports-->
-                        <Label Text="{i18n:Translate 24Report}" FontSize="Body" TextColor="{StaticResource BaseFontColor}" FontAttributes="Bold" Margin="5,0"/>
+                        <!--  Grid today reports  -->
+                        <Label
+                            Margin="5,0"
+                            FontAttributes="Bold"
+                            FontSize="Body"
+                            Text="{i18n:Translate 24Report}"
+                            TextColor="{StaticResource BaseFontColor}" />
                         <Frame Padding="10">
                             <StackLayout Spacing="0">
 
-                                <!--recovered-->
+                                <!--  recovered  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate recoveredCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.todayRecovered, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate recoveredCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.todayRecovered, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
-                                <!--cases/active-->
+                                <!--  cases/active  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate activeCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.todayCases, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate activeCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.todayCases, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
 
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
-                                <!--deaths-->
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
+                                <!--  deaths  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate deathsCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="20,5,5,5" Text="{Binding GlobalDetails.todayDeaths, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate deathsCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="20,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.todayDeaths, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
 
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
                             </StackLayout>
                         </Frame>
 
 
 
-                        <!--Grid general reports-->
-                        <Label Text="Total cases" FontSize="Body" TextColor="{StaticResource BaseFontColor}" FontAttributes="Bold" Margin="5,0"/>
+                        <!--  Grid general reports  -->
+                        <Label
+                            Margin="5,0"
+                            FontAttributes="Bold"
+                            FontSize="Body"
+                            Text="Total cases"
+                            TextColor="{StaticResource BaseFontColor}" />
                         <Frame Padding="10">
-                            <StackLayout Spacing="0" >
+                            <StackLayout Spacing="0">
 
-                                <!--cases-->
+                                <!--  cases  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate confirmedCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.cases, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate confirmedCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.cases, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
-                                <!--recovered-->
+                                <!--  recovered  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label  Padding="5" Text="{i18n:Translate recoveredCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.recovered, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate recoveredCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.recovered, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
-                                <!--active-->
+                                <!--  active  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate activeCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.active, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate activeCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.active, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
-                                <!--critical-->
+                                <!--  critical  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="critical" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.critical, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="critical"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.critical, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
-                                <!--deaths-->
+                                <!--  deaths  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate deathsCases}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.deaths, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate deathsCases}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.deaths, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
-                                <!--tests-->
+                                <!--  tests  -->
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="5" Text="{i18n:Translate covidTests}" FontSize="Body" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Label Padding="10,5,5,5" Text="{Binding GlobalDetails.tests, StringFormat='{0:0,0}'}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+                                    <Label
+                                        Padding="5"
+                                        FontSize="Body"
+                                        Text="{i18n:Translate covidTests}"
+                                        TextColor="{StaticResource BaseFontColor}" />
+                                    <Label
+                                        Padding="10,5,5,5"
+                                        FontSize="Body"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding GlobalDetails.tests, StringFormat='{0:0,0}'}"
+                                        TextColor="{StaticResource BaseFontColor}" />
                                 </StackLayout>
-                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2"/>
+                                <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
                             </StackLayout>
                         </Frame>
 
-                        <!--cases chart-->
+                        <!--  cases chart  -->
                     </StackLayout>
-                    <StackLayout Margin="0,0,0,20">
-                        <Label Text="Porcentaje de casos" FontSize="Body" TextColor="{StaticResource BaseFontColor}" FontAttributes="Bold" Margin="21,0"/>
-                        <microCharts:ChartView Chart="{Binding GlobalChart}" HeightRequest="175" />
+                    <StackLayout Margin="0,0,0,20" Spacing="30">
+                        <StackLayout>
+                            <Label
+                                Margin="21,0"
+                                FontAttributes="Bold"
+                                FontSize="Body"
+                                Text="Porcentaje de casos"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <microCharts:ChartView Chart="{Binding GlobalChart}" HeightRequest="175" />
+                        </StackLayout>
+
+
+                        <StackLayout>
+                            <Label
+                                Margin="21,0"
+                                FontAttributes="Bold"
+                                FontSize="Body"
+                                Text="Acumulado de casos activos"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Label
+                                Margin="21,0"
+                                FontSize="Body"
+                                TextColor="{StaticResource BaseFontColor}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Desde: " />
+                                        <Span Text="{Binding startDate}" />
+                                        <Span Text="&#10;" />
+                                        <Span Text="Hasta: " />
+                                        <Span Text="{Binding endDate}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <microCharts:ChartView Chart="{Binding casesHistoryChart}" HeightRequest="175" />
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label
+                                Margin="21,0"
+                                FontAttributes="Bold"
+                                FontSize="Body"
+                                Text="Acumulado de casos recuperados"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Label
+                                Margin="21,0"
+                                FontSize="Body"
+                                TextColor="{StaticResource BaseFontColor}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Desde: " />
+                                        <Span Text="{Binding startDate}" />
+                                        <Span Text="&#10;" />
+                                        <Span Text="Hasta: " />
+                                        <Span Text="{Binding endDate}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <microCharts:ChartView Chart="{Binding recoveredHistoryChart}" HeightRequest="175" />
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label
+                                Margin="21,0"
+                                FontAttributes="Bold"
+                                FontSize="Body"
+                                Text="Acumulado de muertes"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Label
+                                Margin="21,0"
+                                FontSize="Body"
+                                TextColor="{StaticResource BaseFontColor}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Desde: " />
+                                        <Span Text="{Binding startDate}" />
+                                        <Span Text="&#10;" />
+                                        <Span Text="Hasta: " />
+                                        <Span Text="{Binding endDate}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <microCharts:ChartView Chart="{Binding deathsHistoryChart}" HeightRequest="175" />
+                        </StackLayout>
                     </StackLayout>
 
                 </StackLayout>
             </ScrollView>
-            
+
         </StackLayout>
     </pkv:PancakeView>
 </pages:PopupPage>

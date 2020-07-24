@@ -17,16 +17,16 @@ namespace Covid_Info.Views {
     public partial class MainPage : global::Covid_Info.Views.TemplatePage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Lottie.Forms.AnimationView LottieView;
+        private global::Plugin.Iconize.IconLabel attentionJSON;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Plugin.Iconize.IconLabel attentionJSON;
+        private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            LottieView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Lottie.Forms.AnimationView>(this, "LottieView");
             attentionJSON = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.Iconize.IconLabel>(this, "attentionJSON");
+            busyindicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>(this, "busyindicator");
         }
     }
 }

@@ -79,6 +79,231 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Do not leave your home except to seek medical care, stock up on food, medicine or other important household items.
+        /// </summary>
+        public static string AdvD1 {
+            get {
+                return ResourceManager.GetString("AdvD1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Keep at least 1 meter (3 feet) away from you and others.
+        /// </summary>
+        public static string AdvD2 {
+            get {
+                return ResourceManager.GetString("AdvD2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Use face masks in public places. The use of masks should be part of a comprehensive strategy that includes measures to eliminate transmission and save lives; the use of a mask is not sufficient to provide an adequate level of protection against COVID-19.
+        /// </summary>
+        public static string AdvD3 {
+            get {
+                return ResourceManager.GetString("AdvD3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hands touch many surfaces and can lift viruses. Once contaminated, the hands can transfer the virus to the eyes, nose, or mouth.
+        /// </summary>
+        public static string AdvD4 {
+            get {
+                return ResourceManager.GetString("AdvD4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cover your mouth and nose with a tissue when you cough or sneeze, or use the inside of your elbow.
+        /// </summary>
+        public static string AdvD5 {
+            get {
+                return ResourceManager.GetString("AdvD5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Wash your hands often with soap and water for at least 20 seconds, especially after you&apos;ve been in a public place, or after blowing your nose, coughing, or sneezing.
+        /// </summary>
+        public static string AdvD6 {
+            get {
+                return ResourceManager.GetString("AdvD6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Use an alcohol-based hand sanitizer with at least 60% alcohol, and cover the entire surface of your hands by rubbing them together until dry.
+        /// </summary>
+        public static string AdvD7 {
+            get {
+                return ResourceManager.GetString("AdvD7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Frequently clean and disinfect daily contact surfaces, i.e. tables, door knobs, light faucets, countertops, handles, desks, telephones, keyboards, toilets, faucets, and sinks.
+        /// </summary>
+        public static string AdvD8 {
+            get {
+                return ResourceManager.GetString("AdvD8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Watch for the onset of symptoms. Follow the care instructions from your health care provider and local health department. Local health authorities will give you directions on how to check your symptoms and report the information.
+        /// </summary>
+        public static string AdvD9 {
+            get {
+                return ResourceManager.GetString("AdvD9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Advices.
+        /// </summary>
+        public static string advices {
+            get {
+                return ResourceManager.GetString("advices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Stay at home.
+        /// </summary>
+        public static string AdvT1 {
+            get {
+                return ResourceManager.GetString("AdvT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Practice social distancing.
+        /// </summary>
+        public static string AdvT2 {
+            get {
+                return ResourceManager.GetString("AdvT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Wear a face mask.
+        /// </summary>
+        public static string AdvT3 {
+            get {
+                return ResourceManager.GetString("AdvT3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Avoid touching your eyes, nose and mouth.
+        /// </summary>
+        public static string AdvT4 {
+            get {
+                return ResourceManager.GetString("AdvT4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cover your nose and mouth when you cough and sneeze.
+        /// </summary>
+        public static string AdvT5 {
+            get {
+                return ResourceManager.GetString("AdvT5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Wash your hands frequently.
+        /// </summary>
+        public static string AdvT6 {
+            get {
+                return ResourceManager.GetString("AdvT6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Use alcohol or alcohol gel.
+        /// </summary>
+        public static string AdvT7 {
+            get {
+                return ResourceManager.GetString("AdvT7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Clean and disinfect.
+        /// </summary>
+        public static string AdvT8 {
+            get {
+                return ResourceManager.GetString("AdvT8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Monitor your health daily.
+        /// </summary>
+        public static string AdvT9 {
+            get {
+                return ResourceManager.GetString("AdvT9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Follow the advice of the relevant national and local health authorities or your employer on how to protect yourself and others.
+        /// </summary>
+        public static string bannerDescription {
+            get {
+                return ResourceManager.GetString("bannerDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Let&apos;s fight COVID-19 together!.
+        /// </summary>
+        public static string bannerTitle {
+            get {
+                return ResourceManager.GetString("bannerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Press to know more about COVID-19.
+        /// </summary>
+        public static string btnExternalInfo {
+            get {
+                return ResourceManager.GetString("btnExternalInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Buy me a cup of coffee!.
+        /// </summary>
+        public static string buyCoffee {
+            get {
+                return ResourceManager.GetString("buyCoffee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cancel.
+        /// </summary>
+        public static string cancel {
+            get {
+                return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Percentage of cases.
+        /// </summary>
+        public static string casesPercentage {
+            get {
+                return ResourceManager.GetString("casesPercentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirmed.
         /// </summary>
         public static string confirmedCases {
@@ -115,7 +340,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Statistics for each country.
+        ///   Busca una cadena traducida similar a See statistics for each country.
         /// </summary>
         public static string countriesStats {
             get {
@@ -124,7 +349,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a COVID19 TESTS.
+        ///   Busca una cadena traducida similar a Testes COVID-19.
         /// </summary>
         public static string covidTests {
             get {
@@ -241,7 +466,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Donations(WHO).
+        ///   Busca una cadena traducida similar a Donate to the COVID-19 Response Fund.
         /// </summary>
         public static string DONATIONS {
             get {
@@ -259,7 +484,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Q&amp;A(WHO).
+        ///   Busca una cadena traducida similar a Questions and Answers about Coronavirus Disease (COVID-19).
         /// </summary>
         public static string FAQS {
             get {
@@ -277,11 +502,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Official information  GOES.
+        ///   Busca una cadena traducida similar a Official information from the Government of the Republic of El Salvador..
         /// </summary>
         public static string goesInfo {
             get {
                 return ResourceManager.GetString("goesInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a If this app has been to your liking.
+        /// </summary>
+        public static string greatApp {
+            get {
+                return ResourceManager.GetString("greatApp", resourceCulture);
             }
         }
         
@@ -291,6 +525,15 @@ namespace Resx {
         public static string lastUpdta {
             get {
                 return ResourceManager.GetString("lastUpdta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Less affected countries.
+        /// </summary>
+        public static string lessAffectedCountries {
+            get {
+                return ResourceManager.GetString("lessAffectedCountries", resourceCulture);
             }
         }
         
@@ -331,7 +574,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Myths and advices(WHO) COVID-19.
+        ///   Busca una cadena traducida similar a Tips for the public about the rumors about the new coronavirus.
         /// </summary>
         public static string MYTHS {
             get {
@@ -376,6 +619,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Select sort.
+        /// </summary>
+        public static string orderBy {
+            get {
+                return ResourceManager.GetString("orderBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Recovered.
         /// </summary>
         public static string recoveredCases {
@@ -394,6 +646,69 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a It is recommended that people who suffer mild symptoms and have a good general health condition are confined at home.
+        /// </summary>
+        public static string sintomasCDescription {
+            get {
+                return ResourceManager.GetString("sintomasCDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Common Symptoms.
+        /// </summary>
+        public static string sintomasCTitle {
+            get {
+                return ResourceManager.GetString("sintomasCTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a If you have severe symptoms, seek immediate medical attention. However, you should always call your doctor or healthcare center before showing up at the location in question.
+        /// </summary>
+        public static string sintomasGDescription {
+            get {
+                return ResourceManager.GetString("sintomasGDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Serious Symptoms.
+        /// </summary>
+        public static string sintomasGTitle {
+            get {
+                return ResourceManager.GetString("sintomasGTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a People who become infected begin to have symptoms within 5 to 6 days after they become infected, but can take up to 14 days.
+        /// </summary>
+        public static string sintomasHDescription {
+            get {
+                return ResourceManager.GetString("sintomasHDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Usual Symptoms.
+        /// </summary>
+        public static string sintomasHTitle {
+            get {
+                return ResourceManager.GetString("sintomasHTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Learn more on the World Health Organization website.
+        /// </summary>
+        public static string sintomasSource {
+            get {
+                return ResourceManager.GetString("sintomasSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Stay home!.
         /// </summary>
         public static string stayhome {
@@ -403,11 +718,146 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Symptoms.
+        /// </summary>
+        public static string symptoms {
+            get {
+                return ResourceManager.GetString("symptoms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fever.
+        /// </summary>
+        public static string symptoms1 {
+            get {
+                return ResourceManager.GetString("symptoms1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Skin rashes or loss of color on the fingers or toes.
+        /// </summary>
+        public static string symptoms10 {
+            get {
+                return ResourceManager.GetString("symptoms10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Difficulty breathing or feeling short of breath.
+        /// </summary>
+        public static string symptoms11 {
+            get {
+                return ResourceManager.GetString("symptoms11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Chest pain or pressure.
+        /// </summary>
+        public static string symptoms12 {
+            get {
+                return ResourceManager.GetString("symptoms12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inability to speak or move.
+        /// </summary>
+        public static string symptoms13 {
+            get {
+                return ResourceManager.GetString("symptoms13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dry cough.
+        /// </summary>
+        public static string symptoms2 {
+            get {
+                return ResourceManager.GetString("symptoms2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fatigue.
+        /// </summary>
+        public static string symptoms3 {
+            get {
+                return ResourceManager.GetString("symptoms3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Body aches and pains.
+        /// </summary>
+        public static string symptoms4 {
+            get {
+                return ResourceManager.GetString("symptoms4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sore Throat.
+        /// </summary>
+        public static string symptoms5 {
+            get {
+                return ResourceManager.GetString("symptoms5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Diarrhoea.
+        /// </summary>
+        public static string symptoms6 {
+            get {
+                return ResourceManager.GetString("symptoms6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Conjunctivitis.
+        /// </summary>
+        public static string symptoms7 {
+            get {
+                return ResourceManager.GetString("symptoms7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Headache.
+        /// </summary>
+        public static string symptoms8 {
+            get {
+                return ResourceManager.GetString("symptoms8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Loss of sense of smell or taste.
+        /// </summary>
+        public static string symptoms9 {
+            get {
+                return ResourceManager.GetString("symptoms9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Updating....
         /// </summary>
         public static string updating {
             get {
                 return ResourceManager.GetString("updating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a View more.
+        /// </summary>
+        public static string viewmore {
+            get {
+                return ResourceManager.GetString("viewmore", resourceCulture);
             }
         }
     }

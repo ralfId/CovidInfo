@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Covid_Info.Utils;
+using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,23 +10,20 @@ namespace Covid_Info.Helpers
 {
     public class HasConnectivity
     {
-        //public async static Task<bool> IsConnectedAnndHasInternet()
-        //{
-        //    return CrossConnectivity.Current.IsConnected;
-        //}
 
-        public string GetUpdateDaeTime()
+        public HasConnectivity()
         {
-            var dateTime = DateTime.Now.ToLocalTime();
+        }
+       
+        public async static Task<bool> isReachable()
+        {
+            var cc = await CrossConnectivity.Current.IsReachable(Constants.goodleDomain);
+            return cc;
+        }
 
-            var mints = dateTime.Minute;
-            if (mints % 10 != 0)
-            {
-                mints = (mints - mints % 10);
-            }
-
-            return dateTime.Date.ToString() + dateTime.Hour.ToString() + ":" + mints.ToString();  
-
+        public static bool  isConnected()
+        {
+            return CrossConnectivity.Current.IsConnected;
         }
     }
 }

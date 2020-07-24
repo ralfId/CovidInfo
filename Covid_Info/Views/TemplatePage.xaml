@@ -7,6 +7,46 @@
              xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Covid_Info.Views.TemplatePage"
-             NavigationPage.HasNavigationBar="False"
-             Style="{StaticResource PageStyle}">
+             BackgroundColor="{StaticResource BackgroundColorPage}">
+    <NavigationPage.TitleView>
+        <Grid RowSpacing="0">
+            <Grid Grid.Row="0" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" 
+                           Text="{Binding Title}"
+                           FontSize="Large"
+                           Padding="0"
+                           TextColor="{StaticResource WhiteColor}"
+                           VerticalOptions="CenterAndExpand"
+                           FontAttributes="Bold"/>
+                <Icons:IconLabel Grid.Column="1"
+                                     Text="fas-sync-alt"
+                                     FontSize="Title"
+                                     Padding="10"
+                                     TextColor="{StaticResource WhiteColor}"
+                                     VerticalOptions="CenterAndExpand"  Margin="0">
+                    <Icons:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding UpdateData}"/>
+                    </Icons:IconLabel.GestureRecognizers>
+                </Icons:IconLabel>
+                <Icons:IconLabel Grid.Column="2"
+                                     Text="fas-info-circle"
+                                     FontSize="Title"
+                                     Padding="10"
+                                     TextColor="{StaticResource WhiteColor}"
+                                     VerticalOptions="CenterAndExpand"  Margin="0">
+                    <Icons:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding navDevInfo}"/>
+                    </Icons:IconLabel.GestureRecognizers>
+                </Icons:IconLabel>
+
+            </Grid>
+        </Grid>
+    </NavigationPage.TitleView>
+
 </ContentPage>

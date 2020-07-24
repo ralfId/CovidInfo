@@ -21,5 +21,8 @@ namespace Covid_Info.Data
         Task<List<MyCountry>> GetMyCountry();
         Task<List<GeoCoords>> GetGeoCoords();
         Task<bool> DBOperations(FacadeDBOperations.Operations operations, object obj);
+        Task<bool> insertAllAsync(IEnumerable<object> items);
+        Task<List<Advices>> getAdvices();
+        Task<List<Symptoms>> getSymptoms();
     }
 }
