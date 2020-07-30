@@ -48,7 +48,7 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.1.0.442, )"
+              "version": "[7.1.0.446, )"
             },
             "Com.Airbnb.Xamarin.Forms.Lottie": {
               "target": "Package",
@@ -56,15 +56,23 @@
             },
             "Com.OneSignal": {
               "target": "Package",
-              "version": "[3.9.0, )"
+              "version": "[3.10.0, )"
             },
             "Microcharts": {
               "target": "Package",
-              "version": "[0.7.1, )"
+              "version": "[0.9.5, )"
             },
             "Microcharts.Forms": {
               "target": "Package",
-              "version": "[0.7.1, )"
+              "version": "[0.9.5, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[3.4.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -84,27 +92,11 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[18.1.0.59, )"
+              "version": "[18.2.0.47, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Syncfusion.Xamarin.SfChart": {
-              "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Syncfusion.Xamarin.SfDataGrid": {
-              "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Xam.Plugin.Connectivity": {
-              "target": "Package",
-              "version": "[3.2.0, )"
-            },
-            "Xam.Plugin.Iconize": {
-              "target": "Package",
-              "version": "[3.5.0.129, )"
+              "version": "[18.2.0.47, )"
             },
             "Xam.Plugin.Iconize.FontAwesome": {
               "target": "Package",
@@ -120,15 +112,15 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.7.0.1080, )"
+              "version": "[4.7.0.1179, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
-              "version": "[1.4.2, )"
+              "version": "[2.0.1.698, )"
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[4.7.0.1080, )"
+              "version": "[4.7.0.1179, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -195,7 +187,7 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.1.0.442, )"
+              "version": "[7.1.0.446, )"
             },
             "Com.Airbnb.Xamarin.Forms.Lottie": {
               "target": "Package",
@@ -203,15 +195,23 @@
             },
             "Com.OneSignal": {
               "target": "Package",
-              "version": "[3.9.0, )"
+              "version": "[3.10.0, )"
             },
             "Microcharts": {
               "target": "Package",
-              "version": "[0.7.1, )"
+              "version": "[0.9.5, )"
             },
             "Microcharts.Forms": {
               "target": "Package",
-              "version": "[0.7.1, )"
+              "version": "[0.9.5, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[3.4.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -237,27 +237,11 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[18.1.0.59, )"
+              "version": "[18.2.0.47, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Syncfusion.Xamarin.SfChart": {
-              "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Syncfusion.Xamarin.SfDataGrid": {
-              "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Xam.Plugin.Connectivity": {
-              "target": "Package",
-              "version": "[3.2.0, )"
-            },
-            "Xam.Plugin.Iconize": {
-              "target": "Package",
-              "version": "[3.5.0.129, )"
+              "version": "[18.2.0.47, )"
             },
             "Xam.Plugin.Iconize.FontAwesome": {
               "target": "Package",
@@ -273,15 +257,15 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.7.0.1080, )"
+              "version": "[4.7.0.1179, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
-              "version": "[1.4.2, )"
+              "version": "[2.0.1.698, )"
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[4.7.0.1080, )"
+              "version": "[4.7.0.1179, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -344,11 +328,11 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.1.0.442, )"
+              "version": "[7.1.0.446, )"
             },
             "Microcharts": {
               "target": "Package",
-              "version": "[0.7.1, )"
+              "version": "[0.9.5, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -358,19 +342,11 @@
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Syncfusion.Xamarin.SfChart": {
-              "target": "Package",
-              "version": "[18.1.0.59, )"
-            },
-            "Syncfusion.Xamarin.SfDataGrid": {
-              "target": "Package",
-              "version": "[18.1.0.59, )"
+              "version": "[18.2.0.47, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.7.0.1080, )"
+              "version": "[4.7.0.1179, )"
             }
           },
           "imports": [

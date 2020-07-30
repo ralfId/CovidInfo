@@ -1,18 +1,12 @@
-﻿using Acr.UserDialogs;
-using Covid_Info.Models;
+﻿using Covid_Info.Models;
 using Covid_Info.Services;
 using Covid_Info.Utils;
 using Microcharts;
-using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 using Resx;
 using SkiaSharp;
-using Syncfusion.Data.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,9 +21,9 @@ namespace Covid_Info.ViewModels
         private Country _coutryDetails;
         private Chart _myCountryChart;
 
-        List<Entry> lstCasesHistoryEntries;
-        List<Entry> lstRecoveredHistoryEntreies;
-        List<Entry> lstDeathsHistoryEntries;
+        List<ChartEntry> lstCasesHistoryEntries;
+        List<ChartEntry> lstRecoveredHistoryEntreies;
+        List<ChartEntry> lstDeathsHistoryEntries;
 
         public MyCountryDetailsViewModel(INavigationService navigationService, IApiService apiService)
             : base(navigationService, apiService)
@@ -53,21 +47,21 @@ namespace Covid_Info.ViewModels
                 Entries = new[]
                 {
                     //active cases
-                    new Microcharts.Entry(Convert.ToSingle(CountryDetails.active))
+                    new ChartEntry(Convert.ToSingle(CountryDetails.active))
                     {
                         Color = SKColor.Parse(Constants.activeColor),
                         ValueLabel = decimal.Round(((decimal)CountryDetails.active * 100 / (decimal)CountryDetails.cases),2).ToString()+"%",
                         Label = Resource.activeCases
                     },
                     //recovered cases
-                    new Microcharts.Entry(Convert.ToSingle(CountryDetails.recovered))
+                    new ChartEntry(Convert.ToSingle(CountryDetails.recovered))
                     {
                         Color = SKColor.Parse(Constants.recoveredColor),
                         ValueLabel = decimal.Round(((decimal)CountryDetails.recovered * 100 / (decimal)CountryDetails.cases),2).ToString()+"%",
                         Label = Resource.recoveredCases
                     },
                     //deaths cases
-                    new Microcharts.Entry(Convert.ToSingle(CountryDetails.deaths))
+                    new ChartEntry(Convert.ToSingle(CountryDetails.deaths))
                     {
                         Color = SKColor.Parse(Constants.deathColor),
                         ValueLabel = decimal.Round(((decimal)CountryDetails.deaths * 100 / (decimal)CountryDetails.cases),2).ToString()+"%",
@@ -91,30 +85,30 @@ namespace Covid_Info.ViewModels
         {
             
 
-            var casesEntry = casesHistory.Select(d => new Entry(d.Value) 
+            var casesEntry = casesHistory.Select(d => new ChartEntry(d.Value) 
                 {
                     Color = SKColor.Parse("#607d8b"),
                     ValueLabel = d.Value.ToString("#,##0"),
                     TextColor = SKColor.Parse("#607d8b"),
                     
                 });
-            lstCasesHistoryEntries = new List<Entry>(casesEntry);
+            lstCasesHistoryEntries = new List<ChartEntry>(casesEntry);
 
-            var recoveredEntries = recoveredHistory.Select(r => new Entry(r.Value)
+            var recoveredEntries = recoveredHistory.Select(r => new ChartEntry(r.Value)
             {
                 Color = SKColor.Parse("#4caf50"),
                 ValueLabel = r.Value.ToString("#,##0"),
                 TextColor = SKColor.Parse("#607d8b"),
             });
-            lstRecoveredHistoryEntreies = new List<Entry>(recoveredEntries);
+            lstRecoveredHistoryEntreies = new List<ChartEntry>(recoveredEntries);
 
-            var deathsEntries = deathsHistory.Select(d => new Entry(d.Value)
+            var deathsEntries = deathsHistory.Select(d => new ChartEntry(d.Value)
             {
                 Color = SKColor.Parse("#f44336"),
                 ValueLabel = d.Value.ToString("#,##0"),
                 TextColor = SKColor.Parse("#607d8b"),
             });
-            lstDeathsHistoryEntries = new List<Entry>(deathsEntries);
+            lstDeathsHistoryEntries = new List<ChartEntry>(deathsEntries);
         }
 
         private async Task historyCountry()

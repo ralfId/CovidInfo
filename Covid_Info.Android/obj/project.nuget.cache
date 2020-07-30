@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yjUVNJbRs2CTrcL8Gc57taR8CxQMZmRpNZgYRpl190GtLHb8AwSyEnr/nzZTX40tQXyrEc55GY7zKDiAvSbzpQ==",
+  "dgSpecHash": "EE1j6bnUuYqZIrL7LqCplNnejqsO0gaszDE6qjmDZd/Ecdo7ZsRjo/+eYEKpRQl2YG91XRRbBkeA6Wq279jZNQ==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,9 @@
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microcharts\\0.7.1\\microcharts.0.7.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microcharts.forms\\0.7.1\\microcharts.forms.0.7.1.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter\\3.4.0\\microsoft.appcenter.3.4.0.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.analytics\\3.4.0\\microsoft.appcenter.analytics.3.4.0.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.crashes\\3.4.0\\microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
@@ -146,5 +149,136 @@
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.googleplayservices.stats\\71.1601.0\\xamarin.googleplayservices.stats.71.1601.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.0\\xamarin.googleplayservices.tasks.71.1601.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Syncfusion.Xamarin.SfBusyIndicator de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.1.0.59)",
+      "libraryId": "Syncfusion.Xamarin.SfBusyIndicator",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Microcharts de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Microcharts (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts (>= 0.7.1)",
+      "libraryId": "Microcharts",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Microcharts.Forms de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Microcharts.Forms (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts.Forms (>= 0.7.1)",
+      "libraryId": "Microcharts.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms.Visual.Material de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms.Visual.Material (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms.Visual.Material (>= 4.7.0.1080)",
+      "libraryId": "Xamarin.Forms.Visual.Material",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Syncfusion.Licensing de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Syncfusion.Licensing (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Licensing (>= 18.1.0.59)",
+      "libraryId": "Syncfusion.Licensing",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Com.OneSignal de 3.10.0 a 3.9.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Com.OneSignal (>= 3.10.0) \r\n Covid_Info.Android -> Com.OneSignal (>= 3.9.0)",
+      "libraryId": "Com.OneSignal",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms.PancakeView de 2.0.1.698 a 1.4.2. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms.PancakeView (>= 2.0.1.698) \r\n Covid_Info.Android -> Xamarin.Forms.PancakeView (>= 1.4.2)",
+      "libraryId": "Xamarin.Forms.PancakeView",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Acr.UserDialogs de 7.1.0.446 a 7.1.0.442. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Acr.UserDialogs (>= 7.1.0.446) \r\n Covid_Info.Android -> Acr.UserDialogs (>= 7.1.0.442)",
+      "libraryId": "Acr.UserDialogs",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms (>= 4.7.0.1080)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Syncfusion.Xamarin.SfBusyIndicator de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.1.0.59)",
+      "libraryId": "Syncfusion.Xamarin.SfBusyIndicator",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Microcharts de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Microcharts (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts (>= 0.7.1)",
+      "libraryId": "Microcharts",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Acr.UserDialogs de 7.1.0.446 a 7.1.0.442. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Acr.UserDialogs (>= 7.1.0.446) \r\n Covid_Info.Android -> Acr.UserDialogs (>= 7.1.0.442)",
+      "libraryId": "Acr.UserDialogs",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Xamarin.Forms (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms (>= 4.7.0.1080)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    }
+  ]
 }

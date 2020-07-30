@@ -14,15 +14,15 @@ namespace Covid_Info.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\AllCountries.xaml")]
-    public partial class AllCountries : global::Xamarin.Forms.ContentPage {
+    public partial class AllCountries : global::Covid_Info.Views.TemplatePage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.CollectionView lvCountries;
+        private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AllCountries));
-            lvCountries = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "lvCountries");
+            busyindicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>(this, "busyindicator");
         }
     }
 }

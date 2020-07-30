@@ -23,9 +23,9 @@ namespace Covid_Info.ViewModels
         private Chart _globalChart;
         private GlobalInfo _globalInfo;
 
-        List<Entry> lstCasesHistoryEntries;
-        List<Entry> lstRecoveredHistoryEntreies;
-        List<Entry> lstDeathsHistoryEntries;
+        List<ChartEntry> lstCasesHistoryEntries;
+        List<ChartEntry> lstRecoveredHistoryEntreies;
+        List<ChartEntry> lstDeathsHistoryEntries;
 
         public GlobalDetailsViewModel(INavigationService navigationService, IApiService apiService)
             : base(navigationService, apiService)
@@ -45,21 +45,22 @@ namespace Covid_Info.ViewModels
 
             GlobalChart = new DonutChart()
             {
+             
                 Entries = new[]
                         {
-                            new Microcharts.Entry(GlobalDetails.recovered)
+                            new ChartEntry(GlobalDetails.recovered)
                             {
                                 Color = SKColor.Parse(Constants.recoveredColor),
                                 Label = Resource.recoveredCases,
                                 ValueLabel = decimal.Round((decimal)GlobalDetails.recovered*100/(decimal)GlobalDetails.cases,2).ToString()+"%"
                             },
-                            new Microcharts.Entry(GlobalDetails.active)
+                            new ChartEntry(GlobalDetails.active)
                             {
                                 Color = SKColor.Parse(Constants.activeColor),
                                 Label = Resource.activeCases,
                                 ValueLabel = decimal.Round((decimal)GlobalDetails.active*100/(decimal)GlobalDetails.cases,2).ToString()+"%"
                             },
-                             new Microcharts.Entry(GlobalDetails.deaths)
+                             new ChartEntry(GlobalDetails.deaths)
                             {
                                 Color = SKColor.Parse(Constants.deathColor),
                                 Label = Resource.deathsCases,
@@ -85,30 +86,30 @@ namespace Covid_Info.ViewModels
         {
 
 
-            var casesEntry = casesHistory.Select(d => new Entry(d.Value)
+            var casesEntry = casesHistory.Select(d => new ChartEntry(d.Value)
             {
                 Color = SKColor.Parse("#607d8b"),
                 ValueLabel = d.Value.ToString("#,##0"),
                 TextColor = SKColor.Parse("#607d8b"),
 
             });
-            lstCasesHistoryEntries = new List<Entry>(casesEntry);
+            lstCasesHistoryEntries = new List<ChartEntry>(casesEntry);
 
-            var recoveredEntries = recoveredHistory.Select(r => new Entry(r.Value)
+            var recoveredEntries = recoveredHistory.Select(r => new ChartEntry(r.Value)
             {
                 Color = SKColor.Parse("#4caf50"),
                 ValueLabel = r.Value.ToString("#,##0"),
                 TextColor = SKColor.Parse("#607d8b"),
             });
-            lstRecoveredHistoryEntreies = new List<Entry>(recoveredEntries);
+            lstRecoveredHistoryEntreies = new List<ChartEntry>(recoveredEntries);
 
-            var deathsEntries = deathsHistory.Select(d => new Entry(d.Value)
+            var deathsEntries = deathsHistory.Select(d => new ChartEntry(d.Value)
             {
                 Color = SKColor.Parse("#f44336"),
                 ValueLabel = d.Value.ToString("#,##0"),
                 TextColor = SKColor.Parse("#607d8b"),
             });
-            lstDeathsHistoryEntries = new List<Entry>(deathsEntries);
+            lstDeathsHistoryEntries = new List<ChartEntry>(deathsEntries);
         }
 
         private async Task historyCountry()

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Acr.UserDialogs/7.1.0.442": {
+      "Acr.UserDialogs/7.1.0.446": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Acr.UserDialogs.dll": {}
@@ -11,17 +11,48 @@
           "lib/netstandard2.0/Acr.UserDialogs.dll": {}
         }
       },
-      "Microcharts/0.7.1": {
+      "HarfBuzzSharp/2.6.1.6": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "System.ValueTuple": "4.4.0"
+          "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.dll": {}
+          "lib/netstandard2.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.dll": {}
+          "lib/netstandard2.0/HarfBuzzSharp.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Microcharts/0.9.5": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.HarfBuzz": "2.80.1",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -48,30 +79,50 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "SkiaSharp/1.59.1": {
+      "SkiaSharp/2.80.1": {
         "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
         "compile": {
-          "lib/netstandard1.3/SkiaSharp.dll": {}
+          "lib/netstandard2.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/SkiaSharp.dll": {}
+          "lib/netstandard2.0/SkiaSharp.dll": {}
         },
         "runtimeTargets": {
           "runtimes/osx/native/libSkiaSharp.dylib": {
             "assetType": "native",
             "rid": "osx"
           },
-          "runtimes/win7-x64/native/libSkiaSharp.dll": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
             "assetType": "native",
-            "rid": "win7-x64"
+            "rid": "win-arm64"
           },
-          "runtimes/win7-x86/native/libSkiaSharp.dll": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
             "assetType": "native",
-            "rid": "win7-x86"
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
           }
         }
       },
-      "Syncfusion.Licensing/18.1.0.59": {
+      "SkiaSharp.HarfBuzz/2.80.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp": "2.80.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/18.2.0.47": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
@@ -80,10 +131,10 @@
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/18.1.0.59": {
+      "Syncfusion.Xamarin.Core/18.2.0.47": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "18.1.0.59",
+          "Syncfusion.Licensing": "18.2.0.47",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -93,19 +144,10 @@
           "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/18.1.0.59": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfBusyIndicator/18.1.0.59": {
+      "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.1.0.59",
+          "Syncfusion.Xamarin.Core": "18.2.0.47",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -115,64 +157,48 @@
           "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfChart/18.1.0.59": {
+      "System.Buffers/4.4.0": {
         "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.1.0.59",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
         "compile": {
-          "lib/netstandard2.0/Syncfusion.SfChart.XForms.dll": {}
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfChart.XForms.dll": {}
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfComboBox/18.1.0.59": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.1.0.59",
-          "Xamarin.Forms": "3.6.0.344457"
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
-          "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll": {}
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll": {}
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfDataGrid/18.1.0.59": {
+      "System.Numerics.Vectors/4.4.0": {
         "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.1.0.59",
-          "Syncfusion.Xamarin.GridCommon": "18.1.0.59",
-          "Syncfusion.Xamarin.SfComboBox": "18.1.0.59",
-          "Syncfusion.Xamarin.SfNumericTextBox": "18.1.0.59",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
         "compile": {
-          "lib/netstandard2.0/Syncfusion.Data.Portable.dll": {},
-          "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.dll": {}
+          "ref/netstandard2.0/System.Numerics.Vectors.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Syncfusion.Data.Portable.dll": {},
-          "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.dll": {}
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericTextBox/18.1.0.59": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.1.0.59",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
         "compile": {
-          "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {}
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {}
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -181,7 +207,7 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1080": {
+      "Xamarin.Forms/4.7.0.1179": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -201,20 +227,19 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.1.0.442": {
-      "sha512": "4z+sp3nTkFZuY75gd4zo2+86S8eaWlHl7KhLs/EAG9TH7Ng9+a4jfOap8v3fq1RXrF3gVae2ycLPcndZptxHZQ==",
+    "Acr.UserDialogs/7.1.0.446": {
+      "sha512": "7YF7hk4qy4x9pKrVzKnjTEvua+kTSlHqdPPvP4gIqsxymPH6I3nAW2lpSo8kX97nTBbwkfddtrikwAXIYxRNIw==",
       "type": "package",
-      "path": "acr.userdialogs/7.1.0.442",
+      "path": "acr.userdialogs/7.1.0.446",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.1.0.442.nupkg.sha512",
+        "acr.userdialogs.7.1.0.446.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid10.0/Acr.UserDialogs.dll",
         "lib/monoandroid10.0/Acr.UserDialogs.pdb",
         "lib/monoandroid10.0/Acr.UserDialogs.xml",
         "lib/monoandroid90/Acr.UserDialogs.dll",
-        "lib/monoandroid90/Acr.UserDialogs.dll.mdb",
         "lib/monoandroid90/Acr.UserDialogs.pdb",
         "lib/monoandroid90/Acr.UserDialogs.xml",
         "lib/netstandard2.0/Acr.UserDialogs.dll",
@@ -242,23 +267,83 @@
         "readme.txt"
       ]
     },
-    "Microcharts/0.7.1": {
-      "sha512": "Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
+    "HarfBuzzSharp/2.6.1.6": {
+      "sha512": "yL3wjJk6bfc4vYcf13/89rIgbPAlzS3/FydToxwYhep0/yLLSMyydLZ08fvZQO2+79F7eEvuK0Q6lCNifJXyvw==",
       "type": "package",
-      "path": "microcharts/0.7.1",
+      "path": "harfbuzzsharp/2.6.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/monoandroid1.0/HarfBuzzSharp.targets",
+        "build/monoandroid1.0/arm/libHarfBuzzSharp.so",
+        "build/monoandroid1.0/arm64/libHarfBuzzSharp.so",
+        "build/monoandroid1.0/x64/libHarfBuzzSharp.so",
+        "build/monoandroid1.0/x86/libHarfBuzzSharp.so",
+        "build/net462/HarfBuzzSharp.targets",
+        "build/tizen40/HarfBuzzSharp.targets",
+        "build/tizen40/arm/libHarfBuzzSharp.so",
+        "build/tizen40/x86/libHarfBuzzSharp.so",
+        "build/xamarinios1.0/HarfBuzzSharp.targets",
+        "build/xamarinios1.0/libHarfBuzzSharp.a",
+        "build/xamarinmac2.0/HarfBuzzSharp.targets",
+        "build/xamarintvos1.0/HarfBuzzSharp.targets",
+        "build/xamarintvos1.0/libHarfBuzzSharp.a",
+        "build/xamarinwatchos1.0/HarfBuzzSharp.targets",
+        "build/xamarinwatchos1.0/libHarfBuzzSharp.a",
+        "buildTransitive/net462/HarfBuzzSharp.targets",
+        "harfbuzzsharp.2.6.1.6.nupkg.sha512",
+        "harfbuzzsharp.nuspec",
+        "lib/monoandroid1.0/HarfBuzzSharp.dll",
+        "lib/monoandroid1.0/HarfBuzzSharp.xml",
+        "lib/net462/HarfBuzzSharp.dll",
+        "lib/net462/HarfBuzzSharp.xml",
+        "lib/netstandard1.3/HarfBuzzSharp.dll",
+        "lib/netstandard1.3/HarfBuzzSharp.xml",
+        "lib/netstandard2.0/HarfBuzzSharp.dll",
+        "lib/netstandard2.0/HarfBuzzSharp.xml",
+        "lib/tizen40/HarfBuzzSharp.dll",
+        "lib/tizen40/HarfBuzzSharp.xml",
+        "lib/uap10.0.10240/HarfBuzzSharp.dll",
+        "lib/uap10.0.10240/HarfBuzzSharp.xml",
+        "lib/uap10.0.16299/HarfBuzzSharp.dll",
+        "lib/uap10.0.16299/HarfBuzzSharp.xml",
+        "lib/xamarinios1.0/HarfBuzzSharp.dll",
+        "lib/xamarinios1.0/HarfBuzzSharp.xml",
+        "lib/xamarinmac2.0/HarfBuzzSharp.dll",
+        "lib/xamarinmac2.0/HarfBuzzSharp.xml",
+        "lib/xamarintvos1.0/HarfBuzzSharp.dll",
+        "lib/xamarintvos1.0/HarfBuzzSharp.xml",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.dll",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.xml",
+        "runtimes/osx/native/libHarfBuzzSharp.dylib",
+        "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x86/native/libHarfBuzzSharp.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libHarfBuzzSharp.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libHarfBuzzSharp.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libHarfBuzzSharp.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libHarfBuzzSharp.dll"
+      ]
+    },
+    "Microcharts/0.9.5": {
+      "sha512": "3B3x9oX6fmSTETFJg6L4XH8es0JneWMoUiAJpRn6NzsF9QgP0FqxC+nKhXMwBPhu7Xw9J1Z578CBTqjtRMqHLg==",
+      "type": "package",
+      "path": "microcharts/0.9.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid10/Microcharts.Droid.dll",
         "lib/MonoAndroid10/Microcharts.dll",
-        "lib/Xamarin.iOS10/Microcharts.dll",
-        "lib/Xamarin.iOS10/Microcharts.iOS.dll",
-        "lib/netstandard1.4/Microcharts.dll",
+        "lib/netstandard2.0/Microcharts.dll",
         "lib/uap/Microcharts.Uwp.dll",
         "lib/uap/Microcharts.dll",
-        "lib/xamarinmac/Microcharts.dll",
-        "lib/xamarinmac/Microcharts.macOS.dll",
-        "microcharts.0.7.1.nupkg.sha512",
+        "lib/xamarinios1.0/Microcharts.dll",
+        "lib/xamarinios1.0/Microcharts.iOS.dll",
+        "lib/xamarinmac2.0/Microcharts.dll",
+        "lib/xamarinmac2.0/Microcharts.macOS.dll",
+        "microcharts.0.9.5.nupkg.sha512",
         "microcharts.nuspec"
       ]
     },
@@ -406,53 +491,106 @@
         "netstandard.library.nuspec"
       ]
     },
-    "SkiaSharp/1.59.1": {
-      "sha512": "Le+YqP0aWwJ5ImHikWiLWOWjdH8oOV6F2D7fknzKp9ArzDIrtPASeiHpI1RgqQEK/GGvR56B2l5belsDzwK7uQ==",
+    "SkiaSharp/2.80.1": {
+      "sha512": "CiQwnDzG+1JNGzjAN9G/9n/lJgUVA/NPOFgSlEtu6c7qQ0O7P1tMjrXp/+PtWfX0xyyY9ABsFAZK2kW34U7r/A==",
       "type": "package",
-      "path": "skiasharp/1.59.1",
+      "path": "skiasharp/2.80.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/net45/SkiaSharp.dll.config",
-        "build/net45/SkiaSharp.targets",
-        "lib/MonoAndroid/SkiaSharp.dll",
-        "lib/MonoAndroid/SkiaSharp.xml",
-        "lib/XamarinMac/SkiaSharp.dll",
-        "lib/XamarinMac/SkiaSharp.xml",
-        "lib/XamariniOS/SkiaSharp.dll",
-        "lib/XamariniOS/SkiaSharp.xml",
-        "lib/XamarintvOS/SkiaSharp.dll",
-        "lib/XamarintvOS/SkiaSharp.xml",
-        "lib/net45/SkiaSharp.dll",
-        "lib/net45/SkiaSharp.dll.config",
-        "lib/net45/SkiaSharp.xml",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/monoandroid1.0/SkiaSharp.targets",
+        "build/monoandroid1.0/arm/libSkiaSharp.so",
+        "build/monoandroid1.0/arm64/libSkiaSharp.so",
+        "build/monoandroid1.0/x64/libSkiaSharp.so",
+        "build/monoandroid1.0/x86/libSkiaSharp.so",
+        "build/net462/SkiaSharp.targets",
+        "build/tizen40/SkiaSharp.targets",
+        "build/tizen40/arm/libSkiaSharp.so",
+        "build/tizen40/x86/libSkiaSharp.so",
+        "build/xamarinios1.0/SkiaSharp.targets",
+        "build/xamarinios1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarinios1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarinios1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarinios1.0/libSkiaSharp.framework/libSkiaSharp",
+        "build/xamarinmac2.0/SkiaSharp.targets",
+        "build/xamarintvos1.0/SkiaSharp.targets",
+        "build/xamarintvos1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarintvos1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarintvos1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarintvos1.0/libSkiaSharp.framework/libSkiaSharp",
+        "build/xamarinwatchos1.0/SkiaSharp.targets",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/libSkiaSharp",
+        "buildTransitive/net462/SkiaSharp.targets",
+        "lib/monoandroid1.0/SkiaSharp.dll",
+        "lib/monoandroid1.0/SkiaSharp.xml",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.xml",
         "lib/netstandard1.3/SkiaSharp.dll",
         "lib/netstandard1.3/SkiaSharp.xml",
-        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.dll",
-        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.xml",
-        "lib/uap10.0/SkiaSharp.dll",
-        "lib/uap10.0/SkiaSharp.xml",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0.10240/SkiaSharp.dll",
+        "lib/uap10.0.10240/SkiaSharp.xml",
+        "lib/uap10.0.16299/SkiaSharp.dll",
+        "lib/uap10.0.16299/SkiaSharp.xml",
+        "lib/xamarinios1.0/SkiaSharp.dll",
+        "lib/xamarinios1.0/SkiaSharp.xml",
+        "lib/xamarinmac2.0/SkiaSharp.dll",
+        "lib/xamarinmac2.0/SkiaSharp.xml",
+        "lib/xamarintvos1.0/SkiaSharp.dll",
+        "lib/xamarintvos1.0/SkiaSharp.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.xml",
         "runtimes/osx/native/libSkiaSharp.dylib",
+        "runtimes/win-arm64/native/libSkiaSharp.dll",
+        "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x86/native/libSkiaSharp.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libSkiaSharp.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
-        "runtimes/win7-x64/native/libSkiaSharp.dll",
-        "runtimes/win7-x86/native/libSkiaSharp.dll",
-        "skiasharp.1.59.1.nupkg.sha512",
+        "skiasharp.2.80.1.nupkg.sha512",
         "skiasharp.nuspec",
         "xamarin.interactive/SkiaSharp.Workbooks.dll"
       ]
     },
-    "Syncfusion.Licensing/18.1.0.59": {
-      "sha512": "2mil7zRAoq+Lkd7hdbooUeA9gNJxwUGajfVUVWO38FjirCtIy04LLCeepbM+DAC083JVFgG0eHyB9WLd2MwiqA==",
+    "SkiaSharp.HarfBuzz/2.80.1": {
+      "sha512": "u+RzIELvLRGETSYQ9OdCaQ8ZkziJvPdtU9GicN5gELcPTed1NBOAMBUapM3eJtC5l/8G/k7LeCDSQAoEU9uD3g==",
       "type": "package",
-      "path": "syncfusion.licensing/18.1.0.59",
+      "path": "skiasharp.harfbuzz/2.80.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net462/SkiaSharp.HarfBuzz.dll",
+        "lib/net462/SkiaSharp.HarfBuzz.xml",
+        "lib/netstandard1.3/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard1.3/SkiaSharp.HarfBuzz.xml",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.xml",
+        "skiasharp.harfbuzz.2.80.1.nupkg.sha512",
+        "skiasharp.harfbuzz.nuspec"
+      ]
+    },
+    "Syncfusion.Licensing/18.2.0.47": {
+      "sha512": "boPxbte2+5zk+NZlhptHK2n8xui1W0P1C4LxFkK+8+YpI4LoFV9QNI6VVEPouTwu041+41WePE3QyQwzA1O3SQ==",
+      "type": "package",
+      "path": "syncfusion.licensing/18.2.0.47",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -465,21 +603,22 @@
         "lib/net45/Syncfusion.Licensing.dll",
         "lib/net451/Syncfusion.Licensing.dll",
         "lib/net46/Syncfusion.Licensing.dll",
-        "lib/netcoreapp3.0/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
+        "lib/netcoreapp5.0/Syncfusion.Licensing.dll",
         "lib/netstandard1.0/Syncfusion.Licensing.dll",
         "lib/netstandard1.2/Syncfusion.Licensing.dll",
         "lib/netstandard1.4/Syncfusion.Licensing.dll",
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.18.1.0.59.nupkg.sha512",
+        "syncfusion.licensing.18.2.0.47.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/18.1.0.59": {
-      "sha512": "ayCVhi0Wx6NQfgFL4kQTAW3ESkYKtl2dZQUhVN7I6A2xmR5/J+aKp9yJBB7GdG0XD3LdvET/1wain7uq3e4y2g==",
+    "Syncfusion.Xamarin.Core/18.2.0.47": {
+      "sha512": "AkdC7hC1eHas1MsGJv+gr0Nk778rHwecYWf3zu8htz5YysFgi8A2xS5igBKlKJRSMDxKFY2jr6TPu4nop0CSCw==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/18.1.0.59",
+      "path": "syncfusion.xamarin.core/18.2.0.47",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -498,42 +637,20 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ClearButtonViewVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/DropDownIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleCollapsedIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.18.1.0.59.nupkg.sha512",
+        "syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/18.1.0.59": {
-      "sha512": "eon0EvNryTB/p50EnY+d28IlPsG5XUxhjtK/T1Eb6LnBFCXK+DEiCfNF8XIgJVZtUZvFTjrFLlXHrZMQmJMHNg==",
+    "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
+      "sha512": "2SKxlXhg689NmUtqqHDCWqn8eXFOqMpwzmupuSh4/PnzFTUELBIQnA7GtwvaImaC1CK//NkyBR/KUcLwvh4KNg==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/18.1.0.59",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.XML",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.18.1.0.59.nupkg.sha512",
-        "syncfusion.xamarin.gridcommon.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfBusyIndicator/18.1.0.59": {
-      "sha512": "8w7w70NPx4YZCuf39AdCEN91DhYHPEIUfWApIasSjNF2U4wFFsoApbijsoY9BarLJn0dheHXZyXy537SAgikGg==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sfbusyindicator/18.1.0.59",
+      "path": "syncfusion.xamarin.sfbusyindicator/18.2.0.47",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -555,143 +672,128 @@
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.dll",
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "syncfusion.xamarin.sfbusyindicator.18.1.0.59.nupkg.sha512",
+        "syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
         "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfChart/18.1.0.59": {
-      "sha512": "mDBRfBrbj452+cwkrqqFiQESdXty4hjw46wusvdcqat0eGRYbO97NNgetoo4fpf3K9IXRnjFlNtbF7MfMsGY2Q==",
+    "System.Buffers/4.4.0": {
+      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfchart/18.1.0.59",
+      "path": "system.buffers/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.SfChart.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfChart.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfChart.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfChart.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfChart.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
-        "syncfusion.xamarin.sfchart.18.1.0.59.nupkg.sha512",
-        "syncfusion.xamarin.sfchart.nuspec"
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Syncfusion.Xamarin.SfComboBox/18.1.0.59": {
-      "sha512": "3CScNXlugf5ZwDN4H7/vwp1YHY25Hm8OfPZpfJCxnPyNMRHbQ/2QNUK0rSSi6HyRW6JwQhL9yCKy3LjhUdY+qw==",
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfcombobox/18.1.0.59",
+      "path": "system.memory/4.5.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
-        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
-        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
-        "syncfusion.xamarin.sfcombobox.18.1.0.59.nupkg.sha512",
-        "syncfusion.xamarin.sfcombobox.nuspec"
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Syncfusion.Xamarin.SfDataGrid/18.1.0.59": {
-      "sha512": "EzaVUAjR8k+VQTwyXLEwPL/qpMAy/g6Q9MlTxneGQn/ssOAGBgUTdI2Sgd5e3JQaLK8TyNy6O04nvp2Dr0apig==",
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfdatagrid/18.1.0.59",
+      "path": "system.numerics.vectors/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Data.Portable.dll",
-        "lib/MonoAndroid10/Syncfusion.Data.Portable.xml",
-        "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.Data.Portable.dll",
-        "lib/Xamarin.Mac/Syncfusion.Data.Portable.xml",
-        "lib/Xamarin.Mac/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.SfDataGrid.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Data.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Data.Portable.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.Data.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.Data.Portable.xml",
-        "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Data.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Data.Portable.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/uap10.0/Syncfusion.Data.Portable.dll",
-        "lib/uap10.0/Syncfusion.Data.Portable.xml",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP.pri",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP/Assets/DataGridFontIcon.ttf",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP/Properties/Syncfusion.SfDataGrid.XForms.UWP.rd.xml",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.xml",
-        "syncfusion.xamarin.sfdatagrid.18.1.0.59.nupkg.sha512",
-        "syncfusion.xamarin.sfdatagrid.nuspec"
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Syncfusion.Xamarin.SfNumericTextBox/18.1.0.59": {
-      "sha512": "LviymlRxUvW0TS9KkFp8+zMrvcxU2HY8uX3IuOWB7QRCvjbpbjmvPFTzp6b/nEIBOgxwjzY80bxVUoce9jooyw==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfnumerictextbox/18.1.0.59",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.xml",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.XML",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll",
-        "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.xml",
-        "syncfusion.xamarin.sfnumerictextbox.18.1.0.59.nupkg.sha512",
-        "syncfusion.xamarin.sfnumerictextbox.nuspec"
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "System.ValueTuple/4.4.0": {
-      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
-      "path": "system.valuetuple/4.4.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -709,6 +811,7 @@
         "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -716,27 +819,25 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net461/System.ValueTuple.dll",
-        "ref/net461/System.ValueTuple.xml",
         "ref/net47/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.xml",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard2.0/_._",
         "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.4.5.0.nupkg.sha512",
         "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "Xamarin.Forms/4.7.0.1080": {
-      "sha512": "YN04zJoVBBKdhYnIK1lwZJTGCFrHJ+bUfqQK4aKy8oDjthh5JlNcjetUS+eV+JK9XcmYpS2SxpmDxFFXxSfONQ==",
+    "Xamarin.Forms/4.7.0.1179": {
+      "sha512": "QY/wwwG/OTOK9UGUalL4u3fKDQ5bh86nVa+M8bmKCq8/QdgZSXRQ/YVwDh0Mew0MaKsZZwTZUNGOGRc52fb+/Q==",
       "type": "package",
-      "path": "xamarin.forms/4.7.0.1080",
+      "path": "xamarin.forms/4.7.0.1179",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1043,20 +1144,18 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.7.0.1080.nupkg.sha512",
+        "xamarin.forms.4.7.0.1179.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Acr.UserDialogs >= 7.1.0.442",
-      "Microcharts >= 0.7.1",
+      "Acr.UserDialogs >= 7.1.0.446",
+      "Microcharts >= 0.9.5",
       "NETStandard.Library >= 2.0.3",
-      "Syncfusion.Xamarin.SfBusyIndicator >= 18.1.0.59",
-      "Syncfusion.Xamarin.SfChart >= 18.1.0.59",
-      "Syncfusion.Xamarin.SfDataGrid >= 18.1.0.59",
-      "Xamarin.Forms >= 4.7.0.1080"
+      "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.47",
+      "Xamarin.Forms >= 4.7.0.1179"
     ]
   },
   "packageFolders": {
@@ -1106,11 +1205,11 @@
         "dependencies": {
           "Acr.UserDialogs": {
             "target": "Package",
-            "version": "[7.1.0.442, )"
+            "version": "[7.1.0.446, )"
           },
           "Microcharts": {
             "target": "Package",
-            "version": "[0.7.1, )"
+            "version": "[0.9.5, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -1120,19 +1219,11 @@
           },
           "Syncfusion.Xamarin.SfBusyIndicator": {
             "target": "Package",
-            "version": "[18.1.0.59, )"
-          },
-          "Syncfusion.Xamarin.SfChart": {
-            "target": "Package",
-            "version": "[18.1.0.59, )"
-          },
-          "Syncfusion.Xamarin.SfDataGrid": {
-            "target": "Package",
-            "version": "[18.1.0.59, )"
+            "version": "[18.2.0.47, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.7.0.1080, )"
+            "version": "[4.7.0.1179, )"
           }
         },
         "imports": [

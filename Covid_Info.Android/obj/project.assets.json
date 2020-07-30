@@ -120,6 +120,45 @@
           "lib/netstandard1.4/Microcharts.Forms.dll": {}
         }
       },
+      "Microsoft.AppCenter/3.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Analytics/3.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "3.4.0"
+        },
+        "compile": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.dll": {}
+        }
+      },
+      "Microsoft.AppCenter.Crashes/3.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "3.4.0"
+        },
+        "compile": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -2528,28 +2567,26 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.442",
+          "Acr.UserDialogs": "7.1.0.446",
           "Com.Airbnb.Xamarin.Forms.Lottie": "3.1.0",
-          "Com.OneSignal": "3.9.0",
-          "Microcharts": "0.7.1",
-          "Microcharts.Forms": "0.7.1",
+          "Com.OneSignal": "3.10.0",
+          "Microcharts": "0.9.5",
+          "Microcharts.Forms": "0.9.5",
+          "Microsoft.AppCenter.Analytics": "3.4.0",
+          "Microsoft.AppCenter.Crashes": "3.4.0",
           "Newtonsoft.Json": "12.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
           "Resx": "1.0.0",
           "Rg.Plugins.Popup": "2.0.0.3",
-          "Syncfusion.Licensing": "18.1.0.59",
-          "Syncfusion.Xamarin.SfBusyIndicator": "18.1.0.59",
-          "Syncfusion.Xamarin.SfChart": "18.1.0.59",
-          "Syncfusion.Xamarin.SfDataGrid": "18.1.0.59",
-          "Xam.Plugin.Connectivity": "3.2.0",
-          "Xam.Plugin.Iconize": "3.5.0.129",
+          "Syncfusion.Licensing": "18.2.0.47",
+          "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
           "Xam.Plugin.Iconize.FontAwesome": "3.5.0.114",
           "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.7.0.1080",
-          "Xamarin.Forms.PancakeView": "1.4.2",
-          "Xamarin.Forms.Visual.Material": "4.7.0.1080",
+          "Xamarin.Forms": "4.7.0.1179",
+          "Xamarin.Forms.PancakeView": "2.0.1.698",
+          "Xamarin.Forms.Visual.Material": "4.7.0.1179",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -2563,12 +2600,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.442",
-          "Microcharts": "0.7.1",
-          "Syncfusion.Xamarin.SfBusyIndicator": "18.1.0.59",
-          "Syncfusion.Xamarin.SfChart": "18.1.0.59",
-          "Syncfusion.Xamarin.SfDataGrid": "18.1.0.59",
-          "Xamarin.Forms": "4.7.0.1080"
+          "Acr.UserDialogs": "7.1.0.446",
+          "Microcharts": "0.9.5",
+          "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
+          "Xamarin.Forms": "4.7.0.1179"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -2769,6 +2804,81 @@
         "lib/netstandard1.4/Microcharts.Forms.dll",
         "microcharts.forms.0.7.1.nupkg.sha512",
         "microcharts.forms.nuspec"
+      ]
+    },
+    "Microsoft.AppCenter/3.4.0": {
+      "sha512": "iKXIv436h2qczSGaUDfmZJxdu2ESfH67ullZrQgmA+HXxIsZdv079bxNR5sxlF4Mc71oYXBo0JAt1Sba4ZNkBg==",
+      "type": "package",
+      "path": "microsoft.appcenter/3.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.xml",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.xml",
+        "lib/net461/Microsoft.AppCenter.dll",
+        "lib/net461/Microsoft.AppCenter.xml",
+        "lib/netcoreapp3.0/Microsoft.AppCenter.dll",
+        "lib/netcoreapp3.0/Microsoft.AppCenter.xml",
+        "lib/netstandard1.0/Microsoft.AppCenter.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.xml",
+        "lib/uap10.0/Microsoft.AppCenter.dll",
+        "lib/uap10.0/Microsoft.AppCenter.xml",
+        "microsoft.appcenter.3.4.0.nupkg.sha512",
+        "microsoft.appcenter.nuspec"
+      ]
+    },
+    "Microsoft.AppCenter.Analytics/3.4.0": {
+      "sha512": "e3D1xJRwcbmzGYtgz0cLlaSPGWRrzmIHBG4CygD7lFN+3HUN9lehRXZV22tJpK7mkssCLwMS8pKwrXB7POOw/g==",
+      "type": "package",
+      "path": "microsoft.appcenter.analytics/3.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.xml",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.xml",
+        "lib/net461/Microsoft.AppCenter.Analytics.dll",
+        "lib/net461/Microsoft.AppCenter.Analytics.xml",
+        "lib/netcoreapp3.0/Microsoft.AppCenter.Analytics.dll",
+        "lib/netcoreapp3.0/Microsoft.AppCenter.Analytics.xml",
+        "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.Analytics.xml",
+        "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
+        "lib/uap10.0/Microsoft.AppCenter.Analytics.xml",
+        "microsoft.appcenter.analytics.3.4.0.nupkg.sha512",
+        "microsoft.appcenter.analytics.nuspec"
+      ]
+    },
+    "Microsoft.AppCenter.Crashes/3.4.0": {
+      "sha512": "C1O6dwfVbscVoaEnGebC+LACPYpNQMywcebF6shS1DsAMiKETtCuX52ZSE58aZeay8d448/B9nepJ3C5qV1C8Q==",
+      "type": "package",
+      "path": "microsoft.appcenter.crashes/3.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.xml",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.xml",
+        "lib/net461/Microsoft.AppCenter.Crashes.dll",
+        "lib/net461/Microsoft.AppCenter.Crashes.xml",
+        "lib/netcoreapp3.0/Microsoft.AppCenter.Crashes.dll",
+        "lib/netcoreapp3.0/Microsoft.AppCenter.Crashes.xml",
+        "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.Crashes.xml",
+        "lib/uap10.0/Microsoft.AppCenter.Crashes.dll",
+        "lib/uap10.0/Microsoft.AppCenter.Crashes.xml",
+        "microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
+        "microsoft.appcenter.crashes.nuspec"
       ]
     },
     "Newtonsoft.Json/12.0.3": {
@@ -6082,5 +6192,137 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Syncfusion.Xamarin.SfBusyIndicator de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.1.0.59)",
+      "libraryId": "Syncfusion.Xamarin.SfBusyIndicator",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Microcharts de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Microcharts (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts (>= 0.7.1)",
+      "libraryId": "Microcharts",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Microcharts.Forms de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Microcharts.Forms (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts.Forms (>= 0.7.1)",
+      "libraryId": "Microcharts.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms.Visual.Material de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms.Visual.Material (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms.Visual.Material (>= 4.7.0.1080)",
+      "libraryId": "Xamarin.Forms.Visual.Material",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Syncfusion.Licensing de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Syncfusion.Licensing (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Licensing (>= 18.1.0.59)",
+      "libraryId": "Syncfusion.Licensing",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Com.OneSignal de 3.10.0 a 3.9.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Com.OneSignal (>= 3.10.0) \r\n Covid_Info.Android -> Com.OneSignal (>= 3.9.0)",
+      "libraryId": "Com.OneSignal",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms.PancakeView de 2.0.1.698 a 1.4.2. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms.PancakeView (>= 2.0.1.698) \r\n Covid_Info.Android -> Xamarin.Forms.PancakeView (>= 1.4.2)",
+      "libraryId": "Xamarin.Forms.PancakeView",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Acr.UserDialogs de 7.1.0.446 a 7.1.0.442. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Acr.UserDialogs (>= 7.1.0.446) \r\n Covid_Info.Android -> Acr.UserDialogs (>= 7.1.0.442)",
+      "libraryId": "Acr.UserDialogs",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms (>= 4.7.0.1080)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Syncfusion.Xamarin.SfBusyIndicator de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.1.0.59)",
+      "libraryId": "Syncfusion.Xamarin.SfBusyIndicator",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Microcharts de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Microcharts (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts (>= 0.7.1)",
+      "libraryId": "Microcharts",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Acr.UserDialogs de 7.1.0.446 a 7.1.0.442. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Acr.UserDialogs (>= 7.1.0.446) \r\n Covid_Info.Android -> Acr.UserDialogs (>= 7.1.0.442)",
+      "libraryId": "Acr.UserDialogs",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Xamarin.Forms (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms (>= 4.7.0.1080)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v10.0"
+      ]
+    }
+  ]
 }

@@ -1,11 +1,7 @@
-﻿using Acr.UserDialogs;
-using Covid_Info.Helpers;
-using Covid_Info.Helpers.CovertModels;
+﻿using Covid_Info.Helpers.CovertModels;
 using Covid_Info.Models;
 using Covid_Info.Services;
 using Covid_Info.Utils;
-using ImTools;
-using Plugin.Connectivity;
 using Prism.Commands;
 using Prism.Navigation;
 using Resx;

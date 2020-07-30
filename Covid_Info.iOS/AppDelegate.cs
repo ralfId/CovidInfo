@@ -1,14 +1,12 @@
 using Syncfusion.SfBusyIndicator.XForms.iOS;
-using Syncfusion.SfDataGrid.XForms.iOS;
-using Syncfusion.SfChart.XForms.iOS.Renderers;
-using Com.OneSignal;
 using Foundation;
 using Lottie.Forms.iOS.Renderers;
 using Prism;
 using Prism.Ioc;
 using UIKit;
-
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Covid_Info.iOS
 {
@@ -27,15 +25,13 @@ namespace Covid_Info.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-           
-            
-            
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjM5NzIwQDMxMzgyZTMxMmUzMFlNbUVjYTNzeGM3Z053YnEzMjR4SDMwa2E5YmJBdUo3L1FjTEIvbThJbW89");
+
+
+            AppCenter.Start("59c0b2d9c-a232-44bd-b370-1a51295088e0", typeof(Analytics), typeof(Crashes));
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
             global::Rg.Plugins.Popup.Popup.Init();
-global::Xamarin.Forms.Forms.Init();
-SfBusyIndicatorRenderer.Init();
-SfDataGridRenderer.Init();
-            SfChartRenderer.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfBusyIndicatorRenderer.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App(new iOSInitializer()));
             AnimationViewRenderer.Init();
