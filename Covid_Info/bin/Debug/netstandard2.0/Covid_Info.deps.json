@@ -12,8 +12,6 @@
           "Acr.UserDialogs": "7.1.0.446",
           "Com.Airbnb.Xamarin.Forms.Lottie": "3.1.0",
           "Com.OneSignal": "3.10.0",
-          "Microcharts": "0.9.5",
-          "Microcharts.Forms": "0.9.5",
           "Microsoft.AppCenter.Analytics": "3.4.0",
           "Microsoft.AppCenter.Crashes": "3.4.0",
           "NETStandard.Library": "2.0.3",
@@ -78,50 +76,6 @@
           "lib/netstandard2.0/DryIoc.dll": {
             "assemblyVersion": "4.0.7.0",
             "fileVersion": "4.0.7.0"
-          }
-        }
-      },
-      "HarfBuzzSharp/2.6.1.6": {
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/HarfBuzzSharp.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "2.6.1.6"
-          }
-        }
-      },
-      "Microcharts/0.9.5": {
-        "dependencies": {
-          "SkiaSharp": "2.80.1",
-          "SkiaSharp.HarfBuzz": "2.80.1",
-          "System.ValueTuple": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microcharts.dll": {
-            "assemblyVersion": "0.9.0.0",
-            "fileVersion": "0.9.0.0"
-          }
-        }
-      },
-      "Microcharts.Forms/0.9.5": {
-        "dependencies": {
-          "Microcharts": "0.9.5",
-          "SkiaSharp": "2.80.1",
-          "SkiaSharp.HarfBuzz": "2.80.1",
-          "SkiaSharp.Views.Forms": "2.80.1",
-          "System.ValueTuple": "4.5.0",
-          "Xamarin.Forms": "4.7.0.1179"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microcharts.Forms.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          },
-          "lib/netstandard2.0/Microcharts.dll": {
-            "assemblyVersion": "0.9.0.0",
-            "fileVersion": "0.9.0.0"
           }
         }
       },
@@ -223,35 +177,6 @@
             "assemblyVersion": "2.0.0.3",
             "fileVersion": "2.0.0.3"
           }
-        }
-      },
-      "SkiaSharp/2.80.1": {
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SkiaSharp.dll": {
-            "assemblyVersion": "2.80.0.0",
-            "fileVersion": "2.80.1.0"
-          }
-        }
-      },
-      "SkiaSharp.HarfBuzz/2.80.1": {
-        "dependencies": {
-          "HarfBuzzSharp": "2.6.1.6",
-          "SkiaSharp": "2.80.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "assemblyVersion": "2.80.0.0",
-            "fileVersion": "2.80.1.0"
-          }
-        }
-      },
-      "SkiaSharp.Views.Forms/2.80.1": {
-        "dependencies": {
-          "SkiaSharp": "2.80.1",
-          "Xamarin.Forms": "4.7.0.1179"
         }
       },
       "sqlite-net-pcl/1.7.335": {
@@ -453,7 +378,6 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.ValueTuple/4.5.0": {},
       "Xam.Plugin.Iconize/3.5.0.114": {
         "dependencies": {
           "Xamarin.Forms": "4.7.0.1179"
@@ -535,7 +459,6 @@
       "Resx/1.0.0": {
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
-          "Microcharts": "0.9.5",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
           "Xamarin.Forms": "4.7.0.1179"
         },
@@ -592,27 +515,6 @@
       "sha512": "sha512-CHSWiSNf0tTpnHFt+DPB8mzgQMM9PbaFk7DP4g70+kTXsAS7fQlUI/yW4S+b6COOYsVQ+FPhxAw9NMU/2PGE7Q==",
       "path": "dryioc.dll/4.0.7",
       "hashPath": "dryioc.dll.4.0.7.nupkg.sha512"
-    },
-    "HarfBuzzSharp/2.6.1.6": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-yL3wjJk6bfc4vYcf13/89rIgbPAlzS3/FydToxwYhep0/yLLSMyydLZ08fvZQO2+79F7eEvuK0Q6lCNifJXyvw==",
-      "path": "harfbuzzsharp/2.6.1.6",
-      "hashPath": "harfbuzzsharp.2.6.1.6.nupkg.sha512"
-    },
-    "Microcharts/0.9.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3B3x9oX6fmSTETFJg6L4XH8es0JneWMoUiAJpRn6NzsF9QgP0FqxC+nKhXMwBPhu7Xw9J1Z578CBTqjtRMqHLg==",
-      "path": "microcharts/0.9.5",
-      "hashPath": "microcharts.0.9.5.nupkg.sha512"
-    },
-    "Microcharts.Forms/0.9.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3zqQEHtH3L24SQk0tjDyNnlSaYnKxjMKwK48djHPdXdvHyxEOYWiqvlynTWE1vFuiw7RTEzSF3JCkzDi63nR5w==",
-      "path": "microcharts.forms/0.9.5",
-      "hashPath": "microcharts.forms.0.9.5.nupkg.sha512"
     },
     "Microsoft.AppCenter/3.4.0": {
       "type": "package",
@@ -697,27 +599,6 @@
       "sha512": "sha512-/lrKxxsdaF9T+YEnVDaUMj0angdRyvpngSmX8veY/QYhSjT4x3guJTsL8O8D4egDf7MI5McnmMAsst0tkN1LOA==",
       "path": "rg.plugins.popup/2.0.0.3",
       "hashPath": "rg.plugins.popup.2.0.0.3.nupkg.sha512"
-    },
-    "SkiaSharp/2.80.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CiQwnDzG+1JNGzjAN9G/9n/lJgUVA/NPOFgSlEtu6c7qQ0O7P1tMjrXp/+PtWfX0xyyY9ABsFAZK2kW34U7r/A==",
-      "path": "skiasharp/2.80.1",
-      "hashPath": "skiasharp.2.80.1.nupkg.sha512"
-    },
-    "SkiaSharp.HarfBuzz/2.80.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-u+RzIELvLRGETSYQ9OdCaQ8ZkziJvPdtU9GicN5gELcPTed1NBOAMBUapM3eJtC5l/8G/k7LeCDSQAoEU9uD3g==",
-      "path": "skiasharp.harfbuzz/2.80.1",
-      "hashPath": "skiasharp.harfbuzz.2.80.1.nupkg.sha512"
-    },
-    "SkiaSharp.Views.Forms/2.80.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-YP6YSU6StMlBTb1NRMOc1KWBuHe4kq44Psjib/jUIIbs1aBsjzEf9QwMAzPyYvGXiiqIAXkCCnLoDCH5ufiXCQ==",
-      "path": "skiasharp.views.forms/2.80.1",
-      "hashPath": "skiasharp.views.forms.2.80.1.nupkg.sha512"
     },
     "sqlite-net-pcl/1.7.335": {
       "type": "package",
@@ -865,13 +746,6 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
-    },
-    "System.ValueTuple/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
-      "path": "system.valuetuple/4.5.0",
-      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Xam.Plugin.Iconize/3.5.0.114": {
       "type": "package",

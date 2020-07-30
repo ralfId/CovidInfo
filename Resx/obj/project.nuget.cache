@@ -1,24 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "KQHktUIV4QifDOsig9BrP9uWzS3n73AyMfxG3GwIID7Y9oTL3qhdUhdEwLwMTBAAE69mfu2jHcg3Phqb+Zn65Q==",
+  "dgSpecHash": "2Logj2rbrPjIA86STJ2TWzUtpjCNPjIsoqcSoIyK7yeMYIbBJq4sX0bBN1khYwjCfNkkGB1/ze6Y3OFYAcxcxg==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\harfbuzzsharp\\2.6.1.6\\harfbuzzsharp.2.6.1.6.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microcharts\\0.9.5\\microcharts.0.9.5.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\skiasharp\\2.80.1\\skiasharp.2.80.1.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\skiasharp.harfbuzz\\2.80.1\\skiasharp.harfbuzz.2.80.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.47\\syncfusion.licensing.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.47\\syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.47\\syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1179\\xamarin.forms.4.7.0.1179.nupkg.sha512"
   ],
   "logs": []

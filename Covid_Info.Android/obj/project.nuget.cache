@@ -1,17 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "EE1j6bnUuYqZIrL7LqCplNnejqsO0gaszDE6qjmDZd/Ecdo7ZsRjo/+eYEKpRQl2YG91XRRbBkeA6Wq279jZNQ==",
+  "dgSpecHash": "9mnY98kUpId5oVu9moBoCu2nuSp0xskc9EAPPijT9VSyH2PwvG2PwVwLGvrc+omS3vYWM9jK3Fbm8dJ3EblPBA==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.442\\acr.userdialogs.7.1.0.442.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\com.airbnb.android.lottie\\3.4.0\\com.airbnb.android.lottie.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\3.1.0\\com.airbnb.xamarin.forms.lottie.3.1.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\com.onesignal\\3.9.0\\com.onesignal.3.9.0.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\com.onesignal\\3.10.0\\com.onesignal.3.10.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microcharts\\0.7.1\\microcharts.0.7.1.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microcharts.forms\\0.7.1\\microcharts.forms.0.7.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter\\3.4.0\\microsoft.appcenter.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.analytics\\3.4.0\\microsoft.appcenter.analytics.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.crashes\\3.4.0\\microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
@@ -21,29 +19,25 @@
     "C:\\Users\\ID\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.plugin.popups\\7.2.0.1046\\prism.plugin.popups.7.2.0.1046.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\rg.plugins.popup\\2.0.0.3\\rg.plugins.popup.2.0.0.3.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\skiasharp\\1.59.1\\skiasharp.1.59.1.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\skiasharp.views\\1.59.1.1\\skiasharp.views.1.59.1.1.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\skiasharp.views.forms\\1.59.1.1\\skiasharp.views.forms.1.59.1.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.3\\sqlitepclraw.lib.e_sqlite3.android.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\square.okio\\1.17.4\\square.okio.1.17.4.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.1.0.59\\syncfusion.licensing.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.59\\syncfusion.xamarin.core.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\18.1.0.59\\syncfusion.xamarin.gridcommon.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.1.0.59\\syncfusion.xamarin.sfbusyindicator.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.1.0.59\\syncfusion.xamarin.sfchart.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\18.1.0.59\\syncfusion.xamarin.sfcombobox.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfdatagrid\\18.1.0.59\\syncfusion.xamarin.sfdatagrid.18.1.0.59.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfnumerictextbox\\18.1.0.59\\syncfusion.xamarin.sfnumerictextbox.18.1.0.59.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.47\\syncfusion.licensing.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.47\\syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\18.2.0.47\\syncfusion.xamarin.gridcommon.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.47\\syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.2.0.47\\syncfusion.xamarin.sfchart.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\18.2.0.47\\syncfusion.xamarin.sfcombobox.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfdatagrid\\18.2.0.47\\syncfusion.xamarin.sfdatagrid.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfnumerictextbox\\18.2.0.47\\syncfusion.xamarin.sfnumerictextbox.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.iconize\\3.5.0.129\\xam.plugin.iconize.3.5.0.129.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.iconize.fontawesome\\3.5.0.114\\xam.plugin.iconize.fontawesome.3.5.0.114.nupkg.sha512",
@@ -138,9 +132,9 @@
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.firebase.iid.interop\\71.1601.0\\xamarin.firebase.iid.interop.71.1601.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.firebase.measurement.connector\\71.1701.0\\xamarin.firebase.measurement.connector.71.1701.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.firebase.messaging\\71.1740.0\\xamarin.firebase.messaging.71.1740.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1080\\xamarin.forms.4.7.0.1080.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\1.4.2\\xamarin.forms.pancakeview.1.4.2.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.visual.material\\4.7.0.1080\\xamarin.forms.visual.material.4.7.0.1080.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1179\\xamarin.forms.4.7.0.1179.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.visual.material\\4.7.0.1179\\xamarin.forms.visual.material.4.7.0.1179.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.google.android.material\\1.0.0.1\\xamarin.google.android.material.1.0.0.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.google.autovalue.annotations\\1.6.5\\xamarin.google.autovalue.annotations.1.6.5.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.googleplayservices.ads.identifier\\71.1600.0\\xamarin.googleplayservices.ads.identifier.71.1600.0.nupkg.sha512",
@@ -149,136 +143,5 @@
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.googleplayservices.stats\\71.1601.0\\xamarin.googleplayservices.stats.71.1601.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.0\\xamarin.googleplayservices.tasks.71.1601.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Syncfusion.Xamarin.SfBusyIndicator de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.1.0.59)",
-      "libraryId": "Syncfusion.Xamarin.SfBusyIndicator",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Microcharts de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Microcharts (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts (>= 0.7.1)",
-      "libraryId": "Microcharts",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Microcharts.Forms de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Microcharts.Forms (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts.Forms (>= 0.7.1)",
-      "libraryId": "Microcharts.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.Forms.Visual.Material de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms.Visual.Material (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms.Visual.Material (>= 4.7.0.1080)",
-      "libraryId": "Xamarin.Forms.Visual.Material",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Syncfusion.Licensing de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Syncfusion.Licensing (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Licensing (>= 18.1.0.59)",
-      "libraryId": "Syncfusion.Licensing",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Com.OneSignal de 3.10.0 a 3.9.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Com.OneSignal (>= 3.10.0) \r\n Covid_Info.Android -> Com.OneSignal (>= 3.9.0)",
-      "libraryId": "Com.OneSignal",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.Forms.PancakeView de 2.0.1.698 a 1.4.2. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms.PancakeView (>= 2.0.1.698) \r\n Covid_Info.Android -> Xamarin.Forms.PancakeView (>= 1.4.2)",
-      "libraryId": "Xamarin.Forms.PancakeView",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Acr.UserDialogs de 7.1.0.446 a 7.1.0.442. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Acr.UserDialogs (>= 7.1.0.446) \r\n Covid_Info.Android -> Acr.UserDialogs (>= 7.1.0.442)",
-      "libraryId": "Acr.UserDialogs",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.Forms de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Covid_Info -> Xamarin.Forms (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms (>= 4.7.0.1080)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Syncfusion.Xamarin.SfBusyIndicator de 18.2.0.47 a 18.1.0.59. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.2.0.47) \r\n Covid_Info.Android -> Syncfusion.Xamarin.SfBusyIndicator (>= 18.1.0.59)",
-      "libraryId": "Syncfusion.Xamarin.SfBusyIndicator",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Microcharts de 0.9.5 a 0.7.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Microcharts (>= 0.9.5) \r\n Covid_Info.Android -> Microcharts (>= 0.7.1)",
-      "libraryId": "Microcharts",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Acr.UserDialogs de 7.1.0.446 a 7.1.0.442. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Acr.UserDialogs (>= 7.1.0.446) \r\n Covid_Info.Android -> Acr.UserDialogs (>= 7.1.0.442)",
-      "libraryId": "Acr.UserDialogs",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.Forms de 4.7.0.1179 a 4.7.0.1080. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Covid_Info.Android -> Resx -> Xamarin.Forms (>= 4.7.0.1179) \r\n Covid_Info.Android -> Xamarin.Forms (>= 4.7.0.1080)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v10.0"
-      ]
-    }
-  ]
+  "logs": []
 }

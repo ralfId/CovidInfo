@@ -48,10 +48,6 @@
               "target": "Package",
               "version": "[7.1.0.446, )"
             },
-            "Microcharts": {
-              "target": "Package",
-              "version": "[0.9.5, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

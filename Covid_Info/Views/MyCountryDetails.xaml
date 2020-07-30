@@ -3,9 +3,7 @@
     x:Class="Covid_Info.Views.MyCountryDetails"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:microCharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
@@ -260,7 +258,7 @@
 
 
                     </StackLayout>
-                    <!--  cases charts  -->
+                    <!--  cases charts  --><!--
                     <StackLayout Margin="0,0,0,20" Spacing="30">
                         <StackLayout>
                             <Label
@@ -343,7 +341,7 @@
                             </Label>
                             <microCharts:ChartView Chart="{Binding deathsHistoryChart}" HeightRequest="175" />
                         </StackLayout>
-                    </StackLayout>
+                    </StackLayout>-->
 
                 </StackLayout>
             </ScrollView>

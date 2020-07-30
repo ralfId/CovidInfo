@@ -21,4 +21,3 @@ D:\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\it\Resx.resources.dll
 D:\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\pt\Resx.resources.dll
 D:\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.dll
 D:\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.pdb
-D:\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.csprojAssemblyReference.cache

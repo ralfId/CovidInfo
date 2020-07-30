@@ -58,14 +58,6 @@
               "target": "Package",
               "version": "[3.10.0, )"
             },
-            "Microcharts": {
-              "target": "Package",
-              "version": "[0.9.5, )"
-            },
-            "Microcharts.Forms": {
-              "target": "Package",
-              "version": "[0.9.5, )"
-            },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
               "version": "[3.4.0, )"
@@ -197,14 +189,6 @@
               "target": "Package",
               "version": "[3.10.0, )"
             },
-            "Microcharts": {
-              "target": "Package",
-              "version": "[0.9.5, )"
-            },
-            "Microcharts.Forms": {
-              "target": "Package",
-              "version": "[0.9.5, )"
-            },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
               "version": "[3.4.0, )"
@@ -329,10 +313,6 @@
             "Acr.UserDialogs": {
               "target": "Package",
               "version": "[7.1.0.446, )"
-            },
-            "Microcharts": {
-              "target": "Package",
-              "version": "[0.9.5, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

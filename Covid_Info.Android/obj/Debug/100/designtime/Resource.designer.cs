@@ -2721,7 +2721,6 @@ namespace Covid_Info.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Covid_Info.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Covid_Info.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Covid_Info.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
-			global::Microcharts.Droid.Resource.String.library_name = global::Covid_Info.Droid.Resource.String.library_name;
 			global::Prism.Resource.Animation.abc_fade_in = global::Covid_Info.Droid.Resource.Animation.abc_fade_in;
 			global::Prism.Resource.Animation.abc_fade_out = global::Covid_Info.Droid.Resource.Animation.abc_fade_out;
 			global::Prism.Resource.Animation.abc_grow_fade_in_from_bottom = global::Covid_Info.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -10553,6 +10552,7 @@ namespace Covid_Info.Droid
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.input_layout_drop_down_icon = global::Covid_Info.Droid.Resource.Drawable.input_layout_drop_down_icon;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::Covid_Info.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::Covid_Info.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.clear_button_icon = global::Covid_Info.Droid.Resource.Drawable.clear_button_icon;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorAnimationTypes = global::Covid_Info.Droid.Resource.Attribute.busyIndicatorAnimationTypes;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorIsBusy = global::Covid_Info.Droid.Resource.Attribute.busyIndicatorIsBusy;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorSecondaryColor = global::Covid_Info.Droid.Resource.Attribute.busyIndicatorSecondaryColor;
@@ -10635,6 +10635,11 @@ namespace Covid_Info.Droid
 			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_increase_label = global::Covid_Info.Droid.Resource.String.sfchart_increase_label;
 			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_decrease_label = global::Covid_Info.Droid.Resource.String.sfchart_decrease_label;
 			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_total_label = global::Covid_Info.Droid.Resource.String.sfchart_total_label;
+			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_maximum_label = global::Covid_Info.Droid.Resource.String.sfchart_maximum_label;
+			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_minimum_label = global::Covid_Info.Droid.Resource.String.sfchart_minimum_label;
+			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_Q1_label = global::Covid_Info.Droid.Resource.String.sfchart_Q1_label;
+			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_Q3_label = global::Covid_Info.Droid.Resource.String.sfchart_Q3_label;
+			global::Syncfusion.SfChart.XForms.Droid.Resource.String.sfchart_Median_label = global::Covid_Info.Droid.Resource.String.sfchart_Median_label;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_fade_in = global::Covid_Info.Droid.Resource.Animation.abc_fade_in;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_fade_out = global::Covid_Info.Droid.Resource.Animation.abc_fade_out;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_grow_fade_in_from_bottom = global::Covid_Info.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -11610,6 +11615,7 @@ namespace Covid_Info.Droid
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar9 = global::Covid_Info.Droid.Resource.Drawable.Avatar9;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.avd_hide_password = global::Covid_Info.Droid.Resource.Drawable.avd_hide_password;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.avd_show_password = global::Covid_Info.Droid.Resource.Drawable.avd_show_password;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.clear_button_icon = global::Covid_Info.Droid.Resource.Drawable.clear_button_icon;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_bottom_navigation_item_background = global::Covid_Info.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_fab_background = global::Covid_Info.Droid.Resource.Drawable.design_fab_background;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_ic_visibility = global::Covid_Info.Droid.Resource.Drawable.design_ic_visibility;
@@ -27995,38 +28001,53 @@ namespace Covid_Info.Droid
 			// aapt resource value: 0x7F0E0060
 			public const int search_menu_title = 2131624032;
 			
-			// aapt resource value: 0x7F0E0061
-			public const int sfchart_close_label = 2131624033;
-			
-			// aapt resource value: 0x7F0E0062
-			public const int sfchart_decrease_label = 2131624034;
-			
-			// aapt resource value: 0x7F0E0063
-			public const int sfchart_high_label = 2131624035;
-			
 			// aapt resource value: 0x7F0E0064
-			public const int sfchart_increase_label = 2131624036;
+			public const int sfchart_close_label = 2131624036;
 			
 			// aapt resource value: 0x7F0E0065
-			public const int sfchart_low_label = 2131624037;
+			public const int sfchart_decrease_label = 2131624037;
 			
 			// aapt resource value: 0x7F0E0066
-			public const int sfchart_open_label = 2131624038;
+			public const int sfchart_high_label = 2131624038;
 			
 			// aapt resource value: 0x7F0E0067
-			public const int sfchart_others_label = 2131624039;
+			public const int sfchart_increase_label = 2131624039;
 			
 			// aapt resource value: 0x7F0E0068
-			public const int sfchart_total_label = 2131624040;
+			public const int sfchart_low_label = 2131624040;
 			
 			// aapt resource value: 0x7F0E0069
-			public const int status_bar_notification_info_overflow = 2131624041;
+			public const int sfchart_maximum_label = 2131624041;
+			
+			// aapt resource value: 0x7F0E0061
+			public const int sfchart_Median_label = 2131624033;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int w = 2131624042;
+			public const int sfchart_minimum_label = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int week = 2131624043;
+			public const int sfchart_open_label = 2131624043;
+			
+			// aapt resource value: 0x7F0E006C
+			public const int sfchart_others_label = 2131624044;
+			
+			// aapt resource value: 0x7F0E0062
+			public const int sfchart_Q1_label = 2131624034;
+			
+			// aapt resource value: 0x7F0E0063
+			public const int sfchart_Q3_label = 2131624035;
+			
+			// aapt resource value: 0x7F0E006D
+			public const int sfchart_total_label = 2131624045;
+			
+			// aapt resource value: 0x7F0E006E
+			public const int status_bar_notification_info_overflow = 2131624046;
+			
+			// aapt resource value: 0x7F0E006F
+			public const int w = 2131624047;
+			
+			// aapt resource value: 0x7F0E0070
+			public const int week = 2131624048;
 			
 			static String()
 			{
