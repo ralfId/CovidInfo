@@ -13,8 +13,6 @@
           "Microcharts": "0.9.5",
           "NETStandard.Library": "2.0.3",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
-          "Syncfusion.Xamarin.SfChart": "18.2.0.47",
-          "Syncfusion.Xamarin.SfDataGrid": "18.2.0.47",
           "Xamarin.Forms": "4.7.0.1179"
         },
         "runtime": {
@@ -116,14 +114,6 @@
           }
         }
       },
-      "Syncfusion.Xamarin.GridCommon/18.2.0.47": {
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
-        }
-      },
       "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
         "dependencies": {
           "Syncfusion.Xamarin.Core": "18.2.0.47",
@@ -131,61 +121,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.SfChart/18.2.0.47": {
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1179"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfChart.XForms.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.SfComboBox/18.2.0.47": {
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1179"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.SfDataGrid/18.2.0.47": {
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Syncfusion.Xamarin.GridCommon": "18.2.0.47",
-          "Syncfusion.Xamarin.SfComboBox": "18.2.0.47",
-          "Syncfusion.Xamarin.SfNumericTextBox": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1179"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Data.Portable.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          },
-          "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.SfNumericTextBox/18.2.0.47": {
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1179"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {
             "assemblyVersion": "18.2451.0.47",
             "fileVersion": "18.2451.0.47"
           }
@@ -316,47 +251,12 @@
       "path": "syncfusion.xamarin.core/18.2.0.47",
       "hashPath": "syncfusion.xamarin.core.18.2.0.47.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.GridCommon/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/Hnuiyyxm2EqezdsGFsB1jlQrg5QCQAMBLDYr5og4c+LfHg23nXyHMz/4pN6jwr6lXAmPGbfhWrL6dheyODjRA==",
-      "path": "syncfusion.xamarin.gridcommon/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.gridcommon.18.2.0.47.nupkg.sha512"
-    },
     "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-2SKxlXhg689NmUtqqHDCWqn8eXFOqMpwzmupuSh4/PnzFTUELBIQnA7GtwvaImaC1CK//NkyBR/KUcLwvh4KNg==",
       "path": "syncfusion.xamarin.sfbusyindicator/18.2.0.47",
       "hashPath": "syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.SfChart/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sVfQO57JHVuUVYH4Rak8wiVEQOyo6z6Qtws1h0c0dKJxa2jYTVpTfaiJn2Lltxvf+S8/BjhKrcWYRkmYiyLFEA==",
-      "path": "syncfusion.xamarin.sfchart/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.sfchart.18.2.0.47.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.SfComboBox/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4Q+QcMZWGhb4ucFja22vb59BScDU3/CvBKM55asn5jraJZ4avB++jY3veaMqMWlWl7y5T3lOZkqzCxOlh7axJw==",
-      "path": "syncfusion.xamarin.sfcombobox/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.sfcombobox.18.2.0.47.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.SfDataGrid/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Yin6d+Xls/Yb6x0o3KtuWA64C5J8gLCBIlDNbhuxth88l7weNV80hfZzzGR0a20BkV5QT0iRvD6w+13iOiRn+Q==",
-      "path": "syncfusion.xamarin.sfdatagrid/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.sfdatagrid.18.2.0.47.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.SfNumericTextBox/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-YZLe7dx+/Oeto7O4lGkJVAo4rcwJ78MKSqggFbLCeW+HutcpNEqwYCU5kJ/yw19U6CSGYWlpu/J3Hlb9LxNTtg==",
-      "path": "syncfusion.xamarin.sfnumerictextbox/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.sfnumerictextbox.18.2.0.47.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",
