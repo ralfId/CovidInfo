@@ -1,28 +1,22 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
-             mc:Ignorable="d"
-             x:Class="Covid_Info.Views.ContentViews.LoadingData"
-             Visual="Default">
-  <ContentView.Content>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covid_Info.Views.ContentViews.LoadingData"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Visual="Default"
+    mc:Ignorable="d">
+    <ContentView.Content>
         <Grid>
             <StackLayout VerticalOptions="CenterAndExpand">
-                <lottie:AnimationView
-                    x:Name="animationView"
-                    Animation="{Binding AnimationJSON}"
-                    Loop="True"
-                    IsPlaying="True"
-                    AutoPlay="False"
-                    WidthRequest="50" HeightRequest="50"/>
-                <Label Text="{Binding LoadMessage}"
-                       FontSize="Large" 
-                       FontAttributes="Bold" 
-                       TextColor="{StaticResource WhiteColor}"
-                       HorizontalOptions="Center"
-                       VerticalOptions="EndAndExpand"/>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="{Binding LoadMessage}"
+                    TextColor="{StaticResource WhiteColor}"
+                    VerticalOptions="EndAndExpand" />
             </StackLayout>
         </Grid>
     </ContentView.Content>

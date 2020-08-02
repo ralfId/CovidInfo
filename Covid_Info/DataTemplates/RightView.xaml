@@ -4,7 +4,6 @@
           xmlns:d="http://xamarin.com/schemas/2014/forms/design"
           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
           xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-          xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
           mc:Ignorable="d"
           x:Class="Covid_Info.DataTemplates.RightView">
   <ViewCell.View>
@@ -19,12 +18,6 @@
                     </StackLayout>
                 </Frame>
                 <pkv:PancakeView Grid.Column="1" Grid.Row="0"   CornerRadius="7" Padding="5" TranslationX="-20" WidthRequest="{Binding widthRequest}" HeightRequest="{Binding heightRequest}">
-                    <lottie:AnimationView x:Name="LottieView" 
-                                          Animation="{Binding imgName}" 
-                                          Loop="True" 
-                                          AutoPlay="True"
-                                          VerticalOptions="FillAndExpand"
-                                          HorizontalOptions="FillAndExpand" />
                 </pkv:PancakeView>
             </Grid>
         </StackLayout>

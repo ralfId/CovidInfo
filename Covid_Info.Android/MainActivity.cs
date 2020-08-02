@@ -2,7 +2,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Lottie.Forms.Droid;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -28,7 +27,6 @@ namespace Covid_Info.Droid
             Rg.Plugins.Popup.Popup.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.FormsMaterial.Init(this, bundle);
-            AnimationViewRenderer.Init();
             LoadApplication(new App(new AndroidInitializer()));
         }
 

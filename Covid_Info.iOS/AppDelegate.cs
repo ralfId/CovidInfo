@@ -1,6 +1,5 @@
 using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Foundation;
-using Lottie.Forms.iOS.Renderers;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -34,7 +33,6 @@ namespace Covid_Info.iOS
             SfBusyIndicatorRenderer.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App(new iOSInitializer()));
-            AnimationViewRenderer.Init();
             return base.FinishedLaunching(app, options);
         }
     }

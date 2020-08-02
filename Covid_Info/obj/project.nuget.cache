@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KzW1yTxpOG9kb6ck7KXVM0ND0tKVXoOV5CI6MazZrKu30QyMb+tvSjE2eiFmiJ6/Bu6V9drUcytE7aD7ZZIjNg==",
+  "dgSpecHash": "GySxe0DwGccsHXEi9kp4xKjWwx5/D+MWznM8y3+6LpvFAvSYxR30oz84f6ewAI4kRTBV9wZvG4NNpcS/sMAdBA==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\3.1.0\\com.airbnb.xamarin.forms.lottie.3.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\com.onesignal\\3.10.0\\com.onesignal.3.10.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter\\3.4.0\\microsoft.appcenter.3.4.0.nupkg.sha512",

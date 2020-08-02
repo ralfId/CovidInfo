@@ -2,8 +2,6 @@ Acr.UserDialogs
 AndHUD
 Com.OneSignal
 FormsViewGroup
-Lottie.Android
-Lottie.Forms
 Microsoft.AppCenter.Analytics.Android.Bindings
 Microsoft.AppCenter.Analytics
 Microsoft.AppCenter.Android.Bindings
@@ -18,7 +16,6 @@ Prism.Forms
 Prism.Plugin.Popups
 Rg.Plugins.Popup
 SQLitePCLRaw.lib.e_sqlite3.android
-Square.OkIO
 Syncfusion.Core.XForms.Android
 Syncfusion.SfBusyIndicator.Android
 Syncfusion.SfBusyIndicator.XForms.Android

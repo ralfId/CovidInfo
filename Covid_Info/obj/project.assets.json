@@ -11,18 +11,6 @@
           "lib/netstandard2.0/Acr.UserDialogs.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/3.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "4.5.0.356"
-        },
-        "compile": {
-          "lib/netstandard2.0/Lottie.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Lottie.Forms.dll": {}
-        }
-      },
       "Com.OneSignal/3.10.0": {
         "type": "package",
         "dependencies": {
@@ -625,39 +613,6 @@
         "lib/xamarintvos10/Acr.UserDialogs.dll",
         "lib/xamarintvos10/Acr.UserDialogs.pdb",
         "lib/xamarintvos10/Acr.UserDialogs.xml",
-        "readme.txt"
-      ]
-    },
-    "Com.Airbnb.Xamarin.Forms.Lottie/3.1.0": {
-      "sha512": "aOO+qvfD/czfT49S/RCBZUoCc4nGDMDMD9sBDdqDoQ/5RZR5eqs45W4ohlaQnY1w3te4CAw/IN2EesmZEMyiUA==",
-      "type": "package",
-      "path": "com.airbnb.xamarin.forms.lottie/3.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "com.airbnb.xamarin.forms.lottie.3.1.0.nupkg.sha512",
-        "com.airbnb.xamarin.forms.lottie.nuspec",
-        "icon.png",
-        "lib/monoandroid10.0/Lottie.Forms.dll",
-        "lib/monoandroid10.0/Lottie.Forms.pdb",
-        "lib/monoandroid10.0/Lottie.Forms.xml",
-        "lib/netstandard2.0/Lottie.Forms.dll",
-        "lib/netstandard2.0/Lottie.Forms.pdb",
-        "lib/netstandard2.0/Lottie.Forms.xml",
-        "lib/tizen40/Lottie.Forms.dll",
-        "lib/tizen40/Lottie.Forms.pdb",
-        "lib/tizen40/Lottie.Forms.xml",
-        "lib/uap10.0.18362/Lottie.Forms.dll",
-        "lib/uap10.0.18362/Lottie.Forms.pdb",
-        "lib/uap10.0.18362/Lottie.Forms.pri",
-        "lib/uap10.0.18362/Lottie.Forms.xml",
-        "lib/xamarinios10/Lottie.Forms.dll",
-        "lib/xamarinios10/Lottie.Forms.pdb",
-        "lib/xamarinios10/Lottie.Forms.xml",
-        "lib/xamarinmac20/Lottie.Forms.dll",
-        "lib/xamarinmac20/Lottie.Forms.pdb",
-        "lib/xamarinmac20/Lottie.Forms.xml",
         "readme.txt"
       ]
     },
@@ -2487,7 +2442,6 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Acr.UserDialogs >= 7.1.0.446",
-      "Com.Airbnb.Xamarin.Forms.Lottie >= 3.1.0",
       "Com.OneSignal >= 3.10.0",
       "Microsoft.AppCenter.Analytics >= 3.4.0",
       "Microsoft.AppCenter.Crashes >= 3.4.0",
@@ -2560,10 +2514,6 @@
           "Acr.UserDialogs": {
             "target": "Package",
             "version": "[7.1.0.446, )"
-          },
-          "Com.Airbnb.Xamarin.Forms.Lottie": {
-            "target": "Package",
-            "version": "[3.1.0, )"
           },
           "Com.OneSignal": {
             "target": "Package",
