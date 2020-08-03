@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2Logj2rbrPjIA86STJ2TWzUtpjCNPjIsoqcSoIyK7yeMYIbBJq4sX0bBN1khYwjCfNkkGB1/ze6Y3OFYAcxcxg==",
+  "dgSpecHash": "5lm4XE3LTXxsiCNi3o1IZC5tI3c8AdedyLGjfrLiORRLGCp2r2Nq06SHl/m7OYmBYcpFGbhFVzJ5yFQU5X80WQ==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.47\\syncfusion.licensing.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.47\\syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.47\\syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1179\\xamarin.forms.4.7.0.1179.nupkg.sha512"
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1239\\xamarin.forms.4.7.0.1239.nupkg.sha512"
   ],
   "logs": []
 }

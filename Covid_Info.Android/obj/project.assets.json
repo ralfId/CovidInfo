@@ -262,15 +262,6 @@
           "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/18.2.0.47": {
-        "type": "package",
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll": {}
-        }
-      },
       "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
         "type": "package",
         "dependencies": {
@@ -301,58 +292,6 @@
         "runtime": {
           "lib/MonoAndroid10/Syncfusion.SfChart.XForms.Android.dll": {},
           "lib/MonoAndroid10/Syncfusion.SfChart.XForms.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfComboBox/18.2.0.47": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfDataGrid/18.2.0.47": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Syncfusion.Xamarin.GridCommon": "18.2.0.47",
-          "Syncfusion.Xamarin.SfComboBox": "18.2.0.47",
-          "Syncfusion.Xamarin.SfNumericTextBox": "18.2.0.47",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.Data.Portable.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.Data.Portable.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfNumericTextBox/18.2.0.47": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -404,27 +343,19 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "Xam.Plugin.Connectivity/3.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll": {},
-          "lib/MonoAndroid10/Plugin.Connectivity.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll": {},
-          "lib/MonoAndroid10/Plugin.Connectivity.dll": {}
-        }
-      },
-      "Xam.Plugin.Iconize/3.5.0.129": {
+      "Xam.Plugin.Iconize/3.5.0.114": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "3.5.0.274416"
+          "Xamarin.Forms": "3.5.0.129452"
         },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
         "compile": {
-          "lib/monoandroid90/Plugin.Iconize.dll": {}
+          "lib/monoandroid81/Plugin.Iconize.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Plugin.Iconize.dll": {}
+          "lib/monoandroid81/Plugin.Iconize.dll": {}
         }
       },
       "Xam.Plugin.Iconize.FontAwesome/3.5.0.114": {
@@ -2238,7 +2169,7 @@
           "build/MonoAndroid90/Xamarin.Firebase.Messaging.targets": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1179": {
+      "Xamarin.Forms/4.7.0.1239": {
         "type": "package",
         "dependencies": {
           "Xamarin.AndroidX.Browser": "1.0.0.1",
@@ -2281,7 +2212,7 @@
           "lib/monoandroid90/Xamarin.Forms.PancakeView.dll": {}
         }
       },
-      "Xamarin.Forms.Visual.Material/4.7.0.1179": {
+      "Xamarin.Forms.Visual.Material/4.7.0.1239": {
         "type": "package",
         "dependencies": {
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.1.0.1",
@@ -2450,9 +2381,9 @@
           "Xam.Plugin.Iconize.FontAwesome": "3.5.0.114",
           "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.7.0.1179",
+          "Xamarin.Forms": "4.7.0.1239",
           "Xamarin.Forms.PancakeView": "2.0.1.698",
-          "Xamarin.Forms.Visual.Material": "4.7.0.1179",
+          "Xamarin.Forms.Visual.Material": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -2468,7 +2399,7 @@
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1179"
+          "Xamarin.Forms": "4.7.0.1239"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -2952,29 +2883,6 @@
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/18.2.0.47": {
-      "sha512": "/Hnuiyyxm2EqezdsGFsB1jlQrg5QCQAMBLDYr5og4c+LfHg23nXyHMz/4pN6jwr6lXAmPGbfhWrL6dheyODjRA==",
-      "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.XML",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.18.2.0.47.nupkg.sha512",
-        "syncfusion.xamarin.gridcommon.nuspec"
-      ]
-    },
     "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
       "sha512": "2SKxlXhg689NmUtqqHDCWqn8eXFOqMpwzmupuSh4/PnzFTUELBIQnA7GtwvaImaC1CK//NkyBR/KUcLwvh4KNg==",
       "type": "package",
@@ -3029,109 +2937,6 @@
         "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
         "syncfusion.xamarin.sfchart.18.2.0.47.nupkg.sha512",
         "syncfusion.xamarin.sfchart.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfComboBox/18.2.0.47": {
-      "sha512": "4Q+QcMZWGhb4ucFja22vb59BScDU3/CvBKM55asn5jraJZ4avB++jY3veaMqMWlWl7y5T3lOZkqzCxOlh7axJw==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sfcombobox/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
-        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
-        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
-        "syncfusion.xamarin.sfcombobox.18.2.0.47.nupkg.sha512",
-        "syncfusion.xamarin.sfcombobox.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfDataGrid/18.2.0.47": {
-      "sha512": "Yin6d+Xls/Yb6x0o3KtuWA64C5J8gLCBIlDNbhuxth88l7weNV80hfZzzGR0a20BkV5QT0iRvD6w+13iOiRn+Q==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sfdatagrid/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Data.Portable.dll",
-        "lib/MonoAndroid10/Syncfusion.Data.Portable.xml",
-        "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.Data.Portable.dll",
-        "lib/Xamarin.Mac/Syncfusion.Data.Portable.xml",
-        "lib/Xamarin.Mac/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.SfDataGrid.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Data.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Data.Portable.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.Data.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.Data.Portable.xml",
-        "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Data.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Data.Portable.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfDataGrid.XForms.xml",
-        "lib/uap10.0/Syncfusion.Data.Portable.dll",
-        "lib/uap10.0/Syncfusion.Data.Portable.xml",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP.pri",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP/Assets/DataGridFontIcon.ttf",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP/Assets/DataPagerFontIcon.ttf",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.UWP/Properties/Syncfusion.SfDataGrid.XForms.UWP.rd.xml",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfDataGrid.XForms.xml",
-        "syncfusion.xamarin.sfdatagrid.18.2.0.47.nupkg.sha512",
-        "syncfusion.xamarin.sfdatagrid.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfNumericTextBox/18.2.0.47": {
-      "sha512": "YZLe7dx+/Oeto7O4lGkJVAo4rcwJ78MKSqggFbLCeW+HutcpNEqwYCU5kJ/yw19U6CSGYWlpu/J3Hlb9LxNTtg==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sfnumerictextbox/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.xml",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.XML",
-        "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll",
-        "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfNumericTextBox.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.xml",
-        "syncfusion.xamarin.sfnumerictextbox.18.2.0.47.nupkg.sha512",
-        "syncfusion.xamarin.sfnumerictextbox.nuspec"
       ]
     },
     "System.Buffers/4.4.0": {
@@ -3309,88 +3114,17 @@
         "version.txt"
       ]
     },
-    "Xam.Plugin.Connectivity/3.2.0": {
-      "sha512": "ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+    "Xam.Plugin.Iconize/3.5.0.114": {
+      "sha512": "9hFQYeB8x0Ci5Sx/FoQVRtcMPsg2ajEMlp09m131vxPvqTm6DD+KZTTShjn4ZLjdgDGfd1pVUtaD2awv4Ny+TA==",
       "type": "package",
-      "path": "xam.plugin.connectivity/3.2.0",
+      "path": "xam.plugin.iconize/3.5.0.114",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll",
-        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
-        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
-        "lib/MonoAndroid10/Plugin.Connectivity.dll",
-        "lib/MonoAndroid10/Plugin.Connectivity.dll.mdb",
-        "lib/MonoAndroid10/Plugin.Connectivity.pdb",
-        "lib/MonoAndroid10/Plugin.Connectivity.xml",
-        "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
-        "lib/UAP10/Plugin.Connectivity.Abstractions.pdb",
-        "lib/UAP10/Plugin.Connectivity.Abstractions.xml",
-        "lib/UAP10/Plugin.Connectivity.XML",
-        "lib/UAP10/Plugin.Connectivity.dll",
-        "lib/UAP10/Plugin.Connectivity.pdb",
-        "lib/UAP10/Plugin.Connectivity.pri",
-        "lib/UAP10/Plugin.Connectivity/Properties/Plugin.Connectivity.rd.xml",
-        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.dll",
-        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.pdb",
-        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.xml",
-        "lib/Xamarin.Mac20/Plugin.Connectivity.dll",
-        "lib/Xamarin.Mac20/Plugin.Connectivity.pdb",
-        "lib/Xamarin.Mac20/Plugin.Connectivity.xml",
-        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll",
-        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.pdb",
-        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.xml",
-        "lib/Xamarin.iOS10/Plugin.Connectivity.dll",
-        "lib/Xamarin.iOS10/Plugin.Connectivity.pdb",
-        "lib/Xamarin.iOS10/Plugin.Connectivity.xml",
-        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.dll",
-        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.pdb",
-        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.xml",
-        "lib/XamarinTVOS/Plugin.Connectivity.dll",
-        "lib/XamarinTVOS/Plugin.Connectivity.pdb",
-        "lib/XamarinTVOS/Plugin.Connectivity.xml",
-        "lib/net45/Plugin.Connectivity.Abstractions.dll",
-        "lib/net45/Plugin.Connectivity.Abstractions.pdb",
-        "lib/net45/Plugin.Connectivity.Abstractions.xml",
-        "lib/net45/Plugin.Connectivity.XML",
-        "lib/net45/Plugin.Connectivity.dll",
-        "lib/net45/Plugin.Connectivity.pdb",
-        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.dll",
-        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.pdb",
-        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.xml",
-        "lib/netcoreapp2.0/Plugin.Connectivity.deps.json",
-        "lib/netcoreapp2.0/Plugin.Connectivity.dll",
-        "lib/netcoreapp2.0/Plugin.Connectivity.xml",
-        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll",
-        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.pdb",
-        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.xml",
-        "lib/netstandard1.0/Plugin.Connectivity.deps.json",
-        "lib/netstandard1.0/Plugin.Connectivity.dll",
-        "lib/netstandard1.0/Plugin.Connectivity.pdb",
-        "lib/netstandard1.0/Plugin.Connectivity.xml",
-        "lib/tizen40/Plugin.Connectivity.Abstractions.dll",
-        "lib/tizen40/Plugin.Connectivity.Abstractions.pdb",
-        "lib/tizen40/Plugin.Connectivity.Abstractions.xml",
-        "lib/tizen40/Plugin.Connectivity.deps.json",
-        "lib/tizen40/Plugin.Connectivity.dll",
-        "xam.plugin.connectivity.3.2.0.nupkg.sha512",
-        "xam.plugin.connectivity.nuspec"
-      ]
-    },
-    "Xam.Plugin.Iconize/3.5.0.129": {
-      "sha512": "XLWwU+ZRRs1tM8quKDD3ZgdYgAftxyk9LhEQ8vdji8C9HsqVF+1El9Fdw9WbU/VBxGVoM5GWQ0tDb2uuT1QU7w==",
-      "type": "package",
-      "path": "xam.plugin.iconize/3.5.0.129",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/monoandroid90/Plugin.Iconize.dll",
-        "lib/monoandroid90/Plugin.Iconize.dll.mdb",
-        "lib/monoandroid90/Plugin.Iconize.pdb",
-        "lib/monoandroid90/Plugin.Iconize.xml",
-        "lib/net472/Plugin.Iconize.dll",
-        "lib/net472/Plugin.Iconize.pdb",
-        "lib/net472/Plugin.Iconize.xml",
+        "lib/monoandroid81/Plugin.Iconize.dll",
+        "lib/monoandroid81/Plugin.Iconize.dll.mdb",
+        "lib/monoandroid81/Plugin.Iconize.pdb",
+        "lib/monoandroid81/Plugin.Iconize.xml",
         "lib/netstandard1.3/Plugin.Iconize.dll",
         "lib/netstandard1.3/Plugin.Iconize.pdb",
         "lib/netstandard1.3/Plugin.Iconize.xml",
@@ -3404,7 +3138,7 @@
         "lib/xamarinios10/Plugin.Iconize.dll",
         "lib/xamarinios10/Plugin.Iconize.pdb",
         "lib/xamarinios10/Plugin.Iconize.xml",
-        "xam.plugin.iconize.3.5.0.129.nupkg.sha512",
+        "xam.plugin.iconize.3.5.0.114.nupkg.sha512",
         "xam.plugin.iconize.nuspec"
       ]
     },
@@ -5170,10 +4904,10 @@
         "xamarin.firebase.messaging.nuspec"
       ]
     },
-    "Xamarin.Forms/4.7.0.1179": {
-      "sha512": "QY/wwwG/OTOK9UGUalL4u3fKDQ5bh86nVa+M8bmKCq8/QdgZSXRQ/YVwDh0Mew0MaKsZZwTZUNGOGRc52fb+/Q==",
+    "Xamarin.Forms/4.7.0.1239": {
+      "sha512": "vGtrCFHo/eEIDPk0yHsktW1xl4rt+KbTab2ciPbsU7tlI5x88aspH9IJlfybh5ejCFhRYYpNr8+uB9vX08bsuA==",
       "type": "package",
-      "path": "xamarin.forms/4.7.0.1179",
+      "path": "xamarin.forms/4.7.0.1239",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5480,7 +5214,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.7.0.1179.nupkg.sha512",
+        "xamarin.forms.4.7.0.1239.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -5502,10 +5236,10 @@
         "xamarin.forms.pancakeview.nuspec"
       ]
     },
-    "Xamarin.Forms.Visual.Material/4.7.0.1179": {
-      "sha512": "lF+3Qf6pKwUNGpQI3HpniN+0mlhnrocw2xqN9NXhm0DjfFP3xsXZY1h83tixvJbsUbfLnmvR8OZSj4U+MqF4xQ==",
+    "Xamarin.Forms.Visual.Material/4.7.0.1239": {
+      "sha512": "O4MSFQKy0dUaEivTDDeZ1PV9iggkghTDC/RBbACoElOwl2+S2QTtYloLNeXqrDk21vNwoelqAg10gCvy0up6Mg==",
       "type": "package",
-      "path": "xamarin.forms.visual.material/4.7.0.1179",
+      "path": "xamarin.forms.visual.material/4.7.0.1239",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5522,7 +5256,7 @@
         "lib/netstandard1.0/_._",
         "lib/tizen40/Xamarin.Forms.Material.dll",
         "lib/tizen40/Xamarin.Forms.Material.pdb",
-        "xamarin.forms.visual.material.4.7.0.1179.nupkg.sha512",
+        "xamarin.forms.visual.material.4.7.0.1239.nupkg.sha512",
         "xamarin.forms.visual.material.nuspec"
       ]
     },
@@ -5649,9 +5383,6 @@
       "Syncfusion.Licensing >= 18.2.0.47",
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.47",
       "Syncfusion.Xamarin.SfChart >= 18.2.0.47",
-      "Syncfusion.Xamarin.SfDataGrid >= 18.2.0.47",
-      "Xam.Plugin.Connectivity >= 3.2.0",
-      "Xam.Plugin.Iconize >= 3.5.0.129",
       "Xam.Plugin.Iconize.FontAwesome >= 3.5.0.114",
       "Xamanimation >= 1.3.0",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
@@ -5663,9 +5394,9 @@
       "Xamarin.AndroidX.AppCompat.Resources >= 1.1.0.1",
       "Xamarin.AndroidX.MediaRouter >= 1.1.0.1",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.7.0.1179",
+      "Xamarin.Forms >= 4.7.0.1239",
       "Xamarin.Forms.PancakeView >= 2.0.1.698",
-      "Xamarin.Forms.Visual.Material >= 4.7.0.1179",
+      "Xamarin.Forms.Visual.Material >= 4.7.0.1239",
       "sqlite-net-pcl >= 1.7.335"
     ]
   },
@@ -5751,18 +5482,6 @@
             "target": "Package",
             "version": "[18.2.0.47, )"
           },
-          "Syncfusion.Xamarin.SfDataGrid": {
-            "target": "Package",
-            "version": "[18.2.0.47, )"
-          },
-          "Xam.Plugin.Connectivity": {
-            "target": "Package",
-            "version": "[3.2.0, )"
-          },
-          "Xam.Plugin.Iconize": {
-            "target": "Package",
-            "version": "[3.5.0.129, )"
-          },
           "Xam.Plugin.Iconize.FontAwesome": {
             "target": "Package",
             "version": "[3.5.0.114, )"
@@ -5809,7 +5528,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.7.0.1179, )"
+            "version": "[4.7.0.1239, )"
           },
           "Xamarin.Forms.PancakeView": {
             "target": "Package",
@@ -5817,7 +5536,7 @@
           },
           "Xamarin.Forms.Visual.Material": {
             "target": "Package",
-            "version": "[4.7.0.1179, )"
+            "version": "[4.7.0.1239, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

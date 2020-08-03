@@ -70,7 +70,7 @@
           "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1179": {
+      "Xamarin.Forms/4.7.0.1239": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -363,10 +363,10 @@
         "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
-    "Xamarin.Forms/4.7.0.1179": {
-      "sha512": "QY/wwwG/OTOK9UGUalL4u3fKDQ5bh86nVa+M8bmKCq8/QdgZSXRQ/YVwDh0Mew0MaKsZZwTZUNGOGRc52fb+/Q==",
+    "Xamarin.Forms/4.7.0.1239": {
+      "sha512": "vGtrCFHo/eEIDPk0yHsktW1xl4rt+KbTab2ciPbsU7tlI5x88aspH9IJlfybh5ejCFhRYYpNr8+uB9vX08bsuA==",
       "type": "package",
-      "path": "xamarin.forms/4.7.0.1179",
+      "path": "xamarin.forms/4.7.0.1239",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -673,7 +673,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.7.0.1179.nupkg.sha512",
+        "xamarin.forms.4.7.0.1239.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
@@ -683,7 +683,7 @@
       "Acr.UserDialogs >= 7.1.0.446",
       "NETStandard.Library >= 2.0.3",
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.47",
-      "Xamarin.Forms >= 4.7.0.1179"
+      "Xamarin.Forms >= 4.7.0.1239"
     ]
   },
   "packageFolders": {
@@ -747,7 +747,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.7.0.1179, )"
+            "version": "[4.7.0.1239, )"
           }
         },
         "imports": [

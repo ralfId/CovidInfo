@@ -82,18 +82,6 @@
               "target": "Package",
               "version": "[18.2.0.47, )"
             },
-            "Syncfusion.Xamarin.SfDataGrid": {
-              "target": "Package",
-              "version": "[18.2.0.47, )"
-            },
-            "Xam.Plugin.Connectivity": {
-              "target": "Package",
-              "version": "[3.2.0, )"
-            },
-            "Xam.Plugin.Iconize": {
-              "target": "Package",
-              "version": "[3.5.0.129, )"
-            },
             "Xam.Plugin.Iconize.FontAwesome": {
               "target": "Package",
               "version": "[3.5.0.114, )"
@@ -140,7 +128,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.7.0.1179, )"
+              "version": "[4.7.0.1239, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
@@ -148,7 +136,7 @@
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[4.7.0.1179, )"
+              "version": "[4.7.0.1239, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -262,7 +250,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.7.0.1179, )"
+              "version": "[4.7.0.1239, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
@@ -270,7 +258,7 @@
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[4.7.0.1179, )"
+              "version": "[4.7.0.1239, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -347,7 +335,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.7.0.1179, )"
+              "version": "[4.7.0.1239, )"
             }
           },
           "imports": [
