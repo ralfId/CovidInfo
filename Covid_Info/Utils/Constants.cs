@@ -43,15 +43,15 @@ namespace Covid_Info.Utils
         public const string graves = "graves";
         public const string comunes = "comunes";
         //image names for advices
-        public const string stayHome = "stayHome";
-        public const string distanciamiento = "distanciamiento";
-        public const string covidMask = "covidMask";
-        public const string noTocarRostro = "noTocarRostro";
-        public const string cubrirRostro = "cubrirRostro";
-        public const string lavarManos = "lavarManos";
-        public const string alcoholGel = "alcoholGel";
-        public const string limpiarDesinfectar = "limpiarDesinfectar";
-        public const string monitorearSalud = "monitorearSalud";
+        public const string stayHome = "stayHome.png";
+        public const string distanciamiento = "distanciamiento.png";
+        public const string covidMask = "covidMask.png";
+        public const string noTocarRostro = "noTocarRostro.png";
+        public const string cubrirRostro = "cubrirRostro.png";
+        public const string lavarManos = "lavarManos.png";
+        public const string alcoholGel = "alcoholGel.png";
+        public const string limpiarDesinfectar = "limpiarDesinfectar.png";
+        public const string monitorearSalud = "monitorearSalud.png";
 
 
 

@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
-             xmlns:template="clr-namespace:Covid_Info.DataTemplateSelectors" 
-             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:helpers="clr-namespace:Covid_Info.Helpers"
+             xmlns:converters="clr-namespace:Covid_Info.Converters"
              mc:Ignorable="d"
              x:Class="Covid_Info.Views.GuidelinesViews.Advices"
              Visual="Material">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:EmbeddedImagesConverter x:Key="EmbeddedImagesConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -20,10 +24,10 @@
                                       RowDefinitions="auto,auto,auto" Padding="5">
 
                                     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding title}" FontAttributes="Bold" FontSize="20" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Image Grid.Column="0" Grid.Row="1"  Source="{Binding imgName}" Aspect="AspectFit"
+                                    <Image Grid.Column="0" Grid.Row="1"  Source="{Binding imgName, Converter={StaticResource EmbeddedImagesConverter}, ConverterParameter='Covid_Info.Images'}" Aspect="AspectFit"
                                           VerticalOptions="FillAndExpand"
                                           HorizontalOptions="FillAndExpand"
-                                               WidthRequest="50" HeightRequest="50"/>
+                                               WidthRequest="40" HeightRequest="40"/>
 
                                     <Label Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Text="{Binding description}" FontSize="Body" TextColor="{StaticResource BaseFontColor}" LineBreakMode="WordWrap"/>
                                 </Grid>
