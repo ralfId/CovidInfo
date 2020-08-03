@@ -35,10 +35,18 @@ namespace Covid_Info.ViewModels
 
         public async override void OnNavigatedTo(INavigationParameters parameters)
         {
-            var placemark = await _locationServices.GetMyCountryInfo();
-            if (placemark.CountryCode.ToLower() == "sv" )
+            try
             {
-                IsVisibleGOES = true;
+                var placemark = await _locationServices.GetMyCountryInfo();
+                if (placemark != null && placemark.CountryCode.ToLower() == "sv")
+                {
+                    IsVisibleGOES = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw;
             }
         }
         public DelegateCommand goSVCovidInfo { get; private set; }

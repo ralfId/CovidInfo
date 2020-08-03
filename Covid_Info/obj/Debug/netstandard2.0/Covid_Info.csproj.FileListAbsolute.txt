@@ -26,8 +26,6 @@ D:\Rafael\Proyectos\XFCovid\Covid_Info\bin\Debug\netstandard2.0\it\Resx.resource
 D:\Rafael\Proyectos\XFCovid\Covid_Info\bin\Debug\netstandard2.0\pt\Resx.resources.dll
 D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\Covid_Info.csprojAssemblyReference.cache
 D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\App.xaml.g.cs
-D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\DataTemplates\LeftView.xaml.g.cs
-D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\DataTemplates\RightView.xaml.g.cs
 D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\Views\AllCountries.xaml.g.cs
 D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\Views\ContentViews\AdvicesAndSymp.xaml.g.cs
 D:\Rafael\Proyectos\XFCovid\Covid_Info\obj\Debug\netstandard2.0\Views\ContentViews\CountriesTemplate.xaml.g.cs

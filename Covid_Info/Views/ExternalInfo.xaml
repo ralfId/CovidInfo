@@ -1,179 +1,245 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:prism="http://prismlibrary.com"
-                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
-                 xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
-                 xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-                 xmlns:i18n="clr-namespace:Resx;assembly=Resx" 
-                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-                 prism:ViewModelLocator.AutowireViewModel="True"
-                 x:Class="Covid_Info.Views.ExternalInfo"
-                 Visual="Material">
+<pages:PopupPage
+    x:Class="Covid_Info.Views.ExternalInfo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:helpers="clr-namespace:Covid_Info.Helpers"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Visual="Material">
     <pages:PopupPage.Animation>
-        <animations:ScaleAnimation 
-            PositionIn="Top"
-            PositionOut="Bottom"
-            ScaleIn="1.2"
-            ScaleOut="0.8"
+        <animations:ScaleAnimation
             DurationIn="400"
             DurationOut="300"
             EasingIn="SinOut"
             EasingOut="SinIn"
-            HasBackgroundAnimation="True"/>
+            HasBackgroundAnimation="True"
+            PositionIn="Top"
+            PositionOut="Bottom"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
     </pages:PopupPage.Animation>
 
-    <pkv:PancakeView  BackgroundColor="{StaticResource WhiteColor}"  CornerRadius="10,10,0,0"  HasShadow="True" Margin="0,10,0,0">
+    <pkv:PancakeView
+        Margin="0,10,0,0"
+        BackgroundColor="{StaticResource WhiteColor}"
+        CornerRadius="10,10,0,0"
+        HasShadow="True">
         <pkv:PancakeView.GestureRecognizers>
-            <SwipeGestureRecognizer Direction="Down" Command="{Binding ClosePopup}"/>
+            <SwipeGestureRecognizer Command="{Binding ClosePopup}" Direction="Down" />
         </pkv:PancakeView.GestureRecognizers>
-        
+
         <StackLayout>
 
-            <pkv:PancakeView HeightRequest="30" Padding="0,5,0,0" BackgroundColor="{StaticResource BackgroundColorPage}" >
+            <pkv:PancakeView
+                Padding="0,5,0,0"
+                BackgroundColor="{StaticResource BackgroundColorPage}"
+                HeightRequest="30">
                 <StackLayout Margin="0" Padding="0">
-                    <pkv:PancakeView BackgroundColor="{StaticResource BaseFontColor}" HeightRequest="5" WidthRequest="70" HorizontalOptions="Center" CornerRadius="20" VerticalOptions="CenterAndExpand"/>
-                    <BoxView BackgroundColor="#cfd8dc" HeightRequest="2" VerticalOptions="EndAndExpand"/>
+                    <pkv:PancakeView
+                        BackgroundColor="{StaticResource BaseFontColor}"
+                        CornerRadius="20"
+                        HeightRequest="5"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="70" />
+                    <BoxView
+                        BackgroundColor="#cfd8dc"
+                        HeightRequest="2"
+                        VerticalOptions="EndAndExpand" />
                 </StackLayout>
                 <pkv:PancakeView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ClosePopup}"/>
+                    <TapGestureRecognizer Command="{Binding ClosePopup}" />
                 </pkv:PancakeView.GestureRecognizers>
             </pkv:PancakeView>
 
-            <pkv:PancakeView >
+            <pkv:PancakeView>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10" Padding="15,5,15,10">
-                    <Label Text="{i18n:Translate stayhome}"
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           TextColor="{StaticResource BaseFontColor}"
-                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                    <Image Source="iconStayHome"
-                           WidthRequest="30" HeightRequest="30"
-                           HorizontalOptions="Center"/>
+                <StackLayout
+                    Padding="15,5,15,10"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{i18n:Translate stayhome}"
+                        TextColor="{StaticResource BaseFontColor}"
+                        VerticalTextAlignment="Center" />
+                    <Image
+                        HeightRequest="30"
+                        HorizontalOptions="Center"
+                        Source="{helpers:ImageResource Covid_Info.Images.iconstayhome.png}"
+                        WidthRequest="30" />
                 </StackLayout>
             </pkv:PancakeView>
 
             <ScrollView>
-                <StackLayout Spacing="15" Padding="0,10">
-                    <!--ELSALVADOR INFO-->
-                    <StackLayout   IsVisible="{Binding IsVisibleGOES}" Padding="20,0">
+                <StackLayout Padding="0,10" Spacing="15">
+                    <!--  ELSALVADOR INFO  -->
+                    <StackLayout Padding="20,0" IsVisible="{Binding IsVisibleGOES}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
 
-                            <pkv:PancakeView Grid.Column="0" CornerRadius="5" Padding="3" BackgroundColor="{StaticResource CustomNavBarColor}">
-                                <Image Grid.Column="0" Source="sv" WidthRequest="75" HeightRequest="75"  />
+                            <pkv:PancakeView
+                                Grid.Column="0"
+                                Padding="3"
+                                BackgroundColor="{StaticResource CustomNavBarColor}"
+                                CornerRadius="5">
+                                <Image
+                                    Grid.Column="0"
+                                    HeightRequest="75"
+                                    Source="{helpers:ImageResource Covid_Info.Images.sv.png}"
+                                    WidthRequest="75" />
                             </pkv:PancakeView>
 
-                            <Label Grid.Column="1"
-                               Text="{i18n:Translate goesInfo}"
-                               FontSize="Body"
-                               TextColor="{StaticResource BaseFontColor}"
-                               Padding="5"/>
-                            <Icons:IconLabel Grid.Column="2"
-                                     Text="fas-external-link-alt"
-                                     FontSize="Body"
-                                             Padding="5"
-                                     TextColor="{StaticResource CustomNavBarColor}"
-                                     VerticalOptions="StartAndExpand"/>
+                            <Label
+                                Grid.Column="1"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="{i18n:Translate goesInfo}"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Icons:IconLabel
+                                Grid.Column="2"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="fas-external-link-alt"
+                                TextColor="{StaticResource CustomNavBarColor}"
+                                VerticalOptions="StartAndExpand" />
                         </Grid>
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goSVCovidInfo}"/>
+                            <TapGestureRecognizer Command="{Binding goSVCovidInfo}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
-                    <!--Q&A-->
-                    <StackLayout Grid.Row="1"  Padding="20,0">
+                    <BoxView
+                        Margin="20,0"
+                        BackgroundColor="LightGray"
+                        HeightRequest="1" />
+                    <!--  Q&A  -->
+                    <StackLayout Grid.Row="1" Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
-                            <pkv:PancakeView Grid.Column="0" CornerRadius="5" BackgroundColor="Red">
-                                <Image  Source="question" WidthRequest="75" HeightRequest="75" Margin="0"/>
+                            <pkv:PancakeView Grid.Column="0" CornerRadius="5">
+                                <Image
+                                    Margin="0"
+                                    HeightRequest="75"
+                                    Source="{helpers:ImageResource Covid_Info.Images.question.png}"
+                                    WidthRequest="75" />
                             </pkv:PancakeView>
-                            <Label Grid.Column="1"
-                               Text="{i18n:Translate FAQS}"
-                               FontSize="Body"
-                               TextColor="{StaticResource BaseFontColor}"
-                               Padding="5"/>
-                            <Icons:IconLabel Grid.Column="2"
-                                     Text="fas-external-link-alt"
-                                     FontSize="Body"
-                                             Padding="5"
-                                     TextColor="{StaticResource CustomNavBarColor}"
-                                     VerticalOptions="StartAndExpand"/>
+                            <Label
+                                Grid.Column="1"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="{i18n:Translate FAQS}"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Icons:IconLabel
+                                Grid.Column="2"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="fas-external-link-alt"
+                                TextColor="{StaticResource CustomNavBarColor}"
+                                VerticalOptions="StartAndExpand" />
                         </Grid>
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}"/>
+                            <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
-                    <!--WHO DONATIONS-->
-                    <StackLayout Grid.Row="2"  Padding="20,0">
+                    <BoxView
+                        Margin="20,0"
+                        BackgroundColor="LightGray"
+                        HeightRequest="1" />
+                    <!--  WHO DONATIONS  -->
+                    <StackLayout Grid.Row="2" Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
-                            <pkv:PancakeView Grid.Column="0" CornerRadius="5" BackgroundColor="{StaticResource CustomNavBarColor}">
-                                <Image  Source="donate" WidthRequest="75" HeightRequest="75" Margin="0"/>
+                            <pkv:PancakeView Grid.Column="0" CornerRadius="5">
+                                <Image
+                                    Margin="0"
+                                    HeightRequest="75"
+                                    Source="{helpers:ImageResource Covid_Info.Images.donate.png}"
+                                    WidthRequest="75" />
                             </pkv:PancakeView>
-                            <Label Grid.Column="1"
-                               Text="{i18n:Translate DONATIONS}"
-                               FontSize="Body"
-                               TextColor="{StaticResource BaseFontColor}"
-                               Padding="5"/>
-                            <Icons:IconLabel Grid.Column="2"
-                                     Text="fas-external-link-alt"
-                                     FontSize="Body"
-                                             Padding="5"
-                                     TextColor="{StaticResource CustomNavBarColor}"
-                                     VerticalOptions="StartAndExpand"/>
+                            <Label
+                                Grid.Column="1"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="{i18n:Translate DONATIONS}"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Icons:IconLabel
+                                Grid.Column="2"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="fas-external-link-alt"
+                                TextColor="{StaticResource CustomNavBarColor}"
+                                VerticalOptions="StartAndExpand" />
                         </Grid>
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goWHODonations}"/>
+                            <TapGestureRecognizer Command="{Binding goWHODonations}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
-                    
-                    <!--WHO COVID MYTHS-->
+                    <BoxView
+                        Margin="20,0"
+                        BackgroundColor="LightGray"
+                        HeightRequest="1" />
+
+                    <!--  WHO COVID MYTHS  -->
                     <StackLayout Grid.Row="3" Padding="20,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
                             <pkv:PancakeView Grid.Column="0" CornerRadius="5">
-                                <Image  Source="fakeNews" WidthRequest="75" HeightRequest="75" BackgroundColor="Black" Margin="0"/>
+                                <Image
+                                    Margin="0"
+                                    HeightRequest="75"
+                                    Source="{helpers:ImageResource Covid_Info.Images.fakeNews.png}"
+                                    WidthRequest="75" />
                             </pkv:PancakeView>
-                            <Label Grid.Column="1"
-                               Text="{i18n:Translate MYTHS}"
-                               FontSize="Body"
-                               TextColor="{StaticResource BaseFontColor}"
-                               Padding="5"/>
-                            <Icons:IconLabel Grid.Column="2"
-                                     Text="fas-external-link-alt"
-                                     FontSize="Body"
-                                             Padding="5"
-                                     TextColor="{StaticResource CustomNavBarColor}"
-                                     VerticalOptions="StartAndExpand"/>
+                            <Label
+                                Grid.Column="1"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="{i18n:Translate MYTHS}"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Icons:IconLabel
+                                Grid.Column="2"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="fas-external-link-alt"
+                                TextColor="{StaticResource CustomNavBarColor}"
+                                VerticalOptions="StartAndExpand" />
                         </Grid>
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goCovidWHOMyths}"/>
+                            <TapGestureRecognizer Command="{Binding goCovidWHOMyths}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="20,0"/>
+                    <BoxView
+                        Margin="20,0"
+                        BackgroundColor="LightGray"
+                        HeightRequest="1" />
                 </StackLayout>
             </ScrollView>
-            
+
         </StackLayout>
 
     </pkv:PancakeView>

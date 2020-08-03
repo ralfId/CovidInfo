@@ -3,6 +3,7 @@
     x:Class="Covid_Info.Views.DevInfo"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:prism="http://prismlibrary.com"
     Title="{Binding Title}"
@@ -62,7 +63,7 @@
                         Grid.Column="0"
                         Aspect="AspectFit"
                         HeightRequest="75"
-                        Source="coffeecup" />
+                        Source="{helpers:ImageResource Covid_Info.Images.coffeecup.png}" />
 
                     <Frame
                         Grid.Column="1"

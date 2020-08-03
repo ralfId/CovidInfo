@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
-             x:Class="Covid_Info.App">
-	<Application.Resources>
+<prism:PrismApplication
+    x:Class="Covid_Info.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms">
+    <Application.Resources>
 
-        <!--my frame font color and backgoundpage color-->
+        <!--  my frame font color and backgoundpage color  -->
         <Color x:Key="FrameFontColor">#EEF4F7</Color>
 
-        <!--Colors-->
+        <!--  Colors  -->
         <Color x:Key="ActiveColor">#607d8b</Color>
         <Color x:Key="ConfirmedColor">#00bcd4</Color>
         <Color x:Key="RecoveredColor">#4caf50</Color>
@@ -21,21 +22,21 @@
         <Color x:Key="CustomNavBarColor">#1a1d3e</Color>
         <Color x:Key="BoxSeparator">#b0bec5</Color>
 
-        <!--Font sizes-->
+        <!--  Font sizes  -->
         <x:Double x:Key="MainNumbFS">25</x:Double>
         <x:Double x:Key="BaseTitleFontSize">20</x:Double>
-        
-        <!--Page backgrouncolor-->
+
+        <!--  Page backgrouncolor  -->
         <Style x:Key="PageStyle" TargetType="ContentPage">
             <Setter Property="BackgroundColor" Value="#eceff1" />
         </Style>
-        
-        <!--navbarstyle-->
+
+        <!--  navbarstyle  -->
         <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="#1a1d3e"/>
+            <Setter Property="BarBackgroundColor" Value="#1a1d3e" />
         </Style>
 
-        <!--My own titles-->
+        <!--  My own titles  -->
         <!--<x:Double x:Key="BaseTitleFontSize">20</x:Double>
         <Color x:Key="BlueDColorBase">#1072a3</Color>
         <Color x:Key="NavBarTextColor">#eef1f6</Color>-->

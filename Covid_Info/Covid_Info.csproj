@@ -5,6 +5,54 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\advices.png" />
+    <None Remove="Images\alcoholGel.png" />
+    <None Remove="Images\coffeecup.png" />
+    <None Remove="Images\countries.png" />
+    <None Remove="Images\covidMask.png" />
+    <None Remove="Images\cubrirRostro.png" />
+    <None Remove="Images\distanciamiento.png" />
+    <None Remove="Images\donate.png" />
+    <None Remove="Images\fakeNews.png" />
+    <None Remove="Images\fcovid.png" />
+    <None Remove="Images\global.png" />
+    <None Remove="Images\iconstayhome.png" />
+    <None Remove="Images\lavarManos.png" />
+    <None Remove="Images\limpiarDesinfectar.png" />
+    <None Remove="Images\monitorearSalud.png" />
+    <None Remove="Images\noTocarRostro.png" />
+    <None Remove="Images\question.png" />
+    <None Remove="Images\RAID_FreeLancer.jpg" />
+    <None Remove="Images\stayHome.png" />
+    <None Remove="Images\sv.png" />
+    <None Remove="Images\symptoms.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\advices.png" />
+    <EmbeddedResource Include="Images\alcoholGel.png" />
+    <EmbeddedResource Include="Images\coffeecup.png" />
+    <EmbeddedResource Include="Images\countries.png" />
+    <EmbeddedResource Include="Images\covidMask.png" />
+    <EmbeddedResource Include="Images\cubrirRostro.png" />
+    <EmbeddedResource Include="Images\distanciamiento.png" />
+    <EmbeddedResource Include="Images\donate.png" />
+    <EmbeddedResource Include="Images\fakeNews.png" />
+    <EmbeddedResource Include="Images\fcovid.png" />
+    <EmbeddedResource Include="Images\global.png" />
+    <EmbeddedResource Include="Images\iconstayhome.png" />
+    <EmbeddedResource Include="Images\lavarManos.png" />
+    <EmbeddedResource Include="Images\limpiarDesinfectar.png" />
+    <EmbeddedResource Include="Images\monitorearSalud.png" />
+    <EmbeddedResource Include="Images\noTocarRostro.png" />
+    <EmbeddedResource Include="Images\question.png" />
+    <EmbeddedResource Include="Images\RAID_FreeLancer.jpg" />
+    <EmbeddedResource Include="Images\stayHome.png" />
+    <EmbeddedResource Include="Images\sv.png" />
+    <EmbeddedResource Include="Images\symptoms.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.446" />
     <PackageReference Include="Com.OneSignal" Version="3.10.0" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.0" />
@@ -29,12 +77,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="DataTemplates\LeftView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="DataTemplates\RightView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\AllCountries.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

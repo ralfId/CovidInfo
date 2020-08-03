@@ -92,12 +92,6 @@
     <Compile Include="DependencyServices\Localize.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="RendererControls\CustomViewCellRenderer.cs" />
-    <Compile Include="RendererControls\PickerRendereriOS.cs" />
-    <Compile Include="RendererControls\PickerRendereriOS.designer.cs">
-      <DependentUpon>PickerRendereriOS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RendererControls\SearchBariOS.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,7 +103,6 @@
     <BundleResource Include="Resources\noconnection.json" />
     <BundleResource Include="Resources\limitedconnection.json" />
     <BundleResource Include="Resources\contactDev.json" />
-    <InterfaceDefinition Include="RendererControls\PickerRendereriOS.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

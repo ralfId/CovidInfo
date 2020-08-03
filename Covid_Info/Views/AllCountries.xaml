@@ -1,38 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <views:TemplatePage
-    xmlns:views="clr-namespace:Covid_Info.Views"
+    x:Class="Covid_Info.Views.AllCountries"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:prism="http://prismlibrary.com"
-    xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
-    xmlns:i18n="clr-namespace:Resx;assembly=Resx" 
-    xmlns:renderercontrols="clr-namespace:Covid_Info.RendererControls"
-    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
     xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
-    xmlns:controls="clr-namespace:Covid_Info.Controls" 
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:views="clr-namespace:Covid_Info.Views"
+    Title="{Binding Title}"
     prism:ViewModelLocator.AutowireViewModel="True"
-    x:Class="Covid_Info.Views.AllCountries"
-    Visual="Material"
-    Title="{Binding Title}">
+    Visual="Material">
 
     <AbsoluteLayout>
         <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <StackLayout Spacing="0">
-                <!--my navigation bar-->
-                <pkv:PancakeView BackgroundColor="{StaticResource CustomNavBarColor}" Padding="20,0,10,10" IsVisible="{Binding IsVisibleCountries}">
+                <!--  my navigation bar  -->
+                <pkv:PancakeView
+                    Padding="20,0,10,10"
+                    BackgroundColor="{StaticResource CustomNavBarColor}"
+                    IsVisible="{Binding IsVisibleCountries}">
                     <Grid ColumnDefinitions="*,auto" ColumnSpacing="15">
                         <Frame Margin="0" Padding="0">
                             <SearchBar
-                               Text="{Binding Searched, Mode=TwoWay}"
-                               Placeholder="{i18n:Translate searchPlaceHolder}"
-                               TextColor="{StaticResource BaseFontColor}"
-                               CancelButtonColor="{StaticResource BaseFontColor}"
-                               PlaceholderColor="{StaticResource BaseFontColor}"
-                               SearchCommand="{Binding SearchCountry}" TranslationY="5"/>
+                                CancelButtonColor="{StaticResource BaseFontColor}"
+                                Placeholder="{i18n:Translate searchPlaceHolder}"
+                                PlaceholderColor="{StaticResource BaseFontColor}"
+                                SearchCommand="{Binding SearchCountry}"
+                                Text="{Binding Searched, Mode=TwoWay}"
+                                TextColor="{StaticResource BaseFontColor}"
+                                TranslationY="5" />
                         </Frame>
-                        <Icons:IconLabel Grid.Column="1" Text="fas-filter" FontSize="Large" 
-                                     TextColor="{StaticResource WhiteColor}" VerticalOptions="CenterAndExpand" >
+                        <Icons:IconLabel
+                            Grid.Column="1"
+                            FontSize="Large"
+                            Text="fas-filter"
+                            TextColor="{StaticResource WhiteColor}"
+                            VerticalOptions="CenterAndExpand">
                             <Icons:IconLabel.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding goFiltersView}" />
                             </Icons:IconLabel.GestureRecognizers>
@@ -41,13 +47,20 @@
                 </pkv:PancakeView>
 
 
-                <ListView ItemsSource="{Binding obCountryInfo}" HasUnevenRows="True" SeparatorVisibility="None" SelectionMode="Single" SelectedItem="{Binding SelectedCountry}" CachingStrategy="RecycleElement" IsVisible="{Binding IsVisibleCountries}">
+                <ListView
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    IsVisible="{Binding IsVisibleCountries}"
+                    ItemsSource="{Binding obCountryInfo}"
+                    SelectedItem="{Binding SelectedCountry}"
+                    SelectionMode="Single"
+                    SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Grid RowDefinitions="auto,*">
                                     <BoxView BackgroundColor="Transparent" HeightRequest="9" />
-                                    <contentViews:CountriesTemplate Grid.Row="1" Margin="20,0"/>
+                                    <contentViews:CountriesTemplate Grid.Row="1" Margin="20,0" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
@@ -56,17 +69,23 @@
             </StackLayout>
             <contentViews:LoadingData IsVisible="{Binding IsVisibleLoadingPage}" />
         </Grid>
-        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"  AbsoluteLayout.LayoutFlags="All" BackgroundColor="#661a1d3e" IsVisible="{Binding SFIndicator}">
-            <busyindicator:SfBusyIndicator x:Name="busyindicator" 
-                                           IsVisible="{Binding SFIndicator}"
-                                           IsBusy="{Binding SFIndicator}"
-                                           AnimationType="RollingBall"
-                                           HeightRequest="100"
-                                           WidthRequest="100"
-                                           BackgroundColor="Transparent"
-                                           TextColor="White" TextSize="20"
-                                           Title="{i18n:Translate loading}"/>
+        <Grid
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="#661a1d3e"
+            IsVisible="{Binding SFIndicator}">
+            <busyindicator:SfBusyIndicator
+                x:Name="busyindicator"
+                Title="{i18n:Translate loading}"
+                AnimationType="RollingBall"
+                BackgroundColor="Transparent"
+                HeightRequest="100"
+                IsBusy="{Binding SFIndicator}"
+                IsVisible="{Binding SFIndicator}"
+                TextColor="White"
+                TextSize="20"
+                WidthRequest="100" />
         </Grid>
     </AbsoluteLayout>
-    
+
 </views:TemplatePage>
