@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4EM7VcFfBsvtkbos5T7AFN7zn5sO1gYtNbjLIMXeHHf+YzeFeKYa/rpVz0QpoeQ53mo5p7UwMQ5eHPEh7TIXdA==",
+  "dgSpecHash": "dldztFQbJmTrmbfvOk3vExirXaedif1IzA0ygG7CPYyiYfOCE0DuyGSVbNIqDb11j8EjoLgkaI4CLZHtMb+EPg==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.47\\syncfusion.licensing.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.47\\syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.47\\syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.2.0.47\\syncfusion.xamarin.sfchart.18.2.0.47.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
