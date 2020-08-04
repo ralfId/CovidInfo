@@ -6,6 +6,21 @@
     xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms">
     <Application.Resources>
 
+        <OnPlatform x:Key="FABrands" x:TypeArguments="x:String">
+            <On Platform="Android" Value="FontAwesomeFreeBrands.otf#Brands" />
+            <On Platform="iOS" Value="FontAwesomeFreeBrands" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="FASolid" x:TypeArguments="x:String">
+            <On Platform="Android" Value="FontAwesomeFreeSolid.otf#Solid" />
+            <On Platform="iOS" Value="FontAwesomeFreeSolid" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="FARegular" x:TypeArguments="x:String">
+            <On Platform="Android" Value="FontAwesomeFreeRegular.otf#Regular" />
+            <On Platform="iOS" Value="FontAwesomeFreeRegular" />
+        </OnPlatform>
+
         <!--  my frame font color and backgoundpage color  -->
         <Color x:Key="FrameFontColor">#EEF4F7</Color>
 

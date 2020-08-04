@@ -9,9 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "Resx/1.0.0": {
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.446",
           "NETStandard.Library": "2.0.3",
-          "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
           "Xamarin.Forms": "4.7.0.1239"
         },
         "runtime": {
@@ -32,50 +30,10 @@
           }
         }
       },
-      "Acr.UserDialogs/7.1.0.446": {
-        "runtime": {
-          "lib/netstandard2.0/Acr.UserDialogs.dll": {
-            "assemblyVersion": "7.1.0.446",
-            "fileVersion": "7.1.0.446"
-          }
-        }
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
-        }
-      },
-      "Syncfusion.Licensing/18.2.0.47": {
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "18.2.0.47",
-            "fileVersion": "18.2.0.47"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.Core/18.2.0.47": {
-        "dependencies": {
-          "Syncfusion.Licensing": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1239"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "4.7.0.1239"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {
-            "assemblyVersion": "18.2451.0.47",
-            "fileVersion": "18.2451.0.47"
-          }
         }
       },
       "Xamarin.Forms/4.7.0.1239": {
@@ -102,13 +60,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Acr.UserDialogs/7.1.0.446": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7YF7hk4qy4x9pKrVzKnjTEvua+kTSlHqdPPvP4gIqsxymPH6I3nAW2lpSo8kX97nTBbwkfddtrikwAXIYxRNIw==",
-      "path": "acr.userdialogs/7.1.0.446",
-      "hashPath": "acr.userdialogs.7.1.0.446.nupkg.sha512"
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -122,27 +73,6 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
-    },
-    "Syncfusion.Licensing/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-boPxbte2+5zk+NZlhptHK2n8xui1W0P1C4LxFkK+8+YpI4LoFV9QNI6VVEPouTwu041+41WePE3QyQwzA1O3SQ==",
-      "path": "syncfusion.licensing/18.2.0.47",
-      "hashPath": "syncfusion.licensing.18.2.0.47.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.Core/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-AkdC7hC1eHas1MsGJv+gr0Nk778rHwecYWf3zu8htz5YysFgi8A2xS5igBKlKJRSMDxKFY2jr6TPu4nop0CSCw==",
-      "path": "syncfusion.xamarin.core/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.core.18.2.0.47.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2SKxlXhg689NmUtqqHDCWqn8eXFOqMpwzmupuSh4/PnzFTUELBIQnA7GtwvaImaC1CK//NkyBR/KUcLwvh4KNg==",
-      "path": "syncfusion.xamarin.sfbusyindicator/18.2.0.47",
-      "hashPath": "syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512"
     },
     "Xamarin.Forms/4.7.0.1239": {
       "type": "package",

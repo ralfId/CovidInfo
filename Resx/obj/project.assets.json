@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Acr.UserDialogs/7.1.0.446": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -35,41 +26,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Syncfusion.Licensing/18.2.0.47": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.Core/18.2.0.47": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "18.2.0.47",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.47",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
-        }
-      },
       "Xamarin.Forms/4.7.0.1239": {
         "type": "package",
         "compile": {
@@ -90,46 +46,6 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.1.0.446": {
-      "sha512": "7YF7hk4qy4x9pKrVzKnjTEvua+kTSlHqdPPvP4gIqsxymPH6I3nAW2lpSo8kX97nTBbwkfddtrikwAXIYxRNIw==",
-      "type": "package",
-      "path": "acr.userdialogs/7.1.0.446",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "acr.userdialogs.7.1.0.446.nupkg.sha512",
-        "acr.userdialogs.nuspec",
-        "lib/monoandroid10.0/Acr.UserDialogs.dll",
-        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
-        "lib/monoandroid10.0/Acr.UserDialogs.xml",
-        "lib/monoandroid90/Acr.UserDialogs.dll",
-        "lib/monoandroid90/Acr.UserDialogs.pdb",
-        "lib/monoandroid90/Acr.UserDialogs.xml",
-        "lib/netstandard2.0/Acr.UserDialogs.dll",
-        "lib/netstandard2.0/Acr.UserDialogs.pdb",
-        "lib/netstandard2.0/Acr.UserDialogs.xml",
-        "lib/uap10.0.16299/Acr.UserDialogs.dll",
-        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
-        "lib/uap10.0.16299/Acr.UserDialogs.pri",
-        "lib/uap10.0.16299/Acr.UserDialogs.xml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ActionSheetContentDialog.xaml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/DatePickerControl.xaml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/LoginContentDialog.xaml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ProgressContentDialog.xaml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/TimePickerControl.xaml",
-        "lib/xamarinios10/Acr.UserDialogs.dll",
-        "lib/xamarinios10/Acr.UserDialogs.pdb",
-        "lib/xamarinios10/Acr.UserDialogs.xml",
-        "lib/xamarinmac20/Acr.UserDialogs.dll",
-        "lib/xamarinmac20/Acr.UserDialogs.pdb",
-        "lib/xamarinmac20/Acr.UserDialogs.xml",
-        "lib/xamarintvos10/Acr.UserDialogs.dll",
-        "lib/xamarintvos10/Acr.UserDialogs.pdb",
-        "lib/xamarintvos10/Acr.UserDialogs.xml",
-        "readme.txt"
-      ]
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -272,95 +188,6 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
-      ]
-    },
-    "Syncfusion.Licensing/18.2.0.47": {
-      "sha512": "boPxbte2+5zk+NZlhptHK2n8xui1W0P1C4LxFkK+8+YpI4LoFV9QNI6VVEPouTwu041+41WePE3QyQwzA1O3SQ==",
-      "type": "package",
-      "path": "syncfusion.licensing/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
-        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
-        "lib/net20/Syncfusion.Licensing.dll",
-        "lib/net35/Syncfusion.Licensing.dll",
-        "lib/net40/Syncfusion.Licensing.dll",
-        "lib/net45/Syncfusion.Licensing.dll",
-        "lib/net451/Syncfusion.Licensing.dll",
-        "lib/net46/Syncfusion.Licensing.dll",
-        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
-        "lib/netcoreapp5.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.2/Syncfusion.Licensing.dll",
-        "lib/netstandard1.4/Syncfusion.Licensing.dll",
-        "lib/netstandard2.0/Syncfusion.Licensing.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
-        "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.18.2.0.47.nupkg.sha512",
-        "syncfusion.licensing.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.Core/18.2.0.47": {
-      "sha512": "AkdC7hC1eHas1MsGJv+gr0Nk778rHwecYWf3zu8htz5YysFgi8A2xS5igBKlKJRSMDxKFY2jr6TPu4nop0CSCw==",
-      "type": "package",
-      "path": "syncfusion.xamarin.core/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.Core.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.Core.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ClearButtonViewVisibleIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/DropDownIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleCollapsedIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.dll",
-        "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
-        "syncfusion.xamarin.core.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.47": {
-      "sha512": "2SKxlXhg689NmUtqqHDCWqn8eXFOqMpwzmupuSh4/PnzFTUELBIQnA7GtwvaImaC1CK//NkyBR/KUcLwvh4KNg==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sfbusyindicator/18.2.0.47",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.Android.xml",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.xml",
-        "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
-        "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
     "Xamarin.Forms/4.7.0.1239": {
@@ -680,9 +507,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Acr.UserDialogs >= 7.1.0.446",
       "NETStandard.Library >= 2.0.3",
-      "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.47",
       "Xamarin.Forms >= 4.7.0.1239"
     ]
   },
@@ -731,19 +556,11 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "Acr.UserDialogs": {
-            "target": "Package",
-            "version": "[7.1.0.446, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
-          },
-          "Syncfusion.Xamarin.SfBusyIndicator": {
-            "target": "Package",
-            "version": "[18.2.0.47, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

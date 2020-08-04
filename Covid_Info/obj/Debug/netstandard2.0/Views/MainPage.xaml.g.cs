@@ -17,7 +17,7 @@ namespace Covid_Info.Views {
     public partial class MainPage : global::Covid_Info.Views.TemplatePage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Plugin.Iconize.IconLabel attentionJSON;
+        private global::Xamarin.Forms.Label attentionJSON;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
@@ -25,7 +25,7 @@ namespace Covid_Info.Views {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            attentionJSON = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.Iconize.IconLabel>(this, "attentionJSON");
+            attentionJSON = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "attentionJSON");
             busyindicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>(this, "busyindicator");
         }
     }

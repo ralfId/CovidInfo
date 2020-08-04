@@ -3,7 +3,6 @@
     x:Class="Covid_Info.Views.AllCountries"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
@@ -33,16 +32,18 @@
                                 TextColor="{StaticResource BaseFontColor}"
                                 TranslationY="5" />
                         </Frame>
-                        <Icons:IconLabel
+                        <Label
                             Grid.Column="1"
+                            Padding="5,0"
+                            FontFamily="{StaticResource FASolid}"
                             FontSize="Large"
-                            Text="fas-filter"
+                            Text="&#xf0dc;"
                             TextColor="{StaticResource WhiteColor}"
                             VerticalOptions="CenterAndExpand">
-                            <Icons:IconLabel.GestureRecognizers>
+                            <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding goFiltersView}" />
-                            </Icons:IconLabel.GestureRecognizers>
-                        </Icons:IconLabel>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </Grid>
                 </pkv:PancakeView>
 

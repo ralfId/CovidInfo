@@ -18,8 +18,6 @@ public class MonoPackageManager_Resources {
 		"Microsoft.AppCenter.dll",
 		"Newtonsoft.Json.dll",
 		"OneSignal.Android.Binding.dll",
-		"Plugin.Iconize.dll",
-		"Plugin.Iconize.FontAwesome.dll",
 		"Prism.dll",
 		"Prism.DryIoc.Forms.dll",
 		"Prism.Forms.dll",

@@ -116,11 +116,12 @@
                                                 FontSize="Body"
                                                 Text="View statistic from each country"
                                                 TextColor="{StaticResource WhiteColor}" />
-                                            <Icons:IconLabel
+                                            <Label
                                                 Grid.Column="1"
                                                 FontAttributes="Bold"
+                                                FontFamily="{StaticResource FARegular}"
                                                 FontSize="Large"
-                                                Text="fas-arrow-circle-right"
+                                                Text="&#xf35a;"
                                                 TextColor="{StaticResource WhiteColor}"
                                                 VerticalOptions="Center" />
                                         </Grid>
@@ -156,13 +157,14 @@
                             HorizontalOptions="CenterAndExpand"
                             Orientation="Horizontal"
                             Spacing="10">
-                            <Icons:IconLabel
+                            <Label
                                 x:Name="attentionJSON"
                                 Margin="0"
                                 FontAttributes="Bold"
+                                FontFamily="{StaticResource FASolid}"
                                 FontSize="Title"
                                 HorizontalOptions="Center"
-                                Text="fas-angle-up"
+                                Text="&#xf106;"
                                 TextColor="{StaticResource BaseFontColor}"
                                 VerticalOptions="Center" />
                             <Label

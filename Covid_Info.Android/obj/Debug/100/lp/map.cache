@@ -9,8 +9,6 @@ Microsoft.AppCenter.Crashes.Android.Bindings
 Microsoft.AppCenter.Crashes
 Microsoft.AppCenter
 OneSignal.Android.Binding
-Plugin.Iconize
-Plugin.Iconize.FontAwesome
 Prism.Forms
 Prism.Plugin.Popups
 Rg.Plugins.Popup

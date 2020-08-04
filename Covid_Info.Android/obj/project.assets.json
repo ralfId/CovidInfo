@@ -343,37 +343,6 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "Xam.Plugin.Iconize/3.5.0.114": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "3.5.0.129452"
-        },
-        "frameworkAssemblies": [
-          "Java.Interop"
-        ],
-        "compile": {
-          "lib/monoandroid81/Plugin.Iconize.dll": {}
-        },
-        "runtime": {
-          "lib/monoandroid81/Plugin.Iconize.dll": {}
-        }
-      },
-      "Xam.Plugin.Iconize.FontAwesome/3.5.0.114": {
-        "type": "package",
-        "dependencies": {
-          "Xam.Plugin.Iconize": "3.5.0.114",
-          "Xamarin.Forms": "3.5.0.129452"
-        },
-        "frameworkAssemblies": [
-          "Java.Interop"
-        ],
-        "compile": {
-          "lib/monoandroid81/Plugin.Iconize.FontAwesome.dll": {}
-        },
-        "runtime": {
-          "lib/monoandroid81/Plugin.Iconize.FontAwesome.dll": {}
-        }
-      },
       "Xamanimation/1.3.0": {
         "type": "package",
         "dependencies": {
@@ -2378,7 +2347,6 @@
           "Rg.Plugins.Popup": "2.0.0.3",
           "Syncfusion.Licensing": "18.2.0.47",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
-          "Xam.Plugin.Iconize.FontAwesome": "3.5.0.114",
           "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
@@ -2397,8 +2365,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.446",
-          "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.47",
           "Xamarin.Forms": "4.7.0.1239"
         },
         "compile": {
@@ -3112,68 +3078,6 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Xam.Plugin.Iconize/3.5.0.114": {
-      "sha512": "9hFQYeB8x0Ci5Sx/FoQVRtcMPsg2ajEMlp09m131vxPvqTm6DD+KZTTShjn4ZLjdgDGfd1pVUtaD2awv4Ny+TA==",
-      "type": "package",
-      "path": "xam.plugin.iconize/3.5.0.114",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/monoandroid81/Plugin.Iconize.dll",
-        "lib/monoandroid81/Plugin.Iconize.dll.mdb",
-        "lib/monoandroid81/Plugin.Iconize.pdb",
-        "lib/monoandroid81/Plugin.Iconize.xml",
-        "lib/netstandard1.3/Plugin.Iconize.dll",
-        "lib/netstandard1.3/Plugin.Iconize.pdb",
-        "lib/netstandard1.3/Plugin.Iconize.xml",
-        "lib/netstandard2.0/Plugin.Iconize.dll",
-        "lib/netstandard2.0/Plugin.Iconize.pdb",
-        "lib/netstandard2.0/Plugin.Iconize.xml",
-        "lib/uap10.0.16299/Plugin.Iconize.dll",
-        "lib/uap10.0.16299/Plugin.Iconize.pdb",
-        "lib/uap10.0.16299/Plugin.Iconize.pri",
-        "lib/uap10.0.16299/Plugin.Iconize.xml",
-        "lib/xamarinios10/Plugin.Iconize.dll",
-        "lib/xamarinios10/Plugin.Iconize.pdb",
-        "lib/xamarinios10/Plugin.Iconize.xml",
-        "xam.plugin.iconize.3.5.0.114.nupkg.sha512",
-        "xam.plugin.iconize.nuspec"
-      ]
-    },
-    "Xam.Plugin.Iconize.FontAwesome/3.5.0.114": {
-      "sha512": "lHuhrb08DWqVQYNmb+N51Mkt/7eNuXtQawIadl+l+Ol+TnuC8KGWVSUxFGdsR7TZWUEHZGbtd5E37z0hn3BjQA==",
-      "type": "package",
-      "path": "xam.plugin.iconize.fontawesome/3.5.0.114",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "contentFiles/any/Xamarin.iOS10/Resources/iconize-fontawesome-brands.ttf",
-        "contentFiles/any/Xamarin.iOS10/Resources/iconize-fontawesome-regular.ttf",
-        "contentFiles/any/Xamarin.iOS10/Resources/iconize-fontawesome-solid.ttf",
-        "lib/monoandroid81/Plugin.Iconize.FontAwesome.dll",
-        "lib/monoandroid81/Plugin.Iconize.FontAwesome.dll.mdb",
-        "lib/monoandroid81/Plugin.Iconize.FontAwesome.pdb",
-        "lib/monoandroid81/Plugin.Iconize.FontAwesome.xml",
-        "lib/netstandard1.3/Plugin.Iconize.FontAwesome.dll",
-        "lib/netstandard1.3/Plugin.Iconize.FontAwesome.pdb",
-        "lib/netstandard1.3/Plugin.Iconize.FontAwesome.xml",
-        "lib/netstandard2.0/Plugin.Iconize.FontAwesome.dll",
-        "lib/netstandard2.0/Plugin.Iconize.FontAwesome.pdb",
-        "lib/netstandard2.0/Plugin.Iconize.FontAwesome.xml",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome.dll",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome.pdb",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome.pri",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome.xml",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome/iconize-fontawesome-brands.ttf",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome/iconize-fontawesome-regular.ttf",
-        "lib/uap10.0.16299/Plugin.Iconize.FontAwesome/iconize-fontawesome-solid.ttf",
-        "lib/xamarinios10/Plugin.Iconize.FontAwesome.dll",
-        "lib/xamarinios10/Plugin.Iconize.FontAwesome.pdb",
-        "lib/xamarinios10/Plugin.Iconize.FontAwesome.xml",
-        "xam.plugin.iconize.fontawesome.3.5.0.114.nupkg.sha512",
-        "xam.plugin.iconize.fontawesome.nuspec"
       ]
     },
     "Xamanimation/1.3.0": {
@@ -5383,7 +5287,6 @@
       "Syncfusion.Licensing >= 18.2.0.47",
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.47",
       "Syncfusion.Xamarin.SfChart >= 18.2.0.47",
-      "Xam.Plugin.Iconize.FontAwesome >= 3.5.0.114",
       "Xamanimation >= 1.3.0",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
       "Xamarin.Android.Support.Design >= 28.0.0.3",
@@ -5481,10 +5384,6 @@
           "Syncfusion.Xamarin.SfChart": {
             "target": "Package",
             "version": "[18.2.0.47, )"
-          },
-          "Xam.Plugin.Iconize.FontAwesome": {
-            "target": "Package",
-            "version": "[3.5.0.114, )"
           },
           "Xamanimation": {
             "target": "Package",

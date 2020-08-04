@@ -3,9 +3,6 @@
     x:Class="Covid_Info.Views.TemplatePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
-    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
-    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True"
     BackgroundColor="{StaticResource BackgroundColorPage}">
@@ -26,30 +23,32 @@
                     Text="{Binding Title}"
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand" />
-                <Icons:IconLabel
+                <Label
                     Grid.Column="1"
                     Margin="0"
                     Padding="10"
-                    FontSize="Title"
-                    Text="fas-sync-alt"
+                    FontFamily="{StaticResource FASolid}"
+                    FontSize="Large"
+                    Text="&#xf2f1;"
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand">
-                    <Icons:IconLabel.GestureRecognizers>
+                    <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding UpdateData}" />
-                    </Icons:IconLabel.GestureRecognizers>
-                </Icons:IconLabel>
-                <Icons:IconLabel
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
                     Grid.Column="2"
                     Margin="0"
                     Padding="10"
+                    FontFamily="{StaticResource FARegular}"
                     FontSize="Title"
-                    Text="fas-info-circle"
+                    Text="&#xf059;"
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand">
-                    <Icons:IconLabel.GestureRecognizers>
+                    <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding navDevInfo}" />
-                    </Icons:IconLabel.GestureRecognizers>
-                </Icons:IconLabel>
+                    </Label.GestureRecognizers>
+                </Label>
 
             </Grid>
         </Grid>

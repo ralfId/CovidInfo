@@ -23,7 +23,6 @@ namespace Covid_Info.Droid
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
             Xamarin.Essentials.Platform.Init(this, bundle);
             UserDialogs.Init(this);
-            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
             Rg.Plugins.Popup.Popup.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.FormsMaterial.Init(this, bundle);

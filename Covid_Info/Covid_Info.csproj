@@ -63,7 +63,6 @@
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Syncfusion.Licensing" Version="18.2.0.47" />
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.2.0.47" />
-    <PackageReference Include="Xam.Plugin.Iconize.FontAwesome" Version="3.5.0.114" />
     <PackageReference Include="Xamanimation" Version="1.3.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1239" />
@@ -86,16 +85,10 @@
     <EmbeddedResource Update="Views\ContentViews\CountriesTemplate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ContentViews\ExternalInfo.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\ContentViews\GlobalInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ContentViews\LoadingData.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ContentViews\MainHeader.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ContentViews\MostAffectedCountries.xaml">

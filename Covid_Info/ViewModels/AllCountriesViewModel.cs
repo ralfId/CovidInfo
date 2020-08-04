@@ -2,8 +2,6 @@
 using Covid_Info.Models;
 using Covid_Info.Services;
 using Covid_Info.Utils;
-using Newtonsoft.Json;
-using Plugin.Iconize;
 using Prism.Commands;
 using Prism.Navigation;
 using Resx;
@@ -12,11 +10,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Covid_Info.ViewModels
 {

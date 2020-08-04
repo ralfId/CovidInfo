@@ -98,11 +98,9 @@
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
     <ITunesArtwork Include="iTunesArtwork@3x.png" />
-    <BundleResource Include="Resources\board-design-strategy.json" />
-    <BundleResource Include="Resources\globe-rotation.json" />
-    <BundleResource Include="Resources\noconnection.json" />
-    <BundleResource Include="Resources\limitedconnection.json" />
-    <BundleResource Include="Resources\contactDev.json" />
+    <BundleResource Include="Resources\FontAwesomeFreeBrands.otf" />
+    <BundleResource Include="Resources\FontAwesomeFreeRegular.otf" />
+    <BundleResource Include="Resources\FontAwesomeFreeSolid.otf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -226,9 +224,6 @@
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator">
       <Version>18.2.0.47</Version>
     </PackageReference>
-    <PackageReference Include="Xam.Plugin.Iconize.FontAwesome">
-      <Version>3.5.0.114</Version>
-    </PackageReference>
     <PackageReference Include="Xamanimation">
       <Version>1.3.0</Version>
     </PackageReference>
@@ -253,108 +248,6 @@
       <Project>{1C65C297-D309-4566-A4B2-F1DF8D740CD6}</Project>
       <Name>Resx</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\update.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-44%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-86%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-98%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-20.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-20%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-20%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-29%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-29%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-40%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-40%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-50%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-57.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-57%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-60%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-60%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-72.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-72%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-76.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-76%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon-83.5%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\iTunesArtwork-1024.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-24%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-27.5%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-29%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-29%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\AppleWatch-Icon-40%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\global.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\fakenews.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\qa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\donate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,36 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:prism="http://prismlibrary.com"
-            xmlns:localview="clr-namespace:Covid_Info.Views.GuidelinesViews" 
-            xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
-            xmlns:i18n="clr-namespace:Resx;assembly=Resx" 
-            prism:ViewModelLocator.AutowireViewModel="True"
-            x:Class="Covid_Info.Views.Guidelines"
-            BarBackgroundColor="{StaticResource CustomNavBarColor}">
+<TabbedPage
+    x:Class="Covid_Info.Views.Guidelines"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:localview="clr-namespace:Covid_Info.Views.GuidelinesViews"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    BarBackgroundColor="{StaticResource CustomNavBarColor}">
     <NavigationPage.TitleView>
         <Grid ColumnDefinitions="*,auto">
-            <Label Grid.Column="0" 
-                           Text="Guidelines"
-                           FontSize="Large"
-                           Padding="0"
-                           TextColor="{StaticResource WhiteColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontAttributes="Bold"/>
-            <Icons:IconLabel Grid.Column="1"
-                                     Text="fas-info-circle"
-                                     FontSize="Title"
-                                     Padding="10"
-                                     TextColor="{StaticResource WhiteColor}"
-                                     VerticalOptions="CenterAndExpand"  Margin="0">
-                <Icons:IconLabel.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding navDevInfo}"/>
-                </Icons:IconLabel.GestureRecognizers>
-            </Icons:IconLabel>
+            <Label
+                Grid.Column="0"
+                Padding="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Guidelines"
+                TextColor="{StaticResource WhiteColor}"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Grid.Column="1"
+                Margin="0"
+                Padding="10"
+                FontFamily="{StaticResource FARegular}"
+                FontSize="Title"
+                Text="&#xf059;"
+                TextColor="{StaticResource WhiteColor}"
+                VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding navDevInfo}" />
+                </Label.GestureRecognizers>
+            </Label>
         </Grid>
     </NavigationPage.TitleView>
     <TabbedPage.Children>
-        <localview:Advices Title="{i18n:Translate advices}"/>
-        <localview:Symptoms Title="{i18n:Translate symptoms}"/>
+        <localview:Advices Title="{i18n:Translate advices}" />
+        <localview:Symptoms Title="{i18n:Translate symptoms}" />
     </TabbedPage.Children>
 </TabbedPage>

@@ -109,11 +109,12 @@
                                 FontSize="Body"
                                 Text="{i18n:Translate goesInfo}"
                                 TextColor="{StaticResource BaseFontColor}" />
-                            <Icons:IconLabel
+                            <Label
                                 Grid.Column="2"
-                                Padding="5"
+                                Padding="0"
+                                FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
-                                Text="fas-external-link-alt"
+                                Text="&#xf35d;"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
@@ -125,6 +126,7 @@
                         Margin="20,0"
                         BackgroundColor="LightGray"
                         HeightRequest="1" />
+                    
                     <!--  Q&A  -->
                     <StackLayout Grid.Row="1" Padding="20,0">
                         <Grid>
@@ -146,11 +148,12 @@
                                 FontSize="Body"
                                 Text="{i18n:Translate FAQS}"
                                 TextColor="{StaticResource BaseFontColor}" />
-                            <Icons:IconLabel
+                            <Label
                                 Grid.Column="2"
                                 Padding="5"
                                 FontSize="Body"
-                                Text="fas-external-link-alt"
+                                Text="&#xf35d;"
+                                FontFamily="{StaticResource FASolid}"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
@@ -162,6 +165,7 @@
                         Margin="20,0"
                         BackgroundColor="LightGray"
                         HeightRequest="1" />
+                    
                     <!--  WHO DONATIONS  -->
                     <StackLayout Grid.Row="2" Padding="20,0">
                         <Grid>
@@ -183,11 +187,12 @@
                                 FontSize="Body"
                                 Text="{i18n:Translate DONATIONS}"
                                 TextColor="{StaticResource BaseFontColor}" />
-                            <Icons:IconLabel
+                            <Label
                                 Grid.Column="2"
                                 Padding="5"
                                 FontSize="Body"
-                                Text="fas-external-link-alt"
+                                Text="&#xf35d;"
+                                FontFamily="{StaticResource FASolid}"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
@@ -221,11 +226,12 @@
                                 FontSize="Body"
                                 Text="{i18n:Translate MYTHS}"
                                 TextColor="{StaticResource BaseFontColor}" />
-                            <Icons:IconLabel
+                            <Label
                                 Grid.Column="2"
                                 Padding="5"
                                 FontSize="Body"
-                                Text="fas-external-link-alt"
+                                Text="&#xf35d;"
+                                FontFamily="{StaticResource FASolid}"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>

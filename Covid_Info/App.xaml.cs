@@ -10,9 +10,7 @@ using Covid_Info.Helpers.CovertModels;
 using System;
 using Xamarin.Essentials;
 using Covid_Info.Utils;
-using System.Diagnostics;
 using Com.OneSignal;
-using Com.OneSignal.Abstractions;
 using Prism.Plugin.Popups;
 using System.Threading.Tasks;
 using Covid_Info.Models;
@@ -49,9 +47,6 @@ namespace Covid_Info
                 if (VersionTracking.IsFirstLaunchEver) await AddGuideLines();
                 await NavigationService.NavigateAsync("NavigationPage/MainPage");
 
-                Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeRegularModule())
-                                    .With(new Plugin.Iconize.Fonts.FontAwesomeBrandsModule())
-                                    .With(new Plugin.Iconize.Fonts.FontAwesomeSolidModule());
             }
             catch (Exception ex)
             {

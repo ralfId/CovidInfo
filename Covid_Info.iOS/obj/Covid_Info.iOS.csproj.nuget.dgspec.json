@@ -86,10 +86,6 @@
               "target": "Package",
               "version": "[18.2.0.47, )"
             },
-            "Xam.Plugin.Iconize.FontAwesome": {
-              "target": "Package",
-              "version": "[3.5.0.114, )"
-            },
             "Xamanimation": {
               "target": "Package",
               "version": "[1.3.0, )"
@@ -219,10 +215,6 @@
               "target": "Package",
               "version": "[18.2.0.47, )"
             },
-            "Xam.Plugin.Iconize.FontAwesome": {
-              "target": "Package",
-              "version": "[3.5.0.114, )"
-            },
             "Xamanimation": {
               "target": "Package",
               "version": "[1.3.0, )"
@@ -302,19 +294,11 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Acr.UserDialogs": {
-              "target": "Package",
-              "version": "[7.1.0.446, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "Syncfusion.Xamarin.SfBusyIndicator": {
-              "target": "Package",
-              "version": "[18.2.0.47, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
