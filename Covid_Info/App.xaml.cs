@@ -89,6 +89,8 @@ namespace Covid_Info
 
         private async Task AddGuideLines()
         {
+            
+
             Preferences.Set(Constants.sortingListcountries, Constants.AZ);
             List<Advices> lstAdv = new List<Advices>
             {

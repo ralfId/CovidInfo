@@ -1,4 +1,7 @@
-﻿using Covid_Info.Helpers.CovertModels;
+﻿using Acr.UserDialogs;
+using Covid_Info.Data;
+using Covid_Info.Helpers;
+using Covid_Info.Helpers.CovertModels;
 using Covid_Info.Models;
 using Covid_Info.Services;
 using Covid_Info.Utils;
@@ -9,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -63,6 +67,8 @@ namespace Covid_Info.ViewModels
                 _apiRequest = apiRequest;
 
                 Title = "COVID-INFO";
+
+                Task.Run(async () => { await saveLocationInfo(); });
                 lstCountriesInfo = new List<Country>();
                 
 
@@ -85,6 +91,7 @@ namespace Covid_Info.ViewModels
 
         }
 
+     
 
         public DelegateCommand navAllCountries { get; private set; }
         public DelegateCommand UpdateData { get; private set; }
@@ -201,14 +208,14 @@ namespace Covid_Info.ViewModels
 
 
         #endregion
-
-        //public  override void OnNavigatedTo(INavigationParameters parameters)
-        //{
-        //    base.OnNavigatedTo(parameters);
-        //    if(isBuilt)  Task.Run(async () => { await refresUI(); });
-        //    isBuilt = true;
-        //}
-
+        private async Task saveLocationInfo()
+        {
+            var locationInfo = await _locationServices.GetMyCountryInfo();
+            if (locationInfo == null)
+            {
+                UserDialogs.Instance.Toast("Habilita los permisos GPS para mostrar informacion de tu pais en la pantalla principal.", TimeSpan.FromSeconds(3));
+            };
+        }
         private async Task loadDataValidation()
         {
             try
@@ -223,6 +230,16 @@ namespace Covid_Info.ViewModels
                 IsVisibleMainPage = false;
 
                 if (InterCon == NetworkAccess.None)
+                {
+                    AnimationJSON = Constants.NoConnectionJSON;
+                    LoadMessage = Resource.noInter;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleMainPage = false;
+                    SFIndicator = false;
+                    return;
+                }
+
+                if (InterCon == NetworkAccess.Unknown)
                 {
                     AnimationJSON = Constants.NoConnectionJSON;
                     LoadMessage = Resource.noInter;
@@ -283,7 +300,8 @@ namespace Covid_Info.ViewModels
                     ObMostaAffectedCountries = new ObservableCollection<Country>(orderList);
                     if (orderList.Any()) IsVisibleMAC = true;
 
-                    var placemark = await _locationServices.GetMyCountryInfo();
+                    var myCountryInfo = await DBConnection.Database.GetMyCountry();
+                    var placemark = myCountryInfo?.FirstOrDefault();
 
                     if (placemark != null)
                     {
@@ -324,7 +342,8 @@ namespace Covid_Info.ViewModels
 
         private async Task refresUI()
         {
-            int nn = 0;
+            var myCountryInfo = await DBConnection.Database.GetMyCountry();
+            if (!myCountryInfo.Any()) await _locationServices.GetMyCountryInfo();
 
             var globalInfoUI = await _apiRequest.globalInfoAPIRequest();
             var countriesUI = await _apiRequest.countriesInfoAPIRequest();
@@ -338,8 +357,6 @@ namespace Covid_Info.ViewModels
                 ObMostaAffectedCountries = new ObservableCollection<Country>(countriesUI.OrderByDescending(d => d.deaths).Take(5));
                 MyCountryInfo = countriesUI.FirstOrDefault(n => n.country == countryname || n.countryInfo.iso2 == countryISOcode);
             }
-            MyTimer = nn++.ToString();
-
         }
 
 
@@ -374,6 +391,6 @@ namespace Covid_Info.ViewModels
         }
         #endregion
 
-       
+        
     }
 }

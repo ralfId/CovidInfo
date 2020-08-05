@@ -1,14 +1,6 @@
 ﻿using Covid_Info.Models;
 using Covid_Info.Services;
-using Covid_Info.Utils;
-//using Microcharts;
 using Prism.Navigation;
-using Resx;
-//using SkiaSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Covid_Info.ViewModels
 {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AiBwgcf43K8uGnwpQZMtomX4A1BWuIIusBRltDuM/XtSLNYzBKgq9yPSPbFHMLGyOB7XeTsodlzpV/EUlePrfg==",
+  "dgSpecHash": "Bh+W7w0Du0eSidWObDXROKAnRARgUbtJSfQZYB4NO0isfAKEz1ctzNIX6pbjQ3pVLPUEUrPxMqvE/XyQQH85YA==",
   "success": true,
   "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
   "expectedPackageFiles": [
@@ -22,10 +22,9 @@
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.3\\sqlitepclraw.lib.e_sqlite3.android.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.47\\syncfusion.licensing.18.2.0.47.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.47\\syncfusion.xamarin.core.18.2.0.47.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.47\\syncfusion.xamarin.sfbusyindicator.18.2.0.47.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.2.0.47\\syncfusion.xamarin.sfchart.18.2.0.47.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.48\\syncfusion.licensing.18.2.0.48.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.48\\syncfusion.xamarin.core.18.2.0.48.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.48\\syncfusion.xamarin.sfbusyindicator.18.2.0.48.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",

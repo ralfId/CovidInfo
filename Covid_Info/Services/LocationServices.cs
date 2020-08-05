@@ -90,7 +90,7 @@ namespace Covid_Info.Services
                 {
                     return placeMarkDB?.FirstOrDefault();
                 }
-                UserDialogs.Instance.Alert(Resource.disabledGPS, "", Resource.ok);
+                //UserDialogs.Instance.Alert(Resource.disabledGPS, "", Resource.ok);
                 return default;
             }
         }

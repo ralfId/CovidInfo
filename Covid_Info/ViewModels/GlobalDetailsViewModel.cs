@@ -30,9 +30,6 @@ namespace Covid_Info.ViewModels
             //GlobalDetails = parameters["globaldetails"] as GlobalInfo;
             GlobalDetails = parameters.GetValue<GlobalInfo>("globaldetails");
 
-            startDate = DateTime.Now.AddDays(-30).ToString("dddd, dd MMMM yyyy");
-            endDate = DateTime.Now.AddDays(-1).ToString("dddd, dd MMMM yyyy");
-
 
         }
 

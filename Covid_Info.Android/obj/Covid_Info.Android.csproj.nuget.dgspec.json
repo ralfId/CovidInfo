@@ -72,15 +72,11 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[18.2.0.47, )"
+              "version": "[18.2.0.48, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[18.2.0.47, )"
-            },
-            "Syncfusion.Xamarin.SfChart": {
-              "target": "Package",
-              "version": "[18.2.0.47, )"
+              "version": "[18.2.0.48, )"
             },
             "Xamanimation": {
               "target": "Package",
@@ -226,15 +222,11 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[18.2.0.47, )"
+              "version": "[18.2.0.48, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[18.2.0.47, )"
-            },
-            "Syncfusion.Xamarin.SfChart": {
-              "target": "Package",
-              "version": "[18.2.0.47, )"
+              "version": "[18.2.0.48, )"
             },
             "Xamanimation": {
               "target": "Package",

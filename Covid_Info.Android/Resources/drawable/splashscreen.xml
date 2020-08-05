@@ -5,8 +5,8 @@
   </item>
   <item>
     <bitmap
-        android:src="@mipmap/covidicon"
+        android:src="@mipmap/splashscreenImage"
         android:tileMode="disabled"
-        android:gravity="center"/>
+        android:gravity="fill"/>
   </item>
 </layer-list>   

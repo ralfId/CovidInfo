@@ -35,8 +35,6 @@ public class MonoPackageManager_Resources {
 		"Syncfusion.SfBusyIndicator.Android.dll",
 		"Syncfusion.SfBusyIndicator.XForms.Android.dll",
 		"Syncfusion.SfBusyIndicator.XForms.dll",
-		"Syncfusion.SfChart.XForms.Android.dll",
-		"Syncfusion.SfChart.XForms.dll",
 		"Xamanimation.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

@@ -4,7 +4,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
@@ -258,8 +257,6 @@
 
                             </StackLayout>
                         </Frame>
-
-                        <!--  cases chart  -->
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
