@@ -37,6 +37,14 @@
         <Color x:Key="CustomNavBarColor">#1a1d3e</Color>
         <Color x:Key="BoxSeparator">#b0bec5</Color>
 
+        <Color x:Key="PrimaryColor">#4d6cfa</Color>
+        <Color x:Key="PrimaryLightColor">#8a9aff</Color>
+        <Color x:Key="PrimaryDarkColor">#0042c6</Color>
+
+        <Color x:Key="SecundaryColor">#263238</Color>
+        <Color x:Key="SecundaryDarkColor">#000a12</Color>
+        <Color x:Key="SecundaryLightColor">#4f5b62</Color>
+
         <!--  Font sizes  -->
         <x:Double x:Key="MainNumbFS">25</x:Double>
         <x:Double x:Key="BaseTitleFontSize">20</x:Double>
@@ -47,9 +55,9 @@
         </Style>
 
         <!--  navbarstyle  -->
-        <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="#1a1d3e" />
-        </Style>
+        <!--<Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#4d6cfa" />
+        </Style>-->
 
         <!--  My own titles  -->
         <!--<x:Double x:Key="BaseTitleFontSize">20</x:Double>

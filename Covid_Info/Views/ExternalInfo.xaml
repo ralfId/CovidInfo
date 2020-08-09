@@ -19,7 +19,7 @@
             EasingIn="SinOut"
             EasingOut="SinIn"
             HasBackgroundAnimation="True"
-            PositionIn="Top"
+            PositionIn="Bottom"
             PositionOut="Bottom"
             ScaleIn="1.2"
             ScaleOut="0.8" />

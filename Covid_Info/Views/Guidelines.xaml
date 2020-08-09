@@ -6,8 +6,7 @@
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:localview="clr-namespace:Covid_Info.Views.GuidelinesViews"
     xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True"
-    BarBackgroundColor="{StaticResource CustomNavBarColor}">
+    prism:ViewModelLocator.AutowireViewModel="True">
     <NavigationPage.TitleView>
         <Grid ColumnDefinitions="*,auto">
             <Label

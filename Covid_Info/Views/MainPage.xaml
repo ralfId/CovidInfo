@@ -3,24 +3,15 @@
     x:Class="Covid_Info.Views.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:views="clr-namespace:Covid_Info.Views"
-    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
     Visual="Material">
 
-    <views:TemplatePage.Resources>
-        <ResourceDictionary>
-            <xamanimation:ScaleToAnimation
-                x:Key="ScaleToAnimation"
-                Scale="2"
-                Target="{x:Reference attentionJSON}" />
-        </ResourceDictionary>
-    </views:TemplatePage.Resources>
+
 
     <AbsoluteLayout>
         <RefreshView
@@ -33,28 +24,23 @@
                 BackgroundColor="{StaticResource BackgroundColorPage}"
                 RowDefinitions="*,auto"
                 RowSpacing="0">
-                <ScrollView>
+                <ScrollView Padding="0">
                     <Grid RowDefinitions="auto,*">
-                        <Grid RowDefinitions="auto, auto">
+                        <Grid RowDefinitions="130, auto">
                             <!--  covid banner  -->
                             <pkv:PancakeView
                                 Grid.Row="0"
-                                Margin="0"
-                                Padding="5,0,5,6"
-                                BackgroundColor="{StaticResource CustomNavBarColor}"
+                                Margin="-2"
+                                Padding="0"
+                                BackgroundColor="Transparent"
                                 CornerRadius="0">
-                                <Grid ColumnDefinitions="auto,*" RowDefinitions="auto">
-                                    <Image
-                                        Grid.Row="0"
-                                        Grid.Column="0"
-                                        Margin="3,0"
-                                        Aspect="AspectFit"
-                                        Source="{helpers:ImageResource Covid_Info.Images.fcovid.png}"
-                                        WidthRequest="75" />
-                                    <Grid
-                                        Grid.Row="0"
-                                        Grid.Column="1"
-                                        RowDefinitions="auto,auto">
+                                <Grid>
+                                    <Path
+                                        Aspect="Fill"
+                                        Data="m34.83001,189.05001l715.99999,0l0,182.76699c-225.99999,-35 -531.99999,70.63757 -713.99999,5.07077l-2,-187.83776z"
+                                        Fill="{StaticResource PrimaryColor}"
+                                        TranslationY="-2" />
+                                    <Grid Padding="23,0,23,5" RowDefinitions="auto,auto">
                                         <Label
                                             Grid.Row="0"
                                             FontAttributes="Bold"
@@ -72,7 +58,96 @@
                             </pkv:PancakeView>
 
                             <!--  advices and symt  -->
-                            <contentViews:AdvicesAndSymp Grid.Row="1" Margin="20,10" />
+                            <!--<contentViews:AdvicesAndSymp Grid.Row="1" Margin="20,10" />-->
+                            <Grid
+                                Grid.Row="1"
+                                Margin="20,10"
+                                ColumnSpacing="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <pkv:PancakeView
+                                    x:Name="SymptomsFrame"
+                                    Grid.Column="0"
+                                    BackgroundColor="{StaticResource WhiteColor}"
+                                    CornerRadius="7">
+                                    <pkv:PancakeView.Shadow>
+                                        <pkv:DropShadow
+                                            BlurRadius="10"
+                                            Opacity="0.3"
+                                            Offset="10,10"
+                                            Color="#000000" />
+                                    </pkv:PancakeView.Shadow>
+                                    <Grid RowDefinitions="100,auto">
+                                        <Image
+                                            Grid.RowSpan="2"
+                                            Margin="3"
+                                            Aspect="AspectFit"
+                                            HeightRequest="125"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Source="{helpers:ImageResource Covid_Info.Images.symptoms.png}"
+                                            WidthRequest="125" />
+                                        <Grid
+                                            Grid.Row="1"
+                                            Padding="0,5"
+                                            BackgroundColor="{StaticResource SecundaryDarkColor}"
+                                            Opacity="0.7"
+                                            VerticalOptions="End">
+                                            <Label
+                                                Padding="1"
+                                                FontSize="Body"
+                                                HorizontalTextAlignment="Center"
+                                                Text="{i18n:Translate symptoms}"
+                                                TextColor="{StaticResource WhiteColor}" />
+                                        </Grid>
+                                    </Grid>
+                                    <pkv:PancakeView.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding goASymptoms}" />
+                                    </pkv:PancakeView.GestureRecognizers>
+                                </pkv:PancakeView>
+
+                                <pkv:PancakeView
+                                    x:Name="AdvicesFrame"
+                                    Grid.Column="1"
+                                    BackgroundColor="{StaticResource WhiteColor}"
+                                    CornerRadius="7">
+                                    <pkv:PancakeView.Shadow>
+                                        <pkv:DropShadow
+                                            BlurRadius="10"
+                                            Opacity="0.3"
+                                            Offset="10,10"
+                                            Color="#000000" />
+                                    </pkv:PancakeView.Shadow>
+                                    <Grid RowDefinitions="100,auto">
+                                        <Image
+                                            Grid.RowSpan="2"
+                                            Margin="3"
+                                            Aspect="AspectFit"
+                                            HeightRequest="125"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Source="{helpers:ImageResource Covid_Info.Images.advices.png}"
+                                            WidthRequest="125" />
+                                        <Grid
+                                            Grid.Row="1"
+                                            Padding="0,5"
+                                            BackgroundColor="{StaticResource SecundaryDarkColor}"
+                                            Opacity="0.7"
+                                            VerticalOptions="End">
+                                            <Label
+                                                Padding="1"
+                                                FontSize="Body"
+                                                HorizontalTextAlignment="Center"
+                                                Text="{i18n:Translate advices}"
+                                                TextColor="{StaticResource WhiteColor}" />
+                                        </Grid>
+                                    </Grid>
+                                    <pkv:PancakeView.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding goAdvices}" />
+                                    </pkv:PancakeView.GestureRecognizers>
+                                </pkv:PancakeView>
+                            </Grid>
 
                         </Grid>
                         <StackLayout
@@ -81,15 +156,14 @@
                             IsVisible="{Binding IsVisibleMainPage}"
                             Spacing="25">
 
-                            <!--<Label Text="{Binding MyTimer}" FontSize="Large" TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="20"/>-->
-                            <!--  current country info  -->
+
                             <contentViews:MyCountry IsVisible="{Binding IsVisibleMyCountry}" />
                             <!--  global info  -->
                             <contentViews:GlobalInfo />
 
 
-                            <!--  all countries  -->
-                            <pkv:PancakeView BackgroundColor="{StaticResource CustomNavBarColor}" CornerRadius="7">
+                            <!--  view all countries BTN  -->
+                            <pkv:PancakeView BackgroundColor="{StaticResource SecundaryDarkColor}" CornerRadius="7">
                                 <pkv:PancakeView.Shadow>
                                     <pkv:DropShadow
                                         BlurRadius="10"
@@ -97,35 +171,21 @@
                                         Offset="10,10"
                                         Color="#000000" />
                                 </pkv:PancakeView.Shadow>
-                                <Grid>
-                                    <Image
-                                        Aspect="AspectFill"
-                                        HorizontalOptions="FillAndExpand"
-                                        Source="{helpers:ImageResource Covid_Info.Images.countries.png}" />
-                                    <Grid
-                                        BackgroundColor="{StaticResource CustomNavBarColor}"
-                                        Opacity="0.7"
-                                        VerticalOptions="End">
-                                        <Grid Padding="15,5">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label
-                                                Padding="0"
-                                                FontSize="Body"
-                                                Text="View statistic from each country"
-                                                TextColor="{StaticResource WhiteColor}" />
-                                            <Label
-                                                Grid.Column="1"
-                                                FontAttributes="Bold"
-                                                FontFamily="{StaticResource FARegular}"
-                                                FontSize="Large"
-                                                Text="&#xf35a;"
-                                                TextColor="{StaticResource WhiteColor}"
-                                                VerticalOptions="Center" />
-                                        </Grid>
-                                    </Grid>
+                                <Grid Padding="15,7" ColumnDefinitions="*,auto">
+                                    <Label
+                                        Padding="0"
+                                        FontAttributes="Bold"
+                                        FontSize="Subtitle"
+                                        Text="View statistic from each country"
+                                        TextColor="{StaticResource WhiteColor}" />
+                                    <Label
+                                        Grid.Column="1"
+                                        FontAttributes="Bold"
+                                        FontFamily="{StaticResource FASolid}"
+                                        FontSize="Title"
+                                        Text="&#xf57d;"
+                                        TextColor="{StaticResource WhiteColor}"
+                                        VerticalOptions="Center" />
                                 </Grid>
                                 <pkv:PancakeView.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding navAllCountries}" />
@@ -158,19 +218,18 @@
                             Orientation="Horizontal"
                             Spacing="10">
                             <Label
-                                x:Name="attentionJSON"
                                 Margin="0"
                                 FontAttributes="Bold"
                                 FontFamily="{StaticResource FASolid}"
                                 FontSize="Title"
                                 HorizontalOptions="Center"
                                 Text="&#xf106;"
-                                TextColor="{StaticResource BaseFontColor}"
+                                TextColor="{StaticResource SecundaryDarkColor}"
                                 VerticalOptions="Center" />
                             <Label
                                 FontSize="Body"
                                 Text="{i18n:Translate btnExternalInfo}"
-                                TextColor="{StaticResource BaseFontColor}"
+                                TextColor="{StaticResource SecundaryDarkColor}"
                                 VerticalOptions="Center" />
                         </StackLayout>
                         <pkv:PancakeView.GestureRecognizers>

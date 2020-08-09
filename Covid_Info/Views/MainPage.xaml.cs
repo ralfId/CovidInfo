@@ -14,12 +14,34 @@ namespace Covid_Info.Views
         public MainPage()
         {
             InitializeComponent();
+          
         }
 
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
+
+
+            AdvicesFrame.TranslationX = 300;
+            SymptomsFrame.TranslationX = -300;
+
+            await Task.WhenAll(
+
+                 SymptomsFrame.TranslateTo(-300, 0, 350, Easing.Linear),
+             SymptomsFrame.FadeTo(0.5, 350, Easing.Linear),
+             SymptomsFrame.TranslateTo(-150, 0, 350, Easing.Linear),
+             SymptomsFrame.TranslateTo(0, 0, 350, Easing.Linear),
+             SymptomsFrame.FadeTo(1, 350, Easing.Linear),
+
+             AdvicesFrame.TranslateTo(300, 0, 350, Easing.Linear),
+             AdvicesFrame.FadeTo(0.5, 350, Easing.Linear),
+             AdvicesFrame.TranslateTo(150, 0, 350, Easing.Linear),
+             AdvicesFrame.TranslateTo(0, 0, 350, Easing.Linear),
+             AdvicesFrame.FadeTo(1, 350, Easing.Linear)
+                );
+
         }
+
     }
 }

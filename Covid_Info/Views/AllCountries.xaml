@@ -19,7 +19,7 @@
                 <!--  my navigation bar  -->
                 <pkv:PancakeView
                     Padding="20,0,10,10"
-                    BackgroundColor="{StaticResource CustomNavBarColor}"
+                    BackgroundColor="{StaticResource PrimaryColor}"
                     IsVisible="{Binding IsVisibleCountries}">
                     <Grid ColumnDefinitions="*,auto" ColumnSpacing="15">
                         <Frame Margin="0" Padding="0">

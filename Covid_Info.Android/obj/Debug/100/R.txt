@@ -1853,7 +1853,8 @@ int layout tabbar 0x7f0b005d
 int layout textinputlayoutfilledbox 0x7f0b005e
 int layout toolbar 0x7f0b005f
 int mipmap covidicon 0x7f0c0000
-int mipmap splashscreenimage 0x7f0c0001
+int mipmap iconsplash 0x7f0c0001
+int mipmap splashscreenimage 0x7f0c0002
 int raw consumer_onesignal_keep 0x7f0d0000
 int string abc_action_bar_home_description 0x7f0e0000
 int string abc_action_bar_up_description 0x7f0e0001

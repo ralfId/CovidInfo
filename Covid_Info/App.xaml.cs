@@ -41,7 +41,7 @@ namespace Covid_Info
             {
                 InitializeComponent();
 
-                //Device.SetFlags(new string[] { "Shapes_Experimental" });
+                Xamarin.Forms.Device.SetFlags(new string[] { "Shapes_Experimental" });
                
                 OneSignal.Current.StartInit("22bbbcc9-938a-40ad-a342-2d54994ff0a2").EndInit();
                 if (VersionTracking.IsFirstLaunchEver) await AddGuideLines();

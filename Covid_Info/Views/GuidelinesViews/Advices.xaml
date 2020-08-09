@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:helpers="clr-namespace:Covid_Info.Helpers"
-             xmlns:converters="clr-namespace:Covid_Info.Converters"
-             mc:Ignorable="d"
-             x:Class="Covid_Info.Views.GuidelinesViews.Advices"
-             Visual="Material">
+<ContentPage
+    x:Class="Covid_Info.Views.GuidelinesViews.Advices"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Covid_Info.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:helpers="clr-namespace:Covid_Info.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Visual="Material"
+    mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converters:EmbeddedImagesConverter x:Key="EmbeddedImagesConverter"/>
+            <converters:EmbeddedImagesConverter x:Key="EmbeddedImagesConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -20,16 +21,37 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Margin="20,5">
-                                <Grid ColumnDefinitions="auto,*"
-                                      RowDefinitions="auto,auto,auto" Padding="5">
+                                <Grid
+                                    Padding="5"
+                                    ColumnDefinitions="auto,*"
+                                    RowDefinitions="auto,auto,auto">
 
-                                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding title}" FontAttributes="Bold" FontSize="20" TextColor="{StaticResource BaseFontColor}"/>
-                                    <Image Grid.Column="0" Grid.Row="1"  Source="{Binding imgName, Converter={StaticResource EmbeddedImagesConverter}, ConverterParameter='Covid_Info.Images'}" Aspect="AspectFit"
-                                          VerticalOptions="FillAndExpand"
-                                          HorizontalOptions="FillAndExpand"
-                                               WidthRequest="40" HeightRequest="40"/>
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        Text="{Binding title}"
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
+                                    <Image
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Aspect="AspectFit"
+                                        HeightRequest="40"
+                                        HorizontalOptions="FillAndExpand"
+                                        Source="{Binding imgName, Converter={StaticResource EmbeddedImagesConverter}, ConverterParameter='Covid_Info.Images'}"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="40" />
 
-                                    <Label Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Text="{Binding description}" FontSize="Body" TextColor="{StaticResource BaseFontColor}" LineBreakMode="WordWrap"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.RowSpan="3"
+                                        Grid.Column="1"
+                                        FontSize="Body"
+                                        LineBreakMode="WordWrap"
+                                        Text="{Binding description}"
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </Grid>
                                 <Grid>
                                     <BoxView BackgroundColor="LightGray" HeightRequest="1" />

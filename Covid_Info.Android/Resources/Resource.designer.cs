@@ -24582,7 +24582,10 @@ namespace Covid_Info.Droid
 			public const int covidicon = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int splashscreenImage = 2131492865;
+			public const int iconsplash = 2131492865;
+			
+			// aapt resource value: 0x7F0C0002
+			public const int splashscreenImage = 2131492866;
 			
 			static Mipmap()
 			{

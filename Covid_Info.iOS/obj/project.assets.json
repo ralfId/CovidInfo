@@ -818,18 +818,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamanimation/1.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "4.1.0.581479"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        }
-      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -964,7 +952,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.PancakeView/2.0.1.698": {
+      "Xamarin.Forms.PancakeView/2.0.1.707": {
         "type": "package",
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -1013,10 +1001,9 @@
           "Rg.Plugins.Popup": "2.0.0.3",
           "Syncfusion.Licensing": "18.2.0.48",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
-          "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
-          "Xamarin.Forms.PancakeView": "2.0.1.698",
+          "Xamarin.Forms.PancakeView": "2.0.1.707",
           "Xamarin.Forms.Visual.Material": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -1794,18 +1781,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamanimation/1.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "4.1.0.581479"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        }
-      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1940,7 +1915,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.PancakeView/2.0.1.698": {
+      "Xamarin.Forms.PancakeView/2.0.1.707": {
         "type": "package",
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -1989,10 +1964,9 @@
           "Rg.Plugins.Popup": "2.0.0.3",
           "Syncfusion.Licensing": "18.2.0.48",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
-          "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
-          "Xamarin.Forms.PancakeView": "2.0.1.698",
+          "Xamarin.Forms.PancakeView": "2.0.1.707",
           "Xamarin.Forms.Visual.Material": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -2770,18 +2744,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamanimation/1.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "4.1.0.581479"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        }
-      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -2916,7 +2878,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.PancakeView/2.0.1.698": {
+      "Xamarin.Forms.PancakeView/2.0.1.707": {
         "type": "package",
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -2965,10 +2927,9 @@
           "Rg.Plugins.Popup": "2.0.0.3",
           "Syncfusion.Licensing": "18.2.0.48",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
-          "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
-          "Xamarin.Forms.PancakeView": "2.0.1.698",
+          "Xamarin.Forms.PancakeView": "2.0.1.707",
           "Xamarin.Forms.Visual.Material": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -3746,18 +3707,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamanimation/1.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "4.1.0.581479"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamanimation.dll": {}
-        }
-      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3892,7 +3841,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.PancakeView/2.0.1.698": {
+      "Xamarin.Forms.PancakeView/2.0.1.707": {
         "type": "package",
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -3941,10 +3890,9 @@
           "Rg.Plugins.Popup": "2.0.0.3",
           "Syncfusion.Licensing": "18.2.0.48",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
-          "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
-          "Xamarin.Forms.PancakeView": "2.0.1.698",
+          "Xamarin.Forms.PancakeView": "2.0.1.707",
           "Xamarin.Forms.Visual.Material": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -7318,18 +7266,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Xamanimation/1.3.0": {
-      "sha512": "CXYLcQulqAL9qxRMecm5P5YXbOWiBGK0mgtV2buyHehLjbj6Hf+EdHs8cqVztrD47/zAiTAz2yDCURRXC8d33Q==",
-      "type": "package",
-      "path": "xamanimation/1.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Xamanimation.dll",
-        "xamanimation.1.3.0.nupkg.sha512",
-        "xamanimation.nuspec"
-      ]
-    },
     "Xamarin.Essentials/1.5.3.2": {
       "sha512": "BSLgDJUOPFRwTpQaftM+s4qb/MsTjrqXulEYDOcK6KF3i0Orf75zo3RwRfqnQ8WfpoEFxW/v0jgcPWCvOMgHxg==",
       "type": "package",
@@ -7692,10 +7628,10 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.PancakeView/2.0.1.698": {
-      "sha512": "wjem1ckhesY3UoD+rEpg6mysRG85RcO7hrXcFWpq2fKyTL4YKuH8GTmaaL87q/lyhvk0GCRoJFLgYcOJWsUk5w==",
+    "Xamarin.Forms.PancakeView/2.0.1.707": {
+      "sha512": "YhJ7l9H+Tcc98HD1SINLPchIX+d5Kw4e5mBjYoX9TUh1iy2b1pXC7PoTGLnJX++znE+9Txs6TblKu+S/KX413w==",
       "type": "package",
-      "path": "xamarin.forms.pancakeview/2.0.1.698",
+      "path": "xamarin.forms.pancakeview/2.0.1.707",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7706,7 +7642,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.PancakeView.dll",
         "lib/uap10.0.16299/Xamarin.Forms.PancakeView.pri",
         "lib/xamarinios10/Xamarin.Forms.PancakeView.dll",
-        "xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512",
+        "xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512",
         "xamarin.forms.pancakeview.nuspec"
       ]
     },
@@ -7772,10 +7708,9 @@
       "Rg.Plugins.Popup >= 2.0.0.3",
       "Syncfusion.Licensing >= 18.2.0.48",
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.48",
-      "Xamanimation >= 1.3.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.7.0.1239",
-      "Xamarin.Forms.PancakeView >= 2.0.1.698",
+      "Xamarin.Forms.PancakeView >= 2.0.1.707",
       "Xamarin.Forms.Visual.Material >= 4.7.0.1239",
       "sqlite-net-pcl >= 1.7.335"
     ]
@@ -7787,11 +7722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+      "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
       "projectName": "Covid_Info.iOS",
-      "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+      "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
+      "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -7807,17 +7742,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
-              "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
+            "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
             },
-            "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-              "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+            "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
             }
           }
         }
@@ -7866,10 +7800,6 @@
             "target": "Package",
             "version": "[18.2.0.48, )"
           },
-          "Xamanimation": {
-            "target": "Package",
-            "version": "[1.3.0, )"
-          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.5.3.2, )"
@@ -7880,7 +7810,7 @@
           },
           "Xamarin.Forms.PancakeView": {
             "target": "Package",
-            "version": "[2.0.1.698, )"
+            "version": "[2.0.1.707, )"
           },
           "Xamarin.Forms.Visual.Material": {
             "target": "Package",

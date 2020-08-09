@@ -71,7 +71,7 @@
                                                FontAttributes="Bold" HorizontalOptions="Center"/>
                                         <Label Grid.Row="1" Text="{Binding deaths, StringFormat='{0:0,0}'}"
 						                       FontSize="25"
-						                       TextColor="{StaticResource BaseFontColor}"
+						                       TextColor="{StaticResource SecundaryDarkColor}"
 						                       FontAttributes="Bold" HorizontalOptions="Center"/>
                                     </Grid>
                                 </Grid>

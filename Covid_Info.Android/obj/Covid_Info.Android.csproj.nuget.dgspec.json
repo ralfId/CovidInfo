@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj": {}
+    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj": {}
   },
   "projects": {
-    "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj": {
+    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
+        "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
         "projectName": "Covid_Info.Android",
-        "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
+        "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
         "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\obj\\",
+        "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -27,17 +27,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
-                "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
+              "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+                "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
               },
-              "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-                "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+              "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+                "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
               }
             }
           }
@@ -77,10 +76,6 @@
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
               "version": "[18.2.0.48, )"
-            },
-            "Xamanimation": {
-              "target": "Package",
-              "version": "[1.3.0, )"
             },
             "Xamarin.Android.Support.CustomTabs": {
               "target": "Package",
@@ -124,7 +119,7 @@
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
-              "version": "[2.0.1.698, )"
+              "version": "[2.0.1.707, )"
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
@@ -138,18 +133,17 @@
         }
       }
     },
-    "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+        "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
         "projectName": "Covid_Info",
-        "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+        "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
         "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
+        "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -161,14 +155,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-                "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+              "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+                "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
               }
             }
           }
@@ -228,10 +221,6 @@
               "target": "Package",
               "version": "[18.2.0.48, )"
             },
-            "Xamanimation": {
-              "target": "Package",
-              "version": "[1.3.0, )"
-            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
@@ -242,7 +231,7 @@
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
-              "version": "[2.0.1.698, )"
+              "version": "[2.0.1.707, )"
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
@@ -263,22 +252,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+        "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
         "projectName": "Resx",
-        "projectPath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+        "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
         "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Rafael\\Proyectos\\XFCovid\\Resx\\obj\\",
+        "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -290,8 +278,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -328,7 +315,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

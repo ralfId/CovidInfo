@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ELh/IPYn4xhF4t6PEEV9wLe26wb94Bk5AYxMAIP+X4lENX8z9xDgQpKl80YAECbySvzA1WQNw8BIpKeMSuqT+Q==",
+  "dgSpecHash": "Be8jbKGBQQSDfUlAUF3Up6zScjEwr66NO6hKgfKTZyvIuSb/vsNotXb6e1cd+gdPK15IkgGUgud8JO0d9iJlcA==",
   "success": true,
-  "projectFilePath": "D:\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+  "projectFilePath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\com.onesignal\\3.10.0\\com.onesignal.3.10.0.nupkg.sha512",
@@ -40,10 +40,9 @@
     "C:\\Users\\ID\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamanimation\\1.3.0\\xamanimation.1.3.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1239\\xamarin.forms.4.7.0.1239.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.visual.material\\4.7.0.1239\\xamarin.forms.visual.material.4.7.0.1239.nupkg.sha512"
   ],
   "logs": []

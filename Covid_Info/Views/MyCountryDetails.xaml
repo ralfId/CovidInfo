@@ -33,7 +33,7 @@
             <pkv:PancakeView Padding="0,5,0,0" HeightRequest="30">
                 <StackLayout Margin="0" Padding="0">
                     <pkv:PancakeView
-                        BackgroundColor="{StaticResource BaseFontColor}"
+                        BackgroundColor="{StaticResource SecundaryDarkColor}"
                         CornerRadius="20"
                         HeightRequest="5"
                         HorizontalOptions="Center"
@@ -61,7 +61,7 @@
                         FontAttributes="Bold"
                         FontSize="Large"
                         Text="{Binding CountryDetails.country}"
-                        TextColor="{StaticResource BaseFontColor}"
+                        TextColor="{StaticResource SecundaryDarkColor}"
                         VerticalOptions="Center" />
 
                     <Image
@@ -93,7 +93,7 @@
                             FontAttributes="Bold"
                             FontSize="Body"
                             Text="{i18n:Translate 24Report}"
-                            TextColor="{StaticResource BaseFontColor}" />
+                            TextColor="{StaticResource SecundaryDarkColor}" />
                         <Frame Padding="10">
                             <StackLayout Spacing="0">
                                 <!--  recovered  -->
@@ -102,13 +102,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate recoveredCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.todayRecovered, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -118,13 +118,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate activeCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.todayCases, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -134,13 +134,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate deathsCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.todayDeaths, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
                             </StackLayout>
@@ -152,7 +152,7 @@
                             FontAttributes="Bold"
                             FontSize="Body"
                             Text="Total cases"
-                            TextColor="{StaticResource BaseFontColor}" />
+                            TextColor="{StaticResource SecundaryDarkColor}" />
                         <Frame Padding="10">
                             <StackLayout Spacing="0">
                                 <!--  cases  -->
@@ -161,13 +161,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate confirmedCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.cases, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -177,13 +177,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate recoveredCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.recovered, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -193,13 +193,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate activeCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.active, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -209,13 +209,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="critical"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.critical, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -225,13 +225,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate deathsCases}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.deaths, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 
@@ -241,13 +241,13 @@
                                         Padding="5"
                                         FontSize="Body"
                                         Text="{i18n:Translate covidTests}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                     <Label
                                         Padding="10,5,5,5"
                                         FontSize="Body"
                                         HorizontalOptions="EndAndExpand"
                                         Text="{Binding CountryDetails.tests, StringFormat='{0:0,0}'}"
-                                        TextColor="{StaticResource BaseFontColor}" />
+                                        TextColor="{StaticResource SecundaryDarkColor}" />
                                 </StackLayout>
                                 <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" />
 

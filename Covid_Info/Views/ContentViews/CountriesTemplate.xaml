@@ -26,7 +26,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Text="{Binding country}" TextColor="{StaticResource BaseFontColor}" FontSize="{StaticResource BaseTitleFontSize}" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label Grid.Column="0" Text="{Binding country}" TextColor="{StaticResource SecundaryDarkColor}" FontSize="{StaticResource BaseTitleFontSize}" FontAttributes="Bold" VerticalOptions="Center"/>
 
                 <Image Grid.Column="1" Aspect="AspectFit" WidthRequest="90" HeightRequest="50" HorizontalOptions="End" >
                     <Image.Source>
@@ -85,10 +85,10 @@
 
         <!--Total test-->
             <StackLayout Orientation="Horizontal" Margin="10,5,10,0">
-                <Label Padding="5" Text="{i18n:Translate covidTests}" FontSize="Default" TextColor="{StaticResource BaseFontColor}"/>
-                <Label Padding="10,5,5,5"  Text="{Binding tests, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource BaseFontColor}" HorizontalOptions="EndAndExpand"/>
+            <Label Padding="5" Text="{i18n:Translate covidTests}" FontSize="Default" TextColor="{StaticResource SecundaryDarkColor}"/>
+            <Label Padding="10,5,5,5"  Text="{Binding tests, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource SecundaryDarkColor}" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
-            <BoxView BackgroundColor="{StaticResource BackgroundColorPage}" HeightRequest="2" Margin="15,0"/>
+            <BoxView BackgroundColor="{StaticResource SecundaryDarkColor}" HeightRequest="2" Margin="15,0"/>
 
     </StackLayout>
 </Frame>

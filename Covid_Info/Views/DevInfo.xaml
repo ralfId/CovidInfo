@@ -30,11 +30,11 @@
                         FontAttributes="Bold"
                         FontSize="Large"
                         Text="{i18n:Translate devInfo1}"
-                        TextColor="{StaticResource BaseFontColor}" />
+                        TextColor="{StaticResource SecundaryDarkColor}" />
                     <Label
                         Grid.Row="1"
                         FontSize="Body"
-                        TextColor="{StaticResource BaseFontColor}">
+                        TextColor="{StaticResource SecundaryDarkColor}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{i18n:Translate devInfo2}" />
@@ -52,7 +52,7 @@
                     Grid.Row="1"
                     FontSize="Body"
                     Text="{i18n:Translate greatApp}"
-                    TextColor="{StaticResource BaseFontColor}" />
+                    TextColor="{StaticResource SecundaryDarkColor}" />
                 <Grid Grid.Row="2" HorizontalOptions="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" />
@@ -68,7 +68,7 @@
                     <Frame
                         Grid.Column="1"
                         Padding="10"
-                        BackgroundColor="{StaticResource BaseBlueColor}"
+                        BackgroundColor="{StaticResource SecundaryDarkColor}"
                         VerticalOptions="Center">
                         <Label
                             Padding="0"
@@ -94,9 +94,9 @@
                         FontAttributes="Bold"
                         FontSize="Large"
                         Text="{i18n:Translate dataInfo1}"
-                        TextColor="{StaticResource BaseFontColor}" />
+                        TextColor="{StaticResource SecundaryDarkColor}" />
 
-                    <Label FontSize="Body" TextColor="{StaticResource BaseFontColor}">
+                    <Label FontSize="Body" TextColor="{StaticResource SecundaryDarkColor}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{i18n:Translate dataInfo2}" />
@@ -108,7 +108,7 @@
                     </Label>
                     <Button
                         Margin="5,20"
-                        BackgroundColor="{StaticResource BaseBlueColor}"
+                        BackgroundColor="{StaticResource SecundaryDarkColor}"
                         Command="{Binding goNovelCovidApi}"
                         Text="{i18n:Translate dataInfoBtn}" />
                 </StackLayout>

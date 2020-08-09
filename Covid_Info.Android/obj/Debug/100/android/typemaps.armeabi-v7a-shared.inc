@@ -67809,13 +67809,13 @@
 	.section	.rodata.managed_type_name.3608,"aMS",%progbits,1
 	.type	.L.managed_type_name.3608, %object
 .L.managed_type_name.3608:
-	.asciz	"Android.Util.SparseArray, Mono.Android"
-	.size	.L.managed_type_name.3608, 39
+	.asciz	"Android.Util.SparseArray`1, Mono.Android"
+	.size	.L.managed_type_name.3608, 41
 	.section	.rodata.managed_type_name.3609,"aMS",%progbits,1
 	.type	.L.managed_type_name.3609, %object
 .L.managed_type_name.3609:
-	.asciz	"Android.Util.SparseArray, Mono.Android"
-	.size	.L.managed_type_name.3609, 39
+	.asciz	"Android.Util.SparseArray`1, Mono.Android"
+	.size	.L.managed_type_name.3609, 41
 	.section	.rodata.managed_type_name.3610,"aMS",%progbits,1
 	.type	.L.managed_type_name.3610, %object
 .L.managed_type_name.3610:
@@ -70374,13 +70374,13 @@
 	.section	.rodata.managed_type_name.4121,"aMS",%progbits,1
 	.type	.L.managed_type_name.4121, %object
 .L.managed_type_name.4121:
-	.asciz	"Android.Widget.ArrayAdapter, Mono.Android"
-	.size	.L.managed_type_name.4121, 42
+	.asciz	"Android.Widget.ArrayAdapter`1, Mono.Android"
+	.size	.L.managed_type_name.4121, 44
 	.section	.rodata.managed_type_name.4122,"aMS",%progbits,1
 	.type	.L.managed_type_name.4122, %object
 .L.managed_type_name.4122:
-	.asciz	"Android.Widget.ArrayAdapter, Mono.Android"
-	.size	.L.managed_type_name.4122, 42
+	.asciz	"Android.Widget.ArrayAdapter`1, Mono.Android"
+	.size	.L.managed_type_name.4122, 44
 	.section	.rodata.managed_type_name.4123,"aMS",%progbits,1
 	.type	.L.managed_type_name.4123, %object
 .L.managed_type_name.4123:
