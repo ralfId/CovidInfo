@@ -7,17 +7,9 @@ namespace Covid_Info.Utils
 {
     public class Constants
     {
-        /*DOMAIN corona.lmao.ninja V2*/
-        public const string getGloball_coronaNingaV2 = "https://corona.lmao.ninja/v2/all";
-        public const string getCountries_coronaNinjaV2 = "https://corona.lmao.ninja/v2/countries";
-
-        /*DOMAIN corona.lmao.ninja V3*/
-        public const string getGLobal_coronaNingaV3 = "https://corona.lmao.ninja/v3/covid-19/all";
-        public const string getCountries_coronaNingaV3 = "https://corona.lmao.ninja/v3/covid-19/countries";
-
-        /*DOMAIN disease.sh V2*/
-        public const string getGLobal_diseaseV2 = "https://disease.sh/v2/all";
-        public const string getCountries_diseaseV2 = "https://disease.sh/v2/countries";
+        /*DOMAIN corona.lmao.ninja */
+        public const string ningiaUrl = "https://corona.lmao.ninja/";
+       
 
         /*DOMAIN disease.sh V3*/
         public const string getGLobal_diseaseV3 = "https://disease.sh/v3/covid-19/all";
@@ -30,8 +22,8 @@ namespace Covid_Info.Utils
         public const string IsUpdated = "IsUpdated";
         public const string IsUpdatedNO = "NO";
         public const string IsUpdatedYES = "YES";
-        public const string NoConnectionJSON = "NOinternet.json";
-        public const string LimitedConnectionJSON = "LIMITinternet.json";
+        public const string NoConnectionJSON = "\uf1eb";
+        public const string LimitedConnectionJSON = "\uf73b";
         public const string ElSalvador = "El Salvador";
         public const string sortingListcountries = "sortingListcountries";
         public const string AZ = "A-Z";

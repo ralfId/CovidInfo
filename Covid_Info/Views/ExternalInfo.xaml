@@ -3,7 +3,6 @@
     x:Class="Covid_Info.Views.ExternalInfo"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Icons="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
@@ -81,7 +80,7 @@
             </pkv:PancakeView>
 
             <ScrollView>
-                <StackLayout Padding="0,10" Spacing="15">
+                <StackLayout Padding="0,15,0,20" Spacing="15">
                     <!--  ELSALVADOR INFO  -->
                     <StackLayout Padding="20,0" IsVisible="{Binding IsVisibleGOES}">
                         <Grid>
@@ -118,15 +117,13 @@
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
+                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goSVCovidInfo}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView
-                        Margin="20,0"
-                        BackgroundColor="LightGray"
-                        HeightRequest="1" />
-                    
+
+
                     <!--  Q&A  -->
                     <StackLayout Grid.Row="1" Padding="20,0">
                         <Grid>
@@ -151,21 +148,19 @@
                             <Label
                                 Grid.Column="2"
                                 Padding="5"
+                                FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
-                                FontFamily="{StaticResource FASolid}"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
+                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView
-                        Margin="20,0"
-                        BackgroundColor="LightGray"
-                        HeightRequest="1" />
-                    
+
+
                     <!--  WHO DONATIONS  -->
                     <StackLayout Grid.Row="2" Padding="20,0">
                         <Grid>
@@ -190,20 +185,18 @@
                             <Label
                                 Grid.Column="2"
                                 Padding="5"
+                                FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
-                                FontFamily="{StaticResource FASolid}"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
+                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goWHODonations}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView
-                        Margin="20,0"
-                        BackgroundColor="LightGray"
-                        HeightRequest="1" />
+
 
                     <!--  WHO COVID MYTHS  -->
                     <StackLayout Grid.Row="3" Padding="20,0">
@@ -229,20 +222,56 @@
                             <Label
                                 Grid.Column="2"
                                 Padding="5"
+                                FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
-                                FontFamily="{StaticResource FASolid}"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
                         </Grid>
+                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding goCovidWHOMyths}" />
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <BoxView
-                        Margin="20,0"
-                        BackgroundColor="LightGray"
-                        HeightRequest="1" />
+
+
+                    <!--  ABOUT APP  -->
+                    <StackLayout Grid.Row="3" Padding="20,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
+                            </Grid.ColumnDefinitions>
+                            <pkv:PancakeView Grid.Column="0" CornerRadius="5">
+                                <Image
+                                    Margin="0"
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    HeightRequest="75"
+                                    Source="{helpers:ImageResource Covid_Info.Images.covidicon.png}"
+                                    WidthRequest="75" />
+                            </pkv:PancakeView>
+                            <Label
+                                Grid.Column="1"
+                                Padding="5"
+                                FontSize="Body"
+                                Text="{i18n:Translate devInfo1}"
+                                TextColor="{StaticResource BaseFontColor}" />
+                            <Label
+                                Grid.Column="2"
+                                Padding="5"
+                                FontFamily="{StaticResource FASolid}"
+                                FontSize="Body"
+                                Text="&#xf35d;"
+                                TextColor="{StaticResource CustomNavBarColor}"
+                                VerticalOptions="StartAndExpand" />
+                        </Grid>
+                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding navDevInfo}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
                 </StackLayout>
             </ScrollView>
 

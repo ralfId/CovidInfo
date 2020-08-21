@@ -1,5 +1,6 @@
 ﻿using Covid_Info.Models;
 using Covid_Info.Utils;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,19 +22,8 @@ namespace Covid_Info.Services
         {
             try
             {
-                var responseGlobalInfo = await _apiService.Get<GlobalInfo>(Constants.getGloball_coronaNingaV2);
-                if (responseGlobalInfo != null && responseGlobalInfo.active > 0)
-                    return responseGlobalInfo;
 
-                responseGlobalInfo = await _apiService.Get<GlobalInfo>(Constants.getGLobal_coronaNingaV3);
-                if (responseGlobalInfo != null && responseGlobalInfo.active > 0)
-                    return responseGlobalInfo;
-
-                responseGlobalInfo = await _apiService.Get<GlobalInfo>(Constants.getGLobal_diseaseV2);
-                if (responseGlobalInfo != null && responseGlobalInfo.active > 0)
-                    return responseGlobalInfo;
-
-                responseGlobalInfo = await _apiService.Get<GlobalInfo>(Constants.getGLobal_diseaseV3);
+                var responseGlobalInfo = await _apiService.Get<GlobalInfo>(Constants.getGLobal_diseaseV3);
                 if (responseGlobalInfo != null && responseGlobalInfo.active > 0)
                     return responseGlobalInfo;
 
@@ -50,16 +40,8 @@ namespace Covid_Info.Services
         {
             try
             {
-                var countriesList = await _apiService.Get<List<Country>>(Constants.getCountries_coronaNinjaV2);
-                if (countriesList != null && countriesList.Count > 0) return countriesList;
 
-                countriesList = await _apiService.Get<List<Country>>(Constants.getCountries_coronaNingaV3);
-                if (countriesList != null && countriesList.Count > 0) return countriesList;
-
-                countriesList = await _apiService.Get<List<Country>>(Constants.getCountries_diseaseV2);
-                if (countriesList != null && countriesList.Count > 0) return countriesList;
-
-                countriesList = await _apiService.Get<List<Country>>(Constants.getCountries_diseaseV3);
+                var countriesList = await _apiService.Get<List<Country>>(Constants.getCountries_diseaseV3);
                 if (countriesList != null && countriesList.Count > 0) return countriesList;
 
                 return null;
@@ -71,8 +53,21 @@ namespace Covid_Info.Services
             }
         }
 
+        public async Task<bool> IsConnected()
+        {
+            var conn = CrossConnectivity.Current.IsConnected;
+            return conn;
+        }
 
+        public async Task<bool> IsConnectionsReachable()
+        {
+            var connectivity = CrossConnectivity.Current;
+            var reachable = await connectivity.IsRemoteReachable(Constants.ningiaUrl);
+            return reachable;
+        }
 
+      
 
+        
     }
 }

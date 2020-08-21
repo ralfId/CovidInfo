@@ -5,114 +5,158 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:prism="http://prismlibrary.com"
     Title="{Binding Title}"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material">
     <ScrollView Padding="20,15">
 
-        <Grid RowSpacing="30">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
+        <Grid RowDefinitions="auto, auto, auto" RowSpacing="30">
 
-            <Grid Grid.Row="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
+            <!--  About Developer  -->
+            <Frame Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0" RowDefinitions="auto, auto">
-                    <Label
-                        Grid.Row="0"
-                        FontAttributes="Bold"
-                        FontSize="Large"
-                        Text="{i18n:Translate devInfo1}"
-                        TextColor="{StaticResource SecundaryDarkColor}" />
-                    <Label
+                    <Grid Grid.Row="0" RowDefinitions="auto, auto, auto">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="{i18n:Translate devInfo1}"
+                            TextColor="{StaticResource SecundaryDarkColor}" />
+                        <Label
+                            Grid.Row="1"
+                            FontSize="Body"
+                            TextColor="{StaticResource SecundaryDarkColor}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{i18n:Translate devInfo2}" />
+                                    <Span Text="&#10;" />
+                                    <Span Text="&#10;" />
+                                    <Span Text="{i18n:Translate devInfo3}" />
+                                    <Span Text="&#10;" />
+                                    <Span Text="&#10;" />
+                                    <Span Text="{i18n:Translate devInfo4}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Grid Grid.Row="2" ColumnDefinitions="auto,*">
+                            <Label
+                                FontFamily="{StaticResource FARegular}"
+                                FontSize="30"
+                                Text="&#xf0e0;"
+                                TextColor="{StaticResource SecundaryDarkColor}" />
+                            <Label
+                                Grid.Column="1"
+                                FontAttributes="Bold"
+                                FontSize="Body"
+                                Text="ralf_raid@outlook.es"
+                                TextColor="{StaticResource SecundaryDarkColor}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid
                         Grid.Row="1"
-                        FontSize="Body"
-                        TextColor="{StaticResource SecundaryDarkColor}">
+                        Margin="0,30,0,0"
+                        VerticalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            Aspect="AspectFit"
+                            HeightRequest="75"
+                            HorizontalOptions="Start"
+                            Source="{helpers:ImageResource Covid_Info.Images.coffeecup.png}" />
+
+                        <Grid
+                            Grid.Column="1"
+                            RowDefinitions="auto, auto,15"
+                            RowSpacing="0"
+                            VerticalOptions="CenterAndExpand">
+                            <Label
+                                Margin="0,15,0,5"
+                                FontSize="Body"
+                                Text="{i18n:Translate greatApp}"
+                                TextColor="{StaticResource SecundaryDarkColor}" />
+                            <Button
+                                Grid.Row="1"
+                                BackgroundColor="{StaticResource SecundaryDarkColor}"
+                                Command="{Binding GotoPaypalMe}"
+                                Text="{i18n:Translate buyCoffee}" />
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+            </Frame>
+
+
+            <!--  About API Data  -->
+            <Frame Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="{i18n:Translate dataInfo1}"
+                            TextColor="{StaticResource SecundaryDarkColor}" />
+
+                        <Label FontSize="Body" TextColor="{StaticResource SecundaryDarkColor}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{i18n:Translate dataInfo2}" />
+                                    <Span Text="&#10;" />
+                                    <Span Text="&#10;" />
+                                    <Span Text="{i18n:Translate dataInfo3}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Button
+                            Margin="5,20"
+                            BackgroundColor="{StaticResource SecundaryDarkColor}"
+                            Command="{Binding goNovelCovidApi}"
+                            Text="{i18n:Translate dataInfoBtn}" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+
+            <!--  About Freepik images  -->
+            <Frame Grid.Row="2">
+                <Grid RowDefinitions="auto, auto">
+                    <Label TextColor="{StaticResource SecundaryDarkColor}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="{i18n:Translate devInfo2}" />
-                                <Span Text="&#10;" />
-                                <Span Text="&#10;" />
-                                <Span Text="{i18n:Translate devInfo3}" />
-                                <Span Text="&#10;" />
-                                <Span Text="&#10;" />
-                                <Span Text="{i18n:Translate devInfo4}" />
+                                <Span FontSize="Body" Text="{i18n:Translate imgVector}" />
+                                <Span Text=" " />
+                                <Span
+                                    FontAttributes="Bold"
+                                    FontSize="Subtitle"
+                                    Text="{i18n:Translate byFreepik}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                </Grid>
-                <Label
-                    Grid.Row="1"
-                    FontSize="Body"
-                    Text="{i18n:Translate greatApp}"
-                    TextColor="{StaticResource SecundaryDarkColor}" />
-                <Grid Grid.Row="2" HorizontalOptions="Center">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Image
-                        Grid.Column="0"
-                        Aspect="AspectFit"
-                        HeightRequest="75"
-                        Source="{helpers:ImageResource Covid_Info.Images.coffeecup.png}" />
-
-                    <Frame
-                        Grid.Column="1"
-                        Padding="10"
-                        BackgroundColor="{StaticResource SecundaryDarkColor}"
-                        VerticalOptions="Center">
-                        <Label
-                            Padding="0"
-                            FontAttributes="Bold"
-                            FontSize="Body"
-                            Text="{i18n:Translate buyCoffee}"
-                            TextColor="{StaticResource WhiteColor}"
-                            VerticalOptions="Center" />
+                    <Frame Grid.Row="1" Padding="5">
+                        <Image Aspect="AspectFit" Source="{helpers:ImageResource Covid_Info.Images.freepik.png}" />
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GotoPaypalMe}" />
+                            <TapGestureRecognizer Command="{Binding goToFreepikCommand}" />
                         </Frame.GestureRecognizers>
                     </Frame>
                 </Grid>
-            </Grid>
-
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <StackLayout Grid.Row="0">
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Large"
-                        Text="{i18n:Translate dataInfo1}"
-                        TextColor="{StaticResource SecundaryDarkColor}" />
-
-                    <Label FontSize="Body" TextColor="{StaticResource SecundaryDarkColor}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{i18n:Translate dataInfo2}" />
-                                <Span Text="&#10;" />
-                                <Span Text="&#10;" />
-                                <Span Text="{i18n:Translate dataInfo3}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        Margin="5,20"
-                        BackgroundColor="{StaticResource SecundaryDarkColor}"
-                        Command="{Binding goNovelCovidApi}"
-                        Text="{i18n:Translate dataInfoBtn}" />
-                </StackLayout>
-            </Grid>
+            </Frame>
         </Grid>
     </ScrollView>
 </ContentPage>

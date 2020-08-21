@@ -156,8 +156,10 @@
   <data name="MYTHS" xml:space="preserve">
     <value>Consigli per il pubblico sulle voci sul nuovo coronavirus</value>
   </data>
-  <data name="messaConnectToInternet" xml:space="preserve">
-    <value>Si prega di connettersi ad una rete Internet per ottenere dati aggiornati!</value>
+  <data name="errorConectionServer" xml:space="preserve">
+    <value>Impossibile connettersi al server. Per favore riprova!
+
+Se il problema persiste puoi segnalare il problema allo sviluppatore: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Aggiornamento...</value>
@@ -202,7 +204,7 @@
     <value>Nessuna connessione a Internet</value>
   </data>
   <data name="limitedConnection" xml:space="preserve">
-    <value>Internet limitato! Non è possibile ottenere gli ultimi dati aggiornati</value>
+    <value>Ci sono problemi con la tua connessione Internet. Per favore riprova!</value>
   </data>
   <data name="contatDeveloper" xml:space="preserve">
     <value>Se il problema persiste, contattare lo sviluppatore</value>
@@ -211,7 +213,7 @@
     <value>Informazioni su</value>
   </data>
   <data name="devInfo1" xml:space="preserve">
-    <value>Informazioni su COVIDINFO.</value>
+    <value>Informazioni su Covid-Info</value>
   </data>
   <data name="devInfo2" xml:space="preserve">
     <value>Salve, mi chiamo Rafael Ibañez.</value>
@@ -220,7 +222,7 @@
     <value>COVIDINFO è un progetto personale, creato per fornire informazioni ufficiali e affidabili sull'andamento della pandemia COVID-19, mostrando il progresso del numero di casi in ogni paese e il numero di casi in tutto il mondo. Se l'applicazione ha i permessi per l'accesso alla vostra posizione GPS, mostrerà le statistiche dello sviluppo della pandemia nel vostro paese. </value>
   </data>
   <data name="devInfo4" xml:space="preserve">
-    <value>Per qualsiasi tipo di informazione o suggerimento potete inviarmi una mail a questo indirizzo: rafael.ideveloper@gmail.com</value>
+    <value>Per qualsiasi tipo di informazione o suggerimento potete inviarmi una mail a questo indirizzo: </value>
   </data>
   <data name="dataInfo1" xml:space="preserve">
     <value>Fonte dei dati</value>
@@ -256,7 +258,7 @@
     <value>Se questa app è stata di vostro gradimento</value>
   </data>
   <data name="buyCoffee" xml:space="preserve">
-    <value>Offrimi un caffè!</value>
+    <value>Comprami un caffè!</value>
   </data>
   <data name="symptoms1" xml:space="preserve">
     <value>Febbre</value>
@@ -383,5 +385,23 @@
   </data>
   <data name="casesPercentage" xml:space="preserve">
     <value>Percentuale di casi</value>
+  </data>
+  <data name="viewSatisticCountries" xml:space="preserve">
+    <value>Visualizza le statistiche di ogni paese</value>
+  </data>
+  <data name="totalCases" xml:space="preserve">
+    <value>Casi totali</value>
+  </data>
+  <data name="critical" xml:space="preserve">
+    <value>critico</value>
+  </data>
+  <data name="imgVector" xml:space="preserve">
+    <value>Le immagini vettorializzate sono</value>
+  </data>
+  <data name="byFreepik" xml:space="preserve">
+    <value>Progettato da Freepik</value>
+  </data>
+  <data name="tryAgainBTN" xml:space="preserve">
+    <value>Per favore riprova!</value>
   </data>
 </root>

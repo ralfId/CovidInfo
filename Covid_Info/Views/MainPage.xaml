@@ -17,7 +17,7 @@
         <RefreshView
             AbsoluteLayout.LayoutBounds="0,0,1,1"
             AbsoluteLayout.LayoutFlags="All"
-            Command="{Binding refreshCommand}"
+            Command="{Binding UpdateDataonSwipe}"
             IsRefreshing="{Binding IsRefreshing}">
 
             <Grid
@@ -26,7 +26,7 @@
                 RowSpacing="0">
                 <ScrollView Padding="0">
                     <Grid RowDefinitions="auto,*">
-                        <Grid RowDefinitions="130, auto">
+                        <Grid RowDefinitions="120, auto">
                             <!--  covid banner  -->
                             <pkv:PancakeView
                                 Grid.Row="0"
@@ -57,8 +57,6 @@
                                 </Grid>
                             </pkv:PancakeView>
 
-                            <!--  advices and symt  -->
-                            <!--<contentViews:AdvicesAndSymp Grid.Row="1" Margin="20,10" />-->
                             <Grid
                                 Grid.Row="1"
                                 Margin="20,10"
@@ -171,12 +169,12 @@
                                         Offset="10,10"
                                         Color="#000000" />
                                 </pkv:PancakeView.Shadow>
-                                <Grid Padding="15,7" ColumnDefinitions="*,auto">
+                                <Grid Padding="15,10" ColumnDefinitions="*,auto">
                                     <Label
                                         Padding="0"
                                         FontAttributes="Bold"
                                         FontSize="Subtitle"
-                                        Text="View statistic from each country"
+                                        Text="{i18n:Translate viewSatisticCountries}"
                                         TextColor="{StaticResource WhiteColor}" />
                                     <Label
                                         Grid.Column="1"

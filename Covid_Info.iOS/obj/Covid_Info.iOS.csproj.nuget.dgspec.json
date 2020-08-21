@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[3.4.0, )"
             },
+            "Microsoft.AppCenter.Distribute": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -84,6 +88,10 @@
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
               "version": "[18.2.0.48, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -178,6 +186,10 @@
               "target": "Package",
               "version": "[3.4.0, )"
             },
+            "Microsoft.AppCenter.Distribute": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -207,6 +219,10 @@
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
               "version": "[18.2.0.48, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

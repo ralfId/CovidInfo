@@ -4,6 +4,7 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -28,11 +29,13 @@ namespace Covid_Info.ViewModels
 
             goNovelCovidApi = new DelegateCommand(async () => await webNovelCovidApi());
             GotoPaypalMe = new DelegateCommand(async () => await GotoPaypalMeDonation());
+            goToFreepikCommand = new DelegateCommand(async () => await GoToFreepik());
         }
 
        
         public DelegateCommand goNovelCovidApi { get; private set; }
         public DelegateCommand GotoPaypalMe { get; private set; }
+        public DelegateCommand goToFreepikCommand { get; private set; }
 
         private async Task webNovelCovidApi()
         {
@@ -56,6 +59,17 @@ namespace Covid_Info.ViewModels
             });
         }
 
+        private async Task GoToFreepik()
+        {
+            string url = "http://www.freepik.com";
+
+            await Browser.OpenAsync(url, new BrowserLaunchOptions 
+            {
+                LaunchMode = BrowserLaunchMode.SystemPreferred,
+                TitleMode = BrowserTitleMode.Show,
+                PreferredToolbarColor = Color.Black
+            });
+        }
 
     }
 }

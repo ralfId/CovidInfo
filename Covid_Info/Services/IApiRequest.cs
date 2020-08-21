@@ -10,5 +10,7 @@ namespace Covid_Info.Services
     {
         Task<GlobalInfo> globalInfoAPIRequest();
         Task<List<Country>> countriesInfoAPIRequest();
+        Task<bool> IsConnected();
+        Task<bool> IsConnectionsReachable();
     }
 }

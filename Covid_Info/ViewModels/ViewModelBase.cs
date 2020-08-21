@@ -17,7 +17,9 @@ namespace Covid_Info.ViewModels
         private string _lastUpdateDateTime;
         private readonly IApiService _apiService;
         public string currentCulture;
-
+        private string _iconString;
+        private string _loadMessage;
+        private bool _isVisibleBTNTryAgaing;
 
         public string Title
         {
@@ -29,6 +31,25 @@ namespace Covid_Info.ViewModels
             get { return _lastUpdateDateTime; }
             set { SetProperty(ref _lastUpdateDateTime, value); }
         }
+
+        public string IconString
+        {
+            get { return _iconString; }
+            set { SetProperty(ref _iconString, value); }
+        }
+
+        public string LoadMessage
+        {
+            get { return _loadMessage; }
+            set { SetProperty(ref _loadMessage, value); }
+        }
+
+        public bool IsVisibleBTNTryAgaing
+        {
+            get { return _isVisibleBTNTryAgaing; }
+            set { SetProperty(ref _isVisibleBTNTryAgaing, value); }
+        }
+
         public ViewModelBase(INavigationService navigationService, IApiService apiService)
         {
             NavigationService = navigationService;
@@ -42,6 +63,9 @@ namespace Covid_Info.ViewModels
 
         public DelegateCommand navDevInfo { get; private set; }
         public DelegateCommand ClosePopup { get; set; }
+
+        public DelegateCommand UpdateDataonBTN { get;  set; }
+        public DelegateCommand UpdateDataonSwipe { get;  set; }
 
         public virtual void Initialize(INavigationParameters parameters)
         {

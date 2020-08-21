@@ -25,13 +25,11 @@ namespace Covid_Info.ViewModels
         private ObservableCollection<Country> _obCountryInfo;
         private bool _isVisibleCountries;
         private bool _isVisibleLoadingPage;
-        private string _loadMessage;
-        private string _animationJSON;
         private Country _selectedCountry;
+        private bool _isRefreshing;
+        private bool _sfIndicator;
 
         string sortUserSelection;
-        bool inside;
-
 
         public AllCountriesViewModel(
             INavigationService navigationService,
@@ -39,32 +37,45 @@ namespace Covid_Info.ViewModels
             IApiRequest apiRequest)
             : base(navigationService, apiService)
         {
-            Title = Resource.countries;
-            _navigationService = navigationService;
-            _apiService = apiService;
-            _apiRequest = apiRequest;
+           
 
-            lstCountriesInfo = new List<Country>();
-            Task.Run(async () => await LoadAllCountriesInfo());
+            try
+            {
+                Title = Resource.countries;
+                _navigationService = navigationService;
+                _apiService = apiService;
+                _apiRequest = apiRequest;
 
-            SearchCountry = new DelegateCommand( () => FilterSearch());
-            UpdateData = new DelegateCommand(async () => await LoadAllCountriesInfo());
-            goFiltersView = new DelegateCommand(async () => await Sorting());
+                lstCountriesInfo = new List<Country>();
+                Task.Run(async () => await LoadAllCountriesInfo());
 
-
+                SearchCountry = new DelegateCommand(() => FilterSearch());
+                UpdateDataonBTN = new DelegateCommand(async () => await RefreshListView());
+                UpdateDataonSwipe = new DelegateCommand(async () => await RefreshListView());
+                goFiltersView = new DelegateCommand(async () => await Sorting());
+            }
+            catch (Exception ex)
+            {
+                Debug.Print($"Error in AllCountriesViewModel ==> {ex.ToString()}");
+            }
         }
 
-       
+
 
         public DelegateCommand SearchCountry { get; set; }
         public DelegateCommand UpdateData { get; set; }
-       // public DelegateCommand FilterCountriesListCommand { get; set; }
+
         public DelegateCommand goFiltersView { get; set; }
 
 
 
         #region public properties
-        private bool _sfIndicator;
+
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set { SetProperty(ref _isRefreshing, value); }
+        }
         public bool SFIndicator
         {
             get { return _sfIndicator; }
@@ -81,16 +92,6 @@ namespace Covid_Info.ViewModels
                     SelectedCountryToView();
                 }
             }
-        }
-        public string AnimationJSON
-        {
-            get { return _animationJSON; }
-            set { SetProperty(ref _animationJSON, value); }
-        }
-        public string LoadMessage
-        {
-            get { return _loadMessage; }
-            set { SetProperty(ref _loadMessage, value); }
         }
         public bool IsVisibleLoadingPage
         {
@@ -116,78 +117,162 @@ namespace Covid_Info.ViewModels
                 FilterSearch();
             }
         }
+
         #endregion
 
-
-        /*Send a selected countryinfo to a new popup view*/
-        private async Task SelectedCountryToView()
-        {
-            var navParameters = new NavigationParameters();
-            navParameters.Add("contrydetails", SelectedCountry);
-            await _navigationService.NavigateAsync("MyCountryDetails", navParameters);
-        }
 
         /*Load all countries info*/
         async Task LoadAllCountriesInfo()
         {
-            SFIndicator = true;
-            var InterCon = Connectivity.NetworkAccess;
-
-            IsVisibleCountries = false;
-            IsVisibleLoadingPage = false;
-
-            if (InterCon == NetworkAccess.None)
-            {
-                AnimationJSON = Constants.NoConnectionJSON;
-                IsVisibleCountries = false;
-                IsVisibleLoadingPage = true;
-                LoadMessage = Resource.noInter;
-                SFIndicator = false;
-                return;
-            }
-            
             try
             {
+                SFIndicator = true;
 
-                lstCountriesInfo = await _apiRequest.countriesInfoAPIRequest();
 
-                
-                if (!lstCountriesInfo.Any())
+                IsVisibleCountries = false;
+                IsVisibleLoadingPage = false;
+                IsVisibleBTNTryAgaing = false;
+
+                if (!await _apiRequest.IsConnected())
                 {
-                    AnimationJSON = Constants.LimitedConnectionJSON;
+                    IconString = Constants.NoConnectionJSON;
                     IsVisibleCountries = false;
                     IsVisibleLoadingPage = true;
-                    LoadMessage = Resource.limitedConnection;
+                    IsVisibleBTNTryAgaing = true;
+                    LoadMessage = Resource.noInter;
                     SFIndicator = false;
                     return;
                 }
 
-                //FilterSearch();
-               // UserOrderList();
+                if (!await _apiRequest.IsConnectionsReachable())
+                {
+                    IconString = Constants.LimitedConnectionJSON;
+                    IsVisibleCountries = false;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleBTNTryAgaing = true;
+                    LoadMessage = Resource.limitedConnection;
+                    SFIndicator = false;
+                    return;
+                }
+                lstCountriesInfo = await _apiRequest.countriesInfoAPIRequest();
+
+
+                if (lstCountriesInfo == null)
+                {
+                    IconString = Constants.LimitedConnectionJSON;
+                    IsVisibleCountries = false;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleBTNTryAgaing = true;
+                    LoadMessage = Resource.errorConectionServer;
+                    SFIndicator = false;
+                    return;
+                }
+
+
                 defaultSortingCountry(sortUserSelection);
                 LoadMessage = string.Empty;
-                AnimationJSON = string.Empty;
+                IconString = string.Empty;
                 IsVisibleLoadingPage = false;
+                IsVisibleBTNTryAgaing = true;
                 IsVisibleCountries = true;
                 SFIndicator = false;
+
 
             }
             catch (Exception ex)
             {
-                Debug.Print(ex.ToString());
+                Debug.Print($"Error in LoadAllCountriesInfo() ==> {ex.ToString()}");
+            }
+            
+        }
+
+        /*refresh listview on swipe*/
+        async Task RefreshListView()
+        {
+
+
+            try
+            {
+                IsRefreshing = true;
+                IsVisibleBTNTryAgaing = false;
+                LoadMessage = string.Empty;
+                IconString = string.Empty;
+                if (!await _apiRequest.IsConnected())
+                {
+                    IconString = Constants.NoConnectionJSON;
+                    IsVisibleCountries = false;
+                    IsVisibleLoadingPage = true; 
+                    LoadMessage = Resource.noInter;
+                    IsVisibleBTNTryAgaing = true;
+                    IsRefreshing = false;
+                    return;
+                }
+
+                if (!await _apiRequest.IsConnectionsReachable())
+                {
+                    IconString = Constants.LimitedConnectionJSON;
+                    IsVisibleCountries = false;
+                    IsVisibleLoadingPage = true;
+                    LoadMessage = Resource.limitedConnection;
+                    IsVisibleBTNTryAgaing = true;
+                    IsRefreshing = false;
+                    return;
+                }
+
+                lstCountriesInfo = await _apiRequest.countriesInfoAPIRequest();
+
+
+                if (lstCountriesInfo == null)
+                {
+                    IconString = Constants.LimitedConnectionJSON;
+                    IsVisibleCountries = false;
+                    IsVisibleLoadingPage = true;
+                    LoadMessage = Resource.errorConectionServer;
+                    IsVisibleBTNTryAgaing = true;
+                    IsRefreshing = false;
+                    return;
+                }
+
+                defaultSortingCountry(sortUserSelection);
+                LoadMessage = string.Empty;
+                IconString = string.Empty;
+                IsVisibleBTNTryAgaing = false;
+                IsVisibleLoadingPage = false;
+                IsVisibleCountries = true;
+                IsRefreshing = false;
+            }
+            catch (Exception ex)
+            {
+                Debug.Print($"Error in RefreshListView() ==> {ex.ToString()}");
             }
         }
 
         /*filter countries on listview when user type on searchbar*/
         private void FilterSearch()
         {
-            defaultSortingCountry(sortUserSelection);
-            if (!string.IsNullOrEmpty(Searched))
+            
+            try
             {
-                var myCountryList = lstCountriesInfo.Where(c => c.country.ToLower().Contains(Searched.ToLower())).ToList();
-                obCountryInfo = new ObservableCollection<Country>(myCountryList);
+                defaultSortingCountry(sortUserSelection);
+                if (!string.IsNullOrEmpty(Searched))
+                {
+                    var myCountryList = lstCountriesInfo.Where(c => c.country.ToLower().Contains(Searched.ToLower())).ToList();
+                    obCountryInfo = new ObservableCollection<Country>(myCountryList);
+                }
+                return;
             }
-            return;
+            catch (Exception ex)
+            {
+                Debug.Print($"Error in FilterSearch() ==> {ex.ToString()}");
+            }
+            //try
+            //{
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.Print($"Error in  ==> {ex.ToString()}");
+            //}
         }
 
 
@@ -195,52 +280,80 @@ namespace Covid_Info.ViewModels
         /*sort countries list on user sort selection by defaul is "upward"*/
         private async Task Sorting()
         {
-            var selectedSort = await UserDialogs.Instance.ActionSheetAsync(
-                Resource.orderBy,
-                "",
-                Resource.cancel,
-                null,
-                Constants.AZ,
-                Constants.ZA,
-                Resource.lessAffectedCountries,
-                Resource.mostAffectedcountries);
+            try
+            {
+                var selectedSort = await UserDialogs.Instance.ActionSheetAsync(
+               Resource.orderBy,
+               "",
+               Resource.cancel,
+               null,
+               Constants.AZ,
+               Constants.ZA,
+               Resource.lessAffectedCountries,
+               Resource.mostAffectedcountries);
 
 
-            if (selectedSort == null || selectedSort == "") return;
-            sortUserSelection = string.Empty;
-            sortUserSelection = selectedSort;
-            defaultSortingCountry(sortUserSelection);
+                if (selectedSort == null || selectedSort == "") return;
+                sortUserSelection = string.Empty;
+                sortUserSelection = selectedSort;
+                defaultSortingCountry(sortUserSelection);
+            }
+            catch (Exception ex)
+            {
+                Debug.Print($"Error in Sorting() ==> {ex.ToString()}  ");
+            }
 
         }
 
         //sorting countries list depending on las user sorting selecction
         private void defaultSortingCountry(string sortingSelection)
         {
-            
-            if (sortingSelection == Constants.AZ)
+            try
             {
+                if (sortingSelection == Constants.AZ)
+                {
+                    obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderBy(n => n.country));
+                    return;
+                }
+                if (sortingSelection == Constants.ZA)
+                {
+                    obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderByDescending(n => n.country));
+                    return;
+                }
+                if (sortingSelection == Resource.lessAffectedCountries)
+                {
+                    obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderBy(n => n.deaths));
+                    return;
+                }
+                if (sortingSelection == Resource.mostAffectedcountries)
+                {
+                    obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderByDescending(n => n.deaths));
+                    return;
+                }
                 obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderBy(n => n.country));
-                return; 
             }
-            if (sortingSelection == Constants.ZA) 
+            catch (Exception ex)
             {
-                obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderByDescending(n => n.country)); 
-                return; 
+                Debug.Print($"Error in defaultSortingCountry(string sortingSelection): {ex.ToString()}");
             }
-            if (sortingSelection == Resource.lessAffectedCountries)
-            {
-                obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderBy(n => n.deaths));
-                return;
-            }
-            if (sortingSelection == Resource.mostAffectedcountries)
-            {
-                obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderByDescending(n => n.deaths)); 
-                return; 
-            }
-            obCountryInfo = new ObservableCollection<Country>(lstCountriesInfo.OrderBy(n => n.country));
         }
         #endregion
 
+        /*Send a selected countryinfo to a new popup view*/
+        private async Task SelectedCountryToView()
+        {
+            try
+            {
+                var navParameters = new NavigationParameters();
+                navParameters.Add("contrydetails", SelectedCountry);
+                await _navigationService.NavigateAsync("MyCountryDetails", navParameters);
+            }
+            catch (Exception ex)
+            {
+                Debug.Print($"Error in SelectedCountryToView() ==> {ex.ToString()}");
+            }
+            
+        }
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
@@ -255,50 +368,7 @@ namespace Covid_Info.ViewModels
             Preferences.Remove(Constants.sortingListcountries);
             Preferences.Set(Constants.sortingListcountries, sortUserSelection);
         }
-        //private void FilterCountries()
-        //{
-        //    if (Ascending)
-        //    {
-        //        Preferences.Remove(Constants.sortingListcountries);
-        //        Preferences.Set(Constants.sortingListcountries, 1);
-        //    }
 
-        //    if (Descending)
-        //    {
-        //        Preferences.Remove(Constants.sortingListcountries);
-        //        Preferences.Set(Constants.sortingListcountries, 2);
-        //    }
-
-        //    if (LeastAffected)
-        //    {
-        //        Preferences.Remove(Constants.sortingListcountries);
-        //        Preferences.Set(Constants.sortingListcountries, 3);
-        //    }
-
-        //    if (MostAffected)
-        //    {
-        //        Preferences.Remove(Constants.sortingListcountries);
-        //        Preferences.Set(Constants.sortingListcountries, 4);
-        //    }
-
-        //    FilterSearch();
-        //}
-
-        //private void  UserOrderList()
-        //{
-        //    Searched = string.Empty;
-        //    var selectedSorting = Preferences.Get(Constants.sortingListcountries, 1);
-
-        //    //if (selectedSorting == 1)
-        //    //     lstCountriesInfo.OrderBy(n => n.country).ToList();
-        //    if (selectedSorting == 2)
-        //         lstCountriesInfo.OrderByDescending(n => n.country).ToList();
-        //    if(selectedSorting == 3)
-        //         lstCountriesInfo.OrderBy(n => n.deaths).ToList();
-        //    if(selectedSorting == 4)
-        //         lstCountriesInfo.OrderByDescending(n => n.deaths).ToList();
-
-        //     lstCountriesInfo.OrderBy(n => n.country).ToList();
-        //}
+        
     }
 }

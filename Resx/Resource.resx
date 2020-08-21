@@ -156,8 +156,10 @@
   <data name="MYTHS" xml:space="preserve">
     <value>Tips for the public about the rumors about the new coronavirus</value>
   </data>
-  <data name="messaConnectToInternet" xml:space="preserve">
-    <value>Please connect to an Internet network to get updated data!</value>
+  <data name="errorConectionServer" xml:space="preserve">
+    <value>Could not connect to the server. Please, try again!
+
+If the problem persists you can report the problem to the developer: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Updating...</value>
@@ -202,7 +204,7 @@
     <value>No Internet connection</value>
   </data>
   <data name="limitedConnection" xml:space="preserve">
-    <value>Constrained Internet! Can no get last updated data</value>
+    <value>There are problems with your internet connection. Please, try again!</value>
   </data>
   <data name="contatDeveloper" xml:space="preserve">
     <value>If the problem persists, contact the developer</value>
@@ -211,16 +213,16 @@
     <value>About</value>
   </data>
   <data name="devInfo1" xml:space="preserve">
-    <value>Information about COVIDINFO.</value>
+    <value>About Covid-Info</value>
   </data>
   <data name="devInfo2" xml:space="preserve">
-    <value>Information about COVIDINFO.</value>
+    <value>Hello! My name is Rafael Ibañez.</value>
   </data>
   <data name="devInfo3" xml:space="preserve">
     <value>COVIDINFO is a personal project, created to provide official and reliable information on the progress of the COVID-19 pandemic, showing the progress of the number of cases in each country and the number of cases worldwide. If the application has the permissions for access to your GPS location it will show the statistics of the development of the pandemic in your country. </value>
   </data>
   <data name="devInfo4" xml:space="preserve">
-    <value>For any kind of information or suggestion you can send me a mail to this address: rafael.ideveloper@gmail.com</value>
+    <value>For any kind of information or suggestion you can send me a mail to this address: </value>
   </data>
   <data name="dataInfo1" xml:space="preserve">
     <value>Data source</value>
@@ -256,7 +258,7 @@
     <value>If this app has been to your liking</value>
   </data>
   <data name="buyCoffee" xml:space="preserve">
-    <value>Buy me a cup of coffee!</value>
+    <value>Buy me a coffee!</value>
   </data>
   <data name="symptoms1" xml:space="preserve">
     <value>Fever</value>
@@ -383,5 +385,23 @@
   </data>
   <data name="casesPercentage" xml:space="preserve">
     <value>Percentage of cases</value>
+  </data>
+  <data name="viewSatisticCountries" xml:space="preserve">
+    <value>View statistic from each country</value>
+  </data>
+  <data name="totalCases" xml:space="preserve">
+    <value>Total cases</value>
+  </data>
+  <data name="critical" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="imgVector" xml:space="preserve">
+    <value>Vectorized images are</value>
+  </data>
+  <data name="byFreepik" xml:space="preserve">
+    <value>Designed by Freepik</value>
+  </data>
+  <data name="tryAgainBTN" xml:space="preserve">
+    <value>Please try again!</value>
   </data>
 </root>

@@ -9,12 +9,14 @@
     <None Remove="Images\alcoholGel.png" />
     <None Remove="Images\coffeecup.png" />
     <None Remove="Images\countries.png" />
+    <None Remove="Images\covidicon.png" />
     <None Remove="Images\covidMask.png" />
     <None Remove="Images\cubrirRostro.png" />
     <None Remove="Images\distanciamiento.png" />
     <None Remove="Images\donate.png" />
     <None Remove="Images\fakeNews.png" />
     <None Remove="Images\fcovid.png" />
+    <None Remove="Images\freepik.png" />
     <None Remove="Images\global.png" />
     <None Remove="Images\iconstayhome.png" />
     <None Remove="Images\lavarManos.png" />
@@ -33,12 +35,14 @@
     <EmbeddedResource Include="Images\alcoholGel.png" />
     <EmbeddedResource Include="Images\coffeecup.png" />
     <EmbeddedResource Include="Images\countries.png" />
+    <EmbeddedResource Include="Images\covidicon.png" />
     <EmbeddedResource Include="Images\covidMask.png" />
     <EmbeddedResource Include="Images\cubrirRostro.png" />
     <EmbeddedResource Include="Images\distanciamiento.png" />
     <EmbeddedResource Include="Images\donate.png" />
     <EmbeddedResource Include="Images\fakeNews.png" />
     <EmbeddedResource Include="Images\fcovid.png" />
+    <EmbeddedResource Include="Images\freepik.png" />
     <EmbeddedResource Include="Images\global.png" />
     <EmbeddedResource Include="Images\iconstayhome.png" />
     <EmbeddedResource Include="Images\lavarManos.png" />
@@ -57,12 +61,14 @@
     <PackageReference Include="Com.OneSignal" Version="3.10.0" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.0" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.4.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Syncfusion.Licensing" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.2.0.48" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1239" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />

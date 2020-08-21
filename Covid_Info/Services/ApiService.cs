@@ -2,17 +2,18 @@
 using System;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Covid_Info.Services
 {
     public class ApiService : IApiService
     {
-        HttpClient _httpClient;
+        //HttpClient _httpClient;
 
         public ApiService()
         {
-            _httpClient = new HttpClient();
+            //_httpClient = new HttpClient();
         }
 
         public async Task<TReturn> Get<TReturn>(string url)
@@ -20,7 +21,9 @@ namespace Covid_Info.Services
 
             try
             {
-                //_httpClient.Timeout = TimeSpan.FromSeconds(1);
+                HttpClient _httpClient = new HttpClient();
+                _httpClient.Timeout = new TimeSpan(0, 0, 20);
+
                 var response = await _httpClient.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)

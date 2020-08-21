@@ -20,6 +20,7 @@ using Acr.UserDialogs;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid_Info
@@ -44,6 +45,8 @@ namespace Covid_Info
                 Xamarin.Forms.Device.SetFlags(new string[] { "Shapes_Experimental" });
                
                 OneSignal.Current.StartInit("22bbbcc9-938a-40ad-a342-2d54994ff0a2").EndInit();
+                AppCenter.Start("ios=9c0b2d9c-a232-44bd-b370-1a51295088e0;android=52dd7eff-3093-4cfe-89e5-16b315c9bf47", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+
                 if (VersionTracking.IsFirstLaunchEver) await AddGuideLines();
                 await NavigationService.NavigateAsync("NavigationPage/MainPage");
 
@@ -61,7 +64,7 @@ namespace Covid_Info
             containerRegistry.RegisterPopupNavigationService();
             //syncfusion license key
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
-            AppCenter.Start("ios=9c0b2d9c-a232-44bd-b370-1a51295088e0;android=52dd7eff-3093-4cfe-89e5-16b315c9bf47", typeof(Analytics), typeof(Crashes));
+            
             //ACR Dialogs service
             containerRegistry.RegisterInstance<IUserDialogs>(UserDialogs.Instance);
 

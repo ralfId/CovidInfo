@@ -156,8 +156,10 @@
   <data name="MYTHS" xml:space="preserve">
     <value>Dicas para o público sobre os rumores sobre o novo coronavírus</value>
   </data>
-  <data name="messaConnectToInternet" xml:space="preserve">
-    <value>Ligue-se a uma rede Internet para obter dados actualizados!</value>
+  <data name="errorConectionServer" xml:space="preserve">
+    <value>Não pôde conectar-se ao servidor. Por favor, tente novamente!
+
+Se o problema persistir, você pode relatá-lo ao desenvolvedor: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Actualização...</value>
@@ -202,7 +204,7 @@
     <value>Sem ligação à Internet</value>
   </data>
   <data name="limitedConnection" xml:space="preserve">
-    <value>Internet condicionada! Não é possível obter os últimos dados actualizados</value>
+    <value>Existem problemas com a sua ligação à Internet. Por favor, tente novamente!</value>
   </data>
   <data name="contatDeveloper" xml:space="preserve">
     <value>Se o problema persistir, contactar o dono da obra</value>
@@ -211,7 +213,7 @@
     <value>Sobre</value>
   </data>
   <data name="devInfo1" xml:space="preserve">
-    <value>Informações sobre COVIDINFO.</value>
+    <value>Sobre Covid-Info</value>
   </data>
   <data name="devInfo2" xml:space="preserve">
     <value>Olá! O meu nome é Rafael Ibañez.</value>
@@ -220,7 +222,7 @@
     <value>COVID INFO é um projecto pessoal para fornecer informações oficiais e fiáveis sobre a pandemia COVID19. </value>
   </data>
   <data name="devInfo4" xml:space="preserve">
-    <value>Para qualquer tipo de informação ou sugestão, pode enviar-me uma mensagem para este endereço: rafael.ideveloper@gmail.com</value>
+    <value>Para qualquer tipo de informação ou sugestão, pode enviar-me uma mensagem para este endereço: </value>
   </data>
   <data name="dataInfo1" xml:space="preserve">
     <value>Origem dos dados</value>
@@ -383,5 +385,23 @@
   </data>
   <data name="casesPercentage" xml:space="preserve">
     <value>Porcentagem de casos</value>
+  </data>
+  <data name="viewSatisticCountries" xml:space="preserve">
+    <value>Ver estatísticas de cada país</value>
+  </data>
+  <data name="totalCases" xml:space="preserve">
+    <value>Total de casos</value>
+  </data>
+  <data name="critical" xml:space="preserve">
+    <value>crítico</value>
+  </data>
+  <data name="imgVector" xml:space="preserve">
+    <value>Imagens vetorizadas são</value>
+  </data>
+  <data name="byFreepik" xml:space="preserve">
+    <value>Desenhado por Freepik</value>
+  </data>
+  <data name="tryAgainBTN" xml:space="preserve">
+    <value>Por favor, tente novamente!</value>
   </data>
 </root>

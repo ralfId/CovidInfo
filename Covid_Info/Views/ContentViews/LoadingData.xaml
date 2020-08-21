@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Visual="Default"
     mc:Ignorable="d">
@@ -11,12 +12,28 @@
         <Grid>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Label
+                    Padding="0"
+                    FontFamily="{StaticResource FASolid}"
+                    FontSize="40"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{Binding IconString}"
+                    TextColor="{StaticResource CustomNavBarColor}" />
+                <Label
+                    Margin="10,5"
                     FontAttributes="Bold"
-                    FontSize="Large"
-                    HorizontalOptions="Center"
+                    FontSize="Body"
+                    HorizontalTextAlignment="Center"
                     Text="{Binding LoadMessage}"
-                    TextColor="{StaticResource WhiteColor}"
-                    VerticalOptions="EndAndExpand" />
+                    TextColor="{StaticResource CustomNavBarColor}" />
+
+                <Button
+                    Padding="40,0"
+                    BackgroundColor="{StaticResource SecundaryDarkColor}"
+                    Command="{Binding UpdateDataonBTN}"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding IsVisibleBTNTryAgaing}"
+                    Text="{i18n:Translate tryAgainBTN}"
+                    TextColor="{StaticResource WhiteColor}" />
             </StackLayout>
         </Grid>
     </ContentView.Content>

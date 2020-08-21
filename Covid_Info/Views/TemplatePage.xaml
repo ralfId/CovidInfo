@@ -18,7 +18,6 @@
                 <Label
                     Grid.Column="0"
                     Padding="0"
-                    FontAttributes="Bold"
                     FontSize="Large"
                     Text="{Binding Title}"
                     TextColor="{StaticResource WhiteColor}"
@@ -29,11 +28,12 @@
                     Padding="10"
                     FontFamily="{StaticResource FASolid}"
                     FontSize="Large"
+                    IsEnabled="{Binding IsVisibleBTNTryAgaing}"
                     Text="&#xf2f1;"
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding UpdateData}" />
+                        <TapGestureRecognizer Command="{Binding UpdateDataonBTN}" />
                     </Label.GestureRecognizers>
                 </Label>
                 <Label
@@ -42,6 +42,7 @@
                     Padding="10"
                     FontFamily="{StaticResource FARegular}"
                     FontSize="Title"
+                    IsEnabled="{Binding IsVisibleBTNTryAgaing}"
                     Text="&#xf059;"
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand">

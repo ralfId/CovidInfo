@@ -5,6 +5,7 @@ using Android.OS;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
 using Prism;
 using Prism.Ioc;
 
@@ -19,7 +20,7 @@ namespace Covid_Info.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            AppCenter.Start("52dd7eff-3093-4cfe-89e5-16b315c9bf47", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("52dd7eff-3093-4cfe-89e5-16b315c9bf47", typeof(Analytics), typeof(Crashes), typeof(Distribute));
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
             Xamarin.Essentials.Platform.Init(this, bundle);
             UserDialogs.Init(this);

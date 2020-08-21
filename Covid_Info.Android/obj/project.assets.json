@@ -98,6 +98,20 @@
           "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.dll": {}
         }
       },
+      "Microsoft.AppCenter.Distribute/3.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AppCenter": "3.4.0"
+        },
+        "compile": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.Android.Bindings.dll": {},
+          "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -326,6 +340,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/MonoAndroid10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/MonoAndroid10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Android.Arch.Core.Common/1.1.1.3": {
@@ -2313,6 +2338,7 @@
           "Com.OneSignal": "3.10.0",
           "Microsoft.AppCenter.Analytics": "3.4.0",
           "Microsoft.AppCenter.Crashes": "3.4.0",
+          "Microsoft.AppCenter.Distribute": "3.4.0",
           "Newtonsoft.Json": "12.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
@@ -2320,6 +2346,7 @@
           "Rg.Plugins.Popup": "2.0.0.3",
           "Syncfusion.Licensing": "18.2.0.48",
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
+          "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "Xamarin.Forms.PancakeView": "2.0.1.707",
@@ -2530,6 +2557,25 @@
         "lib/uap10.0/Microsoft.AppCenter.Crashes.xml",
         "microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
         "microsoft.appcenter.crashes.nuspec"
+      ]
+    },
+    "Microsoft.AppCenter.Distribute/3.4.0": {
+      "sha512": "IcVaml9RDMneSL94Ii4uSC21qgmGQkeCAxROT//4KybxKypdjjjubSEdeZUVKARr0xmfZLj+2+fbL7suCt0MEw==",
+      "type": "package",
+      "path": "microsoft.appcenter.distribute/3.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.Android.Bindings.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.dll",
+        "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.xml",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll",
+        "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.xml",
+        "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll",
+        "lib/netstandard1.0/Microsoft.AppCenter.Distribute.xml",
+        "microsoft.appcenter.distribute.3.4.0.nupkg.sha512",
+        "microsoft.appcenter.distribute.nuspec"
       ]
     },
     "Newtonsoft.Json/12.0.3": {
@@ -3023,6 +3069,73 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "sha512": "ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "type": "package",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Connectivity.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.xml",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.xml",
+        "lib/UAP10/Plugin.Connectivity.XML",
+        "lib/UAP10/Plugin.Connectivity.dll",
+        "lib/UAP10/Plugin.Connectivity.pdb",
+        "lib/UAP10/Plugin.Connectivity.pri",
+        "lib/UAP10/Plugin.Connectivity/Properties/Plugin.Connectivity.rd.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.xml",
+        "lib/net45/Plugin.Connectivity.Abstractions.dll",
+        "lib/net45/Plugin.Connectivity.Abstractions.pdb",
+        "lib/net45/Plugin.Connectivity.Abstractions.xml",
+        "lib/net45/Plugin.Connectivity.XML",
+        "lib/net45/Plugin.Connectivity.dll",
+        "lib/net45/Plugin.Connectivity.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netcoreapp2.0/Plugin.Connectivity.deps.json",
+        "lib/netcoreapp2.0/Plugin.Connectivity.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.deps.json",
+        "lib/netstandard1.0/Plugin.Connectivity.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.xml",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.dll",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.pdb",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.xml",
+        "lib/tizen40/Plugin.Connectivity.deps.json",
+        "lib/tizen40/Plugin.Connectivity.dll",
+        "xam.plugin.connectivity.3.2.0.nupkg.sha512",
+        "xam.plugin.connectivity.nuspec"
       ]
     },
     "Xamarin.Android.Arch.Core.Common/1.1.1.3": {
@@ -5212,6 +5325,7 @@
       "Acr.UserDialogs >= 7.1.0.446",
       "Com.OneSignal >= 3.10.0",
       "Covid_Info >= 1.0.0",
+      "Microsoft.AppCenter.Distribute >= 3.4.0",
       "Newtonsoft.Json >= 12.0.3",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
       "Prism.Plugin.Popups >= 7.2.0.1046",
@@ -5219,6 +5333,7 @@
       "Rg.Plugins.Popup >= 2.0.0.3",
       "Syncfusion.Licensing >= 18.2.0.48",
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.48",
+      "Xam.Plugin.Connectivity >= 3.2.0",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
       "Xamarin.Android.Support.Design >= 28.0.0.3",
       "Xamarin.Android.Support.v4 >= 28.0.0.3",
@@ -5287,6 +5402,10 @@
             "target": "Package",
             "version": "[3.10.0, )"
           },
+          "Microsoft.AppCenter.Distribute": {
+            "target": "Package",
+            "version": "[3.4.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
@@ -5310,6 +5429,10 @@
           "Syncfusion.Xamarin.SfBusyIndicator": {
             "target": "Package",
             "version": "[18.2.0.48, )"
+          },
+          "Xam.Plugin.Connectivity": {
+            "target": "Package",
+            "version": "[3.2.0, )"
           },
           "Xamarin.Android.Support.CustomTabs": {
             "target": "Package",

@@ -156,8 +156,10 @@
   <data name="MYTHS" xml:space="preserve">
     <value>Conseils pour le public concernant les rumeurs sur le nouveau coronavirus</value>
   </data>
-  <data name="messaConnectToInternet" xml:space="preserve">
-    <value>Veuillez vous connecter à un réseau Internet pour obtenir des données actualisées !</value>
+  <data name="errorConectionServer" xml:space="preserve">
+    <value>Ne peut se connecter au serveur. Veuillez réessayer!
+
+Si le problème persiste, vous pouvez le signaler au développeur: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Mise à jour de...</value>
@@ -202,7 +204,7 @@
     <value>Pas de connexion Internet</value>
   </data>
   <data name="limitedConnection" xml:space="preserve">
-    <value>Internet sous contrainte ! Impossible d'obtenir les dernières données mises à jour</value>
+    <value>Il y a des problèmes avec votre connexion Internet. Veuillez réessayer!</value>
   </data>
   <data name="contatDeveloper" xml:space="preserve">
     <value>Si le problème persiste, contactez le développeur</value>
@@ -211,13 +213,13 @@
     <value>À propos de</value>
   </data>
   <data name="devInfo1" xml:space="preserve">
-    <value>Informations sur COVIDINFO.</value>
+    <value>Acerca de Covid-Info</value>
   </data>
   <data name="devInfo2" xml:space="preserve">
     <value>Bonjour ! Je m'appelle Rafael Ibañez.</value>
   </data>
   <data name="devInfo4" xml:space="preserve">
-    <value>Pour tout type d'information ou de suggestion, vous pouvez m'envoyer un courrier à cette adresse : rafael.ideveloper@gmail.com</value>
+    <value>Pour tout type d'information ou de suggestion, vous pouvez m'envoyer un courrier à cette adresse : </value>
   </data>
   <data name="dataInfo1" xml:space="preserve">
     <value>Source des données</value>
@@ -256,7 +258,7 @@
     <value>Si cette application a été à votre goût</value>
   </data>
   <data name="buyCoffee" xml:space="preserve">
-    <value>Offrez-moi une tasse de café !</value>
+    <value>Compre-me um café!</value>
   </data>
   <data name="symptoms1" xml:space="preserve">
     <value>Fièvre</value>
@@ -383,5 +385,23 @@
   </data>
   <data name="casesPercentage" xml:space="preserve">
     <value>Pourcentage de cas</value>
+  </data>
+  <data name="viewSatisticCountries" xml:space="preserve">
+    <value>Voir les statistiques de chaque pays</value>
+  </data>
+  <data name="totalCases" xml:space="preserve">
+    <value>Total des cas</value>
+  </data>
+  <data name="critical" xml:space="preserve">
+    <value>critique</value>
+  </data>
+  <data name="imgVector" xml:space="preserve">
+    <value>Les images vectorisées sont</value>
+  </data>
+  <data name="byFreepik" xml:space="preserve">
+    <value>Conçu par Freepik</value>
+  </data>
+  <data name="tryAgainBTN" xml:space="preserve">
+    <value>Veuillez réessayer!</value>
   </data>
 </root>

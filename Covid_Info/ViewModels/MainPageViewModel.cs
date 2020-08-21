@@ -24,7 +24,6 @@ namespace Covid_Info.ViewModels
     public class MainPageViewModel : ViewModelBase
     {
 
-        private bool IsThereData = false;
         private List<Country> lstCountriesInfo;
         private ObservableCollection<Country> _obMostCountries;
         private readonly IApiService _apiService;
@@ -36,18 +35,13 @@ namespace Covid_Info.ViewModels
         private Country _country;
         private Country _myCountryInfo;
         private bool _isvisibleUpdaterViwer;
-        private string URLDownloader;
         private bool _isVisibleLoadingPage;
         private bool _isVisibleMainPage;
         private bool _isVisibleMyCountry;
         private bool _isVisibleMAC;
-        private string _loadMessage;
-        private string _animationJSON;
         private bool _isVisibleSVINFO;
-       // bool isBuilt;
-        bool hasData;
-        string countryname;
-        string countryISOcode;
+        private bool _sfIndicator;
+        private bool _isRefrshing;
 
         public MainPageViewModel(
             INavigationService navigationService,
@@ -73,20 +67,20 @@ namespace Covid_Info.ViewModels
                 
 
                 navAllCountries = new DelegateCommand(async () => await _navigationService.NavigateAsync("AllCountries"));
-                UpdateData = new DelegateCommand(async () => await loadDataValidation());
-                DownloaderCommand = new DelegateCommand(async ()=> await OpenUrlUpdater());
+                UpdateDataonBTN = new DelegateCommand(async () => await refreshOnSwipeBTN());
+                UpdateDataonSwipe = new DelegateCommand(async () => await refreshOnSwipeBTN());
                 goExternalInfo = new DelegateCommand(async ()=> await _navigationService.NavigateAsync("ExternalInfo"));
                 goMyCountryDetails = new DelegateCommand(async () => await navContryDetails());
                 goGlobalDetails = new DelegateCommand(async () => await navGlobalDetails());
                 goAdvices = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Advices"));
                 goASymptoms = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Symptoms"));
-                refreshCommand = new DelegateCommand(async () => await refreshUIonRefresViewCommand());
+                refreshCommand = new DelegateCommand(async () => await refreshOnSwipeBTN());
                 Task.Run(async () => { await loadDataValidation(); });
                
             }
             catch (Exception ex)
             {
-                Debug.Print(ex.ToString());
+                Debug.Print($"error in MainPageViewModel ==> {ex.ToString()}");
             }
 
         }
@@ -94,8 +88,6 @@ namespace Covid_Info.ViewModels
      
 
         public DelegateCommand navAllCountries { get; private set; }
-        public DelegateCommand UpdateData { get; private set; }
-        public DelegateCommand DownloaderCommand { get; private set; }
         public DelegateCommand goMyCountryDetails { get; private set; }
         public DelegateCommand goGlobalDetails { get; private set; }
         public DelegateCommand goExternalInfo { get; private set; }
@@ -105,69 +97,42 @@ namespace Covid_Info.ViewModels
 
 
         #region PUBLIC PROPERTIES
-        private bool _sfIndicator;
+
         public bool SFIndicator
         {
             get { return _sfIndicator; }
             set { SetProperty(ref _sfIndicator, value); }
         }
-        private bool _isRefrshing;
         public bool IsRefreshing
         {
             get { return _isRefrshing; }
             set { SetProperty(ref _isRefrshing, value); }
-        }
-
-        private string _timer;
-        public string MyTimer
-        {
-            get { return _timer; }
-            set { SetProperty(ref _timer, value); }
         }
         public bool IsVisibleSVINFO
         {
             get { return _isVisibleSVINFO; }
             set { SetProperty(ref _isVisibleSVINFO, value); }
         }
-
-        public string AnimationJSON
-        {
-            get { return _animationJSON; }
-            set { SetProperty(ref _animationJSON, value); }
-        }
-
-        public string LoadMessage
-        {
-            get { return _loadMessage; }
-            set { SetProperty(ref _loadMessage, value); }
-        }
-
         public bool IsVisibleMAC
         {
             get { return _isVisibleMAC; }
             set { SetProperty(ref _isVisibleMAC, value); }
         }
-
-
         public bool IsVisibleMyCountry
         {
             get { return _isVisibleMyCountry; }
             set { SetProperty(ref _isVisibleMyCountry, value); }
         }
-
-
         public bool IsVisibleMainPage
         {
             get { return _isVisibleMainPage; }
             set { SetProperty(ref _isVisibleMainPage, value); }
         }
-
         public bool IsVisibleLoadingPage
         {
             get { return _isVisibleLoadingPage; }
             set { SetProperty(ref _isVisibleLoadingPage, value); }
         }
-
         public bool IsVisibleUpdaterViwer
         {
             get { return _isvisibleUpdaterViwer; }
@@ -178,72 +143,73 @@ namespace Covid_Info.ViewModels
             get { return _obMostCountries; }
             set { SetProperty(ref _obMostCountries, value); }
         }
-
         public GlobalInfo globalInfo
         {
             get { return _globalInfo; }
             set { SetProperty(ref _globalInfo, value); }
         }
-
         public Country CountryI
         {
             get { return _country; }
             set { SetProperty(ref _country, value); }
         }
-
-
         public Country MyCountryInfo
         {
             get { return _myCountryInfo; }
             set { SetProperty(ref _myCountryInfo, value); }
         }
 
-        private string _oneSignalMessage;
-
-        public string urlDownloader
-        {
-            get { return _oneSignalMessage; }
-            set { SetProperty(ref _oneSignalMessage, value); }
-        }
-
 
         #endregion
+
+
         private async Task saveLocationInfo()
         {
-            var locationInfo = await _locationServices.GetMyCountryInfo();
-            if (locationInfo == null)
+            try
             {
-                UserDialogs.Instance.Toast("Habilita los permisos GPS para mostrar informacion de tu pais en la pantalla principal.", TimeSpan.FromSeconds(3));
-            };
+                var locationInfo = await _locationServices.GetMyCountryInfo();
+                if (locationInfo == null)
+                {
+                    UserDialogs.Instance.Toast("Habilita los permisos GPS para mostrar informacion de tu pais en la pantalla principal.", TimeSpan.FromSeconds(3));
+                };
+            }
+            catch (Exception ex)
+            {
+                Debug.Print($"Error in saveLocationInfo() ==> {ex.ToString()}");
+            }
         }
+
         private async Task loadDataValidation()
         {
+           
             try
             {
 
                 SFIndicator = true;
-                var InterCon = Connectivity.NetworkAccess;
 
-                AnimationJSON = string.Empty;
+                IconString = string.Empty;
                 LoadMessage = string.Empty;
                 IsVisibleLoadingPage = false;
                 IsVisibleMainPage = false;
+                IsVisibleBTNTryAgaing = false;
 
-                if (InterCon == NetworkAccess.None)
+                if (!await _apiRequest.IsConnected())
                 {
-                    AnimationJSON = Constants.NoConnectionJSON;
+                    IconString = Constants.NoConnectionJSON;
                     LoadMessage = Resource.noInter;
                     IsVisibleLoadingPage = true;
+                    IsVisibleBTNTryAgaing = true;
                     IsVisibleMainPage = false;
                     SFIndicator = false;
                     return;
                 }
 
-                if (InterCon == NetworkAccess.Unknown)
+                if (!await _apiRequest.IsConnectionsReachable())
                 {
-                    AnimationJSON = Constants.NoConnectionJSON;
-                    LoadMessage = Resource.noInter;
+                    IconString = Constants.LimitedConnectionJSON;
+                    LoadMessage = Resource.limitedConnection;
                     IsVisibleLoadingPage = true;
+                    IsVisibleBTNTryAgaing = true;
                     IsVisibleMainPage = false;
                     SFIndicator = false;
                     return;
@@ -253,9 +219,10 @@ namespace Covid_Info.ViewModels
 
                 if (globalInfo == null  && !lstCountriesInfo.Any())
                 {
-                    AnimationJSON = Constants.LimitedConnectionJSON;
-                    LoadMessage = Resource.limitedConnection;
+                    IconString = Constants.LimitedConnectionJSON;
+                    LoadMessage = Resource.errorConectionServer;
                     IsVisibleLoadingPage = true;
+                    IsVisibleBTNTryAgaing = true;
                     IsVisibleMainPage = false;
                     SFIndicator = false;
                     return;
@@ -263,13 +230,14 @@ namespace Covid_Info.ViewModels
 
                 IsVisibleLoadingPage = false;
                 IsVisibleMainPage = true;
+                IsVisibleBTNTryAgaing = true;
                 LoadMessage = string.Empty;
-                AnimationJSON = string.Empty;
+                IconString = string.Empty;
                 SFIndicator = false;
             }
             catch (Exception ex)
             {
-                Debug.Print(ex.ToString());
+                Debug.Print($"Error in loadDataValidation() ==> {ex.ToString()}");
             }
         }
 
@@ -305,58 +273,79 @@ namespace Covid_Info.ViewModels
 
                     if (placemark != null)
                     {
-                        countryname = placemark.CountryName;
-                        countryISOcode = placemark.CountryCode;
                         IsVisibleMyCountry = true;
                         MyCountryInfo = countriesList.FirstOrDefault(c => c.country == placemark.CountryName || c.countryInfo.iso2 == placemark.CountryCode);
 
-                        if (MyCountryInfo.country.ToLower() == Constants.ElSalvador.ToLower()) IsVisibleSVINFO = true;
+                        //if (MyCountryInfo.country.ToLower() == Constants.ElSalvador.ToLower()) IsVisibleSVINFO = true;
 
                     }
                 }
 
-                //validate if data on bindable properties
-                if (globalData != null && countriesList.Any()) hasData = true;
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error ------" + ex.Message.ToString());
+                Console.WriteLine("Error in loadData() ==>" + ex.Message.ToString());
             }
         }
 
-        private async Task refreshUIonRefresViewCommand()
+        private async Task refreshOnSwipeBTN()
         {
-            if (hasData)
+
+            try
             {
                 IsRefreshing = true;
-                if (globalInfo == null && !lstCountriesInfo.Any() )
+                IconString = string.Empty;
+                LoadMessage = string.Empty;
+                IsVisibleBTNTryAgaing = false;
+
+                if (!await _apiRequest.IsConnected())
                 {
-                    await loadData();
+                    IconString = Constants.NoConnectionJSON;
+                    LoadMessage = Resource.noInter;
+                    IsVisibleBTNTryAgaing = true;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleMainPage = false;
+                    IsRefreshing = false;
+                    return;
                 }
-                await refresUI();
+
+                if (!await _apiRequest.IsConnectionsReachable())
+                {
+                    IconString = Constants.LimitedConnectionJSON;
+                    LoadMessage = Resource.limitedConnection;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleBTNTryAgaing = true;
+                    IsVisibleMainPage = false;
+                    IsRefreshing = false;
+                    return;
+                }
+
+                await loadData();
+
+                if (globalInfo == null && !lstCountriesInfo.Any())
+                {
+                    IconString = Constants.LimitedConnectionJSON;
+                    LoadMessage = Resource.errorConectionServer;
+                    IsVisibleBTNTryAgaing = true;
+                    IsVisibleLoadingPage = true;
+                    IsVisibleMainPage = false;
+                    IsRefreshing = false;
+                    return;
+                }
+
+                IsVisibleLoadingPage = false;
+                IsVisibleMainPage = true;
+                IsVisibleBTNTryAgaing = true;
+                LoadMessage = string.Empty;
+                IconString = string.Empty;
                 IsRefreshing = false;
             }
-            return;
-        }
-
-        private async Task refresUI()
-        {
-            var myCountryInfo = await DBConnection.Database.GetMyCountry();
-            if (!myCountryInfo.Any()) await _locationServices.GetMyCountryInfo();
-
-            var globalInfoUI = await _apiRequest.globalInfoAPIRequest();
-            var countriesUI = await _apiRequest.countriesInfoAPIRequest();
-            if (globalInfoUI.cases > 0)
+            catch (Exception ex)
             {
-                globalInfo = globalInfoUI;
+                Debug.Print($"Error in refreshOnSwipeBTN() ==> {ex.ToString()}");
             }
 
-            if (countriesUI.Any())
-            {
-                ObMostaAffectedCountries = new ObservableCollection<Country>(countriesUI.OrderByDescending(d => d.deaths).Take(5));
-                MyCountryInfo = countriesUI.FirstOrDefault(n => n.country == countryname || n.countryInfo.iso2 == countryISOcode);
-            }
         }
 
 
@@ -376,18 +365,6 @@ namespace Covid_Info.ViewModels
             var navParameters = new NavigationParameters();
             navParameters.Add("contrydetails", MyCountryInfo);
             await _navigationService.NavigateAsync("MyCountryDetails", navParameters);
-        }
-
-        private async Task OpenUrlUpdater()
-        {
-            await SecureStorage.SetAsync(Constants.IsUpdated, Constants.IsUpdatedYES);
-            await Browser.OpenAsync(URLDownloader, new BrowserLaunchOptions
-            {
-                LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
-                PreferredControlColor = Color.Black,
-            });
-            IsVisibleUpdaterViwer = false;
         }
         #endregion
 

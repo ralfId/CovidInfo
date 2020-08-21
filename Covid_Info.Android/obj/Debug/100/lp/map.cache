@@ -7,8 +7,11 @@ Microsoft.AppCenter.Analytics
 Microsoft.AppCenter.Android.Bindings
 Microsoft.AppCenter.Crashes.Android.Bindings
 Microsoft.AppCenter.Crashes
+Microsoft.AppCenter.Distribute.Android.Bindings
+Microsoft.AppCenter.Distribute
 Microsoft.AppCenter
 OneSignal.Android.Binding
+Plugin.Connectivity
 Prism.Forms
 Prism.Plugin.Popups
 Rg.Plugins.Popup

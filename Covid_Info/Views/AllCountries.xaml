@@ -46,13 +46,14 @@
                         </Label>
                     </Grid>
                 </pkv:PancakeView>
-
-
                 <ListView
                     CachingStrategy="RecycleElement"
                     HasUnevenRows="True"
+                    IsPullToRefreshEnabled="True"
+                    IsRefreshing="{Binding IsRefreshing}"
                     IsVisible="{Binding IsVisibleCountries}"
                     ItemsSource="{Binding obCountryInfo}"
+                    RefreshCommand="{Binding UpdateData}"
                     SelectedItem="{Binding SelectedCountry}"
                     SelectionMode="Single"
                     SeparatorVisibility="None">
@@ -68,8 +69,18 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-            <contentViews:LoadingData IsVisible="{Binding IsVisibleLoadingPage}" />
         </Grid>
+
+        <RefreshView
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="{StaticResource WhiteColor}"
+            Command="{Binding UpdateDataonSwipe}"
+            IsRefreshing="{Binding IsRefreshing}"
+            IsVisible="{Binding IsVisibleLoadingPage}">
+            <contentViews:LoadingData />
+        </RefreshView>
+
         <Grid
             AbsoluteLayout.LayoutBounds="0,0,1,1"
             AbsoluteLayout.LayoutFlags="All"

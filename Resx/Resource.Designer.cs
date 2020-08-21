@@ -277,11 +277,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Buy me a cup of coffee!.
+        ///   Busca una cadena traducida similar a Buy me a coffee!.
         /// </summary>
         public static string buyCoffee {
             get {
                 return ResourceManager.GetString("buyCoffee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Designed by Freepik.
+        /// </summary>
+        public static string byFreepik {
+            get {
+                return ResourceManager.GetString("byFreepik", resourceCulture);
             }
         }
         
@@ -358,6 +367,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Critical.
+        /// </summary>
+        public static string critical {
+            get {
+                return ResourceManager.GetString("critical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Tests performed.
         /// </summary>
         public static string currentTest {
@@ -421,7 +439,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Information about COVIDINFO..
+        ///   Busca una cadena traducida similar a About Covid-Info.
         /// </summary>
         public static string devInfo1 {
             get {
@@ -430,7 +448,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Information about COVIDINFO..
+        ///   Busca una cadena traducida similar a Hello! My name is Rafael Ibañez..
         /// </summary>
         public static string devInfo2 {
             get {
@@ -448,7 +466,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a For any kind of information or suggestion you can send me a mail to this address: rafael.ideveloper@gmail.com.
+        ///   Busca una cadena traducida similar a For any kind of information or suggestion you can send me a mail to this address: .
         /// </summary>
         public static string devInfo4 {
             get {
@@ -480,6 +498,17 @@ namespace Resx {
         public static string enableGPSPermissions {
             get {
                 return ResourceManager.GetString("enableGPSPermissions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Could not connect to the server. Please, try again!
+        ///
+        ///If the problem persists you can report the problem to the developer: rafael.ideveloper@gmail.com.
+        /// </summary>
+        public static string errorConectionServer {
+            get {
+                return ResourceManager.GetString("errorConectionServer", resourceCulture);
             }
         }
         
@@ -520,6 +549,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Vectorized images are.
+        /// </summary>
+        public static string imgVector {
+            get {
+                return ResourceManager.GetString("imgVector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Last update: .
         /// </summary>
         public static string lastUpdta {
@@ -538,7 +576,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Constrained Internet! Can no get last updated data.
+        ///   Busca una cadena traducida similar a There are problems with your internet connection. Please, try again!.
         /// </summary>
         public static string limitedConnection {
             get {
@@ -552,15 +590,6 @@ namespace Resx {
         public static string loading {
             get {
                 return ResourceManager.GetString("loading", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Please connect to an Internet network to get updated data!.
-        /// </summary>
-        public static string messaConnectToInternet {
-            get {
-                return ResourceManager.GetString("messaConnectToInternet", resourceCulture);
             }
         }
         
@@ -844,6 +873,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Total cases.
+        /// </summary>
+        public static string totalCases {
+            get {
+                return ResourceManager.GetString("totalCases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Please try again!.
+        /// </summary>
+        public static string tryAgainBTN {
+            get {
+                return ResourceManager.GetString("tryAgainBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Updating....
         /// </summary>
         public static string updating {
@@ -858,6 +905,15 @@ namespace Resx {
         public static string viewmore {
             get {
                 return ResourceManager.GetString("viewmore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a View statistic from each country.
+        /// </summary>
+        public static string viewSatisticCountries {
+            get {
+                return ResourceManager.GetString("viewSatisticCountries", resourceCulture);
             }
         }
     }

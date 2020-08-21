@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "diHNl1jddji1cLmv/47PZtSryQ6eJH6tJv5+m0n6fcLur4ZyBhvu2TYu9HXBz20tI0k2YXfZih8nwZLeSire1A==",
+  "dgSpecHash": "seelkQP724JSwNEuMuQsu2U1Fj5C2C1tNdLhcJ2B9zXgpzi681MeCIZDg0sfGCYeLCTPQcmIZzUN02Uc7aIT2A==",
   "success": true,
   "projectFilePath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter\\3.4.0\\microsoft.appcenter.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.analytics\\3.4.0\\microsoft.appcenter.analytics.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.crashes\\3.4.0\\microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.distribute\\3.4.0\\microsoft.appcenter.distribute.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
@@ -74,6 +75,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1239\\xamarin.forms.4.7.0.1239.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512",
