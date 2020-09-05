@@ -7918,11 +7918,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+      "projectUniqueName": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
       "projectName": "Covid_Info.iOS",
-      "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+      "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
+      "outputPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -7943,11 +7943,11 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
-              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
+            "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+              "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
             },
-            "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+            "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+              "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
             }
           }
         }

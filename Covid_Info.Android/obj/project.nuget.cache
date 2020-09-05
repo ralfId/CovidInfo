@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RfHYCkDtjBbAba8O0OENmuRhOQ71HhDBgJN2acFV1EhKFBma+cZXgg8Zro928UjMsLnv6SDCHMl5G5p7K3zSnA==",
+  "dgSpecHash": "DzMDej6P3UQ5wDEVQLo3gX3LG8w4CmDaesH5QBeN6vtAAKoB0wFREysi2rO57z7cNaHik5L5sBbG5L9mhopwZw==",
   "success": true,
-  "projectFilePath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
+  "projectFilePath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",

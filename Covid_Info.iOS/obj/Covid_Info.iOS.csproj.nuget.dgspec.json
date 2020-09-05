@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj": {}
+    "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj": {}
   },
   "projects": {
-    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj": {
+    "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+        "projectUniqueName": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
         "projectName": "Covid_Info.iOS",
-        "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+        "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
         "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
+        "outputPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,11 +32,11 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
-                "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
+              "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+                "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
               },
-              "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-                "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+              "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+                "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
               }
             }
           }
@@ -128,14 +128,14 @@
         }
       }
     },
-    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+    "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+        "projectUniqueName": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
         "projectName": "Covid_Info",
-        "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+        "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
         "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
+        "outputPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -155,8 +155,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-                "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+              "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+                "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
               }
             }
           }
@@ -255,18 +255,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+    "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+        "projectUniqueName": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
         "projectName": "Resx",
-        "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+        "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
         "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\obj\\",
+        "outputPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -318,7 +318,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

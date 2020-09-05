@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SOwBS8r8JseqmkY5/QhNxXe2mDEB9AaP+/xFt8FKTluVWi7E4PDsuPQ+Bbedk91xJ1wGFsJyRWhKIIzzqbH+Mg==",
+  "dgSpecHash": "UhWRdlgr2A6kxk3PwIG3QgdmbwLQdw7JsUB9CPpSY6A2ejTNxP0C/G2dFJsoEm9lrEaVBlOXT8eBlfsYFbokKA==",
   "success": true,
-  "projectFilePath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+  "projectFilePath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

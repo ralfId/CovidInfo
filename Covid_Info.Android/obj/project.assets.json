@@ -5356,11 +5356,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
+      "projectUniqueName": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
       "projectName": "Covid_Info.Android",
-      "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
+      "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\obj\\",
+      "outputPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -5381,11 +5381,11 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
-              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
+            "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+              "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
             },
-            "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+            "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+              "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
             }
           }
         }
