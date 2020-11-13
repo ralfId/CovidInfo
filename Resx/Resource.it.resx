@@ -159,7 +159,7 @@
   <data name="errorConectionServer" xml:space="preserve">
     <value>Impossibile connettersi al server. Per favore riprova!
 
-Se il problema persiste puoi segnalare il problema allo sviluppatore: rafael.ideveloper@gmail.com</value>
+Se il problema persiste puoi segnalare allo sviluppatore: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Aggiornamento...</value>
@@ -168,13 +168,14 @@ Se il problema persiste puoi segnalare il problema allo sviluppatore: rafael.ide
     <value>Test eseguiti</value>
   </data>
   <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Si prega di abilitare i permessi GPS dell'applicazione per visualizzare le statistiche del vostro paese! Questo è richiesto solo una volta</value>
+    <value>Abilita i permessi di localizzazione nell'app, per poter visualizzare le informazioni sul tuo Paese nella pagina principale.
+Questo è necessario solo una volta.</value>
   </data>
   <data name="ok" xml:space="preserve">
     <value>Accetta</value>
   </data>
   <data name="disabledGPS" xml:space="preserve">
-    <value>Abilitate il GPS del vostro dispositivo per visualizzare le statistiche del vostro paese!</value>
+    <value>Abilita le autorizzazioni di localizzazione dell'applicazione per visualizzare le informazioni sul tuo paese nella schermata principale!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Ricerca...</value>
@@ -189,7 +190,7 @@ Se il problema persiste puoi segnalare il problema allo sviluppatore: rafael.ide
     <value>Segnalati di recente</value>
   </data>
   <data name="covidTests" xml:space="preserve">
-    <value>Test COVID-19</value>
+    <value>Test Covid-19</value>
   </data>
   <data name="countriesStats" xml:space="preserve">
     <value>Vedi le statistiche per ogni paese</value>
@@ -403,5 +404,8 @@ Se il problema persiste puoi segnalare il problema allo sviluppatore: rafael.ide
   </data>
   <data name="tryAgainBTN" xml:space="preserve">
     <value>Per favore riprova!</value>
+  </data>
+  <data name="guide" xml:space="preserve">
+    <value>Guida</value>
   </data>
 </root>

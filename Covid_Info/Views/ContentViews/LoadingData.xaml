@@ -6,7 +6,6 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Visual="Default"
     mc:Ignorable="d">
     <ContentView.Content>
         <Grid>

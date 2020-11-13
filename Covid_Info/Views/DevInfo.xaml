@@ -8,10 +8,9 @@
     xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:prism="http://prismlibrary.com"
     Title="{Binding Title}"
-    prism:ViewModelLocator.AutowireViewModel="True"
-    Visual="Material">
-    <ScrollView Padding="20,15">
+    prism:ViewModelLocator.AutowireViewModel="True">
 
+    <ScrollView Padding="20,15">
         <Grid RowDefinitions="auto, auto, auto" RowSpacing="30">
 
             <!--  About Developer  -->
@@ -92,7 +91,8 @@
                                 Grid.Row="1"
                                 BackgroundColor="{StaticResource SecundaryDarkColor}"
                                 Command="{Binding GotoPaypalMe}"
-                                Text="{i18n:Translate buyCoffee}" />
+                                Text="{i18n:Translate buyCoffee}"
+                                TextColor="{StaticResource WhiteColor}" />
                         </Grid>
 
                     </Grid>
@@ -128,7 +128,8 @@
                             Margin="5,20"
                             BackgroundColor="{StaticResource SecundaryDarkColor}"
                             Command="{Binding goNovelCovidApi}"
-                            Text="{i18n:Translate dataInfoBtn}" />
+                            Text="{i18n:Translate dataInfoBtn}"
+                            TextColor="{StaticResource WhiteColor}" />
                     </StackLayout>
                 </Grid>
             </Frame>

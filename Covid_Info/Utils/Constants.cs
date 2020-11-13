@@ -1,6 +1,7 @@
 ﻿using Resx;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace Covid_Info.Utils
@@ -28,7 +29,6 @@ namespace Covid_Info.Utils
         public const string sortingListcountries = "sortingListcountries";
         public const string AZ = "A-Z";
         public const string ZA = "Z-A";
-        public const string goodleDomain = "https://www.google.com/";
 
         //symptoms 
         public const string habituales = "habituales";

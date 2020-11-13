@@ -11,8 +11,9 @@ namespace Covid_Info.Data
     public class DBConnection  : IDBRepository
     {
 
-        static DBConnection database;
-        static object locker = new object();
+        readonly SQLiteAsyncConnection _connection;
+        private static DBConnection database = null;
+        private static object locker = new object();
 
         public static DBConnection Database
         {
@@ -27,9 +28,8 @@ namespace Covid_Info.Data
             }
         }
 
-        private SQLiteAsyncConnection _connection;
 
-        public DBConnection()
+        private DBConnection()
         {
             _connection = DependencyService.Get<IConnPlatformService>().GetConnection();
             _connection.CreateTableAsync<CurrentCountry>().Wait();
@@ -38,8 +38,6 @@ namespace Covid_Info.Data
             _connection.CreateTableAsync<Advices>().Wait();
             _connection.CreateTableAsync<Symptoms>().Wait();
         }
-
-
 
         public async Task<bool> DBOperations(FacadeDBOperations.Operations operations, object obj)
         {
@@ -163,29 +161,6 @@ namespace Covid_Info.Data
             }
         }
 
-        public Task<bool> insertAllAsync(IEnumerable<object> items)
-        {
-            lock(locker)
-            {
-                try
-                {
-                    if (_connection.InsertAllAsync(items).Result == 1)
-                    {
-                        return Task.FromResult(true);
-                    }
-                    else
-                    {
-                        return Task.FromResult(false);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.Print(ex.ToString());
-                    return Task.FromResult(false);
-                }
-            }
-        }
-
         public Task<List<Advices>> getAdvices()
         {
             lock (locker)
@@ -214,6 +189,29 @@ namespace Covid_Info.Data
                 {
                     Debug.Print(ex.ToString());
                     return null;
+                }
+            }
+        }
+
+        public Task<bool> insertAllAsync(IEnumerable<object> items)
+        {
+            lock (locker)
+            {
+                try
+                {
+                    if (_connection.InsertAllAsync(items).Result == 1)
+                    {
+                        return Task.FromResult(true);
+                    }
+                    else
+                    {
+                        return Task.FromResult(false);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.Print(ex.ToString());
+                    return Task.FromResult(false);
                 }
             }
         }

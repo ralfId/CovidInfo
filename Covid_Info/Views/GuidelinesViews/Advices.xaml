@@ -7,7 +7,6 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Visual="Material"
     mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>

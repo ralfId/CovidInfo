@@ -1,36 +1,51 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Frame xmlns="http://xamarin.com/schemas/2014/forms" 
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-       xmlns:i18n="clr-namespace:Resx;assembly=Resx"
-       xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
-       xmlns:converters="clr-namespace:Covid_Info.Converters"
-       mc:Ignorable="d"
-       x:Class="Covid_Info.Views.ContentViews.CountriesTemplate"
-       Padding="10">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Frame
+    x:Class="Covid_Info.Views.ContentViews.CountriesTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Covid_Info.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    Padding="10"
+    mc:Ignorable="d">
     <ContentView.Resources>
         <ResourceDictionary>
-            <converters:ToUpperCaseConverter x:Key="ToUpperCaseConverter"/>
-            <converters:GeneralInfoConverter x:Key="GeneralInfoConverter"/>
-            <converters:GlobalInfoConverter x:Key="GlobalInfoConverter"/>
+            <converters:ToUpperCaseConverter x:Key="ToUpperCaseConverter" />
+            <converters:GeneralInfoConverter x:Key="GeneralInfoConverter" />
+            <converters:GlobalInfoConverter x:Key="GlobalInfoConverter" />
         </ResourceDictionary>
     </ContentView.Resources>
 
     <StackLayout Spacing="0">
 
-        <pkv:PancakeView   Padding="0">
+        <pkv:PancakeView Padding="0">
             <Grid Padding="15,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Text="{Binding country}" TextColor="{StaticResource SecundaryDarkColor}" FontSize="{StaticResource BaseTitleFontSize}" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    FontSize="{StaticResource BaseTitleFontSize}"
+                    Text="{Binding country}"
+                    TextColor="{StaticResource SecundaryDarkColor}"
+                    VerticalOptions="Center" />
 
-                <Image Grid.Column="1" Aspect="AspectFit" WidthRequest="90" HeightRequest="50" HorizontalOptions="End" >
+                <Image
+                    Grid.Column="1"
+                    Aspect="AspectFit"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    WidthRequest="90">
                     <Image.Source>
-                        <UriImageSource Uri="{Binding countryInfo.flag}" CachingEnabled="True" CacheValidity="15"/>
+                        <UriImageSource
+                            CacheValidity="15"
+                            CachingEnabled="True"
+                            Uri="{Binding countryInfo.flag}" />
                     </Image.Source>
                 </Image>
             </Grid>
@@ -38,57 +53,117 @@
 
         <Grid Margin="0,5" HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="125"/>
-                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="125" />
+                <ColumnDefinition Width="125" />
             </Grid.ColumnDefinitions>
-            <!--confirmed-->
-            <Frame Grid.Column="0" BorderColor="{StaticResource ConfirmedColor}" HasShadow="False" Padding="5" >
+            <!--  confirmed  -->
+            <Frame
+                Grid.Column="0"
+                Padding="5"
+                BorderColor="{StaticResource ConfirmedColor}"
+                HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Label   Text="{Binding cases, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource ConfirmedColor}" HorizontalOptions="Center"/>
-        
-                    <Label Text="{i18n:Translate confirmedCases}" FontSize="Body" TextColor="{StaticResource ConfirmedColor}" HorizontalOptions="Center"/>
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{Binding cases, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                        TextColor="{StaticResource ConfirmedColor}" />
+
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate confirmedCases}"
+                        TextColor="{StaticResource ConfirmedColor}" />
                 </StackLayout>
             </Frame>
 
-            <!--Active cases-->
-            <Frame Grid.Column="1" BorderColor="{StaticResource ActiveColor}" HasShadow="False" Padding="5">
+            <!--  Active cases  -->
+            <Frame
+                Grid.Column="1"
+                Padding="5"
+                BorderColor="{StaticResource ActiveColor}"
+                HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Label Text="{Binding active, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource ActiveColor}" HorizontalOptions="Center"/>
-                    <Label Text="{i18n:Translate activeCases}" FontSize="Body" TextColor="{StaticResource ActiveColor}" HorizontalOptions="Center"/>
-                    
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{Binding active, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                        TextColor="{StaticResource ActiveColor}" />
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate activeCases}"
+                        TextColor="{StaticResource ActiveColor}" />
+
                 </StackLayout>
             </Frame>
         </Grid>
 
         <Grid HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="125"/>
-                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="125" />
+                <ColumnDefinition Width="125" />
             </Grid.ColumnDefinitions>
-            <!--Recovered cases-->
-            <Frame Grid.Column="0" BorderColor="{StaticResource RecoveredColor}" HasShadow="False" Padding="0,5">
+            <!--  Recovered cases  -->
+            <Frame
+                Grid.Column="0"
+                Padding="0,5"
+                BorderColor="{StaticResource RecoveredColor}"
+                HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Label Text="{Binding recovered, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource RecoveredColor}" HorizontalOptions="Center"/>
-                    <Label  Text="{i18n:Translate recoveredCases}" FontSize="Body" TextColor="{StaticResource RecoveredColor}" HorizontalOptions="Center"/>
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{Binding recovered, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                        TextColor="{StaticResource RecoveredColor}" />
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate recoveredCases}"
+                        TextColor="{StaticResource RecoveredColor}" />
                 </StackLayout>
             </Frame>
 
-            <!--Deaths cases-->
-            <Frame Grid.Column="1" BorderColor="{StaticResource DeathsColor}" HasShadow="False" Padding="0,5">
+            <!--  Deaths cases  -->
+            <Frame
+                Grid.Column="1"
+                Padding="0,5"
+                BorderColor="{StaticResource DeathsColor}"
+                HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Label Text="{Binding deaths, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource DeathsColor}" HorizontalOptions="Center"/>
-                    <Label Text="{i18n:Translate deathsCases}" FontSize="Body" TextColor="{StaticResource DeathsColor}" HorizontalOptions="Center"/>
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{Binding deaths, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                        TextColor="{StaticResource DeathsColor}" />
+                    <Label
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate deathsCases}"
+                        TextColor="{StaticResource DeathsColor}" />
                 </StackLayout>
             </Frame>
         </Grid>
-       
 
-        <!--Total test-->
-            <StackLayout Orientation="Horizontal" Margin="10,5,10,0">
-            <Label Padding="5" Text="{i18n:Translate covidTests}" FontSize="Default" TextColor="{StaticResource SecundaryDarkColor}"/>
-            <Label Padding="10,5,5,5"  Text="{Binding tests, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}" FontSize="Body"  TextColor="{StaticResource SecundaryDarkColor}" HorizontalOptions="EndAndExpand"/>
-            </StackLayout>
-            <BoxView BackgroundColor="{StaticResource SecundaryDarkColor}" HeightRequest="2" Margin="15,0"/>
+
+        <!--  Total test  -->
+        <StackLayout Margin="10,5,10,0" Orientation="Horizontal">
+            <Label
+                Padding="5"
+                FontSize="Default"
+                Text="{i18n:Translate covidTests}"
+                TextColor="{StaticResource SecundaryDarkColor}" />
+            <Label
+                Padding="10,5,5,5"
+                FontSize="Body"
+                HorizontalOptions="EndAndExpand"
+                Text="{Binding tests, StringFormat='{0:0,0}', Converter={StaticResource GeneralInfoConverter}}"
+                TextColor="{StaticResource SecundaryDarkColor}" />
+        </StackLayout>
+        <BoxView
+            Margin="15,0"
+            BackgroundColor="{StaticResource SecundaryDarkColor}"
+            HeightRequest="2" />
 
     </StackLayout>
 </Frame>

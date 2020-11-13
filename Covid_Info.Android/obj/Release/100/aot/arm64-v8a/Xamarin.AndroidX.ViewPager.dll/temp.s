@@ -1,0 +1,595 @@
+.text 0
+	.balign 8
+jit_code_start:
+
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+jit_code_end:
+
+	.byte 0,0,0,0
+.section ".data.rel.ro"
+.subsection 0
+	.balign 8
+method_addresses:
+	.local method_addresses
+	.type method_addresses,@object
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+method_addresses_end:
+
+.text 0
+	.balign 8
+unbox_trampolines:
+unbox_trampolines_end:
+
+	.long 0
+.text 0
+	.balign 8
+unbox_trampoline_addresses:
+
+	.long 0
+.text 0
+	.balign 8
+method_info_offsets:
+
+	.byte 16,1,0,0,10,0,0,0,28,0,0,0,2,0,0,0,0,0,10,0,20,0,30,0,40,0,50,0,60,0,70,0
+	.byte 80,0,90,0,100,0,110,0,120,0,130,0,140,0,150,0,160,0,170,0,180,0,190,0,200,0,210,0,220,0,230,0
+	.byte 240,0,250,0,4,1,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+extra_method_table:
+
+	.byte 11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+extra_method_info_offsets:
+
+	.byte 0,0,0,0
+.text 0
+	.balign 8
+class_name_table:
+
+	.byte 37,0,13,0,0,0,19,0,0,0,18,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,25,0,0,0,7,0
+	.byte 42,0,2,0,0,0,9,0,41,0,4,0,40,0,6,0,0,0,17,0,39,0,20,0,0,0,14,0,0,0,0,0
+	.byte 0,0,0,0,0,0,11,0,0,0,5,0,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,1,0
+	.byte 0,0,3,0,38,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,15,0,0,0,21,0
+	.byte 0,0,22,0,0,0,23,0,0,0,24,0,0,0
+.text 0
+	.balign 8
+got_info_offsets:
+
+	.byte 25,0,0,0,10,0,0,0,3,0,0,0,2,0,0,0,0,0,10,0,20,0,1,2,1,1,1,1,1,1,1,2
+	.byte 14,2,2,2,3,2,2,2,2,2,36,3,2,3,3
+.text 0
+	.balign 8
+ex_info_offsets:
+
+	.byte 16,1,0,0,10,0,0,0,28,0,0,0,2,0,0,0,0,0,10,0,20,0,30,0,40,0,50,0,60,0,70,0
+	.byte 80,0,90,0,100,0,110,0,120,0,130,0,140,0,150,0,160,0,170,0,180,0,190,0,200,0,210,0,220,0,230,0
+	.byte 240,0,250,0,4,1,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text 1
+	.balign 8
+unwind_info:
+.text 0
+	.balign 8
+class_info_offsets:
+
+	.byte 25,0,0,0,10,0,0,0,3,0,0,0,2,0,0,0,0,0,14,0,27,0,50,7,23,128,141,128,140,133,81,7
+	.byte 125,23,128,133,135,225,128,129,23,23,23,128,137,7,125,23,23,137,249,23,23,23,23
+
+.text 0
+	.balign 16
+plt:
+mono_aot_Xamarin_AndroidX_ViewPager_plt:
+	.size mono_aot_Xamarin_AndroidX_ViewPager_plt,.-mono_aot_Xamarin_AndroidX_ViewPager_plt
+plt_end:
+.text 0
+	.balign 8
+image_table:
+
+	.byte 3,0,0,0,88,97,109,97,114,105,110,46,65,110,100,114,111,105,100,88,46,86,105,101,119,80,97,103,101,114,0,51
+	.byte 48,68,55,53,57,65,56,45,66,70,54,55,45,52,48,55,70,45,65,56,68,53,45,70,67,48,57,53,51,50,68,57
+	.byte 69,52,56,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,109,115,99,111
+	.byte 114,108,105,98,0,68,70,48,66,53,67,66,67,45,69,51,52,69,45,52,65,67,67,45,57,55,55,56,45,65,48,55
+	.byte 52,68,70,67,50,68,66,48,54,0,0,55,99,101,99,56,53,100,55,98,101,97,55,55,57,56,101,0,0,0,0,0
+	.byte 1,0,0,0,2,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,77,111,110,111,46,65,110,100,114,111,105,100
+	.byte 0,65,51,56,51,69,52,49,54,45,54,53,50,52,45,52,48,48,54,45,56,53,65,51,45,69,55,67,67,53,69,54
+	.byte 57,67,52,69,55,0,0,56,52,101,48,52,102,102,57,99,102,98,55,57,48,54,53,0,1,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+weak_field_indexes:
+
+	.byte 0,0,0,0
+.section ".bss"
+.subsection 0
+	.balign 8
+	.local mono_aot_Xamarin_AndroidX_ViewPager_got
+	.type mono_aot_Xamarin_AndroidX_ViewPager_got,@object
+mono_aot_Xamarin_AndroidX_ViewPager_got:
+	.skip 208
+got_end:
+.text 0
+	.balign 8
+blob:
+
+	.byte 0,11,0,35,37,45,49,51,31,47,54,9,54,10,54,11,54,12,54,13,54,129,3,6,93,6,91,6,90,6,92,6
+	.byte 101,6,128,188,6,129,9,6,96,6,128,167,6,128,145,6,128,144,0,128,144,16,0,0,1,4,128,192,16,8,0,1
+	.byte 193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,50,128,198,72,194,0,47,112,56,128,168,0,8,194,0,47
+	.byte 161,194,0,47,158,194,0,47,112,193,0,15,137,194,0,47,130,194,0,47,118,194,0,47,105,194,0,47,106,194,0,47
+	.byte 107,194,0,47,108,194,0,47,109,194,0,47,110,194,0,47,111,194,0,47,115,194,0,47,127,194,0,47,116,194,0,47
+	.byte 129,6,194,0,47,123,194,0,47,128,194,0,47,124,194,0,47,125,194,0,47,126,194,0,47,155,194,0,47,152,194,0
+	.byte 47,149,194,0,47,131,8,7,6,71,68,65,62,59,56,53,50,47,0,41,38,35,31,28,25,22,19,16,0,50,128,198
+	.byte 78,194,0,47,112,56,8,0,8,194,0,47,161,194,0,47,158,194,0,47,112,193,0,15,137,194,0,47,130,194,0,47
+	.byte 118,194,0,47,105,194,0,47,106,194,0,47,107,194,0,47,108,194,0,47,109,194,0,47,110,194,0,47,111,194,0,47
+	.byte 115,194,0,47,127,194,0,47,116,194,0,47,129,74,194,0,47,123,194,0,47,128,194,0,47,124,194,0,47,125,194,0
+	.byte 47,126,194,0,47,155,194,0,47,152,194,0,47,149,194,0,47,131,75,7,74,71,68,65,62,59,56,53,50,47,77,41
+	.byte 38,35,31,28,25,22,19,16,76,129,103,128,238,128,192,194,0,47,112,112,129,8,0,8,194,0,47,161,194,0,47,158
+	.byte 194,0,47,112,193,0,15,137,194,0,47,130,194,0,47,118,194,0,47,105,194,0,47,106,194,0,47,107,194,0,47,108
+	.byte 194,0,47,109,194,0,47,110,194,0,47,111,194,0,47,115,194,0,47,127,194,0,47,116,194,0,47,129,80,194,0,47
+	.byte 123,194,0,47,128,194,0,47,124,194,0,47,125,194,0,47,126,194,0,47,155,194,0,47,152,194,0,47,149,194,0,47
+	.byte 131,82,81,80,194,0,14,107,194,0,14,208,194,0,15,31,194,0,14,217,194,0,14,220,194,0,14,141,194,0,14,144
+	.byte 194,0,14,147,194,0,14,153,194,0,15,31,194,0,15,28,194,0,15,25,194,0,15,22,194,0,15,19,194,0,15,16
+	.byte 194,0,15,13,194,0,15,10,194,0,15,7,194,0,15,4,194,0,15,1,194,0,14,254,194,0,14,251,194,0,14,248
+	.byte 194,0,14,245,194,0,14,241,194,0,14,238,194,0,14,235,194,0,14,232,194,0,14,229,194,0,14,226,194,0,14,223
+	.byte 194,0,14,220,194,0,14,217,194,0,14,214,194,0,14,211,194,0,14,208,194,0,14,205,194,0,14,202,194,0,14,198
+	.byte 194,0,14,195,194,0,14,192,194,0,14,189,194,0,14,186,194,0,14,183,194,0,14,180,194,0,14,177,194,0,14,174
+	.byte 194,0,14,171,194,0,14,168,194,0,14,165,194,0,14,162,194,0,14,159,194,0,14,156,194,0,14,153,194,0,14,150
+	.byte 194,0,14,147,194,0,14,144,194,0,14,141,194,0,14,138,194,0,14,135,194,0,14,132,194,0,14,129,194,0,14,126
+	.byte 194,0,14,123,194,0,14,120,194,0,14,117,194,0,21,155,194,0,14,110,194,0,14,107,194,0,14,104,194,0,14,101
+	.byte 194,0,14,98,194,0,14,95,194,0,14,92,194,0,14,87,194,0,14,84,194,0,14,79,194,0,14,76,194,0,14,73
+	.byte 194,0,14,70,194,0,14,67,194,0,14,64,194,0,14,61,194,0,14,58,194,0,14,55,194,0,14,52,194,0,14,49
+	.byte 194,0,14,46,194,0,14,43,194,0,14,40,194,0,14,37,194,0,14,34,194,0,14,31,194,0,14,28,194,0,14,25
+	.byte 194,0,14,22,194,0,14,19,194,0,14,16,194,0,14,13,194,0,14,10,194,0,14,7,194,0,14,4,194,0,14,1
+	.byte 194,0,13,254,194,0,13,251,194,0,13,247,194,0,13,246,194,0,13,241,194,0,13,238,194,0,13,237,194,0,13,232
+	.byte 194,0,13,229,194,0,13,228,194,0,13,223,194,0,13,222,194,0,13,216,194,0,13,215,194,0,13,210,194,0,13,209
+	.byte 194,0,13,204,194,0,13,203,194,0,13,198,194,0,13,195,194,0,13,192,194,0,13,191,194,0,13,186,194,0,13,185
+	.byte 194,0,13,177,194,0,13,174,194,0,13,171,194,0,13,168,194,0,13,165,194,0,13,162,194,0,13,159,194,0,13,154
+	.byte 194,0,13,151,194,0,13,150,194,0,13,145,194,0,13,144,194,0,13,139,194,0,13,138,194,0,13,133,194,0,13,130
+	.byte 194,0,13,129,194,0,13,126,194,0,13,123,194,0,13,120,194,0,13,117,194,0,13,114,194,0,13,111,194,0,13,108
+	.byte 194,0,13,105,194,0,13,102,194,0,13,99,194,0,13,98,194,0,13,93,194,0,13,90,194,0,13,89,194,0,13,84
+	.byte 194,0,13,78,194,0,13,77,194,0,13,72,194,0,13,71,194,0,13,66,194,0,13,65,194,0,13,60,194,0,13,57
+	.byte 194,0,13,54,194,0,13,51,194,0,13,48,194,0,13,45,194,0,13,42,194,0,13,39,194,0,13,36,194,0,13,33
+	.byte 194,0,13,30,194,0,13,29,194,0,13,24,194,0,13,23,194,0,13,18,194,0,13,17,194,0,13,11,194,0,13,8
+	.byte 194,0,13,5,194,0,13,2,194,0,12,252,194,0,12,251,194,0,12,246,194,0,12,245,194,0,12,240,194,0,12,234
+	.byte 194,0,12,233,194,0,12,226,194,0,12,225,194,0,12,220,194,0,12,219,194,0,12,213,194,0,12,210,194,0,12,207
+	.byte 194,0,12,206,194,0,12,201,194,0,12,198,194,0,12,195,194,0,21,114,194,0,21,197,194,0,21,236,194,0,13,45
+	.byte 194,0,13,48,194,0,13,54,194,0,13,57,194,0,13,71,194,0,13,130,194,0,13,133,194,0,13,209,194,0,13,215
+	.byte 194,0,21,123,194,0,14,19,194,0,14,22,194,0,14,25,194,0,21,126,194,0,21,129,194,0,21,132,194,0,14,52
+	.byte 194,0,21,138,194,0,21,141,194,0,21,147,194,0,21,151,194,0,21,154,194,0,14,110,194,0,21,158,194,0,21,167
+	.byte 194,0,21,170,194,0,21,173,194,0,21,176,194,0,21,179,194,0,21,182,194,0,21,185,194,0,21,188,194,0,21,191
+	.byte 194,0,21,203,194,0,21,206,194,0,21,209,194,0,14,198,194,0,14,205,194,0,21,212,194,0,21,215,194,0,21,224
+	.byte 194,0,21,227,194,0,21,230,194,0,21,233,194,0,21,236,194,0,21,233,194,0,21,230,194,0,21,227,194,0,21,224
+	.byte 194,0,21,221,194,0,21,218,194,0,21,215,194,0,21,212,194,0,21,209,194,0,21,206,194,0,21,203,194,0,21,200
+	.byte 194,0,21,197,194,0,21,194,194,0,21,191,194,0,21,188,194,0,21,185,194,0,21,182,194,0,21,179,194,0,21,176
+	.byte 194,0,21,173,194,0,21,170,194,0,21,167,128,148,194,0,21,161,194,0,21,158,194,0,21,154,194,0,21,150,194,0
+	.byte 21,147,194,0,21,144,194,0,21,141,194,0,21,138,194,0,21,135,194,0,21,132,194,0,21,129,194,0,21,126,194,0
+	.byte 21,123,194,0,21,120,194,0,21,117,194,0,21,114,194,0,21,111,194,0,21,108,194,0,21,105,194,0,21,104,194,0
+	.byte 21,99,194,0,21,96,194,0,21,93,128,181,128,178,128,175,128,172,128,169,128,166,128,163,128,160,128,157,128,154,128,151
+	.byte 128,145,128,142,128,139,128,136,128,133,128,130,127,124,121,118,115,112,111,106,105,100,97,96,91,90,0,128,144,16,0,0
+	.byte 1,31,128,198,128,205,194,0,47,112,72,16,0,8,194,0,47,161,194,0,47,158,194,0,47,112,193,0,15,137,194,0
+	.byte 47,130,194,0,47,118,194,0,47,105,194,0,47,106,194,0,47,107,194,0,47,108,194,0,47,109,194,0,47,110,194,0
+	.byte 47,111,194,0,47,115,194,0,47,127,194,0,47,116,194,0,47,129,128,195,194,0,47,123,194,0,47,128,194,0,47,124
+	.byte 194,0,47,125,194,0,47,126,194,0,47,155,194,0,47,152,194,0,47,149,128,200,128,197,128,196,128,195,128,204,4,128
+	.byte 160,40,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,31,128,162,194,0,47,112,72,0,0,8
+	.byte 194,0,47,161,194,0,47,158,194,0,47,112,193,0,15,137,194,0,47,130,194,0,47,118,194,0,47,105,194,0,47,106
+	.byte 194,0,47,107,194,0,47,108,194,0,47,109,194,0,47,110,194,0,47,111,194,0,47,115,194,0,47,127,194,0,47,116
+	.byte 194,0,47,129,194,0,47,117,194,0,47,123,194,0,47,128,194,0,47,124,194,0,47,125,194,0,47,126,194,0,47,155
+	.byte 194,0,47,152,194,0,47,149,194,0,47,131,194,0,47,120,194,0,47,119,194,0,47,117,128,208,0,128,144,16,0,0
+	.byte 1,33,128,198,128,230,194,0,47,112,88,32,0,8,194,0,47,161,194,0,47,158,194,0,47,112,193,0,15,137,194,0
+	.byte 47,130,194,0,47,118,194,0,47,105,194,0,47,106,194,0,47,107,194,0,47,108,194,0,47,109,194,0,47,110,194,0
+	.byte 47,111,194,0,47,115,194,0,47,127,194,0,47,116,194,0,47,129,128,214,194,0,47,123,194,0,47,128,194,0,47,124
+	.byte 194,0,47,125,194,0,47,126,194,0,47,155,194,0,47,152,194,0,47,149,128,219,128,216,128,215,128,214,128,223,128,226
+	.byte 128,229,4,128,128,20,0,0,4,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,128,28,0,0,4
+	.byte 193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,128,20,0,0,4,193,0,15,144,193,0,15,141,193
+	.byte 0,15,140,193,0,15,137,33,128,162,194,0,47,112,88,0,0,8,194,0,47,161,194,0,47,158,194,0,47,112,193,0
+	.byte 15,137,194,0,47,130,194,0,47,118,194,0,47,105,194,0,47,106,194,0,47,107,194,0,47,108,194,0,47,109,194,0
+	.byte 47,110,194,0,47,111,194,0,47,115,194,0,47,127,194,0,47,116,194,0,47,129,194,0,47,117,194,0,47,123,194,0
+	.byte 47,128,194,0,47,124,194,0,47,125,194,0,47,126,194,0,47,155,194,0,47,152,194,0,47,149,194,0,47,131,194,0
+	.byte 47,120,194,0,47,119,194,0,47,117,128,235,128,236,128,237,0,128,144,16,0,0,1,31,128,198,128,251,194,0,47,112
+	.byte 72,16,0,8,194,0,47,161,194,0,47,158,194,0,47,112,193,0,15,137,194,0,47,130,194,0,47,118,194,0,47,105
+	.byte 194,0,47,106,194,0,47,107,194,0,47,108,194,0,47,109,194,0,47,110,194,0,47,111,194,0,47,115,194,0,47,127
+	.byte 194,0,47,116,194,0,47,129,128,241,194,0,47,123,194,0,47,128,194,0,47,124,194,0,47,125,194,0,47,126,194,0
+	.byte 47,155,194,0,47,152,194,0,47,149,128,246,128,243,128,242,128,241,128,250,4,128,160,24,0,0,8,193,0,15,144,193
+	.byte 0,15,141,193,0,15,140,193,0,15,137,4,128,160,32,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0
+	.byte 15,137,4,128,160,24,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,160,32,0,0,8
+	.byte 193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,160,24,0,0,8,193,0,15,144,193,0,15,141,193
+	.byte 0,15,140,193,0,15,137,4,128,160,32,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128
+	.byte 160,24,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,160,32,0,0,8,193,0,15,144
+	.byte 193,0,15,141,193,0,15,140,193,0,15,137,115,103,101,110,0
+.text 1
+runtime_version:
+	.string ""
+.text 1
+assembly_guid:
+	.string "30D759A8-BF67-407F-A8D5-FC09532D9E48"
+.text 1
+assembly_name:
+	.string "Xamarin.AndroidX.ViewPager"
+.data 0
+	.balign 8
+mono_aot_file_info:
+	.globl mono_aot_file_info
+	.type mono_aot_file_info,@object
+
+	.long 172,0
+	.balign 8
+	.xword mono_aot_Xamarin_AndroidX_ViewPager_got
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword jit_code_start
+	.balign 8
+	.xword jit_code_end
+	.balign 8
+	.xword method_addresses
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword blob
+	.balign 8
+	.xword class_name_table
+	.balign 8
+	.xword class_info_offsets
+	.balign 8
+	.xword method_info_offsets
+	.balign 8
+	.xword ex_info_offsets
+	.balign 8
+	.xword extra_method_info_offsets
+	.balign 8
+	.xword extra_method_table
+	.balign 8
+	.xword got_info_offsets
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword image_table
+	.balign 8
+	.xword weak_field_indexes
+	.balign 8
+	.xword mem_end
+	.balign 8
+	.xword assembly_guid
+	.balign 8
+	.xword runtime_version
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword assembly_name
+	.balign 8
+	.xword plt
+	.balign 8
+	.xword plt_end
+	.balign 8
+	.xword unwind_info
+	.balign 8
+	.xword unbox_trampolines
+	.balign 8
+	.xword unbox_trampolines_end
+	.balign 8
+	.xword unbox_trampoline_addresses
+
+	.long 25,208,1,272,0,32,374417919,0
+	.long 2668,128,8,8,8,9,8388607,0
+	.long 4,25,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.byte 133,184,62,98,176,38,129,208,60,10,2,125,181,144,219,17
+.text 1
+	.balign 8
+mem_end:

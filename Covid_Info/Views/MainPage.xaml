@@ -8,8 +8,7 @@
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:views="clr-namespace:Covid_Info.Views"
-    Visual="Material">
+    xmlns:views="clr-namespace:Covid_Info.Views">
 
 
 
@@ -28,34 +27,26 @@
                     <Grid RowDefinitions="auto,*">
                         <Grid RowDefinitions="120, auto">
                             <!--  covid banner  -->
-                            <pkv:PancakeView
-                                Grid.Row="0"
-                                Margin="-2"
-                                Padding="0"
-                                BackgroundColor="Transparent"
-                                CornerRadius="0">
-                                <Grid>
-                                    <Path
-                                        Aspect="Fill"
-                                        Data="m34.83001,189.05001l715.99999,0l0,182.76699c-225.99999,-35 -531.99999,70.63757 -713.99999,5.07077l-2,-187.83776z"
-                                        Fill="{StaticResource PrimaryColor}"
-                                        TranslationY="-2" />
-                                    <Grid Padding="23,0,23,5" RowDefinitions="auto,auto">
-                                        <Label
-                                            Grid.Row="0"
-                                            FontAttributes="Bold"
-                                            FontSize="Small"
-                                            Text="{i18n:Translate bannerTitle}"
-                                            TextColor="White" />
-                                        <Label
-                                            Grid.Row="1"
-                                            FontSize="Small"
-                                            LineBreakMode="WordWrap"
-                                            Text="{i18n:Translate bannerDescription}"
-                                            TextColor="White" />
-                                    </Grid>
+                            <Grid Grid.Row="0" Margin="-1">
+                                <Path
+                                    Aspect="Fill"
+                                    Data="m34.83001,189.05001l715.99999,0l0,182.76699c-225.99999,-35 -531.99999,70.63757 -713.99999,5.07077l-2,-187.83776z"
+                                    Fill="{StaticResource PrimaryColor}" />
+                                <Grid Padding="20,0,20,0" RowDefinitions="auto,auto">
+                                    <Label
+                                        Grid.Row="0"
+                                        FontAttributes="Bold"
+                                        FontSize="Small"
+                                        Text="{i18n:Translate bannerTitle}"
+                                        TextColor="White" />
+                                    <Label
+                                        Grid.Row="1"
+                                        FontSize="Small"
+                                        LineBreakMode="WordWrap"
+                                        Text="{i18n:Translate bannerDescription}"
+                                        TextColor="White" />
                                 </Grid>
-                            </pkv:PancakeView>
+                            </Grid>
 
                             <Grid
                                 Grid.Row="1"
@@ -102,7 +93,7 @@
                                         </Grid>
                                     </Grid>
                                     <pkv:PancakeView.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding goASymptoms}" />
+                                        <TapGestureRecognizer Command="{Binding GoASymptoms}" />
                                     </pkv:PancakeView.GestureRecognizers>
                                 </pkv:PancakeView>
 
@@ -142,7 +133,7 @@
                                         </Grid>
                                     </Grid>
                                     <pkv:PancakeView.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding goAdvices}" />
+                                        <TapGestureRecognizer Command="{Binding GoAdvices}" />
                                     </pkv:PancakeView.GestureRecognizers>
                                 </pkv:PancakeView>
                             </Grid>
@@ -205,7 +196,7 @@
                     Margin="0"
                     Padding="10"
                     BackgroundColor="#cfd8dc"
-                    IsVisible="True"
+                    IsVisible="{Binding IsVisibleMainPage}"
                     VerticalOptions="EndAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />

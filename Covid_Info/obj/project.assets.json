@@ -11,20 +11,6 @@
           "lib/netstandard2.0/Acr.UserDialogs.dll": {}
         }
       },
-      "Com.OneSignal/3.10.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.0/Com.OneSignal.Abstractions.dll": {},
-          "lib/netstandard1.0/Com.OneSignal.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Com.OneSignal.Abstractions.dll": {},
-          "lib/netstandard1.0/Com.OneSignal.dll": {}
-        }
-      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -35,51 +21,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/DryIoc.dll": {}
-        }
-      },
-      "Microsoft.AppCenter/3.4.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/Microsoft.AppCenter.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Microsoft.AppCenter.dll": {}
-        }
-      },
-      "Microsoft.AppCenter.Analytics/3.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AppCenter": "3.4.0"
-        },
-        "compile": {
-          "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {}
-        }
-      },
-      "Microsoft.AppCenter.Crashes/3.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AppCenter": "3.4.0"
-        },
-        "compile": {
-          "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll": {}
-        }
-      },
-      "Microsoft.AppCenter.Distribute/3.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AppCenter": "3.4.0"
-        },
-        "compile": {
-          "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -172,16 +113,16 @@
           "lib/netstandard2.0/Prism.Plugin.Popups.dll": {}
         }
       },
-      "Rg.Plugins.Popup/2.0.0.3": {
+      "Rg.Plugins.Popup/1.2.0.223": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.5.0.530"
+          "Xamarin.Forms": "2.5.0.121934"
         },
         "compile": {
-          "lib/netstandard2.0/Rg.Plugins.Popup.dll": {}
+          "lib/netstandard1.0/Rg.Plugins.Popup.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Rg.Plugins.Popup.dll": {}
+          "lib/netstandard1.0/Rg.Plugins.Popup.dll": {}
         }
       },
       "sqlite-net-pcl/1.7.335": {
@@ -505,7 +446,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1239": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -535,23 +476,11 @@
           "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll": {}
         }
       },
-      "Xamarin.Forms.Visual.Material/4.7.0.1239": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "4.7.0.1239"
-        },
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
       "Resx/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "4.7.0.1239"
+          "Xamarin.Forms": "4.7.0.1351"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -603,33 +532,6 @@
         "readme.txt"
       ]
     },
-    "Com.OneSignal/3.10.0": {
-      "sha512": "+oGYJFScsnRw2rtC3KWNadi5n7ygO01sC3GatdVuP1AIJXi9xlONa103YULebMSReOxqSwJSeM8/wDIUqQRzbQ==",
-      "type": "package",
-      "path": "com.onesignal/3.10.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "com.onesignal.3.10.0.nupkg.sha512",
-        "com.onesignal.nuspec",
-        "lib/MonoAndroid10/Com.OneSignal.Abstractions.dll",
-        "lib/MonoAndroid10/Com.OneSignal.Abstractions.pdb",
-        "lib/MonoAndroid10/Com.OneSignal.dll",
-        "lib/MonoAndroid10/Com.OneSignal.pdb",
-        "lib/MonoAndroid10/OneSignal.Android.Binding.dll",
-        "lib/MonoAndroid10/OneSignal.Android.Binding.pdb",
-        "lib/Xamarin.iOS10/Com.OneSignal.Abstractions.dll",
-        "lib/Xamarin.iOS10/Com.OneSignal.Abstractions.pdb",
-        "lib/Xamarin.iOS10/Com.OneSignal.dll",
-        "lib/Xamarin.iOS10/Com.OneSignal.pdb",
-        "lib/Xamarin.iOS10/OneSignal.iOS.Binding.dll",
-        "lib/Xamarin.iOS10/OneSignal.iOS.Binding.pdb",
-        "lib/netstandard1.0/Com.OneSignal.Abstractions.dll",
-        "lib/netstandard1.0/Com.OneSignal.Abstractions.pdb",
-        "lib/netstandard1.0/Com.OneSignal.dll",
-        "lib/netstandard1.0/Com.OneSignal.pdb"
-      ]
-    },
     "DryIoc.dll/4.0.7": {
       "sha512": "CHSWiSNf0tTpnHFt+DPB8mzgQMM9PbaFk7DP4g70+kTXsAS7fQlUI/yW4S+b6COOYsVQ+FPhxAw9NMU/2PGE7Q==",
       "type": "package",
@@ -657,100 +559,6 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/DryIoc.xml",
         "lib/portable-net45+win8+wp8+wpa81/DryIoc.dll",
         "lib/portable-net45+win8+wp8+wpa81/DryIoc.xml"
-      ]
-    },
-    "Microsoft.AppCenter/3.4.0": {
-      "sha512": "iKXIv436h2qczSGaUDfmZJxdu2ESfH67ullZrQgmA+HXxIsZdv079bxNR5sxlF4Mc71oYXBo0JAt1Sba4ZNkBg==",
-      "type": "package",
-      "path": "microsoft.appcenter/3.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.xml",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.xml",
-        "lib/net461/Microsoft.AppCenter.dll",
-        "lib/net461/Microsoft.AppCenter.xml",
-        "lib/netcoreapp3.0/Microsoft.AppCenter.dll",
-        "lib/netcoreapp3.0/Microsoft.AppCenter.xml",
-        "lib/netstandard1.0/Microsoft.AppCenter.dll",
-        "lib/netstandard1.0/Microsoft.AppCenter.xml",
-        "lib/uap10.0/Microsoft.AppCenter.dll",
-        "lib/uap10.0/Microsoft.AppCenter.xml",
-        "microsoft.appcenter.3.4.0.nupkg.sha512",
-        "microsoft.appcenter.nuspec"
-      ]
-    },
-    "Microsoft.AppCenter.Analytics/3.4.0": {
-      "sha512": "e3D1xJRwcbmzGYtgz0cLlaSPGWRrzmIHBG4CygD7lFN+3HUN9lehRXZV22tJpK7mkssCLwMS8pKwrXB7POOw/g==",
-      "type": "package",
-      "path": "microsoft.appcenter.analytics/3.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.xml",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.xml",
-        "lib/net461/Microsoft.AppCenter.Analytics.dll",
-        "lib/net461/Microsoft.AppCenter.Analytics.xml",
-        "lib/netcoreapp3.0/Microsoft.AppCenter.Analytics.dll",
-        "lib/netcoreapp3.0/Microsoft.AppCenter.Analytics.xml",
-        "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll",
-        "lib/netstandard1.0/Microsoft.AppCenter.Analytics.xml",
-        "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
-        "lib/uap10.0/Microsoft.AppCenter.Analytics.xml",
-        "microsoft.appcenter.analytics.3.4.0.nupkg.sha512",
-        "microsoft.appcenter.analytics.nuspec"
-      ]
-    },
-    "Microsoft.AppCenter.Crashes/3.4.0": {
-      "sha512": "C1O6dwfVbscVoaEnGebC+LACPYpNQMywcebF6shS1DsAMiKETtCuX52ZSE58aZeay8d448/B9nepJ3C5qV1C8Q==",
-      "type": "package",
-      "path": "microsoft.appcenter.crashes/3.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.Android.Bindings.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Crashes.xml",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.xml",
-        "lib/net461/Microsoft.AppCenter.Crashes.dll",
-        "lib/net461/Microsoft.AppCenter.Crashes.xml",
-        "lib/netcoreapp3.0/Microsoft.AppCenter.Crashes.dll",
-        "lib/netcoreapp3.0/Microsoft.AppCenter.Crashes.xml",
-        "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll",
-        "lib/netstandard1.0/Microsoft.AppCenter.Crashes.xml",
-        "lib/uap10.0/Microsoft.AppCenter.Crashes.dll",
-        "lib/uap10.0/Microsoft.AppCenter.Crashes.xml",
-        "microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
-        "microsoft.appcenter.crashes.nuspec"
-      ]
-    },
-    "Microsoft.AppCenter.Distribute/3.4.0": {
-      "sha512": "IcVaml9RDMneSL94Ii4uSC21qgmGQkeCAxROT//4KybxKypdjjjubSEdeZUVKARr0xmfZLj+2+fbL7suCt0MEw==",
-      "type": "package",
-      "path": "microsoft.appcenter.distribute/3.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.Android.Bindings.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.dll",
-        "lib/MonoAndroid403/Microsoft.AppCenter.Distribute.xml",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll",
-        "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.xml",
-        "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll",
-        "lib/netstandard1.0/Microsoft.AppCenter.Distribute.xml",
-        "microsoft.appcenter.distribute.3.4.0.nupkg.sha512",
-        "microsoft.appcenter.distribute.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -1024,51 +832,34 @@
         "prism.plugin.popups.nuspec"
       ]
     },
-    "Rg.Plugins.Popup/2.0.0.3": {
-      "sha512": "/lrKxxsdaF9T+YEnVDaUMj0angdRyvpngSmX8veY/QYhSjT4x3guJTsL8O8D4egDf7MI5McnmMAsst0tkN1LOA==",
+    "Rg.Plugins.Popup/1.2.0.223": {
+      "sha512": "0ruzj7EedYRUhhsk327z7ymaHzf9E/n6Slg2ZJfOYqtZ14tX1dtWbyNRSmGEnWxLyN1qSq4Od4U6vYupHRpdtw==",
       "type": "package",
-      "path": "rg.plugins.popup/2.0.0.3",
+      "path": "rg.plugins.popup/1.2.0.223",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.md",
-        "icon.png",
-        "lib/monoandroid10.0/Rg.Plugins.Popup.dll",
-        "lib/monoandroid10.0/Rg.Plugins.Popup.pdb",
-        "lib/monoandroid10.0/Rg.Plugins.Popup.xml",
-        "lib/monoandroid90/Rg.Plugins.Popup.dll",
-        "lib/monoandroid90/Rg.Plugins.Popup.pdb",
-        "lib/monoandroid90/Rg.Plugins.Popup.xml",
-        "lib/net472/Rg.Plugins.Popup.dll",
-        "lib/net472/Rg.Plugins.Popup.pdb",
-        "lib/net472/Rg.Plugins.Popup.xml",
-        "lib/netcoreapp3.1/Rg.Plugins.Popup.dll",
-        "lib/netcoreapp3.1/Rg.Plugins.Popup.pdb",
-        "lib/netcoreapp3.1/Rg.Plugins.Popup.xml",
-        "lib/netstandard2.0/Rg.Plugins.Popup.dll",
-        "lib/netstandard2.0/Rg.Plugins.Popup.pdb",
-        "lib/netstandard2.0/Rg.Plugins.Popup.xml",
-        "lib/tizen40/Rg.Plugins.Popup.dll",
-        "lib/tizen40/Rg.Plugins.Popup.pdb",
-        "lib/tizen40/Rg.Plugins.Popup.xml",
-        "lib/uap10.0.17763/Rg.Plugins.Popup.dll",
-        "lib/uap10.0.17763/Rg.Plugins.Popup.pdb",
-        "lib/uap10.0.17763/Rg.Plugins.Popup.pri",
-        "lib/uap10.0.17763/Rg.Plugins.Popup.xml",
-        "lib/xamarinios10/Rg.Plugins.Popup.dll",
-        "lib/xamarinios10/Rg.Plugins.Popup.pdb",
-        "lib/xamarinios10/Rg.Plugins.Popup.xml",
-        "lib/xamarinmac20/Rg.Plugins.Popup.dll",
-        "lib/xamarinmac20/Rg.Plugins.Popup.pdb",
-        "lib/xamarinmac20/Rg.Plugins.Popup.xml",
-        "lib/xamarintvos10/Rg.Plugins.Popup.dll",
-        "lib/xamarintvos10/Rg.Plugins.Popup.pdb",
-        "lib/xamarintvos10/Rg.Plugins.Popup.xml",
-        "lib/xamarinwatchos10/Rg.Plugins.Popup.dll",
-        "lib/xamarinwatchos10/Rg.Plugins.Popup.pdb",
-        "lib/xamarinwatchos10/Rg.Plugins.Popup.xml",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll.mdb",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.pdb",
+        "lib/MonoAndroid/Rg.Plugins.Popup.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.pdb",
+        "lib/netstandard1.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard1.0/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.pdb",
         "readme.txt",
-        "rg.plugins.popup.2.0.0.3.nupkg.sha512",
+        "rg.plugins.popup.1.2.0.223.nupkg.sha512",
         "rg.plugins.popup.nuspec"
       ]
     },
@@ -2077,10 +1868,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.7.0.1239": {
-      "sha512": "vGtrCFHo/eEIDPk0yHsktW1xl4rt+KbTab2ciPbsU7tlI5x88aspH9IJlfybh5ejCFhRYYpNr8+uB9vX08bsuA==",
+    "Xamarin.Forms/4.7.0.1351": {
+      "sha512": "JdhRaNGFZIkbKC1t/fdI0+iJKO0bZx603hWEu15N3ffUkkRji3EQzMvyv6MZggW6cDR88gIsk0NRkLlLF3wMFg==",
       "type": "package",
-      "path": "xamarin.forms/4.7.0.1239",
+      "path": "xamarin.forms/4.7.0.1351",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2387,7 +2178,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.7.0.1239.nupkg.sha512",
+        "xamarin.forms.4.7.0.1351.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2409,30 +2200,6 @@
         "xamarin.forms.pancakeview.nuspec"
       ]
     },
-    "Xamarin.Forms.Visual.Material/4.7.0.1239": {
-      "sha512": "O4MSFQKy0dUaEivTDDeZ1PV9iggkghTDC/RBbACoElOwl2+S2QTtYloLNeXqrDk21vNwoelqAg10gCvy0up6Mg==",
-      "type": "package",
-      "path": "xamarin.forms.visual.material/4.7.0.1239",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Assets/xamarin_128x128.png",
-        "build/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
-        "buildTransitive/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
-        "lib/MonoAndroid10.0/Xamarin.Forms.Material.dll",
-        "lib/MonoAndroid10.0/Xamarin.Forms.Material.pdb",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoAndroid90/Xamarin.Forms.Material.dll",
-        "lib/MonoAndroid90/Xamarin.Forms.Material.pdb",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Material.pdb",
-        "lib/netstandard1.0/_._",
-        "lib/tizen40/Xamarin.Forms.Material.dll",
-        "lib/tizen40/Xamarin.Forms.Material.pdb",
-        "xamarin.forms.visual.material.4.7.0.1239.nupkg.sha512",
-        "xamarin.forms.visual.material.nuspec"
-      ]
-    },
     "Resx/1.0.0": {
       "type": "project",
       "path": "../Resx/Resx.csproj",
@@ -2442,23 +2209,17 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Acr.UserDialogs >= 7.1.0.446",
-      "Com.OneSignal >= 3.10.0",
-      "Microsoft.AppCenter.Analytics >= 3.4.0",
-      "Microsoft.AppCenter.Crashes >= 3.4.0",
-      "Microsoft.AppCenter.Distribute >= 3.4.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
       "Prism.Plugin.Popups >= 7.2.0.1046",
       "Resx >= 1.0.0",
-      "Rg.Plugins.Popup >= 2.0.0.3",
       "Syncfusion.Licensing >= 18.2.0.48",
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.48",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.7.0.1239",
+      "Xamarin.Forms >= 4.7.0.1351",
       "Xamarin.Forms.PancakeView >= 2.0.1.707",
-      "Xamarin.Forms.Visual.Material >= 4.7.0.1239",
       "sqlite-net-pcl >= 1.7.335"
     ]
   },
@@ -2469,11 +2230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+      "projectUniqueName": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
       "projectName": "Covid_Info",
-      "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+      "projectPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
+      "outputPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -2492,9 +2253,10 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-              "projectPath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+            "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+              "projectPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
             }
           }
         }
@@ -2507,26 +2269,11 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Acr.UserDialogs": {
             "target": "Package",
             "version": "[7.1.0.446, )"
-          },
-          "Com.OneSignal": {
-            "target": "Package",
-            "version": "[3.10.0, )"
-          },
-          "Microsoft.AppCenter.Analytics": {
-            "target": "Package",
-            "version": "[3.4.0, )"
-          },
-          "Microsoft.AppCenter.Crashes": {
-            "target": "Package",
-            "version": "[3.4.0, )"
-          },
-          "Microsoft.AppCenter.Distribute": {
-            "target": "Package",
-            "version": "[3.4.0, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -2546,10 +2293,6 @@
             "target": "Package",
             "version": "[7.2.0.1046, )"
           },
-          "Rg.Plugins.Popup": {
-            "target": "Package",
-            "version": "[2.0.0.3, )"
-          },
           "Syncfusion.Licensing": {
             "target": "Package",
             "version": "[18.2.0.48, )"
@@ -2568,15 +2311,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.7.0.1239, )"
+            "version": "[4.7.0.1351, )"
           },
           "Xamarin.Forms.PancakeView": {
             "target": "Package",
             "version": "[2.0.1.707, )"
-          },
-          "Xamarin.Forms.Visual.Material": {
-            "target": "Package",
-            "version": "[4.7.0.1239, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
@@ -2593,7 +2332,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

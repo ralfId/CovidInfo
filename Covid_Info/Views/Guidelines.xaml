@@ -14,7 +14,7 @@
                 Padding="0"
                 FontAttributes="Bold"
                 FontSize="Large"
-                Text="Guidelines"
+                Text="{i18n:Translate guide}"
                 TextColor="{StaticResource WhiteColor}"
                 VerticalOptions="CenterAndExpand" />
             <Label

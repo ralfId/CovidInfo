@@ -1,78 +1,91 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:converters="clr-namespace:Covid_Info.Converters"
-             xmlns:i18n="clr-namespace:Resx;assembly=Resx"
-             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
-             mc:Ignorable="d"
-             x:Class="Covid_Info.Views.ContentViews.MostAffectedCountries"
-             Visual="Material">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covid_Info.Views.ContentViews.MostAffectedCountries"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Covid_Info.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
     <ContentView.Resources>
         <ResourceDictionary>
-            <converters:ToUpperCaseConverter x:Key="ToUpperCaseConverter"/>
+            <converters:ToUpperCaseConverter x:Key="ToUpperCaseConverter" />
         </ResourceDictionary>
     </ContentView.Resources>
-    
+
     <ContentView.Content>
 
         <Frame>
-            <Grid >
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0"
-                       
-                       FontAttributes="Bold"
-                       FontSize="{StaticResource BaseTitleFontSize}"
-                       TextColor="{StaticResource BaseFontColor}"
-                       Margin="10,5">
+                <Label
+                    Grid.Row="0"
+                    Margin="10,5"
+                    FontAttributes="Bold"
+                    FontSize="{StaticResource BaseTitleFontSize}"
+                    TextColor="{StaticResource BaseFontColor}">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{i18n:Translate mostAffectedcountries}" />
-                            <Span Text=" ("/>
-                            <Span Text="{i18n:Translate deathsCases}"/>
-                            <Span Text=")"/>
+                            <Span Text=" (" />
+                            <Span Text="{i18n:Translate deathsCases}" />
+                            <Span Text=")" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <StackLayout Grid.Row="1"   BindableLayout.ItemsSource="{Binding ObMostaAffectedCountries}">
+                <StackLayout Grid.Row="1" BindableLayout.ItemsSource="{Binding ObMostaAffectedCountries}">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Margin="0,5">
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Grid.Column="0" Grid.Row="0" Aspect="AspectFill" WidthRequest="100" HeightRequest="60">
+                                    <Image
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Aspect="AspectFill"
+                                        HeightRequest="60"
+                                        WidthRequest="100">
                                         <Image.Source>
-                                            <UriImageSource Uri="{Binding countryInfo.flag}" CachingEnabled="True" CacheValidity="15"/>
+                                            <UriImageSource
+                                                CacheValidity="15"
+                                                CachingEnabled="True"
+                                                Uri="{Binding countryInfo.flag}" />
                                         </Image.Source>
                                     </Image>
 
                                     <Grid Grid.Row="0" Grid.Column="1">
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="auto"/>
-                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="auto" />
                                         </Grid.RowDefinitions>
-                                        <Label Grid.Row="0" Text="{Binding country}"
-                                               FontSize="Body"
-                                               TextColor="{StaticResource BaseFontColor}"
-                                               FontAttributes="Bold" HorizontalOptions="Center"/>
-                                        <Label Grid.Row="1" Text="{Binding deaths, StringFormat='{0:0,0}'}"
-						                       FontSize="25"
-						                       TextColor="{StaticResource SecundaryDarkColor}"
-						                       FontAttributes="Bold" HorizontalOptions="Center"/>
+                                        <Label
+                                            Grid.Row="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Body"
+                                            HorizontalOptions="Center"
+                                            Text="{Binding country}"
+                                            TextColor="{StaticResource BaseFontColor}" />
+                                        <Label
+                                            Grid.Row="1"
+                                            FontAttributes="Bold"
+                                            FontSize="25"
+                                            HorizontalOptions="Center"
+                                            Text="{Binding deaths, StringFormat='{0:0,0}'}"
+                                            TextColor="{StaticResource SecundaryDarkColor}" />
                                     </Grid>
                                 </Grid>
                                 <BoxView BackgroundColor="LightGray" HeightRequest="1" />
@@ -83,6 +96,6 @@
 
             </Grid>
         </Frame>
-        
+
     </ContentView.Content>
 </ContentView>

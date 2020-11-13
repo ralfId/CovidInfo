@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UhWRdlgr2A6kxk3PwIG3QgdmbwLQdw7JsUB9CPpSY6A2ejTNxP0C/G2dFJsoEm9lrEaVBlOXT8eBlfsYFbokKA==",
+  "dgSpecHash": "u4E3gOoXqjShzRxegaLKd/I8D2cLRpSpNHZkjYz/mmusKH8KJJki+nlPql37Wgmm+Z6p9zJOST2zYsyzdgdLYQ==",
   "success": true,
-  "projectFilePath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+  "projectFilePath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1239\\xamarin.forms.4.7.0.1239.nupkg.sha512"
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1351\\xamarin.forms.4.7.0.1351.nupkg.sha512"
   ],
   "logs": []
 }

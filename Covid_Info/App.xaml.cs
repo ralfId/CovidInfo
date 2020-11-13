@@ -10,17 +10,14 @@ using Covid_Info.Helpers.CovertModels;
 using System;
 using Xamarin.Essentials;
 using Covid_Info.Utils;
-using Com.OneSignal;
 using Prism.Plugin.Popups;
 using System.Threading.Tasks;
 using Covid_Info.Models;
 using System.Collections.Generic;
 using Resx;
 using Acr.UserDialogs;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using Microsoft.AppCenter.Distribute;
+using System.Diagnostics;
+using Xamarin.Forms.PlatformConfiguration;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid_Info
@@ -44,16 +41,13 @@ namespace Covid_Info
 
                 Xamarin.Forms.Device.SetFlags(new string[] { "Shapes_Experimental" });
                
-                OneSignal.Current.StartInit("22bbbcc9-938a-40ad-a342-2d54994ff0a2").EndInit();
-                AppCenter.Start("ios=9c0b2d9c-a232-44bd-b370-1a51295088e0;android=52dd7eff-3093-4cfe-89e5-16b315c9bf47", typeof(Analytics), typeof(Crashes), typeof(Distribute));
-
                 if (VersionTracking.IsFirstLaunchEver) await AddGuideLines();
                 await NavigationService.NavigateAsync("NavigationPage/MainPage");
 
             }
             catch (Exception ex)
             {
-                Crashes.TrackError(ex);
+                Debug.Print(ex.ToString());
             }
             
         }
@@ -85,7 +79,6 @@ namespace Covid_Info
             containerRegistry.RegisterForNavigation<Guidelines, GuidelinesViewModel>();
             containerRegistry.RegisterForNavigation<Covid_Info.Views.GuidelinesViews.Symptoms>();
             containerRegistry.RegisterForNavigation<Covid_Info.Views.GuidelinesViews.Advices>();
-            containerRegistry.RegisterForNavigation<Covid_Info.Views.Popups.CountrySorting>();
         }
 
 
@@ -126,6 +119,17 @@ namespace Covid_Info
                 new Symptoms{category = Constants.graves, symptom= Resource.symptoms13},
             };
             await DBConnection.Database.insertAllAsync(lstSymp);
+
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                var permissions = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+
+                if (permissions != PermissionStatus.Granted)
+                {
+                    await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+                }
+
+            });
         }
 
 

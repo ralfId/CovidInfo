@@ -3,10 +3,6 @@ using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using Microsoft.AppCenter.Distribute;
 
 namespace Covid_Info.iOS
 {
@@ -26,8 +22,6 @@ namespace Covid_Info.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 
-            Distribute.DontCheckForUpdatesInDebug();
-            AppCenter.Start("59c0b2d9c-a232-44bd-b370-1a51295088e0", typeof(Analytics), typeof(Crashes), typeof(Distribute));
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
             global::Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();

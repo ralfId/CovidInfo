@@ -159,7 +159,7 @@
   <data name="errorConectionServer" xml:space="preserve">
     <value>Could not connect to the server. Please, try again!
 
-If the problem persists you can report the problem to the developer: rafael.ideveloper@gmail.com</value>
+If the problem persists you can report to the developer: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Updating...</value>
@@ -168,13 +168,14 @@ If the problem persists you can report the problem to the developer: rafael.idev
     <value>Tests performed</value>
   </data>
   <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Please enable the application's GPS permissions to display your country's statistics! This is required only once</value>
+    <value>Please enable location permissions in the app, to be able to display information about your country on the main page.
+This is necessary only once.</value>
   </data>
   <data name="ok" xml:space="preserve">
     <value>Ok</value>
   </data>
   <data name="disabledGPS" xml:space="preserve">
-    <value>Please enable your device's GPS to display your country's statistics!</value>
+    <value>Enable the application's location permissions to display information about your country on the main screen!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Search...</value>
@@ -189,7 +190,7 @@ If the problem persists you can report the problem to the developer: rafael.idev
     <value>Recently reported</value>
   </data>
   <data name="covidTests" xml:space="preserve">
-    <value>Testes COVID-19</value>
+    <value>Covid-19 Tests</value>
   </data>
   <data name="countriesStats" xml:space="preserve">
     <value>See statistics for each country</value>
@@ -403,5 +404,8 @@ If the problem persists you can report the problem to the developer: rafael.idev
   </data>
   <data name="tryAgainBTN" xml:space="preserve">
     <value>Please try again!</value>
+  </data>
+  <data name="guide" xml:space="preserve">
+    <value>Guide</value>
   </data>
 </root>

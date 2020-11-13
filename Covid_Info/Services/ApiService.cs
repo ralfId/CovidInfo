@@ -21,8 +21,10 @@ namespace Covid_Info.Services
 
             try
             {
-                HttpClient _httpClient = new HttpClient();
-                _httpClient.Timeout = new TimeSpan(0, 0, 20);
+                HttpClient _httpClient = new HttpClient
+                {
+                    Timeout = new TimeSpan(0, 0, 20)
+                };
 
                 var response = await _httpClient.GetAsync(url);
 
@@ -36,7 +38,7 @@ namespace Covid_Info.Services
             {
                 Debug.Print(e.ToString());
             }
-            return default(TReturn);
+            return default;
 
 
         }

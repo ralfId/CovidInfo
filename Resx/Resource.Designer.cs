@@ -358,7 +358,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Testes COVID-19.
+        ///   Busca una cadena traducida similar a Covid-19 Tests.
         /// </summary>
         public static string covidTests {
             get {
@@ -475,7 +475,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Please enable your device&apos;s GPS to display your country&apos;s statistics!.
+        ///   Busca una cadena traducida similar a Enable the application&apos;s location permissions to display information about your country on the main screen!.
         /// </summary>
         public static string disabledGPS {
             get {
@@ -493,7 +493,8 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Please enable the application&apos;s GPS permissions to display your country&apos;s statistics! This is required only once.
+        ///   Busca una cadena traducida similar a Please enable location permissions in the app, to be able to display information about your country on the main page.
+        ///This is necessary only once..
         /// </summary>
         public static string enableGPSPermissions {
             get {
@@ -504,7 +505,7 @@ namespace Resx {
         /// <summary>
         ///   Busca una cadena traducida similar a Could not connect to the server. Please, try again!
         ///
-        ///If the problem persists you can report the problem to the developer: rafael.ideveloper@gmail.com.
+        ///If the problem persists you can report to the developer: rafael.ideveloper@gmail.com.
         /// </summary>
         public static string errorConectionServer {
             get {
@@ -545,6 +546,15 @@ namespace Resx {
         public static string greatApp {
             get {
                 return ResourceManager.GetString("greatApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Guide.
+        /// </summary>
+        public static string guide {
+            get {
+                return ResourceManager.GetString("guide", resourceCulture);
             }
         }
         

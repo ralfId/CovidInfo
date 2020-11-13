@@ -24,7 +24,7 @@ namespace Covid_Info.ViewModels
     public class MainPageViewModel : ViewModelBase
     {
 
-        private List<Country> lstCountriesInfo;
+        private  List<Country> lstCountriesInfo;
         private ObservableCollection<Country> _obMostCountries;
         private readonly IApiService _apiService;
         private readonly ILocationServices _locationServices;
@@ -42,6 +42,8 @@ namespace Covid_Info.ViewModels
         private bool _isVisibleSVINFO;
         private bool _sfIndicator;
         private bool _isRefrshing;
+        private MyCountry myCountryInfo;
+
 
         public MainPageViewModel(
             INavigationService navigationService,
@@ -62,37 +64,36 @@ namespace Covid_Info.ViewModels
 
                 Title = "COVID-INFO";
 
-                Task.Run(async () => { await saveLocationInfo(); });
                 lstCountriesInfo = new List<Country>();
-                
 
-                navAllCountries = new DelegateCommand(async () => await _navigationService.NavigateAsync("AllCountries"));
-                UpdateDataonBTN = new DelegateCommand(async () => await refreshOnSwipeBTN());
-                UpdateDataonSwipe = new DelegateCommand(async () => await refreshOnSwipeBTN());
-                goExternalInfo = new DelegateCommand(async ()=> await _navigationService.NavigateAsync("ExternalInfo"));
-                goMyCountryDetails = new DelegateCommand(async () => await navContryDetails());
-                goGlobalDetails = new DelegateCommand(async () => await navGlobalDetails());
-                goAdvices = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Advices"));
-                goASymptoms = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Symptoms"));
-                refreshCommand = new DelegateCommand(async () => await refreshOnSwipeBTN());
+                NavAllCountries = new DelegateCommand(async () => await _navigationService.NavigateAsync("AllCountries"));
+                UpdateDataonBTN = new DelegateCommand(async () => await loadDataValidation());
+                UpdateDataonSwipe = new DelegateCommand(async () => await RefreshOnSwipeBTN());
+                GoExternalInfo = new DelegateCommand(async ()=> await _navigationService.NavigateAsync("ExternalInfo"));
+                GoMyCountryDetails = new DelegateCommand(async () => await navContryDetails());
+                GoGlobalDetails = new DelegateCommand(async () => await NavGlobalDetails());
+                GoAdvices = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Advices"));
+                GoASymptoms = new DelegateCommand(async () => await _navigationService.NavigateAsync($"Guidelines?{ KnownNavigationParameters.SelectedTab}=Symptoms"));
+                refreshCommand = new DelegateCommand(async () => await RefreshOnSwipeBTN());
                 Task.Run(async () => { await loadDataValidation(); });
+                
                
             }
             catch (Exception ex)
             {
-                Debug.Print($"error in MainPageViewModel ==> {ex.ToString()}");
+                Debug.Print($"error in MainPageViewModel ==> {ex}");
             }
 
         }
 
-     
+  
 
-        public DelegateCommand navAllCountries { get; private set; }
-        public DelegateCommand goMyCountryDetails { get; private set; }
-        public DelegateCommand goGlobalDetails { get; private set; }
-        public DelegateCommand goExternalInfo { get; private set; }
-        public DelegateCommand goAdvices { get; private set; }
-        public DelegateCommand goASymptoms { get; private set; }
+        public DelegateCommand NavAllCountries { get; private set; }
+        public DelegateCommand GoMyCountryDetails { get; private set; }
+        public DelegateCommand GoGlobalDetails { get; private set; }
+        public DelegateCommand GoExternalInfo { get; private set; }
+        public DelegateCommand GoAdvices { get; private set; }
+        public DelegateCommand GoASymptoms { get; private set; }
         public DelegateCommand refreshCommand { get; private set; }
 
 
@@ -143,7 +144,7 @@ namespace Covid_Info.ViewModels
             get { return _obMostCountries; }
             set { SetProperty(ref _obMostCountries, value); }
         }
-        public GlobalInfo globalInfo
+        public GlobalInfo GlobalInfo
         {
             get { return _globalInfo; }
             set { SetProperty(ref _globalInfo, value); }
@@ -161,23 +162,6 @@ namespace Covid_Info.ViewModels
 
 
         #endregion
-
-
-        private async Task saveLocationInfo()
-        {
-            try
-            {
-                var locationInfo = await _locationServices.GetMyCountryInfo();
-                if (locationInfo == null)
-                {
-                    UserDialogs.Instance.Toast("Habilita los permisos GPS para mostrar informacion de tu pais en la pantalla principal.", TimeSpan.FromSeconds(3));
-                };
-            }
-            catch (Exception ex)
-            {
-                Debug.Print($"Error in saveLocationInfo() ==> {ex.ToString()}");
-            }
-        }
 
         private async Task loadDataValidation()
         {
@@ -215,9 +199,9 @@ namespace Covid_Info.ViewModels
                     return;
                 }
 
-                await loadData();
+                await LoadData();
 
-                if (globalInfo == null  && !lstCountriesInfo.Any())
+                if (GlobalInfo == null  && !lstCountriesInfo.Any())
                 {
                     IconString = Constants.LimitedConnectionJSON;
                     LoadMessage = Resource.errorConectionServer;
@@ -237,20 +221,26 @@ namespace Covid_Info.ViewModels
             }
             catch (Exception ex)
             {
-                Debug.Print($"Error in loadDataValidation() ==> {ex.ToString()}");
+                Debug.Print($"Error in loadDataValidation() ==> {ex}");
             }
         }
 
-        private async Task loadData()
+        private async Task LoadData()
         {
 
             try
             {
+
+                if (myCountryInfo == null)
+                {
+                    myCountryInfo = await _locationServices.GetMyCountryInfo();
+                }
+
                 //GET GLOBAL INGO
                 var globalData = await _apiRequest.globalInfoAPIRequest();
                 if (globalData != null)
                 {
-                    globalInfo = globalData;
+                    GlobalInfo = globalData;
                 }
 
                 //GET ALL COUNTRIES INFO
@@ -268,16 +258,12 @@ namespace Covid_Info.ViewModels
                     ObMostaAffectedCountries = new ObservableCollection<Country>(orderList);
                     if (orderList.Any()) IsVisibleMAC = true;
 
-                    var myCountryInfo = await DBConnection.Database.GetMyCountry();
-                    var placemark = myCountryInfo?.FirstOrDefault();
+                    
 
-                    if (placemark != null)
+                    if (myCountryInfo != null)
                     {
                         IsVisibleMyCountry = true;
-                        MyCountryInfo = countriesList.FirstOrDefault(c => c.country == placemark.CountryName || c.countryInfo.iso2 == placemark.CountryCode);
-
-                        //if (MyCountryInfo.country.ToLower() == Constants.ElSalvador.ToLower()) IsVisibleSVINFO = true;
-
+                        MyCountryInfo = countriesList.FirstOrDefault(c => c.country == myCountryInfo.CountryName || c.countryInfo.iso2 == myCountryInfo.CountryCode);
                     }
                 }
 
@@ -289,7 +275,7 @@ namespace Covid_Info.ViewModels
             }
         }
 
-        private async Task refreshOnSwipeBTN()
+        private async Task RefreshOnSwipeBTN()
         {
 
             try
@@ -321,9 +307,9 @@ namespace Covid_Info.ViewModels
                     return;
                 }
 
-                await loadData();
+                await LoadData();
 
-                if (globalInfo == null && !lstCountriesInfo.Any())
+                if (GlobalInfo == null && !lstCountriesInfo.Any())
                 {
                     IconString = Constants.LimitedConnectionJSON;
                     LoadMessage = Resource.errorConectionServer;
@@ -343,7 +329,7 @@ namespace Covid_Info.ViewModels
             }
             catch (Exception ex)
             {
-                Debug.Print($"Error in refreshOnSwipeBTN() ==> {ex.ToString()}");
+                Debug.Print($"Error in refreshOnSwipeBTN() ==> {ex}");
             }
 
         }
@@ -352,18 +338,22 @@ namespace Covid_Info.ViewModels
 
         #region methods for navigation to external info
         //navigate to GlobalDetails
-        private async Task navGlobalDetails()
+        private async Task NavGlobalDetails()
         {
-            var navParameters = new NavigationParameters();
-            navParameters.Add("globaldetails", globalInfo);
+            var navParameters = new NavigationParameters
+            {
+                { "globaldetails", GlobalInfo }
+            };
             await _navigationService.NavigateAsync("GlobalDetails", navParameters);
         }
 
         //Navigate to MyCountryDetails
         private async Task navContryDetails()
         {
-            var navParameters = new NavigationParameters();
-            navParameters.Add("contrydetails", MyCountryInfo);
+            var navParameters = new NavigationParameters
+            {
+                { "contrydetails", MyCountryInfo }
+            };
             await _navigationService.NavigateAsync("MyCountryDetails", navParameters);
         }
         #endregion

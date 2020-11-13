@@ -8,14 +8,11 @@
     <None Remove="Images\advices.png" />
     <None Remove="Images\alcoholGel.png" />
     <None Remove="Images\coffeecup.png" />
-    <None Remove="Images\countries.png" />
-    <None Remove="Images\covidicon.png" />
     <None Remove="Images\covidMask.png" />
     <None Remove="Images\cubrirRostro.png" />
     <None Remove="Images\distanciamiento.png" />
     <None Remove="Images\donate.png" />
     <None Remove="Images\fakeNews.png" />
-    <None Remove="Images\fcovid.png" />
     <None Remove="Images\freepik.png" />
     <None Remove="Images\global.png" />
     <None Remove="Images\iconstayhome.png" />
@@ -24,7 +21,7 @@
     <None Remove="Images\monitorearSalud.png" />
     <None Remove="Images\noTocarRostro.png" />
     <None Remove="Images\question.png" />
-    <None Remove="Images\RAID_FreeLancer.jpg" />
+    <None Remove="Images\Recurso 5hdpi.png" />
     <None Remove="Images\stayHome.png" />
     <None Remove="Images\sv.png" />
     <None Remove="Images\symptoms.png" />
@@ -34,14 +31,11 @@
     <EmbeddedResource Include="Images\advices.png" />
     <EmbeddedResource Include="Images\alcoholGel.png" />
     <EmbeddedResource Include="Images\coffeecup.png" />
-    <EmbeddedResource Include="Images\countries.png" />
-    <EmbeddedResource Include="Images\covidicon.png" />
     <EmbeddedResource Include="Images\covidMask.png" />
     <EmbeddedResource Include="Images\cubrirRostro.png" />
     <EmbeddedResource Include="Images\distanciamiento.png" />
     <EmbeddedResource Include="Images\donate.png" />
     <EmbeddedResource Include="Images\fakeNews.png" />
-    <EmbeddedResource Include="Images\fcovid.png" />
     <EmbeddedResource Include="Images\freepik.png" />
     <EmbeddedResource Include="Images\global.png" />
     <EmbeddedResource Include="Images\iconstayhome.png" />
@@ -50,7 +44,7 @@
     <EmbeddedResource Include="Images\monitorearSalud.png" />
     <EmbeddedResource Include="Images\noTocarRostro.png" />
     <EmbeddedResource Include="Images\question.png" />
-    <EmbeddedResource Include="Images\RAID_FreeLancer.jpg" />
+    <EmbeddedResource Include="Images\Recurso 5hdpi.png" />
     <EmbeddedResource Include="Images\stayHome.png" />
     <EmbeddedResource Include="Images\sv.png" />
     <EmbeddedResource Include="Images\symptoms.png" />
@@ -58,22 +52,16 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.446" />
-    <PackageReference Include="Com.OneSignal" Version="3.10.0" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.0" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.4.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Syncfusion.Licensing" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.2.0.48" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1239" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1351" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.0.1.707" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.1239" />
   </ItemGroup>
 
   <ItemGroup>
@@ -121,9 +109,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MyCountryDetails.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\CountrySorting.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TemplatePage.xaml">

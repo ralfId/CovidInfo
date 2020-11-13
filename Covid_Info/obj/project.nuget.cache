@@ -1,16 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bjggMXwQm68u0Nr9uJQ2GpivUlAsTumNblJYGZYBjFptahYIN74DRVhdhbFKJCfkH12r656SrIFcnP40VO66BQ==",
+  "dgSpecHash": "CrwUDGuEX74usR1hK1KUkYL9HQQg8FX1vP7ZdLDs9KWOIy2yTqbXCcxBff7jyvQnZ/RyH8CaOMVJM7b/uLGuMg==",
   "success": true,
-  "projectFilePath": "D:\\Local Disk_952020126\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+  "projectFilePath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\com.onesignal\\3.10.0\\com.onesignal.3.10.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter\\3.4.0\\microsoft.appcenter.3.4.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.analytics\\3.4.0\\microsoft.appcenter.analytics.3.4.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.crashes\\3.4.0\\microsoft.appcenter.crashes.3.4.0.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\microsoft.appcenter.distribute\\3.4.0\\microsoft.appcenter.distribute.3.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
@@ -19,7 +14,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.plugin.popups\\7.2.0.1046\\prism.plugin.popups.7.2.0.1046.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\rg.plugins.popup\\2.0.0.3\\rg.plugins.popup.2.0.0.3.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\rg.plugins.popup\\1.2.0.223\\rg.plugins.popup.1.2.0.223.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
@@ -43,9 +38,8 @@
     "C:\\Users\\ID\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1239\\xamarin.forms.4.7.0.1239.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.visual.material\\4.7.0.1239\\xamarin.forms.visual.material.4.7.0.1239.nupkg.sha512"
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1351\\xamarin.forms.4.7.0.1351.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512"
   ],
   "logs": []
 }

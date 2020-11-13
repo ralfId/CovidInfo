@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace Covid_Info.Models
 {
     public class MyCountry
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string CountryCode { get; set; }
         public string CountryName { get; set; }

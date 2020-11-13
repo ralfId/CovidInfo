@@ -13,15 +13,13 @@ using Java.Lang;
 
 namespace Covid_Info.Droid
 {
-    [Activity(Label = "Covid Info", Theme = "@style/Theme.Splash", Icon = "@mipmap/covidicon", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Covid Info", Theme = "@style/Theme.Splash", Icon = "@mipmap/iconApp", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            var mainActivityIntent = new Intent(this, typeof(MainActivity));
-            StartActivity(mainActivityIntent);
-            Finish();
+            StartActivity(new Intent(this, typeof(MainActivity)));
         }
 
         public override void OnBackPressed()

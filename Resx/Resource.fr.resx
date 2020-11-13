@@ -168,13 +168,14 @@ Si le problème persiste, vous pouvez le signaler au développeur: rafael.idevel
     <value>Tests effectués</value>
   </data>
   <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Veuillez activer les autorisations GPS de l'application pour afficher les statistiques de votre pays ! Cela n'est nécessaire qu'une fois</value>
+    <value>Veuillez activer les autorisations de localisation dans l'application pour pouvoir afficher des informations sur votre pays sur la page principale.
+Cela n'est nécessaire qu'une seule fois.</value>
   </data>
   <data name="ok" xml:space="preserve">
     <value>Accepter</value>
   </data>
   <data name="disabledGPS" xml:space="preserve">
-    <value>Veuillez activer le GPS de votre appareil pour afficher les statistiques de votre pays !</value>
+    <value>Activez les autorisations de localisation de l'application pour afficher des informations sur votre pays sur l'écran principal!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Rechercher...</value>
@@ -189,7 +190,7 @@ Si le problème persiste, vous pouvez le signaler au développeur: rafael.idevel
     <value>Récemment rapporté</value>
   </data>
   <data name="covidTests" xml:space="preserve">
-    <value>Tests COVID-19</value>
+    <value>Tests Covid-19</value>
   </data>
   <data name="countriesStats" xml:space="preserve">
     <value>Voir les statistiques pour chaque pays</value>
@@ -403,5 +404,8 @@ Si le problème persiste, vous pouvez le signaler au développeur: rafael.idevel
   </data>
   <data name="tryAgainBTN" xml:space="preserve">
     <value>Veuillez réessayer!</value>
+  </data>
+  <data name="guide" xml:space="preserve">
+    <value>Guider</value>
   </data>
 </root>

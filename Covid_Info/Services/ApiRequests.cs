@@ -55,7 +55,7 @@ namespace Covid_Info.Services
 
         public async Task<bool> IsConnected()
         {
-            var conn = CrossConnectivity.Current.IsConnected;
+            var conn =  CrossConnectivity.Current.IsConnected;
             return conn;
         }
 

@@ -1,0 +1,531 @@
+.text 0
+	.balign 8
+jit_code_start:
+
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+jit_code_end:
+
+	.byte 0,0,0,0
+.section ".data.rel.ro"
+.subsection 0
+	.balign 8
+method_addresses:
+	.local method_addresses
+	.type method_addresses,@object
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+method_addresses_end:
+
+.text 0
+	.balign 8
+unbox_trampolines:
+unbox_trampolines_end:
+
+	.long 0
+.text 0
+	.balign 8
+unbox_trampoline_addresses:
+
+	.long 0
+.text 0
+	.balign 8
+method_info_offsets:
+
+	.byte 230,0,0,0,10,0,0,0,23,0,0,0,2,0,0,0,0,0,10,0,20,0,30,0,40,0,50,0,60,0,70,0
+	.byte 80,0,90,0,100,0,110,0,120,0,130,0,140,0,150,0,160,0,170,0,180,0,190,0,200,0,210,0,220,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0
+.text 0
+	.balign 8
+extra_method_table:
+
+	.byte 11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+extra_method_info_offsets:
+
+	.byte 0,0,0,0
+.text 0
+	.balign 8
+class_name_table:
+
+	.byte 73,0,27,0,79,0,0,0,0,0,0,0,0,0,14,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+	.byte 0,0,34,0,0,0,0,0,0,0,37,0,0,0,11,0,82,0,0,0,0,0,13,0,0,0,8,0,0,0,0,0
+	.byte 0,0,0,0,0,0,21,0,78,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,42,0,0,0,43,0
+	.byte 0,0,2,0,74,0,0,0,0,0,9,0,0,0,0,0,0,0,12,0,76,0,26,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,44,0,0,0,22,0,84,0,24,0,0,0,19,0,0,0,0,0,0,0,0,0
+	.byte 0,0,20,0,80,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,73,0,10,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,18,0,0,0,0,0,0,0,0,0,0,0,5,0,77,0,0,0,0,0,16,0,0,0,0,0,0,0,6,0
+	.byte 0,0,28,0,0,0,38,0,0,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0
+	.byte 0,0,17,0,81,0,15,0,0,0,23,0,0,0,25,0,0,0,29,0,0,0,30,0,0,0,33,0,83,0,35,0
+	.byte 0,0,36,0,0,0,39,0,0,0,40,0,0,0,41,0,0,0,45,0,0,0
+.text 0
+	.balign 8
+got_info_offsets:
+
+	.byte 25,0,0,0,10,0,0,0,3,0,0,0,2,0,0,0,0,0,10,0,20,0,1,2,1,1,1,1,1,1,1,2
+	.byte 14,2,2,2,3,2,2,2,2,2,36,3,2,3,3
+.text 0
+	.balign 8
+ex_info_offsets:
+
+	.byte 230,0,0,0,10,0,0,0,23,0,0,0,2,0,0,0,0,0,10,0,20,0,30,0,40,0,50,0,60,0,70,0
+	.byte 80,0,90,0,100,0,110,0,120,0,130,0,140,0,150,0,160,0,170,0,180,0,190,0,200,0,210,0,220,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0
+.text 1
+	.balign 8
+unwind_info:
+.text 0
+	.balign 8
+class_info_offsets:
+
+	.byte 45,0,0,0,10,0,0,0,5,0,0,0,2,0,0,0,0,0,10,0,22,0,33,0,44,0,50,7,23,23,36,25
+	.byte 23,25,23,23,129,27,25,25,23,25,130,23,25,25,25,7,131,253,23,30,23,99,99,36,23,36,7,133,124,47,47,27
+	.byte 27,47,27,27,23,43,134,206,47,23,23,23
+
+.text 0
+	.balign 16
+plt:
+mono_aot_Rg_Plugins_Popup_plt:
+	.size mono_aot_Rg_Plugins_Popup_plt,.-mono_aot_Rg_Plugins_Popup_plt
+plt_end:
+.text 0
+	.balign 8
+image_table:
+
+	.byte 3,0,0,0,82,103,46,80,108,117,103,105,110,115,46,80,111,112,117,112,0,53,65,66,57,65,49,65,57,45,68,67
+	.byte 50,65,45,52,57,65,65,45,57,66,65,67,45,53,66,50,69,70,51,50,51,50,69,67,67,0,0,0,0,0,0,0
+	.byte 0,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,223,0,0,0,109,115,99,111,114,108,105,98,0,68,70,48
+	.byte 66,53,67,66,67,45,69,51,52,69,45,52,65,67,67,45,57,55,55,56,45,65,48,55,52,68,70,67,50,68,66,48
+	.byte 54,0,0,55,99,101,99,56,53,100,55,98,101,97,55,55,57,56,101,0,0,0,0,0,1,0,0,0,2,0,0,0
+	.byte 0,0,0,0,5,0,0,0,0,0,0,0,88,97,109,97,114,105,110,46,70,111,114,109,115,46,67,111,114,101,0,57
+	.byte 48,54,70,68,66,66,49,45,51,67,55,57,45,52,50,52,69,45,56,55,53,69,45,67,50,54,48,48,53,52,53,54
+	.byte 52,68,70,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text 0
+	.balign 8
+weak_field_indexes:
+
+	.byte 0,0,0,0
+.section ".bss"
+.subsection 0
+	.balign 8
+	.local mono_aot_Rg_Plugins_Popup_got
+	.type mono_aot_Rg_Plugins_Popup_got,@object
+mono_aot_Rg_Plugins_Popup_got:
+	.skip 208
+got_end:
+.text 0
+	.balign 8
+blob:
+
+	.byte 0,11,0,35,37,45,49,51,31,47,54,9,54,10,54,11,54,12,54,13,54,129,3,6,93,6,91,6,90,6,92,6
+	.byte 101,6,128,188,6,129,9,6,96,6,128,167,6,128,145,6,128,144,0,128,144,16,0,0,1,4,128,192,16,0,0,1
+	.byte 193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,192,16,16,0,1,193,0,15,144,193,0,15,141,193
+	.byte 0,15,140,193,0,15,137,17,128,168,64,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,9,10
+	.byte 11,12,13,14,15,16,18,21,22,23,24,6,128,160,72,0,0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0
+	.byte 16,40,30,31,4,128,168,40,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,6,128,160,64,0
+	.byte 0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,34,35,4,128,160,32,0,0,8,193,0,15,144,193
+	.byte 0,15,141,193,0,15,140,193,0,15,137,4,128,168,40,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0
+	.byte 15,137,6,128,160,64,0,0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,40,41,6,128,160,72,0
+	.byte 0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,42,43,6,128,160,72,0,0,8,193,0,16,43,193
+	.byte 0,16,42,193,0,15,140,193,0,16,40,44,45,4,128,168,32,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140
+	.byte 193,0,15,137,6,128,160,72,0,0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,48,49,128,139,128
+	.byte 236,94,130,24,80,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,194,0,1,228,194,0,1,229,194
+	.byte 0,2,1,194,0,6,55,194,0,6,52,194,0,1,250,77,194,0,4,233,194,0,1,225,194,0,1,224,194,0,6,21
+	.byte 194,0,6,22,194,0,6,20,194,0,6,25,194,0,6,32,194,0,6,33,194,0,6,26,194,0,6,27,194,0,6,31
+	.byte 194,0,6,28,194,0,6,30,194,0,6,12,194,0,6,17,194,0,6,49,194,0,6,67,194,0,6,68,194,0,6,69
+	.byte 194,0,6,70,194,0,6,74,194,0,6,73,194,0,6,75,194,0,18,130,194,0,6,71,194,0,23,101,194,0,6,53
+	.byte 194,0,25,20,194,0,6,50,194,0,15,105,194,0,23,106,194,0,24,255,194,0,15,83,194,0,15,84,194,0,18,131
+	.byte 194,0,18,124,194,0,24,232,194,0,24,233,194,0,24,237,194,0,25,14,194,0,24,216,194,0,24,220,194,0,24,221
+	.byte 194,0,24,153,194,0,24,222,194,0,24,223,194,0,24,224,194,0,24,225,194,0,24,228,194,0,24,229,194,0,18,131
+	.byte 194,0,25,6,194,0,25,7,194,0,25,10,194,0,25,11,194,0,24,234,194,0,24,235,194,0,24,236,194,0,18,124
+	.byte 194,0,24,150,194,0,24,151,194,0,24,206,194,0,25,33,194,0,25,34,194,0,24,140,194,0,24,141,194,0,24,137
+	.byte 194,0,24,193,194,0,24,194,194,0,24,197,194,0,24,198,194,0,25,36,194,0,25,25,194,0,25,19,194,0,15,96
+	.byte 194,0,25,17,194,0,25,13,194,0,23,100,194,0,25,4,194,0,15,106,194,0,25,2,194,0,24,253,194,0,24,243
+	.byte 194,0,24,200,194,0,24,199,194,0,24,196,194,0,24,195,194,0,24,174,194,0,24,173,194,0,24,159,194,0,15,85
+	.byte 194,0,15,86,194,0,15,78,194,0,15,79,194,0,15,80,194,0,15,81,194,0,15,82,194,0,15,110,194,0,15,111
+	.byte 255,251,0,0,0,194,0,15,119,194,0,15,70,194,0,15,73,194,0,15,72,194,0,15,108,194,0,15,104,194,0,15
+	.byte 103,78,194,0,15,100,79,194,0,23,95,194,0,23,96,194,0,23,97,194,0,23,98,194,0,23,99,194,0,23,102,194
+	.byte 0,23,104,194,0,23,105,194,0,4,234,92,91,90,89,88,87,86,85,84,6,128,160,64,0,0,8,193,0,16,43,193
+	.byte 0,16,42,193,0,15,140,193,0,16,40,95,96,6,128,160,64,0,0,8,193,0,16,43,193,0,16,42,193,0,15,140
+	.byte 193,0,16,40,97,98,6,128,160,72,0,0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,99,100,0
+	.byte 128,144,16,0,0,1,4,128,144,16,0,0,1,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,152
+	.byte 16,0,0,1,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,11,128,160,80,0,0,8,193,0,15,144,193
+	.byte 0,15,141,193,0,15,140,193,0,15,137,116,117,113,111,112,115,114,4,128,160,32,0,0,8,193,0,15,144,193,0,15
+	.byte 141,193,0,15,140,193,0,15,137,23,128,144,20,0,0,4,193,0,13,35,193,0,13,34,193,0,15,140,193,0,13,33
+	.byte 193,0,13,37,193,0,13,36,193,0,13,41,193,0,13,42,193,0,13,43,193,0,13,44,193,0,13,45,193,0,13,46
+	.byte 193,0,13,47,193,0,13,48,193,0,13,49,193,0,13,50,193,0,13,51,193,0,13,52,193,0,13,53,193,0,13,54
+	.byte 193,0,13,55,193,0,13,39,193,0,13,56,23,128,144,20,0,0,4,193,0,13,35,193,0,13,34,193,0,15,140,193
+	.byte 0,13,33,193,0,13,37,193,0,13,36,193,0,13,41,193,0,13,42,193,0,13,43,193,0,13,44,193,0,13,45,193
+	.byte 0,13,46,193,0,13,47,193,0,13,48,193,0,13,49,193,0,13,50,193,0,13,51,193,0,13,52,193,0,13,53,193
+	.byte 0,13,54,193,0,13,55,193,0,13,39,193,0,13,56,8,128,152,16,0,0,1,193,0,15,144,193,0,15,141,193,0
+	.byte 15,140,193,0,15,137,121,194,0,23,254,194,0,23,253,194,0,23,252,4,128,160,24,0,0,8,193,0,15,144,193,0
+	.byte 15,141,193,0,15,140,193,0,15,137,8,128,144,16,0,0,1,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15
+	.byte 137,125,194,0,23,254,194,0,23,253,194,0,23,252,0,128,144,16,0,0,1,0,128,144,16,0,0,1,16,128,160,56
+	.byte 0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,128,148,128,149,128,150,128,151,128,210,128,209,128
+	.byte 208,128,207,128,151,128,150,128,149,128,148,16,128,168,104,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0
+	.byte 15,137,128,159,128,160,128,161,128,162,128,210,128,209,128,208,128,207,128,162,128,161,128,160,128,159,6,128,160,80,0,0
+	.byte 8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,128,166,128,167,6,128,160,80,0,0,8,193,0,16,43
+	.byte 193,0,16,42,193,0,15,140,193,0,16,40,128,168,128,169,16,128,168,112,0,0,8,193,0,15,144,193,0,15,141,193
+	.byte 0,15,140,193,0,15,137,128,180,128,181,128,182,128,183,128,210,128,209,128,208,128,207,128,183,128,182,128,181,128,180,6
+	.byte 128,160,80,0,0,8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,128,188,128,189,6,128,160,80,0,0
+	.byte 8,193,0,16,43,193,0,16,42,193,0,15,140,193,0,16,40,128,190,128,191,4,128,160,32,0,0,8,193,0,15,144
+	.byte 193,0,15,141,193,0,15,140,193,0,15,137,16,128,168,40,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193
+	.byte 0,15,137,128,203,128,204,128,205,128,206,128,210,128,209,128,208,128,207,0,0,0,0,4,128,160,24,0,0,8,193,0
+	.byte 15,144,193,0,15,141,193,0,15,140,193,0,15,137,16,128,168,80,0,0,8,193,0,15,144,193,0,15,141,193,0,15
+	.byte 140,193,0,15,137,128,216,128,217,128,218,128,219,128,210,128,209,128,208,128,207,128,219,128,218,128,217,128,216,4,128,160
+	.byte 32,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,4,128,160,24,0,0,8,193,0,15,144,193
+	.byte 0,15,141,193,0,15,140,193,0,15,137,4,128,160,32,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0
+	.byte 15,137,4,128,160,24,0,0,8,193,0,15,144,193,0,15,141,193,0,15,140,193,0,15,137,115,103,101,110,0
+.text 1
+runtime_version:
+	.string ""
+.text 1
+assembly_guid:
+	.string "5AB9A1A9-DC2A-49AA-9BAC-5B2EF3232ECC"
+.text 1
+assembly_name:
+	.string "Rg.Plugins.Popup"
+.data 0
+	.balign 8
+mono_aot_file_info:
+	.globl mono_aot_file_info
+	.type mono_aot_file_info,@object
+
+	.long 172,0
+	.balign 8
+	.xword mono_aot_Rg_Plugins_Popup_got
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword jit_code_start
+	.balign 8
+	.xword jit_code_end
+	.balign 8
+	.xword method_addresses
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword blob
+	.balign 8
+	.xword class_name_table
+	.balign 8
+	.xword class_info_offsets
+	.balign 8
+	.xword method_info_offsets
+	.balign 8
+	.xword ex_info_offsets
+	.balign 8
+	.xword extra_method_info_offsets
+	.balign 8
+	.xword extra_method_table
+	.balign 8
+	.xword got_info_offsets
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword image_table
+	.balign 8
+	.xword weak_field_indexes
+	.balign 8
+	.xword mem_end
+	.balign 8
+	.xword assembly_guid
+	.balign 8
+	.xword runtime_version
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword 0
+	.balign 8
+	.xword assembly_name
+	.balign 8
+	.xword plt
+	.balign 8
+	.xword plt_end
+	.balign 8
+	.xword unwind_info
+	.balign 8
+	.xword unbox_trampolines
+	.balign 8
+	.xword unbox_trampolines_end
+	.balign 8
+	.xword unbox_trampoline_addresses
+
+	.long 25,208,1,230,0,32,374417919,0
+	.long 1881,128,8,8,8,9,8388607,0
+	.long 4,25,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,0
+	.byte 153,34,22,119,39,141,227,22,132,62,64,132,255,116,244,224
+.text 1
+	.balign 8
+mem_end:

@@ -157,9 +157,9 @@
     <value>Consejos para la población acerca de los rumores sobre el nuevo coronavirus</value>
   </data>
   <data name="errorConectionServer" xml:space="preserve">
-    <value>No se pudo conectar con el servidor. Por favor vuelva a intentarlo! 
+    <value>No se puede conectar con el servidor. ¡Inténtalo de nuevo!
 
-Si el problema persiste puede reportar el problema con el desarrollador:  rafael.ideveloper@gmail.com</value>
+Si el problema persiste, puede informar al desarrollador: rafael.ideveloper@gmail.com</value>
   </data>
   <data name="updating" xml:space="preserve">
     <value>Actualizando...</value>
@@ -168,13 +168,14 @@ Si el problema persiste puede reportar el problema con el desarrollador:  rafael
     <value>Pruebas realizadas</value>
   </data>
   <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Por favor habilita los permisos GPS de la aplicación para mostrar los estadísticas de tu país! Esto es requerido solo una vez</value>
+    <value>Habilite los permisos de ubicación en la aplicación para poder mostrar información sobre su país en la página principal.
+Esto es necesario solo una vez.</value>
   </data>
   <data name="ok" xml:space="preserve">
     <value>Aceptar</value>
   </data>
   <data name="disabledGPS" xml:space="preserve">
-    <value>Por favor habilita el GPS de tu dispositivo para mostrar los estadísticas de tu país!</value>
+    <value>¡Habilite los permisos de ubicación de la aplicación para mostrar información sobre su país en la pantalla principal!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Buscar...</value>
@@ -189,7 +190,7 @@ Si el problema persiste puede reportar el problema con el desarrollador:  rafael
     <value>Reportados recientemente</value>
   </data>
   <data name="covidTests" xml:space="preserve">
-    <value>Pruebas COVID-19</value>
+    <value>Pruebas Covid-19</value>
   </data>
   <data name="countriesStats" xml:space="preserve">
     <value>Ver estadísticas de cada país</value>
@@ -403,5 +404,8 @@ Si el problema persiste puede reportar el problema con el desarrollador:  rafael
   </data>
   <data name="tryAgainBTN" xml:space="preserve">
     <value>¡Intentalo nuevamente!</value>
+  </data>
+  <data name="guide" xml:space="preserve">
+    <value>Guía</value>
   </data>
 </root>
