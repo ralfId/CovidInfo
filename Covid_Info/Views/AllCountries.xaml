@@ -46,7 +46,7 @@
                     </Grid>
                 </pkv:PancakeView>
                 <ListView
-                    CachingStrategy="RecycleElement"
+                    CachingStrategy="RetainElement"
                     HasUnevenRows="True"
                     IsPullToRefreshEnabled="True"
                     IsRefreshing="{Binding IsRefreshing}"

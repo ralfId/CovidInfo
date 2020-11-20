@@ -181,7 +181,7 @@ namespace Covid_Info.ViewModels
             }
             catch (Exception ex)
             {
-                Debug.Print($"Error in LoadAllCountriesInfo() ==> {ex.ToString()}");
+                Debug.Print($"Error in LoadAllCountriesInfo() ==> {ex}");
             }
             
         }
@@ -265,14 +265,6 @@ namespace Covid_Info.ViewModels
             {
                 Debug.Print($"Error in FilterSearch() ==> {ex.ToString()}");
             }
-            //try
-            //{
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.Print($"Error in  ==> {ex.ToString()}");
-            //}
         }
 
 

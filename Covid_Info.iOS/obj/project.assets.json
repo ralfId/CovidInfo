@@ -436,6 +436,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xamarin.Forms": "4.7.0.1351"
         },
         "compile": {
@@ -881,6 +882,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xamarin.Forms": "4.7.0.1351"
         },
         "compile": {
@@ -1326,6 +1328,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xamarin.Forms": "4.7.0.1351"
         },
         "compile": {
@@ -1771,6 +1774,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xamarin.Forms": "4.7.0.1351"
         },
         "compile": {

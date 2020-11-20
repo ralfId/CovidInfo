@@ -42,7 +42,8 @@ namespace Covid_Info.ViewModels
         private bool _isVisibleSVINFO;
         private bool _sfIndicator;
         private bool _isRefrshing;
-        private MyCountry myCountryInfo;
+        public string currentUserCountry;
+        //private MyCountry myCountryInfo;
 
 
         public MainPageViewModel(
@@ -231,10 +232,10 @@ namespace Covid_Info.ViewModels
             try
             {
 
-                if (myCountryInfo == null)
-                {
-                    myCountryInfo = await _locationServices.GetMyCountryInfo();
-                }
+                //if (myCountryInfo == null)
+                //{
+                //    myCountryInfo = await _locationServices.GetMyCountryInfo();
+                //}
 
                 //GET GLOBAL INGO
                 var globalData = await _apiRequest.globalInfoAPIRequest();
@@ -258,12 +259,15 @@ namespace Covid_Info.ViewModels
                     ObMostaAffectedCountries = new ObservableCollection<Country>(orderList);
                     if (orderList.Any()) IsVisibleMAC = true;
 
-                    
+                    if (Preferences.ContainsKey(Constants.userCountry))
+                    {
+                        currentUserCountry = Preferences.Get(Constants.userCountry, string.Empty);
+                    }
 
-                    if (myCountryInfo != null)
+                    if (!string.IsNullOrEmpty(currentUserCountry))
                     {
                         IsVisibleMyCountry = true;
-                        MyCountryInfo = countriesList.FirstOrDefault(c => c.country == myCountryInfo.CountryName || c.countryInfo.iso2 == myCountryInfo.CountryCode);
+                        MyCountryInfo = countriesList.FirstOrDefault(c => c.countryInfo.iso2 == currentUserCountry);
                     }
                 }
 

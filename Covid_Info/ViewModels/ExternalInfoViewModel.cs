@@ -5,6 +5,7 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
@@ -33,20 +34,23 @@ namespace Covid_Info.ViewModels
             
         }
 
-        public async override void OnNavigatedTo(INavigationParameters parameters)
+        public override void OnNavigatedTo(INavigationParameters parameters)
         {
             try
             {
-                var placemark = await _locationServices.GetMyCountryInfo();
-                if (placemark != null && placemark.CountryCode.ToLower() == "sv")
+
+                if (Preferences.ContainsKey(Constants.userCountry))
                 {
-                    IsVisibleGOES = true;
+                    string userCountryCode = Preferences.Get(Constants.userCountry, string.Empty);
+                    if (userCountryCode.ToLower() == Constants.svCountryCode)
+                    {
+                        IsVisibleGOES = true;
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
-                throw;
+                Debug.WriteLine(ex.ToString());
             }
         }
         public DelegateCommand goSVCovidInfo { get; private set; }

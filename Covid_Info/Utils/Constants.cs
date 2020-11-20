@@ -18,14 +18,16 @@ namespace Covid_Info.Utils
 
         //others keys
         public const string currentLang = "user_language";
-        public const string PlayerID = "playerId";
-        public const string urlUpdater = "urlUpdaterApp";
-        public const string IsUpdated = "IsUpdated";
-        public const string IsUpdatedNO = "NO";
-        public const string IsUpdatedYES = "YES";
+        public const string userCountry = "userCountry";
+        //public const string PlayerID = "playerId";
+        //public const string urlUpdater = "urlUpdaterApp";
+        //public const string IsUpdated = "IsUpdated";
+        //public const string IsUpdatedNO = "NO";
+        //public const string IsUpdatedYES = "YES";
         public const string NoConnectionJSON = "\uf1eb";
         public const string LimitedConnectionJSON = "\uf73b";
         public const string ElSalvador = "El Salvador";
+        public const string svCountryCode = "sv";
         public const string sortingListcountries = "sortingListcountries";
         public const string AZ = "A-Z";
         public const string ZA = "Z-A";

@@ -40,9 +40,8 @@ namespace Covid_Info
                 InitializeComponent();
 
                 Xamarin.Forms.Device.SetFlags(new string[] { "Shapes_Experimental" });
-               
-                if (VersionTracking.IsFirstLaunchEver) await AddGuideLines();
-                await NavigationService.NavigateAsync("NavigationPage/MainPage");
+
+                await CheckAppLaunch();
 
             }
             catch (Exception ex)
@@ -79,10 +78,22 @@ namespace Covid_Info
             containerRegistry.RegisterForNavigation<Guidelines, GuidelinesViewModel>();
             containerRegistry.RegisterForNavigation<Covid_Info.Views.GuidelinesViews.Symptoms>();
             containerRegistry.RegisterForNavigation<Covid_Info.Views.GuidelinesViews.Advices>();
+            containerRegistry.RegisterForNavigation<SelectionCountry, SelectionCountryViewModel>();
         }
 
-
-
+        private async Task CheckAppLaunch()
+        {
+            if (VersionTracking.IsFirstLaunchEver)
+            {
+                await AddGuideLines();
+                await NavigationService.NavigateAsync(new Uri("CI:///NavigationPage/SelectionCountry", UriKind.Absolute));
+            }
+            else
+            {
+                await NavigationService.NavigateAsync("NavigationPage/MainPage");
+                //await NavigationService.NavigateAsync("NavigationPage/SelectionCountry");
+            }
+        }
         private async Task AddGuideLines()
         {
             
@@ -120,16 +131,16 @@ namespace Covid_Info
             };
             await DBConnection.Database.insertAllAsync(lstSymp);
 
-            MainThread.BeginInvokeOnMainThread(async () =>
-            {
-                var permissions = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+            //MainThread.BeginInvokeOnMainThread(async () =>
+            //{
+            //    var permissions = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
 
-                if (permissions != PermissionStatus.Granted)
-                {
-                    await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
-                }
+            //    if (permissions != PermissionStatus.Granted)
+            //    {
+            //        await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+            //    }
 
-            });
+            //});
         }
 
 

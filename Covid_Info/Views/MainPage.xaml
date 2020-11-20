@@ -177,7 +177,7 @@
                                         VerticalOptions="Center" />
                                 </Grid>
                                 <pkv:PancakeView.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding navAllCountries}" />
+                                    <TapGestureRecognizer Command="{Binding NavAllCountries}" />
                                 </pkv:PancakeView.GestureRecognizers>
                             </pkv:PancakeView>
 
@@ -222,7 +222,7 @@
                                 VerticalOptions="Center" />
                         </StackLayout>
                         <pkv:PancakeView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goExternalInfo}" />
+                            <TapGestureRecognizer Command="{Binding GoExternalInfo}" />
                         </pkv:PancakeView.GestureRecognizers>
                     </pkv:PancakeView>
                 </Grid>
