@@ -4,7 +4,7 @@ using Covid_Info.ViewModels;
 using Covid_Info.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Covid_Info.Data;
+using Covid_Info.Data; 
 using Covid_Info.Services;
 using Covid_Info.Helpers.CovertModels;
 using System;
@@ -62,7 +62,6 @@ namespace Covid_Info
             containerRegistry.RegisterInstance<IUserDialogs>(UserDialogs.Instance);
 
             containerRegistry.Register<IDBRepository, DBConnection>();
-            containerRegistry.Register<ILocationServices, LocationServices>();
             containerRegistry.Register<IConverModels, ConvertModels>();
             containerRegistry.Register<IApiService, ApiService>();
             containerRegistry.Register<IApiRequest, ApiRequests>();

@@ -27,7 +27,6 @@ namespace Covid_Info.ViewModels
         private  List<Country> lstCountriesInfo;
         private ObservableCollection<Country> _obMostCountries;
         private readonly IApiService _apiService;
-        private readonly ILocationServices _locationServices;
         private readonly IConverModels _converModels;
         private readonly INavigationService _navigationService;
         private readonly IApiRequest _apiRequest;
@@ -49,7 +48,6 @@ namespace Covid_Info.ViewModels
         public MainPageViewModel(
             INavigationService navigationService,
             IApiService apiService,
-            ILocationServices locationServices,
             IConverModels converModels,
             IApiRequest apiRequest)
             : base(navigationService, apiService)
@@ -58,7 +56,6 @@ namespace Covid_Info.ViewModels
             try
             {
                 _apiService = apiService;
-                _locationServices = locationServices;
                 _converModels = converModels;
                 _navigationService = navigationService;
                 _apiRequest = apiRequest;

@@ -18,14 +18,12 @@ namespace Covid_Info.ViewModels
 
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
-        private readonly ILocationServices _locationServices;
 
-        public ExternalInfoViewModel(INavigationService navigationService, IApiService apiService, ILocationServices locationServices)
+        public ExternalInfoViewModel(INavigationService navigationService, IApiService apiService)
             : base(navigationService, apiService)
         {
             _navigationService = navigationService;
             _apiService = apiService;
-            _locationServices = locationServices;
             goSVCovidInfo = new DelegateCommand(async () => await webSvCovidInfo());
             goWHOCovidFaqs = new DelegateCommand(async () => await webWHOCovidFaqs());
             goWHODonations = new DelegateCommand(async () => await webWHODonations());
