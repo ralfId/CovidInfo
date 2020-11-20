@@ -46,8 +46,8 @@
         <Color x:Key="SecundaryLightColor">#4f5b62</Color>
 
         <!--  Font sizes  -->
-        <x:Double x:Key="MainNumbFS">25</x:Double>
-        <x:Double x:Key="BaseTitleFontSize">20</x:Double>
+        <x:Double x:Key="MainNumbFS">22</x:Double>
+        <x:Double x:Key="BaseTitleFontSize">18</x:Double>
 
         <!--  Page backgrouncolor  -->
         <Style x:Key="PageStyle" TargetType="ContentPage">

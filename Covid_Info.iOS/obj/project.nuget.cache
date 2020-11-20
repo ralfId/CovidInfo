@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PvyWBTKwT8OldJ5VhOYHPgFrZdY1P87IwZL8XDHHDGcpLaRLF75QN3E2zFcooNmmpoI3GDmmrE/SuFJB94Hbug==",
+  "dgSpecHash": "AwxIHq8AHW+zzic2M5TNapWfUU+6lP0Pd6PkZ7WbFLJxvO00drixN8m5tV7Wp3ES4U3r4dkz541cG3urn6W4hQ==",
   "success": true,
   "projectFilePath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1351\\xamarin.forms.4.7.0.1351.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512"
   ],
   "logs": []

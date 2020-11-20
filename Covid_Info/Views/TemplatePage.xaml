@@ -47,7 +47,7 @@
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding navDevInfo}" />
+                        <TapGestureRecognizer Command="{Binding NavDevInfo}" />
                     </Label.GestureRecognizers>
                 </Label>
 

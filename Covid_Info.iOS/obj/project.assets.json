@@ -274,7 +274,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1351": {
+      "Xamarin.Forms/4.8.0.1451": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -421,7 +421,7 @@
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.7.0.1351",
+          "Xamarin.Forms": "4.8.0.1451",
           "Xamarin.Forms.PancakeView": "2.0.1.707",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -437,7 +437,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.DryIoc.Forms": "7.2.0.1422",
-          "Xamarin.Forms": "4.7.0.1351"
+          "Xamarin.Forms": "4.8.0.1451"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -720,7 +720,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1351": {
+      "Xamarin.Forms/4.8.0.1451": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -867,7 +867,7 @@
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.7.0.1351",
+          "Xamarin.Forms": "4.8.0.1451",
           "Xamarin.Forms.PancakeView": "2.0.1.707",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -883,7 +883,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.DryIoc.Forms": "7.2.0.1422",
-          "Xamarin.Forms": "4.7.0.1351"
+          "Xamarin.Forms": "4.8.0.1451"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -1166,7 +1166,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1351": {
+      "Xamarin.Forms/4.8.0.1451": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1313,7 +1313,7 @@
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.7.0.1351",
+          "Xamarin.Forms": "4.8.0.1451",
           "Xamarin.Forms.PancakeView": "2.0.1.707",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -1329,7 +1329,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.DryIoc.Forms": "7.2.0.1422",
-          "Xamarin.Forms": "4.7.0.1351"
+          "Xamarin.Forms": "4.8.0.1451"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -1612,7 +1612,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1351": {
+      "Xamarin.Forms/4.8.0.1451": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1759,7 +1759,7 @@
           "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.7.0.1351",
+          "Xamarin.Forms": "4.8.0.1451",
           "Xamarin.Forms.PancakeView": "2.0.1.707",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -1775,7 +1775,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.DryIoc.Forms": "7.2.0.1422",
-          "Xamarin.Forms": "4.7.0.1351"
+          "Xamarin.Forms": "4.8.0.1451"
         },
         "compile": {
           "bin/placeholder/Resx.dll": {}
@@ -2450,10 +2450,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.7.0.1351": {
-      "sha512": "JdhRaNGFZIkbKC1t/fdI0+iJKO0bZx603hWEu15N3ffUkkRji3EQzMvyv6MZggW6cDR88gIsk0NRkLlLF3wMFg==",
+    "Xamarin.Forms/4.8.0.1451": {
+      "sha512": "3RUzBpcaBxOjufLLqJnuZRGLhzAbVyfe/Pyp0AFY/H1MkCHYxXIRzgB8h6yC9NTs39NLK2SgGiaMbvC4TJ/zFA==",
       "type": "package",
-      "path": "xamarin.forms/4.7.0.1351",
+      "path": "xamarin.forms/4.8.0.1451",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2719,6 +2719,7 @@
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Resources.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Shell/ShellPageWrapper.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xaml",
@@ -2751,6 +2752,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Resources.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellPageWrapper.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
@@ -2760,7 +2762,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.7.0.1351.nupkg.sha512",
+        "xamarin.forms.4.8.0.1451.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2805,7 +2807,7 @@
       "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.48",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.7.0.1351",
+      "Xamarin.Forms >= 4.8.0.1451",
       "Xamarin.Forms.PancakeView >= 2.0.1.707",
       "sqlite-net-pcl >= 1.7.335"
     ]
@@ -2889,7 +2891,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.7.0.1351, )"
+            "version": "[4.8.0.1451, )"
           },
           "Xamarin.Forms.PancakeView": {
             "target": "Package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gi6Ad/oUERNHKdtaIxkjsyoZkfHdBlQHY0VDe2cQRnBwyM80/6BCmzNcnSec8wgdxrsMpCXO4bnFjpOAxzx8Bw==",
+  "dgSpecHash": "ErdzsvAfs07io7aAclYCy7UPNlF0Qsx4y+PD6XqJhnuWhyUbKp4QTDXIUjoi288vItotnl+LWEcHjFm2XbF/Yg==",
   "success": true,
   "projectFilePath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
   "expectedPackageFiles": [
@@ -111,7 +111,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.androidx.versionedparcelable\\1.1.0.1\\xamarin.androidx.versionedparcelable.1.1.0.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.1\\xamarin.androidx.viewpager.1.0.0.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.7.0.1351\\xamarin.forms.4.7.0.1351.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.google.android.material\\1.0.0.1\\xamarin.google.android.material.1.0.0.1.nupkg.sha512"
   ],
