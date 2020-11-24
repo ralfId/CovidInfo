@@ -37,7 +37,7 @@
                 Padding="0,5,0,0"
                 BackgroundColor="{StaticResource BackgroundColorPage}"
                 HeightRequest="30">
-                <StackLayout Margin="0" Padding="0">
+                <StackLayout>
                     <pkv:PancakeView
                         BackgroundColor="{StaticResource BaseFontColor}"
                         CornerRadius="20"
@@ -76,15 +76,14 @@
 
             <ScrollView>
                 <StackLayout Padding="0,15,0,20" Spacing="15">
-                    <!--  ELSALVADOR INFO  -->
-                    <StackLayout Padding="20,0" IsVisible="{Binding IsVisibleGOES}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="auto" />
-                            </Grid.ColumnDefinitions>
-
+                    <Grid RowDefinitions="auto, auto, auto, auto" RowSpacing="10">
+                        <!--  ELSALVADOR INFO  -->
+                        <Grid
+                            Padding="20,0"
+                            ColumnDefinitions="80, *,20"
+                            IsVisible="{Binding IsVisibleGOES}"
+                            RowDefinitions="80,1"
+                            RowSpacing="10">
                             <pkv:PancakeView
                                 Grid.Column="0"
                                 Padding="3"
@@ -105,29 +104,29 @@
                                 TextColor="{StaticResource BaseFontColor}" />
                             <Label
                                 Grid.Column="2"
-                                Padding="0"
                                 FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
+
+                            <BoxView
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                BackgroundColor="LightGray"
+                                HeightRequest="1" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goSVCovidInfo}" />
+                            </Grid.GestureRecognizers>
                         </Grid>
-                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goSVCovidInfo}" />
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-
-
-                    <!--  Q&A  -->
-                    <StackLayout Grid.Row="1" Padding="20,0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="auto" />
-                            </Grid.ColumnDefinitions>
-                            <pkv:PancakeView Grid.Column="0" CornerRadius="5">
+                        <!--  Q&A  -->
+                        <Grid
+                            Grid.Row="1"
+                            Padding="20,0"
+                            ColumnDefinitions="80, *, 20"
+                            RowDefinitions="80, 1"
+                            RowSpacing="10">
+                            <pkv:PancakeView Grid.Column="0" CornerRadius="7">
                                 <Image
                                     Margin="0"
                                     HeightRequest="75"
@@ -142,29 +141,28 @@
                                 TextColor="{StaticResource BaseFontColor}" />
                             <Label
                                 Grid.Column="2"
-                                Padding="5"
                                 FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
+                            <BoxView
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                BackgroundColor="LightGray"
+                                HeightRequest="1" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}" />
+                            </Grid.GestureRecognizers>
                         </Grid>
-                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goWHOCovidFaqs}" />
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-
-
-                    <!--  WHO DONATIONS  -->
-                    <StackLayout Grid.Row="2" Padding="20,0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="auto" />
-                            </Grid.ColumnDefinitions>
-                            <pkv:PancakeView Grid.Column="0" CornerRadius="5">
+                        <!--  WHO DONATIONS  -->
+                        <Grid
+                            Grid.Row="2"
+                            Padding="20,0"
+                            ColumnDefinitions="80, *, 20"
+                            RowDefinitions="80, 1"
+                            RowSpacing="10">
+                            <pkv:PancakeView Grid.Column="0" CornerRadius="7">
                                 <Image
                                     Margin="0"
                                     HeightRequest="75"
@@ -179,29 +177,28 @@
                                 TextColor="{StaticResource BaseFontColor}" />
                             <Label
                                 Grid.Column="2"
-                                Padding="5"
                                 FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
+                            <BoxView
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                BackgroundColor="LightGray"
+                                HeightRequest="1" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goWHODonations}" />
+                            </Grid.GestureRecognizers>
                         </Grid>
-                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goWHODonations}" />
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-
-
-                    <!--  WHO COVID MYTHS  -->
-                    <StackLayout Grid.Row="3" Padding="20,0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="auto" />
-                            </Grid.ColumnDefinitions>
-                            <pkv:PancakeView Grid.Column="0" CornerRadius="5">
+                        <!--  WHO COVID MYTHS  -->
+                        <Grid
+                            Grid.Row="3"
+                            Padding="20,0"
+                            ColumnDefinitions="80, *, 20"
+                            RowDefinitions="80, 1"
+                            RowSpacing="10">
+                            <pkv:PancakeView Grid.Column="0" CornerRadius="7">
                                 <Image
                                     Margin="0"
                                     HeightRequest="75"
@@ -216,24 +213,24 @@
                                 TextColor="{StaticResource BaseFontColor}" />
                             <Label
                                 Grid.Column="2"
-                                Padding="5"
                                 FontFamily="{StaticResource FASolid}"
                                 FontSize="Body"
                                 Text="&#xf35d;"
                                 TextColor="{StaticResource CustomNavBarColor}"
                                 VerticalOptions="StartAndExpand" />
+                            <BoxView
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                BackgroundColor="LightGray"
+                                HeightRequest="1" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goCovidWHOMyths}" />
+                            </Grid.GestureRecognizers>
                         </Grid>
-                        <BoxView BackgroundColor="LightGray" HeightRequest="1" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding goCovidWHOMyths}" />
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-
+                    </Grid>
                 </StackLayout>
             </ScrollView>
-
         </StackLayout>
-
     </pkv:PancakeView>
 
 </pages:PopupPage>

@@ -18,7 +18,7 @@
     <ContentView.Content>
 
         <Frame>
-            <Grid RowDefinitions="auto, auto">
+            <Grid RowDefinitions="40, *">
                 <Label
                     Grid.Row="0"
                     Margin="10,5"
@@ -69,7 +69,10 @@
                                             TextColor="{StaticResource SecundaryDarkColor}" />
                                     </Grid>
                                 </Grid>
-                                <BoxView BackgroundColor="LightGray" HeightRequest="1" />
+                                <BoxView
+                                    Margin="0,5,0,0"
+                                    BackgroundColor="LightGray"
+                                    HeightRequest="1" />
                             </StackLayout>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
