@@ -70,29 +70,47 @@
             </ListView>
 
             <Grid Grid.Row="2" ColumnDefinitions="*,*">
-                <Button
+                <Frame
+                    Padding="30,10"
                     BackgroundColor="{StaticResource SecundaryDarkColor}"
-                    Command="{Binding SetCountryCommnad}"
-                    FontAttributes="Bold"
-                    Text="Cancelar"
-                    TextColor="{StaticResource WhiteColor}" />
-                <Button
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate cancel}"
+                        TextColor="{StaticResource WhiteColor}"
+                        VerticalOptions="Center" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SetCountryCommnad}" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame
                     Grid.Column="1"
-                    Command="{Binding SetCountryCommnad}"
-                    FontAttributes="Bold"
+                    Padding="30,10"
+                    HorizontalOptions="Center"
                     IsEnabled="{Binding ContinueBTN}"
-                    Text="Continuar">
-                    <Button.Triggers>
-                        <Trigger TargetType="Button" Property="IsEnabled" Value="False">
-                            <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Body"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate ok}"
+                        TextColor="{StaticResource WhiteColor}"
+                        VerticalOptions="Center" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SetCountryCommnad}" />
+                    </Frame.GestureRecognizers>
+                    <Frame.Triggers>
+                        <Trigger TargetType="Frame" Property="IsEnabled" Value="False">
                             <Setter Property="BackgroundColor" Value="LightGray" />
                         </Trigger>
-                        <Trigger TargetType="Button" Property="IsEnabled" Value="True">
-                            <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                        <Trigger TargetType="Frame" Property="IsEnabled" Value="True">
                             <Setter Property="BackgroundColor" Value="{StaticResource SecundaryDarkColor}" />
                         </Trigger>
-                    </Button.Triggers>
-                </Button>
+                    </Frame.Triggers>
+                </Frame>
             </Grid>
         </Grid>
     </pkv:PancakeView>

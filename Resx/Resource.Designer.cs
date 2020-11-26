@@ -457,7 +457,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a COVIDINFO is a personal project, created to provide official and reliable information on the progress of the COVID-19 pandemic, showing the progress of the number of cases in each country and the number of cases worldwide. If the application has the permissions for access to your GPS location it will show the statistics of the development of the pandemic in your country. .
+        ///   Busca una cadena traducida similar a COVIDINFO is a personal project, created to provide official and reliable information on the progress of the COVID-19 pandemic, showing the progress of the number of cases in each country and the number of cases worldwide..
         /// </summary>
         public static string devInfo3 {
             get {
@@ -475,30 +475,11 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enable the application&apos;s location permissions to display information about your country on the main screen!.
-        /// </summary>
-        public static string disabledGPS {
-            get {
-                return ResourceManager.GetString("disabledGPS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Donate to the COVID-19 Response Fund.
         /// </summary>
         public static string DONATIONS {
             get {
                 return ResourceManager.GetString("DONATIONS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Please enable location permissions in the app, to be able to display information about your country on the main page.
-        ///This is necessary only once..
-        /// </summary>
-        public static string enableGPSPermissions {
-            get {
-                return ResourceManager.GetString("enableGPSPermissions", resourceCulture);
             }
         }
         

@@ -167,15 +167,8 @@ Si le problème persiste, vous pouvez le signaler au développeur: rafael.idevel
   <data name="currentTest" xml:space="preserve">
     <value>Tests effectués</value>
   </data>
-  <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Veuillez activer les autorisations de localisation dans l'application pour pouvoir afficher des informations sur votre pays sur la page principale.
-Cela n'est nécessaire qu'une seule fois.</value>
-  </data>
   <data name="ok" xml:space="preserve">
     <value>Accepter</value>
-  </data>
-  <data name="disabledGPS" xml:space="preserve">
-    <value>Activez les autorisations de localisation de l'application pour afficher des informations sur votre pays sur l'écran principal!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Rechercher...</value>
@@ -232,7 +225,7 @@ Cela n'est nécessaire qu'une seule fois.</value>
     <value>Voir documentation officielle</value>
   </data>
   <data name="devInfo3" xml:space="preserve">
-    <value>COVIDINFO est un projet personnel, créé pour fournir des informations officielles et fiables sur l'évolution de la pandémie COVID-19, montrant l'évolution du nombre de cas dans chaque pays et le nombre de cas dans le monde. Si l'application dispose des autorisations nécessaires pour accéder à votre position GPS, elle affichera les statistiques sur l'évolution de la pandémie dans votre pays. </value>
+    <value>COVIDINFO est un projet personnel, créé pour fournir des informations officielles et fiables sur la progression de la pandémie COVID-19, montrant la progression du nombre de cas dans chaque pays et le nombre de cas dans le monde.</value>
   </data>
   <data name="dataInfo3" xml:space="preserve">
     <value>Pour plus d'informations, voir la documentation officielle de l'API NOVEL COVID.</value>

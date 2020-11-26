@@ -47,12 +47,8 @@
 
                         <Grid
                             Grid.Row="1"
-                            Margin="20,0"
-                            ColumnSpacing="20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+                            Margin="20,10,20,0"
+                            ColumnSpacing="20" ColumnDefinitions="*,*">
 
                             <pkv:PancakeView
                                 x:Name="SymptomsFrame"
@@ -190,7 +186,7 @@
                         <busyindicator:SfBusyIndicator
                             x:Name="busyindicator"
                             Title="{i18n:Translate loading}"
-                            Margin="0,30,0,0"
+                            Margin="0,40,0,0"
                             AnimationType="RollingBall"
                             HeightRequest="100"
                             IsBusy="{Binding SFIndicator}"

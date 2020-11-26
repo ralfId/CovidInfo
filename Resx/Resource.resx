@@ -167,15 +167,8 @@ If the problem persists you can report to the developer: rafael.ideveloper@gmail
   <data name="currentTest" xml:space="preserve">
     <value>Tests performed</value>
   </data>
-  <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Please enable location permissions in the app, to be able to display information about your country on the main page.
-This is necessary only once.</value>
-  </data>
   <data name="ok" xml:space="preserve">
     <value>Ok</value>
-  </data>
-  <data name="disabledGPS" xml:space="preserve">
-    <value>Enable the application's location permissions to display information about your country on the main screen!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Search...</value>
@@ -220,7 +213,7 @@ This is necessary only once.</value>
     <value>Hello! My name is Rafael Ibañez.</value>
   </data>
   <data name="devInfo3" xml:space="preserve">
-    <value>COVIDINFO is a personal project, created to provide official and reliable information on the progress of the COVID-19 pandemic, showing the progress of the number of cases in each country and the number of cases worldwide. If the application has the permissions for access to your GPS location it will show the statistics of the development of the pandemic in your country. </value>
+    <value>COVIDINFO is a personal project, created to provide official and reliable information on the progress of the COVID-19 pandemic, showing the progress of the number of cases in each country and the number of cases worldwide.</value>
   </data>
   <data name="devInfo4" xml:space="preserve">
     <value>For any kind of information or suggestion you can send me a mail to this address: </value>

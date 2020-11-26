@@ -167,15 +167,8 @@ Si el problema persiste, puede informar al desarrollador: rafael.ideveloper@gmai
   <data name="currentTest" xml:space="preserve">
     <value>Pruebas realizadas</value>
   </data>
-  <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Habilite los permisos de ubicación en la aplicación para poder mostrar información sobre su país en la página principal.
-Esto es necesario solo una vez.</value>
-  </data>
   <data name="ok" xml:space="preserve">
     <value>Aceptar</value>
-  </data>
-  <data name="disabledGPS" xml:space="preserve">
-    <value>¡Habilite los permisos de ubicación de la aplicación para mostrar información sobre su país en la pantalla principal!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Buscar...</value>
@@ -220,7 +213,7 @@ Esto es necesario solo una vez.</value>
     <value>¡Hola! Mi nombre es Rafael Ibañez.</value>
   </data>
   <data name="devInfo3" xml:space="preserve">
-    <value>COVIDINFO es un proyecto personal, creado con el propósito de bridar  información oficial y fiable sobre el avance de la pandemia COVID-19, donde se muestran el progreso de número de casos en cada país y el número de casos a nivel mundial. Si la aplicación cuenta con los permisos para el  acceso a tu ubicación GPS mostrara la estadística del desarrollo de la pandemia en tu país. </value>
+    <value>COVIDINFO es un proyecto personal, creado para brindar información oficial y confiable sobre el avance de la pandemia COVID-19, mostrando el avance del número de casos en cada país y el número de casos a nivel mundial.</value>
   </data>
   <data name="devInfo4" xml:space="preserve">
     <value>Para cualquier tipo de información o sugerencia puedes enviarme un correo a esta dirección: </value>

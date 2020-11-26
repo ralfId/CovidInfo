@@ -167,15 +167,8 @@ Se o problema persistir, você pode relatar ao desenvolvedor: rafael.ideveloper@
   <data name="currentTest" xml:space="preserve">
     <value>Testes realizados</value>
   </data>
-  <data name="enableGPSPermissions" xml:space="preserve">
-    <value>Ative as permissões de localização no aplicativo para poder exibir informações sobre o seu país na página principal.
-Isso é necessário apenas uma vez.</value>
-  </data>
   <data name="ok" xml:space="preserve">
     <value>Accetta</value>
-  </data>
-  <data name="disabledGPS" xml:space="preserve">
-    <value>Habilite as permissões de localização do aplicativo para exibir informações sobre seu país na tela principal!</value>
   </data>
   <data name="searchPlaceHolder" xml:space="preserve">
     <value>Buscar ...</value>
@@ -220,7 +213,7 @@ Isso é necessário apenas uma vez.</value>
     <value>Olá! O meu nome é Rafael Ibañez.</value>
   </data>
   <data name="devInfo3" xml:space="preserve">
-    <value>COVID INFO é um projecto pessoal para fornecer informações oficiais e fiáveis sobre a pandemia COVID19. </value>
+    <value>COVIDINFO é um projeto pessoal, criado para fornecer informações oficiais e confiáveis sobre o andamento da pandemia COVID-19, mostrando a evolução do número de casos em cada país e o número de casos no mundo.</value>
   </data>
   <data name="devInfo4" xml:space="preserve">
     <value>Para qualquer tipo de informação ou sugestão, pode enviar-me uma mensagem para este endereço: </value>
