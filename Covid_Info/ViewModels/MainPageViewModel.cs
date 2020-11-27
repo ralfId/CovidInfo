@@ -42,7 +42,6 @@ namespace Covid_Info.ViewModels
         private bool _sfIndicator;
         private bool _isRefrshing;
         public string currentUserCountry;
-        //private MyCountry myCountryInfo;
 
 
         public MainPageViewModel(
@@ -163,10 +162,8 @@ namespace Covid_Info.ViewModels
 
         private async Task loadDataValidation()
         {
-           
             try
             {
-
                 SFIndicator = true;
 
                 IconString = string.Empty;
@@ -225,15 +222,8 @@ namespace Covid_Info.ViewModels
 
         private async Task LoadData()
         {
-
             try
             {
-
-                //if (myCountryInfo == null)
-                //{
-                //    myCountryInfo = await _locationServices.GetMyCountryInfo();
-                //}
-
                 //GET GLOBAL INGO
                 var globalData = await _apiRequest.globalInfoAPIRequest();
                 if (globalData != null)
@@ -267,8 +257,6 @@ namespace Covid_Info.ViewModels
                         MyCountryInfo = countriesList.FirstOrDefault(c => c.countryInfo.iso2 == currentUserCountry);
                     }
                 }
-
-
             }
             catch (Exception ex)
             {

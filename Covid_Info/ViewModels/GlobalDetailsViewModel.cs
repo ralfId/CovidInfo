@@ -12,7 +12,6 @@ namespace Covid_Info.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
         private GlobalInfo _globalInfo;
-        private Historical _historical;
 
 
         public GlobalDetailsViewModel(INavigationService navigationService, IApiService apiService)
@@ -27,10 +26,7 @@ namespace Covid_Info.ViewModels
         {
             base.OnNavigatedTo(parameters);
 
-            //GlobalDetails = parameters["globaldetails"] as GlobalInfo;
             GlobalDetails = parameters.GetValue<GlobalInfo>("globaldetails");
-
-
         }
 
 
@@ -40,11 +36,7 @@ namespace Covid_Info.ViewModels
             set { SetProperty(ref _globalInfo, value); }
         }
 
-        public Historical historicalCountry
-        {
-            get { return _historical; }
-            set { SetProperty(ref _historical, value); }
-        }
+   
 
 
     }

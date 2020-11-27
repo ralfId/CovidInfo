@@ -11,7 +11,6 @@ namespace Covid_Info.ViewModels
         private readonly IApiService _apiService;
 
         private Country _coutryDetails;
-        private Historical _historical;
 
         public MyCountryDetailsViewModel(INavigationService navigationService, IApiService apiService)
             : base(navigationService, apiService)
@@ -35,12 +34,6 @@ namespace Covid_Info.ViewModels
         {
             get { return _coutryDetails; }
             set { SetProperty(ref _coutryDetails, value); }
-        }
-
-        public Historical historicalCountry
-        {
-            get { return _historical; }
-            set { SetProperty(ref _historical, value); }
         }
 
     }

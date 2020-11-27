@@ -23,8 +23,14 @@ namespace Covid_Info.ViewModels
 
         private List<Country> LstCountries;
 
-        public DelegateCommand _setCountryCommand;
-        public DelegateCommand _searchCountryCommnad;
+        private bool _SFIndicator;
+        private bool _IsVisibleCountries;
+        private bool _IsVisibleLoadingPage;
+        private ObservableCollection<Country> _ObCountries;
+        private Country _SeletedCountry;
+        private bool _ContinueBTN = false;
+        private string _SeachedCountry;
+
         public SelectionCountryViewModel(
             INavigationService navigationService,
             IApiService apiService,
@@ -33,12 +39,10 @@ namespace Covid_Info.ViewModels
         {
             try
             {
-                Title = "Selecciona tu pais";
                 _navigationService = navigationService;
                 _apiService = apiService;
                 _apiRequest = apiRequest;
 
-                //SetCountryCommnad = new DelegateCommand(async () => await SetCountryInfo());
             }
             catch (Exception ex)
             {
@@ -46,37 +50,33 @@ namespace Covid_Info.ViewModels
             }
         }
 
+        public DelegateCommand _setCountryCommand;
         public DelegateCommand SetCountryCommnad  =>  _setCountryCommand ??  ( _setCountryCommand  = new DelegateCommand(SetCountryInfo));
-        //public DelegateCommand SearchCountryCommnad => _searchCountryCommnad ?? (_searchCountryCommnad = new DelegateCommand(SearchedCountryMethod));
-        private bool _SFIndicator;
+        
         public bool SFIndicator
         {
             get { return _SFIndicator; }
             set { SetProperty(ref _SFIndicator, value); }
         }
 
-        private bool _IsVisibleCountries;
         public bool IsVisibleCountries
         {
             get { return _IsVisibleCountries; }
             set { SetProperty(ref _IsVisibleCountries, value); }
         }
 
-        private bool _IsVisibleLoadingPage;
         public bool IsVisibleLoadingPage
         {
             get { return _IsVisibleLoadingPage; }
             set { SetProperty(ref _IsVisibleLoadingPage, value); }
         }
 
-        private ObservableCollection<Country> _ObCountries;
         public ObservableCollection<Country> ObCountries
         {
             get { return _ObCountries; }
             set { SetProperty(ref _ObCountries, value); }
         }
 
-        private Country _SeletedCountry;
         public Country SelectedCountry
         {
             get { return _SeletedCountry; }
@@ -89,13 +89,11 @@ namespace Covid_Info.ViewModels
                 }
             }
         }
-        private bool _ContinueBTN = false;
         public bool ContinueBTN
         {
             get { return _ContinueBTN; }
             set { SetProperty(ref _ContinueBTN, value); }
         }
-        private string _SeachedCountry;
         public string SearchedCountry
         {
             get { return _SeachedCountry; }

@@ -401,4 +401,10 @@ Si el problema persiste, puede informar al desarrollador: rafael.ideveloper@gmai
   <data name="guide" xml:space="preserve">
     <value>Guía</value>
   </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Selecciona tu país</value>
+  </data>
+  <data name="SelectCountryDescription" xml:space="preserve">
+    <value>(Para mostrar información en la página principal)</value>
+  </data>
 </root>

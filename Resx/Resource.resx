@@ -401,4 +401,10 @@ If the problem persists you can report to the developer: rafael.ideveloper@gmail
   <data name="guide" xml:space="preserve">
     <value>Guide</value>
   </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Select your country</value>
+  </data>
+  <data name="SelectCountryDescription" xml:space="preserve">
+    <value>(To display information on the main page)</value>
+  </data>
 </root>

@@ -666,6 +666,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Select your country.
+        /// </summary>
+        public static string SelectCountry {
+            get {
+                return ResourceManager.GetString("SelectCountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a (To display information on the main page).
+        /// </summary>
+        public static string SelectCountryDescription {
+            get {
+                return ResourceManager.GetString("SelectCountryDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a It is recommended that people who suffer mild symptoms and have a good general health condition are confined at home.
         /// </summary>
         public static string sintomasCDescription {

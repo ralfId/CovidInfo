@@ -60,11 +60,8 @@ namespace Covid_Info.ViewModels
             }
         }
 
-
-
         public DelegateCommand SearchCountry { get; set; }
         public DelegateCommand UpdateData { get; set; }
-
         public DelegateCommand goFiltersView { get; set; }
 
 
@@ -275,14 +272,14 @@ namespace Covid_Info.ViewModels
             try
             {
                 var selectedSort = await UserDialogs.Instance.ActionSheetAsync(
-               Resource.orderBy,
-               "",
-               Resource.cancel,
-               null,
-               Constants.AZ,
-               Constants.ZA,
-               Resource.lessAffectedCountries,
-               Resource.mostAffectedcountries);
+                    Resource.orderBy,
+                    "",
+                    Resource.cancel,
+                    null,
+                    Constants.AZ,
+                    Constants.ZA,
+                    Resource.lessAffectedCountries,
+                    Resource.mostAffectedcountries);
 
 
                 if (selectedSort == null || selectedSort == "") return;

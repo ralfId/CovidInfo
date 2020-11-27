@@ -32,11 +32,11 @@
                     <Label
                         FontSize="Large"
                         HorizontalOptions="Center"
-                        Text="{Binding Title}" />
+                        Text="{i18n:Translate SelectCountry}" />
                     <Label
                         FontSize="12"
                         HorizontalOptions="CenterAndExpand"
-                        Text="(Para mostrar informacion en la pagina principal)" />
+                        Text="{i18n:Translate SelectCountryDescription}" />
                 </StackLayout>
                 <SearchBar
                     Grid.Row="1"

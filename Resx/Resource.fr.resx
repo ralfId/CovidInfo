@@ -401,4 +401,10 @@ Si le problème persiste, vous pouvez le signaler au développeur: rafael.idevel
   <data name="guide" xml:space="preserve">
     <value>Guider</value>
   </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Sélectionnez votre pays</value>
+  </data>
+  <data name="SelectCountryDescription" xml:space="preserve">
+    <value>(Pour afficher des informations sur la page principale)</value>
+  </data>
 </root>
