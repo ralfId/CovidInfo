@@ -61,7 +61,7 @@
                             BorderColor="{StaticResource ConfirmedColor}"
                             HasShadow="False">
                             <Grid
-                                RowDefinitions="35, 25"
+                                RowDefinitions="auto, auto"
                                 RowSpacing="0"
                                 VerticalOptions="CenterAndExpand">
                                 <Label
@@ -88,7 +88,7 @@
                             BorderColor="{StaticResource ActiveColor}"
                             HasShadow="False">
                             <Grid
-                                RowDefinitions="35, 25"
+                                RowDefinitions="auto, auto"
                                 RowSpacing="0"
                                 VerticalOptions="Center">
                                 <Label
@@ -115,7 +115,7 @@
                             BorderColor="{StaticResource RecoveredColor}"
                             HasShadow="False">
                             <Grid
-                                RowDefinitions="35, 25"
+                                RowDefinitions="auto, auto"
                                 RowSpacing="0"
                                 VerticalOptions="Center">
                                 <Label
@@ -142,7 +142,7 @@
                             BorderColor="{StaticResource DeathsColor}"
                             HasShadow="False">
                             <Grid
-                                RowDefinitions="35, 25"
+                                RowDefinitions="auto, auto"
                                 RowSpacing="0"
                                 VerticalOptions="Center">
                                 <Label

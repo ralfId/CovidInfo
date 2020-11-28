@@ -34,7 +34,7 @@
             <SwipeGestureRecognizer Command="{Binding ClosePopup}" Direction="Down" />
         </pkv:PancakeView.GestureRecognizers>
 
-        <Grid RowDefinitions="30, 80, *" RowSpacing="2">
+        <Grid RowDefinitions="30, auto, *" RowSpacing="2">
 
             <pkv:PancakeView Padding="0,5,0,0" HeightRequest="30">
                 <StackLayout>
@@ -80,7 +80,7 @@
                 <Grid
                     Margin="10,0"
                     Padding="5,20,5,0"
-                    RowDefinitions="25, 110, 25, 190">
+                    RowDefinitions="auto, auto, auto, auto">
                     <!--  Grid today reports  -->
                     <Label
                         Margin="5,0"

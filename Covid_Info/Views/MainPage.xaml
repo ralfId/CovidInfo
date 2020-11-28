@@ -63,7 +63,7 @@
                                         Offset="10,10"
                                         Color="#000000" />
                                 </pkv:PancakeView.Shadow>
-                                <Grid RowDefinitions="100,auto">
+                                <Grid RowDefinitions="auto,auto">
                                     <Image
                                         Grid.RowSpan="2"
                                         Margin="3"
@@ -103,7 +103,7 @@
                                         Offset="10,10"
                                         Color="#000000" />
                                 </pkv:PancakeView.Shadow>
-                                <Grid RowDefinitions="100,auto">
+                                <Grid RowDefinitions="auto,auto">
                                     <Image
                                         Grid.RowSpan="2"
                                         Margin="3"

@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Covid_Info.Views.ContentViews.UpdaterViewer.xaml", "Views/ContentViews/UpdaterViewer.xaml", typeof(global::Covid_Info.Views.ContentViews.UpdaterViewer))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Covid_Info.Views.Settings.xaml", "Views/Settings.xaml", typeof(global::Covid_Info.Views.Settings))]
 
-namespace Covid_Info.Views.ContentViews {
+namespace Covid_Info.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\ContentViews\\UpdaterViewer.xaml")]
-    public partial class UpdaterViewer : global::Xamarin.Forms.ContentView {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Settings.xaml")]
+    public partial class Settings : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UpdaterViewer));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Settings));
         }
     }
 }

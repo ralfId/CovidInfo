@@ -55,7 +55,7 @@
 
 	/* 3: Covid_Info.dll */
 	/* uncompressed_file_size */
-	.long	678400
+	.long	681984
 	/* loaded */
 	.byte	0
 	/* data */
@@ -172,7 +172,7 @@
 
 	/* 16: Resx.dll */
 	/* uncompressed_file_size */
-	.long	22528
+	.long	23040
 	/* loaded */
 	.byte	0
 	/* data */

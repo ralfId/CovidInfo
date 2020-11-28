@@ -55,7 +55,6 @@ R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\ContentViews\LoadingData.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\ContentViews\MostAffectedCountries.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\ContentViews\MyCountry.xaml.g.cs
-R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\ContentViews\UpdaterViewer.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\DevInfo.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\ExternalInfo.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\GlobalDetails.xaml.g.cs
@@ -65,6 +64,7 @@ R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\MainPage.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\MyCountryDetails.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\SelectionCountry.xaml.g.cs
+R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\Settings.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\TemplatePage.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Covid_Info.AssemblyInfoInputs.cache
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Covid_Info.AssemblyInfo.cs
