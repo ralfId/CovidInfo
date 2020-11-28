@@ -232,11 +232,11 @@ namespace Covid_Info.ViewModels
                 }
 
                 //GET ALL COUNTRIES INFO
-                var countriesList = await _apiRequest.countriesInfoAPIRequest();
+                lstCountriesInfo = await _apiRequest.countriesInfoAPIRequest();
 
-                if (countriesList.Any())
+                if (lstCountriesInfo.Any())
                 {
-                    var orderList = countriesList.OrderByDescending(d => d.deaths).Take(5).Select(c => new Country
+                    var orderList = lstCountriesInfo.OrderByDescending(d => d.deaths).Take(5).Select(c => new Country
                     {
                         country = c.country,
                         deaths = c.deaths,
@@ -254,7 +254,7 @@ namespace Covid_Info.ViewModels
                     if (!string.IsNullOrEmpty(currentUserCountry))
                     {
                         IsVisibleMyCountry = true;
-                        MyCountryInfo = countriesList.FirstOrDefault(c => c.countryInfo.iso2 == currentUserCountry);
+                        MyCountryInfo = lstCountriesInfo.FirstOrDefault(c => c.countryInfo.iso2 == currentUserCountry);
                     }
                 }
             }
@@ -323,7 +323,19 @@ namespace Covid_Info.ViewModels
 
         }
 
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            MessagingCenter.Subscribe<SelectionCountryViewModel, string>(this, Constants.userCountry, (s, a) =>
+            {
+                if (!string.IsNullOrEmpty(a))
+                {
+                    IsVisibleMyCountry = true;
+                    MyCountryInfo = lstCountriesInfo.FirstOrDefault(c => c.countryInfo.iso2 == a);
+                }
+            });
 
+        }
 
         #region methods for navigation to external info
         //navigate to GlobalDetails

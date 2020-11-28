@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid_Info.Views.Settings"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
+    xmlns:prism="http://prismlibrary.com"
+    Title="{Binding Title}"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ScrollView>
+        <TableView Margin="0,10,0,10" Intent="Settings">
+            <TableView.Root>
+                <TableSection>
+                    <ViewCell>
+                        <Grid Padding="5" ColumnDefinitions="50,*">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavToCountrySelectionPage}" />
+                            </Grid.GestureRecognizers>
+                            <Label
+                                FontFamily="{StaticResource FASolid}"
+                                FontSize="Title"
+                                HorizontalOptions="Center"
+                                Text="&#xf57d;"
+                                TextColor="{StaticResource SecundaryColor}"
+                                VerticalOptions="Center" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="Body"
+                                Text="{i18n:Translate SelectCountry}"
+                                TextColor="{StaticResource SecundaryColor}"
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+    </ScrollView>
+
+</ContentPage>

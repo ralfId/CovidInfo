@@ -407,4 +407,7 @@ Se il problema persiste puoi segnalare allo sviluppatore: rafael.ideveloper@gmai
   <data name="SelectCountryDescription" xml:space="preserve">
     <value>(Per visualizzare le informazioni sulla pagina principale)</value>
   </data>
+  <data name="Config" xml:space="preserve">
+    <value>Config.</value>
+  </data>
 </root>

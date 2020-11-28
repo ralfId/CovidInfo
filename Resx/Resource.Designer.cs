@@ -313,6 +313,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Config..
+        /// </summary>
+        public static string Config {
+            get {
+                return ResourceManager.GetString("Config", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirmed.
         /// </summary>
         public static string confirmedCases {

@@ -78,6 +78,7 @@ namespace Covid_Info
             containerRegistry.RegisterForNavigation<Covid_Info.Views.GuidelinesViews.Symptoms>();
             containerRegistry.RegisterForNavigation<Covid_Info.Views.GuidelinesViews.Advices>();
             containerRegistry.RegisterForNavigation<SelectionCountry, SelectionCountryViewModel>();
+            containerRegistry.RegisterForNavigation<Settings, SettingsViewModel>();
         }
 
         private async Task CheckAppLaunch()

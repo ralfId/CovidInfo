@@ -1,4 +1,5 @@
-﻿using Covid_Info.Models;
+﻿using Acr.UserDialogs;
+using Covid_Info.Models;
 using Covid_Info.Services;
 using Covid_Info.Utils;
 using Prism.Commands;
@@ -12,6 +13,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid_Info.ViewModels
 {
@@ -44,15 +46,20 @@ namespace Covid_Info.ViewModels
                 _apiRequest = apiRequest;
 
                 UpdateAndGetData = new DelegateCommand(async () => await GetCotriesList());
+                CancelCommand = new DelegateCommand(async () => await Cancel());
             }
             catch (Exception ex)
             {
                 Debug.Print($"Error in AllCountriesViewModel ==> {ex.ToString()}");
             }
         }
+
+        
+
+        public DelegateCommand CancelCommand { get; set; }
         public DelegateCommand _setCountryCommand;
         public DelegateCommand SetCountryCommnad  =>  _setCountryCommand ??  ( _setCountryCommand  = new DelegateCommand(SetCountryInfo));
-
+        
 
         public bool IsVisibleCountries
         {
@@ -190,26 +197,51 @@ namespace Covid_Info.ViewModels
                     {
                         Preferences.Set(Constants.userCountry, SelectedCountry.countryInfo.iso2);
                         var result = await _navigationService.NavigateAsync(new Uri("CI:///NavigationPage/MainPage", UriKind.Absolute));
-                        if (!result.Success)
-                        {
-                            Console.WriteLine($"Error on set new main page {result.Exception}");
-                        }
                     }
                     else
                     {
-                        await _navigationService.NavigateAsync(new Uri("CI:///NavigationPage/MainPage", UriKind.Absolute));
+                        await UserDialogs.Instance.AlertAsync("Select your country", null, Resource.ok);
+                        return;
                     }
                 }
                 else
                 {
-                    
-                    Preferences.Set(Constants.userCountry, SelectedCountry.countryInfo.iso2);
+                    if (SelectedCountry != null)
+                    {
+                        Preferences.Set(Constants.userCountry, SelectedCountry.countryInfo.iso2);
+                        MessagingCenter.Send(this, Constants.userCountry, SelectedCountry.countryInfo.iso2);
+                        await _navigationService.GoBackAsync();
+                    }
+                    else
+                    {
+                        await UserDialogs.Instance.AlertAsync("Select your country", null, Resource.ok);
+                        return;
+                    }
                 }
 
             }
             catch (Exception ex)
             {
                 Debug.Print($"Error on SetCountryInfo(), SelectionCountryVM >>>>> {ex}");
+            }
+        }
+
+        private async Task Cancel()
+        {
+            try
+            {
+                if (VersionTracking.IsFirstLaunchEver)
+                {
+                    await _navigationService.NavigateAsync(new Uri("CI:///NavigationPage/MainPage", UriKind.Absolute));
+                }
+                else
+                {
+                    await _navigationService.GoBackAsync();
+                }
+            }
+            catch ( Exception ex)
+            {
+                Debug.WriteLine($"Error on calcel SelectionCountryPage >>>>>>>>>> {ex}");
             }
         }
     }

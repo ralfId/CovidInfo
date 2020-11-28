@@ -51,6 +51,7 @@ namespace Covid_Info.ViewModels
 
             NavDevInfo = new DelegateCommand(async () => await NavigationService.NavigateAsync("DevInfo"));
             ClosePopup = new DelegateCommand(async () => await NavigationService.ClearPopupStackAsync());
+            NavToSettingsPageCommand = new DelegateCommand(async () => await navigationService.NavigateAsync("Settings"));
             currentCulture = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
         }
 
@@ -59,6 +60,13 @@ namespace Covid_Info.ViewModels
 
         public DelegateCommand UpdateAndGetData { get;  set; }
         public DelegateCommand UpdateDataonSwipe { get;  set; }
+        public DelegateCommand NavToSettingsPageCommand { get; set; }
+        
+
+        private void NavToSettingsPage()
+        {
+            
+        }
 
         public virtual void Initialize(INavigationParameters parameters)
         {

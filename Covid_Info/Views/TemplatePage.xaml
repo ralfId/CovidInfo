@@ -3,9 +3,17 @@
     x:Class="Covid_Info.Views.TemplatePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True"
     BackgroundColor="{StaticResource BackgroundColorPage}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding NavToSettingsPageCommand}"
+            Order="Secondary"
+            Priority="0"
+            Text="{i18n:Translate Config}" />
+    </ContentPage.ToolbarItems>
     <NavigationPage.TitleView>
         <Grid RowSpacing="0">
             <Grid Grid.Row="0" ColumnSpacing="0">
