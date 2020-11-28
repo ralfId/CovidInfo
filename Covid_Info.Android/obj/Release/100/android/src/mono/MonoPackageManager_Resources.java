@@ -81,7 +81,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Google.Android.Material.dll",
 		"Acr.UserDialogs.dll",
 		"AndHUD.dll",
-		"Covid_Info.dll",
 		"DryIoc.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
@@ -91,7 +90,6 @@ public class MonoPackageManager_Resources {
 		"Prism.DryIoc.Forms.dll",
 		"Prism.Forms.dll",
 		"Prism.Plugin.Popups.dll",
-		"Resx.dll",
 		"Rg.Plugins.Popup.dll",
 		"Rg.Plugins.Popup.Droid.dll",
 		"SQLite-net.dll",
@@ -114,6 +112,8 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"Covid_Info.Android.dll",
+		"Covid_Info.dll",
+		"Resx.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

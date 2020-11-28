@@ -73,9 +73,6 @@
             </pkv:PancakeView>
 
             <ScrollView Grid.Row="2">
-                <ScrollView.GestureRecognizers>
-                    <SwipeGestureRecognizer Command="{Binding ClosePopup}" Direction="Down" />
-                </ScrollView.GestureRecognizers>
                 <Grid
                     Margin="10,0"
                     Padding="5,20,5,0"

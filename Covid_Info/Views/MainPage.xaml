@@ -202,41 +202,35 @@
 
 
             <!--  BTN External info  -->
-            <Grid
+
+            <pkv:PancakeView
                 Grid.Row="1"
-                Margin="0"
-                Padding="3,10"
+                Padding="0,10"
                 BackgroundColor="#cfd8dc"
-                IsVisible="{Binding IsVisibleMainPage}"
-                VerticalOptions="EndAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <pkv:PancakeView>
-                    <StackLayout
-                        HorizontalOptions="CenterAndExpand"
-                        Orientation="Horizontal"
-                        Spacing="10">
-                        <Label
-                            Margin="0"
-                            FontAttributes="Bold"
-                            FontFamily="{StaticResource FASolid}"
-                            FontSize="Title"
-                            HorizontalOptions="Center"
-                            Text="&#xf106;"
-                            TextColor="{StaticResource SecundaryDarkColor}"
-                            VerticalOptions="Center" />
-                        <Label
-                            FontSize="Body"
-                            Text="{i18n:Translate btnExternalInfo}"
-                            TextColor="{StaticResource SecundaryDarkColor}"
-                            VerticalOptions="Center" />
-                    </StackLayout>
-                    <pkv:PancakeView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GoExternalInfo}" />
-                    </pkv:PancakeView.GestureRecognizers>
-                </pkv:PancakeView>
-            </Grid>
+                IsVisible="{Binding IsVisibleMainPage}">
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    <Label
+                        Margin="0"
+                        FontAttributes="Bold"
+                        FontFamily="{StaticResource FASolid}"
+                        FontSize="Title"
+                        HorizontalOptions="Center"
+                        Text="&#xf106;"
+                        TextColor="{StaticResource SecundaryDarkColor}"
+                        VerticalOptions="Center" />
+                    <Label
+                        FontSize="Body"
+                        Text="{i18n:Translate btnExternalInfo}"
+                        TextColor="{StaticResource SecundaryDarkColor}"
+                        VerticalOptions="Center" />
+                </StackLayout>
+                <pkv:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoExternalInfo}" />
+                </pkv:PancakeView.GestureRecognizers>
+            </pkv:PancakeView>
 
         </Grid>
 

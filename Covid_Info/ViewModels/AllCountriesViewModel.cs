@@ -50,7 +50,7 @@ namespace Covid_Info.ViewModels
                 Task.Run(async () => await LoadAllCountriesInfo());
 
                 SearchCountry = new DelegateCommand(() => FilterSearch());
-                UpdateDataonBTN = new DelegateCommand(async () => await RefreshListView());
+                UpdateAndGetData = new DelegateCommand(async () => await RefreshListView());
                 UpdateDataonSwipe = new DelegateCommand(async () => await RefreshListView());
                 goFiltersView = new DelegateCommand(async () => await Sorting());
             }

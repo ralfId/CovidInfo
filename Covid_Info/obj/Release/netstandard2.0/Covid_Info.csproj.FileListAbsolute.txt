@@ -64,6 +64,7 @@ R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\GuidelinesViews\Symptoms.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\MainPage.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\MyCountryDetails.xaml.g.cs
+R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\SelectionCountry.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Views\TemplatePage.xaml.g.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Covid_Info.AssemblyInfoInputs.cache
 R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info\obj\Release\netstandard2.0\Covid_Info.AssemblyInfo.cs

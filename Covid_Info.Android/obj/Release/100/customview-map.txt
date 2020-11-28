@@ -54,6 +54,7 @@ resources;obj\Release\100\res\values\styles.xml
 resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\1\jl\res\values\attrs.xml
 resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\1\jl\res\values\strings.xml
 resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\56\jl\res\values\attrs.xml
+resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\56\jl\res\values\strings.xml
 resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\56\jl\res\values\styles.xml
 resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\9\jl\res\values\attrs.xml
 resources;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\9\jl\res\values\strings.xml
@@ -64,6 +65,7 @@ set;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\5
 shape;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\1\jl\res\drawable\roundedbg.xml
 shape;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\1\jl\res\drawable\roundedbgdark.xml
 string;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\1\jl\res\values\strings.xml
+string;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\56\jl\res\values\strings.xml
 string;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\9\jl\res\values\strings.xml
 style;obj\Release\100\res\values\styles.xml
 style;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Release\100\lp\56\jl\res\values\styles.xml

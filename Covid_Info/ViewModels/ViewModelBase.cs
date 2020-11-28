@@ -57,7 +57,7 @@ namespace Covid_Info.ViewModels
         public DelegateCommand NavDevInfo { get; private set; }
         public DelegateCommand ClosePopup { get; set; }
 
-        public DelegateCommand UpdateDataonBTN { get;  set; }
+        public DelegateCommand UpdateAndGetData { get;  set; }
         public DelegateCommand UpdateDataonSwipe { get;  set; }
 
         public virtual void Initialize(INavigationParameters parameters)

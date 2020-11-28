@@ -64,7 +64,7 @@ namespace Covid_Info.ViewModels
                 lstCountriesInfo = new List<Country>();
 
                 NavAllCountries = new DelegateCommand(async () => await _navigationService.NavigateAsync("AllCountries"));
-                UpdateDataonBTN = new DelegateCommand(async () => await loadDataValidation());
+                UpdateAndGetData = new DelegateCommand(async () => await loadDataValidation());
                 UpdateDataonSwipe = new DelegateCommand(async () => await RefreshOnSwipeBTN());
                 GoExternalInfo = new DelegateCommand(async ()=> await _navigationService.NavigateAsync("ExternalInfo"));
                 GoMyCountryDetails = new DelegateCommand(async () => await navContryDetails());

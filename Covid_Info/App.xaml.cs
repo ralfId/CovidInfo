@@ -90,7 +90,6 @@ namespace Covid_Info
             else
             {
                 await NavigationService.NavigateAsync("NavigationPage/MainPage");
-                //await NavigationService.NavigateAsync("NavigationPage/SelectionCountry");
             }
         }
         private async Task AddGuideLines()

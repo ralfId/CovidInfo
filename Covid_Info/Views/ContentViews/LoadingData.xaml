@@ -28,7 +28,7 @@
                 <Button
                     Padding="40,0"
                     BackgroundColor="{StaticResource SecundaryDarkColor}"
-                    Command="{Binding UpdateDataonBTN}"
+                    Command="{Binding UpdateAndGetData}"
                     HorizontalOptions="CenterAndExpand"
                     IsVisible="{Binding IsVisibleBTNTryAgaing}"
                     Text="{i18n:Translate tryAgainBTN}"

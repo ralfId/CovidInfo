@@ -31,7 +31,7 @@
             <SwipeGestureRecognizer Command="{Binding ClosePopup}" Direction="Down" />
         </pkv:PancakeView.GestureRecognizers>
 
-        <StackLayout>
+        <Grid RowDefinitions="30, 50, *">
 
             <pkv:PancakeView
                 Padding="0,5,0,0"
@@ -56,7 +56,7 @@
             </pkv:PancakeView>
 
             <StackLayout
-                Padding="15,5,15,10"
+                Grid.Row="1"
                 HorizontalOptions="Center"
                 Orientation="Horizontal"
                 Spacing="10">
@@ -68,14 +68,14 @@
                     TextColor="{StaticResource BaseFontColor}"
                     VerticalTextAlignment="Center" />
                 <Image
-                    HeightRequest="30"
+                    HeightRequest="35"
                     HorizontalOptions="Center"
                     Source="{helpers:ImageResource Covid_Info.Images.iconstayhome.png}"
-                    WidthRequest="30" />
+                    WidthRequest="35" />
             </StackLayout>
 
-            <ScrollView>
-                <StackLayout Padding="0,15,0,20" Spacing="15">
+            <ScrollView Grid.Row="2">
+                <StackLayout Padding="0,10,0,20" Spacing="15">
                     <Grid RowDefinitions="auto, auto, auto, auto" RowSpacing="10">
                         <!--  ELSALVADOR INFO  -->
                         <Grid
@@ -230,7 +230,7 @@
                     </Grid>
                 </StackLayout>
             </ScrollView>
-        </StackLayout>
+        </Grid>
     </pkv:PancakeView>
 
 </pages:PopupPage>

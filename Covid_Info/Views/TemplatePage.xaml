@@ -33,7 +33,7 @@
                     TextColor="{StaticResource WhiteColor}"
                     VerticalOptions="CenterAndExpand">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding UpdateDataonBTN}" />
+                        <TapGestureRecognizer Command="{Binding UpdateAndGetData}" />
                     </Label.GestureRecognizers>
                 </Label>
                 <Label

@@ -23,13 +23,13 @@ namespace Covid_Info.ViewModels
 
         private List<Country> LstCountries;
 
-        private bool _SFIndicator;
         private bool _IsVisibleCountries;
         private bool _IsVisibleLoadingPage;
         private ObservableCollection<Country> _ObCountries;
         private Country _SeletedCountry;
         private bool _ContinueBTN = false;
         private string _SeachedCountry;
+        private bool _IsRefreshing;
 
         public SelectionCountryViewModel(
             INavigationService navigationService,
@@ -43,40 +43,32 @@ namespace Covid_Info.ViewModels
                 _apiService = apiService;
                 _apiRequest = apiRequest;
 
+                UpdateAndGetData = new DelegateCommand(async () => await GetCotriesList());
             }
             catch (Exception ex)
             {
                 Debug.Print($"Error in AllCountriesViewModel ==> {ex.ToString()}");
             }
         }
-
         public DelegateCommand _setCountryCommand;
         public DelegateCommand SetCountryCommnad  =>  _setCountryCommand ??  ( _setCountryCommand  = new DelegateCommand(SetCountryInfo));
-        
-        public bool SFIndicator
-        {
-            get { return _SFIndicator; }
-            set { SetProperty(ref _SFIndicator, value); }
-        }
+
 
         public bool IsVisibleCountries
         {
             get { return _IsVisibleCountries; }
             set { SetProperty(ref _IsVisibleCountries, value); }
         }
-
         public bool IsVisibleLoadingPage
         {
             get { return _IsVisibleLoadingPage; }
             set { SetProperty(ref _IsVisibleLoadingPage, value); }
         }
-
         public ObservableCollection<Country> ObCountries
         {
             get { return _ObCountries; }
             set { SetProperty(ref _ObCountries, value); }
         }
-
         public Country SelectedCountry
         {
             get { return _SeletedCountry; }
@@ -99,7 +91,11 @@ namespace Covid_Info.ViewModels
             get { return _SeachedCountry; }
             set { SetProperty(ref _SeachedCountry, value); SearchedCountryMethod(); }
         }
-
+        public bool IsRefreshing
+        {
+            get { return _IsRefreshing; }
+            set { SetProperty(ref _IsRefreshing, value); }
+        }
         private void SearchedCountryMethod()
         {
             try
@@ -127,13 +123,10 @@ namespace Covid_Info.ViewModels
         {
             try
             {
-                SFIndicator = true;
-
-
-                IsVisibleCountries = false;
+                IsRefreshing = true;
+                IsVisibleCountries = true;
                 IsVisibleLoadingPage = false;
                 IsVisibleBTNTryAgaing = false;
-
                 if (!await _apiRequest.IsConnected())
                 {
                     IconString = Constants.NoConnectionJSON;
@@ -141,7 +134,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.noInter;
-                    SFIndicator = false;
+                    IsRefreshing = false;
                     return;
                 }
 
@@ -152,7 +145,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.limitedConnection;
-                    SFIndicator = false;
+                    IsRefreshing = false;
                     return;
                 }
                 LstCountries = await _apiRequest.countriesInfoAPIRequest();
@@ -165,19 +158,16 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.errorConectionServer;
-                    SFIndicator = false;
+                    IsRefreshing = false;
                     return;
                 }
-
                 ObCountries = new ObservableCollection<Country>(LstCountries);
+                IsRefreshing = false;
                 LoadMessage = string.Empty;
                 IconString = string.Empty;
                 IsVisibleLoadingPage = false;
                 IsVisibleBTNTryAgaing = true;
                 IsVisibleCountries = true;
-                SFIndicator = false;
-
-
             }
             catch (Exception ex)
             {

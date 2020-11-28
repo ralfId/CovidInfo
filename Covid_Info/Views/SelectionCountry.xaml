@@ -16,7 +16,7 @@
     NavigationPage.HasNavigationBar="False">
 
     <pkv:PancakeView
-        Margin="30,20"
+        Margin="20"
         BackgroundColor="{StaticResource WhiteColor}"
         CornerRadius="7">
         <pkv:PancakeView.Shadow>
@@ -27,7 +27,10 @@
                 Color="{StaticResource SecundaryDarkColor}" />
         </pkv:PancakeView.Shadow>
         <Grid Padding="10" RowDefinitions="auto,*,auto">
-            <Grid RowDefinitions="auto,auto" RowSpacing="0">
+            <Grid
+                IsVisible="{Binding IsVisibleCountries}"
+                RowDefinitions="auto,auto"
+                RowSpacing="0">
                 <StackLayout>
                     <Label
                         FontSize="Large"
@@ -50,14 +53,19 @@
 
             <ListView
                 Grid.Row="1"
+                Margin="15,0"
                 CachingStrategy="RetainElement"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshing}"
+                IsVisible="{Binding IsVisibleCountries}"
                 ItemsSource="{Binding ObCountries}"
+                RefreshCommand="{Binding UpdateAndGetData}"
                 SelectedItem="{Binding SelectedCountry}"
                 SelectionMode="Single">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Spacing="15">
                                 <Image Source="{Binding countryInfo.flag}" WidthRequest="50" />
                                 <Label
                                     FontSize="Body"
@@ -69,7 +77,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Grid Grid.Row="2" ColumnDefinitions="*,*">
+            <Grid
+                Grid.Row="2"
+                ColumnDefinitions="*,*"
+                IsVisible="{Binding IsVisibleCountries}">
                 <Frame
                     Padding="30,10"
                     BackgroundColor="{StaticResource SecundaryDarkColor}"
@@ -78,7 +89,7 @@
                     <Label
                         FontAttributes="Bold"
                         FontSize="Body"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="CenterAndExpand"
                         Text="{i18n:Translate cancel}"
                         TextColor="{StaticResource WhiteColor}"
                         VerticalOptions="Center" />
@@ -89,7 +100,7 @@
                 <Frame
                     Grid.Column="1"
                     Padding="30,10"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
                     IsEnabled="{Binding ContinueBTN}"
                     VerticalOptions="Center">
                     <Label
@@ -112,6 +123,12 @@
                     </Frame.Triggers>
                 </Frame>
             </Grid>
+
+            <contentViews:LoadingData
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                IsVisible="{Binding IsVisibleLoadingPage}"
+                VerticalOptions="Center" />
         </Grid>
     </pkv:PancakeView>
 </ContentPage>

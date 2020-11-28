@@ -14,11 +14,9 @@ R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.csproj
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.AssemblyInfoInputs.cache
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.AssemblyInfo.cs
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.csproj.CoreCompileInputs.cache
-R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\XamlC.stamp
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\es\Resx.resources.dll
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\fr\Resx.resources.dll
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\it\Resx.resources.dll
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\pt\Resx.resources.dll
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.dll
 R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.pdb
-R:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Release\netstandard2.0\Resx.csprojAssemblyReference.cache

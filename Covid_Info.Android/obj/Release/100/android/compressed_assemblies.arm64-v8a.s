@@ -26,7 +26,7 @@
 
 	/* 2: Covid_Info.Android.dll */
 	/* uncompressed_file_size */
-	.word	384512
+	.word	385024
 	/* loaded */
 	.byte	0
 	/* data */
@@ -35,7 +35,7 @@
 
 	/* 3: Covid_Info.dll */
 	/* uncompressed_file_size */
-	.word	673280
+	.word	677888
 	/* loaded */
 	.byte	0
 	/* data */
@@ -53,7 +53,7 @@
 
 	/* 5: FormsViewGroup.dll */
 	/* uncompressed_file_size */
-	.word	14336
+	.word	15360
 	/* loaded */
 	.byte	0
 	/* data */
@@ -71,7 +71,7 @@
 
 	/* 7: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.word	2067968
+	.word	2062336
 	/* loaded */
 	.byte	0
 	/* data */
@@ -152,7 +152,7 @@
 
 	/* 16: Resx.dll */
 	/* uncompressed_file_size */
-	.word	23040
+	.word	22528
 	/* loaded */
 	.byte	0
 	/* data */
@@ -485,7 +485,7 @@
 
 	/* 53: Xamarin.AndroidX.Core.dll */
 	/* uncompressed_file_size */
-	.word	524288
+	.word	522240
 	/* loaded */
 	.byte	0
 	/* data */
@@ -746,7 +746,7 @@
 
 	/* 82: Xamarin.Essentials.dll */
 	/* uncompressed_file_size */
-	.word	51712
+	.word	31232
 	/* loaded */
 	.byte	0
 	/* data */
@@ -755,7 +755,7 @@
 
 	/* 83: Xamarin.Forms.Core.dll */
 	/* uncompressed_file_size */
-	.word	1149952
+	.word	1191424
 	/* loaded */
 	.byte	0
 	/* data */
@@ -773,7 +773,7 @@
 
 	/* 85: Xamarin.Forms.Platform.Android.dll */
 	/* uncompressed_file_size */
-	.word	779264
+	.word	798720
 	/* loaded */
 	.byte	0
 	/* data */
@@ -791,7 +791,7 @@
 
 	/* 87: Xamarin.Forms.Xaml.dll */
 	/* uncompressed_file_size */
-	.word	102912
+	.word	102400
 	/* loaded */
 	.byte	0
 	/* data */
@@ -809,7 +809,7 @@
 
 	/* 89: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	2112000
+	.word	2112512
 	/* loaded */
 	.byte	0
 	/* data */
