@@ -26,7 +26,7 @@
 
 	/* 2: Covid_Info.Android.dll */
 	/* uncompressed_file_size */
-	.word	385024
+	.word	384512
 	/* loaded */
 	.byte	0
 	/* data */
@@ -35,7 +35,7 @@
 
 	/* 3: Covid_Info.dll */
 	/* uncompressed_file_size */
-	.word	677888
+	.word	678400
 	/* loaded */
 	.byte	0
 	/* data */

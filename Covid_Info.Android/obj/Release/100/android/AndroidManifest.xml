@@ -2,23 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.covidinfo" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
   <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-  <uses-feature android:name="android.hardware.location" android:required="false" />
-  <uses-feature android:name="android.hardware.location.gps" android:required="false" />
-  <uses-feature android:name="android.hardware.location.network" android:required="false" />
-  <permission android:name="com.covidinfo.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-  <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="false" android:extractNativeLibs="true" android:icon="@mipmap/iconapp" android:label="Covid Info">
-    <receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
-      <intent-filter>
-        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-        <category android:name="com.covidinfo" />
-      </intent-filter>
-    </receiver>
     <receiver android:name="crc64cea48322b3427ae9.ConnectivityChangeBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Connectivity Plugin Broadcast Receiver" />
     <receiver android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" android:enabled="true" android:exported="false" />
     <activity android:name="crc64f6cb9a614f6b8a35.MainActivity" android:configChanges="orientation|screenSize" android:screenOrientation="portrait" android:theme="@style/MainTheme" />

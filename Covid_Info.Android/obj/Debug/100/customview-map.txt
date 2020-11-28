@@ -29,7 +29,6 @@ com.google.android.material.tabs.TabLayout;R:\Archivos\Rafael\Proyectos\XFCovid\
 com.google.android.material.tabs.TabLayout;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\56\jl\res\layout\tabbar.xml
 corners;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\1\jl\res\drawable\roundedbg.xml
 corners;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\1\jl\res\drawable\roundedbgdark.xml
-crc64720bb2db43a66fe9.FormsViewPager;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\56\jl\res\layout\rootlayout.xml
 declare-styleable;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\1\jl\res\values\attrs.xml
 declare-styleable;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\56\jl\res\values\attrs.xml
 declare-styleable;R:\Archivos\Rafael\Proyectos\XFCovid\Covid_Info.Android\obj\Debug\100\lp\9\jl\res\values\attrs.xml
