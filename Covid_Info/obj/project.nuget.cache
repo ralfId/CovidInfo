@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DVfuaPNW7mIiSMW8dw3UmVOp95bgBSUFNyVcMhUU6ySVEoL5qmvYNkrr0Ruy0clq4M3slQqkTD350fnR0NqhTA==",
+  "dgSpecHash": "tt5Rj//0KihjtEW807Ut01eWvCcs3Qj0NnaWnuJyLNm8zPt8epzIPsV9ZDqf4gK96U/E1Ak+Jb80l3AWMNxdIw==",
   "success": true,
-  "projectFilePath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+  "projectFilePath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
@@ -20,9 +20,6 @@
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.3\\sqlitepclraw.lib.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.licensing\\18.2.0.48\\syncfusion.licensing.18.2.0.48.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.48\\syncfusion.xamarin.core.18.2.0.48.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.2.0.48\\syncfusion.xamarin.sfbusyindicator.18.2.0.48.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
@@ -37,8 +34,8 @@
     "C:\\Users\\ID\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.707\\xamarin.forms.pancakeview.2.0.1.707.nupkg.sha512"
   ],
   "logs": []

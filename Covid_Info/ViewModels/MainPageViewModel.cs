@@ -39,7 +39,6 @@ namespace Covid_Info.ViewModels
         private bool _isVisibleMyCountry;
         private bool _isVisibleMAC;
         private bool _isVisibleSVINFO;
-        private bool _sfIndicator;
         private bool _isRefrshing;
         public string currentUserCountry;
 
@@ -96,11 +95,6 @@ namespace Covid_Info.ViewModels
 
         #region PUBLIC PROPERTIES
 
-        public bool SFIndicator
-        {
-            get { return _sfIndicator; }
-            set { SetProperty(ref _sfIndicator, value); }
-        }
         public bool IsRefreshing
         {
             get { return _isRefrshing; }
@@ -164,7 +158,7 @@ namespace Covid_Info.ViewModels
         {
             try
             {
-                SFIndicator = true;
+                UserDialogs.Instance.ShowLoading(Resource.loading, MaskType.Gradient);
 
                 IconString = string.Empty;
                 LoadMessage = string.Empty;
@@ -179,7 +173,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     IsVisibleMainPage = false;
-                    SFIndicator = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -190,7 +184,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     IsVisibleMainPage = false;
-                    SFIndicator = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -203,7 +197,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     IsVisibleMainPage = false;
-                    SFIndicator = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -212,7 +206,7 @@ namespace Covid_Info.ViewModels
                 IsVisibleBTNTryAgaing = true;
                 LoadMessage = string.Empty;
                 IconString = string.Empty;
-                SFIndicator = false;
+                UserDialogs.Instance.HideLoading();
             }
             catch (Exception ex)
             {

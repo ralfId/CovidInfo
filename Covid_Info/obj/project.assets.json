@@ -234,41 +234,6 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/18.2.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.Core/18.2.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "18.2.0.48",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.48",
-          "Xamarin.Forms": "3.6.0.344457"
-        },
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
-        }
-      },
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
@@ -949,95 +914,6 @@
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.nuspec"
-      ]
-    },
-    "Syncfusion.Licensing/18.2.0.48": {
-      "sha512": "qzaQC1D6V+a3PbySvrR1exN0u0Lh716xL1ffUc1eFHKU6uy0+Q7mas/31nZMG//dOydhQXT/9Vni/vRWYKCZvQ==",
-      "type": "package",
-      "path": "syncfusion.licensing/18.2.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
-        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
-        "lib/net20/Syncfusion.Licensing.dll",
-        "lib/net35/Syncfusion.Licensing.dll",
-        "lib/net40/Syncfusion.Licensing.dll",
-        "lib/net45/Syncfusion.Licensing.dll",
-        "lib/net451/Syncfusion.Licensing.dll",
-        "lib/net46/Syncfusion.Licensing.dll",
-        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
-        "lib/netcoreapp5.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.2/Syncfusion.Licensing.dll",
-        "lib/netstandard1.4/Syncfusion.Licensing.dll",
-        "lib/netstandard2.0/Syncfusion.Licensing.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
-        "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.18.2.0.48.nupkg.sha512",
-        "syncfusion.licensing.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.Core/18.2.0.48": {
-      "sha512": "4Ki3dUjybiD+Xt8RqqWGiPI1e4xBX8pq3P2fit+1BTVEYaWLlhIfled8Z3/19mdK9bN6hKbnuh9O9mqJYXwFrg==",
-      "type": "package",
-      "path": "syncfusion.xamarin.core/18.2.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.Core.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.Core.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ClearButtonViewVisibleIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/DropDownIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleCollapsedIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.dll",
-        "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.18.2.0.48.nupkg.sha512",
-        "syncfusion.xamarin.core.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.48": {
-      "sha512": "LkRAamhYSloSqwS7C1/56lFqm7ZCjMbBYEzRfd9c/oLGJW4bMkyjd6aPgelT8+33VVcrWqW2bOtNxB4d6dl7FQ==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sfbusyindicator/18.2.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.Android.xml",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.xml",
-        "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfBusyIndicator.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "syncfusion.xamarin.sfbusyindicator.18.2.0.48.nupkg.sha512",
-        "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
     "System.Buffers/4.4.0": {
@@ -2217,8 +2093,6 @@
       "Prism.DryIoc.Forms >= 7.2.0.1422",
       "Prism.Plugin.Popups >= 7.2.0.1046",
       "Resx >= 1.0.0",
-      "Syncfusion.Licensing >= 18.2.0.48",
-      "Syncfusion.Xamarin.SfBusyIndicator >= 18.2.0.48",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.8.0.1451",
@@ -2228,19 +2102,19 @@
   },
   "packageFolders": {
     "C:\\Users\\ID\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+      "projectUniqueName": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
       "projectName": "Covid_Info",
-      "projectPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
+      "projectPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
+      "outputPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2258,8 +2132,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-              "projectPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+            "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
+              "projectPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
             }
           }
         }
@@ -2296,14 +2170,6 @@
             "target": "Package",
             "version": "[7.2.0.1046, )"
           },
-          "Syncfusion.Licensing": {
-            "target": "Package",
-            "version": "[18.2.0.48, )"
-          },
-          "Syncfusion.Xamarin.SfBusyIndicator": {
-            "target": "Package",
-            "version": "[18.2.0.48, )"
-          },
           "Xam.Plugin.Connectivity": {
             "target": "Package",
             "version": "[3.2.0, )"
@@ -2335,7 +2201,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

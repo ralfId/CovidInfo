@@ -24,13 +24,15 @@
             <Grid Padding="15,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
 
                 <Label
                     Grid.Column="0"
+                    BackgroundColor="AntiqueWhite"
                     FontAttributes="Bold"
                     FontSize="{StaticResource BaseTitleFontSize}"
+                    HorizontalOptions="StartAndExpand"
                     Text="{Binding country}"
                     TextColor="{StaticResource SecundaryDarkColor}"
                     VerticalOptions="Center" />
@@ -51,7 +53,10 @@
             </Grid>
         </pkv:PancakeView>
 
-        <Grid Margin="0,5" HorizontalOptions="Center" ColumnDefinitions="125, 125">
+        <Grid
+            Margin="0,5"
+            ColumnDefinitions="125, 125"
+            HorizontalOptions="Center">
 
             <!--  confirmed  -->
             <Frame
@@ -96,7 +101,7 @@
             </Frame>
         </Grid>
 
-        <Grid HorizontalOptions="Center"  ColumnDefinitions="125, 125">
+        <Grid ColumnDefinitions="125, 125" HorizontalOptions="Center">
             <!--  Recovered cases  -->
             <Frame
                 Grid.Column="0"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YR2Tbc4Tb63FjmKDZgkf8whEy86rJMz91cTkvFgCxLqMML2uNelufm+vzK9VphheDHjAG1HsEbyHFotCmADmOQ==",
+  "dgSpecHash": "QotLNnzdU1ovZkU9iKS+1sXx9bkfbCEuf+ihuMSnHz+BcS5f8pmT9jl0pUme36MuGPZ4HEBKtpGISk83kp2U4g==",
   "success": true,
-  "projectFilePath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+  "projectFilePath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -19,7 +19,7 @@
     "C:\\Users\\ID\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+    "C:\\Users\\ID\\.nuget\\packages\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
   ],
   "logs": []
 }

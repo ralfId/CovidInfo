@@ -1306,19 +1306,19 @@
   },
   "packageFolders": {
     "C:\\Users\\ID\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+      "projectUniqueName": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
       "projectName": "Resx",
-      "projectPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+      "projectPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "R:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\obj\\",
+      "outputPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1373,7 +1373,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -55,9 +55,6 @@ namespace Covid_Info
         {
             //for Popup navigation
             containerRegistry.RegisterPopupNavigationService();
-            //syncfusion license key
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
-            
             //ACR Dialogs service
             containerRegistry.RegisterInstance<IUserDialogs>(UserDialogs.Instance);
 

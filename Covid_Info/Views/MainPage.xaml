@@ -3,7 +3,6 @@
     x:Class="Covid_Info.Views.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
     xmlns:helpers="clr-namespace:Covid_Info.Helpers"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
@@ -180,7 +179,7 @@
 
                     <contentViews:LoadingData Grid.Row="1" IsVisible="{Binding IsVisibleLoadingPage}" />
 
-                    <Grid
+                    <!--<Grid
                         Grid.Row="0"
                         Grid.RowSpan="2"
                         IsVisible="{Binding SFIndicator}">
@@ -195,7 +194,7 @@
                             TextColor="{StaticResource SecundaryDarkColor}"
                             TextSize="20"
                             WidthRequest="100" />
-                    </Grid>
+                    </Grid>-->
                 </Grid>
 
             </ScrollView>

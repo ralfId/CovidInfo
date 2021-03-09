@@ -16,7 +16,6 @@ namespace Covid_Info.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
             Xamarin.Essentials.Platform.Init(this, bundle);
             UserDialogs.Init(this);
             Rg.Plugins.Popup.Popup.Init(this, bundle);

@@ -4,7 +4,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:contentViews="clr-namespace:Covid_Info.Views.ContentViews"
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
@@ -15,120 +14,117 @@
     NavigationPage.HasBackButton="False"
     NavigationPage.HasNavigationBar="False">
 
-    <pkv:PancakeView
-        Margin="20"
-        BackgroundColor="{StaticResource WhiteColor}"
-        CornerRadius="7">
-        <pkv:PancakeView.Shadow>
-            <pkv:DropShadow
-                BlurRadius="10"
-                Opacity="0.3"
-                Offset="10,10"
-                Color="{StaticResource SecundaryDarkColor}" />
-        </pkv:PancakeView.Shadow>
-        <Grid Padding="10" RowDefinitions="auto,*,auto">
-            <Grid
-                IsVisible="{Binding IsVisibleCountries}"
-                RowDefinitions="auto,auto"
-                RowSpacing="0">
-                <StackLayout>
-                    <Label
-                        FontSize="Large"
-                        HorizontalOptions="Center"
-                        Text="{i18n:Translate SelectCountry}" />
-                    <Label
-                        FontSize="12"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="{i18n:Translate SelectCountryDescription}" />
-                </StackLayout>
+    <Grid Padding="0" RowDefinitions="auto,*,auto">
+        <Grid
+            BackgroundColor="{StaticResource PrimaryColor}"
+            IsVisible="{Binding IsVisibleCountries}"
+            RowDefinitions="auto,auto"
+            RowSpacing="0">
+            <StackLayout>
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="{i18n:Translate SelectCountry}"
+                    TextColor="{StaticResource WhiteColor}" />
+                <Label
+                    FontSize="12"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{i18n:Translate SelectCountryDescription}"
+                    TextColor="{StaticResource WhiteColor}" />
+            </StackLayout>
+            <Frame
+                Grid.Row="1"
+                Margin="10,5"
+                Padding="0">
                 <SearchBar
-                    Grid.Row="1"
                     Margin="0"
                     CancelButtonColor="{StaticResource BaseFontColor}"
                     Placeholder="{i18n:Translate searchPlaceHolder}"
                     PlaceholderColor="{StaticResource BaseFontColor}"
                     Text="{Binding SearchedCountry, Mode=TwoWay}"
-                    TextColor="{StaticResource BaseFontColor}" />
-            </Grid>
-
-            <ListView
-                Grid.Row="1"
-                Margin="15,0"
-                CachingStrategy="RetainElement"
-                IsPullToRefreshEnabled="True"
-                IsRefreshing="{Binding IsRefreshing}"
-                IsVisible="{Binding IsVisibleCountries}"
-                ItemsSource="{Binding ObCountries}"
-                RefreshCommand="{Binding UpdateAndGetData}"
-                SelectedItem="{Binding SelectedCountry}"
-                SelectionMode="Single">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Spacing="15">
-                                <Image Source="{Binding countryInfo.flag}" WidthRequest="50" />
-                                <Label
-                                    FontSize="Body"
-                                    Text="{Binding country}"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-            <Grid
-                Grid.Row="2"
-                ColumnDefinitions="*,*"
-                IsVisible="{Binding IsVisibleCountries}">
-                <Frame
-                    Padding="30,10"
-                    BackgroundColor="{StaticResource SecundaryDarkColor}"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Body"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="{i18n:Translate cancel}"
-                        TextColor="{StaticResource WhiteColor}"
-                        VerticalOptions="Center" />
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetCountryCommnad}" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-                <Frame
-                    Grid.Column="1"
-                    Padding="30,10"
-                    HorizontalOptions="CenterAndExpand"
-                    IsEnabled="{Binding ContinueBTN}"
-                    VerticalOptions="Center">
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Body"
-                        HorizontalOptions="Center"
-                        Text="{i18n:Translate ok}"
-                        TextColor="{StaticResource WhiteColor}"
-                        VerticalOptions="Center" />
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetCountryCommnad}" />
-                    </Frame.GestureRecognizers>
-                    <Frame.Triggers>
-                        <Trigger TargetType="Frame" Property="IsEnabled" Value="False">
-                            <Setter Property="BackgroundColor" Value="LightGray" />
-                        </Trigger>
-                        <Trigger TargetType="Frame" Property="IsEnabled" Value="True">
-                            <Setter Property="BackgroundColor" Value="{StaticResource SecundaryDarkColor}" />
-                        </Trigger>
-                    </Frame.Triggers>
-                </Frame>
-            </Grid>
-
-            <contentViews:LoadingData
-                Grid.Row="1"
-                HorizontalOptions="Center"
-                IsVisible="{Binding IsVisibleLoadingPage}"
-                VerticalOptions="Center" />
+                    TextColor="{StaticResource BaseFontColor}"
+                    TranslationY="5" />
+            </Frame>
         </Grid>
-    </pkv:PancakeView>
+
+        <ListView
+            Grid.Row="1"
+            Margin="20,5,20,10"
+            CachingStrategy="RetainElement"
+            IsVisible="{Binding IsVisibleCountries}"
+            ItemsSource="{Binding ObCountries}"
+            RefreshCommand="{Binding UpdateAndGetData}"
+            SelectedItem="{Binding SelectedCountry}"
+            SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="15">
+                            <Image Source="{Binding countryInfo.flag}" WidthRequest="50" />
+                            <Label
+                                FontSize="Body"
+                                Text="{Binding country}"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid
+            Grid.Row="2"
+            Margin="20,0,20,10"
+            ColumnDefinitions="*,*"
+            IsVisible="{Binding IsVisibleCountries}">
+            <!--  cancel button  -->
+            <Frame
+                Padding="30,10"
+                BackgroundColor="{StaticResource SecundaryDarkColor}"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Body"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{i18n:Translate cancel}"
+                    TextColor="{StaticResource WhiteColor}"
+                    VerticalOptions="Center" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <!--  continue button  -->
+            <Frame
+                Grid.Column="1"
+                Padding="30,10"
+                HorizontalOptions="EndAndExpand"
+                IsEnabled="{Binding ContinueBTN}"
+                VerticalOptions="Center">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Body"
+                    HorizontalOptions="Center"
+                    Text="{i18n:Translate ok}"
+                    TextColor="{StaticResource WhiteColor}"
+                    VerticalOptions="Center" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetCountryCommnad}" />
+                </Frame.GestureRecognizers>
+                <Frame.Triggers>
+                    <Trigger TargetType="Frame" Property="IsEnabled" Value="False">
+                        <Setter Property="BackgroundColor" Value="LightGray" />
+                    </Trigger>
+                    <Trigger TargetType="Frame" Property="IsEnabled" Value="True">
+                        <Setter Property="BackgroundColor" Value="{StaticResource SecundaryDarkColor}" />
+                    </Trigger>
+                </Frame.Triggers>
+            </Frame>
+        </Grid>
+
+        <contentViews:LoadingData
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisibleLoadingPage}"
+            VerticalOptions="Center" />
+    </Grid>
 </ContentPage>

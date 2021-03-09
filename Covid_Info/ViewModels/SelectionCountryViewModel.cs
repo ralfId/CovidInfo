@@ -130,10 +130,11 @@ namespace Covid_Info.ViewModels
         {
             try
             {
-                IsRefreshing = true;
+                UserDialogs.Instance.ShowLoading(Resource.loading, MaskType.None);
                 IsVisibleCountries = true;
                 IsVisibleLoadingPage = false;
                 IsVisibleBTNTryAgaing = false;
+
                 if (!await _apiRequest.IsConnected())
                 {
                     IconString = Constants.NoConnectionJSON;
@@ -141,7 +142,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.noInter;
-                    IsRefreshing = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -152,7 +153,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.limitedConnection;
-                    IsRefreshing = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
                 LstCountries = await _apiRequest.countriesInfoAPIRequest();
@@ -165,16 +166,15 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.errorConectionServer;
-                    IsRefreshing = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
                 ObCountries = new ObservableCollection<Country>(LstCountries);
-                IsRefreshing = false;
                 LoadMessage = string.Empty;
                 IconString = string.Empty;
                 IsVisibleLoadingPage = false;
                 IsVisibleBTNTryAgaing = true;
-                IsVisibleCountries = true;
+                UserDialogs.Instance.HideLoading();
             }
             catch (Exception ex)
             {

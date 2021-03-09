@@ -16,7 +16,10 @@
     </ContentPage.ToolbarItems>
     <NavigationPage.TitleView>
         <Grid RowSpacing="0">
-            <Grid Grid.Row="0" ColumnSpacing="0" ColumnDefinitions="*, auto, auto">
+            <Grid
+                Grid.Row="0"
+                ColumnDefinitions="*, auto, auto"
+                ColumnSpacing="0">
                 <Label
                     Grid.Column="0"
                     Padding="0"

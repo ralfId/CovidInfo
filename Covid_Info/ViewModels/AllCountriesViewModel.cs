@@ -27,7 +27,6 @@ namespace Covid_Info.ViewModels
         private bool _isVisibleLoadingPage;
         private Country _selectedCountry;
         private bool _isRefreshing;
-        private bool _sfIndicator;
 
         string sortUserSelection;
 
@@ -50,7 +49,7 @@ namespace Covid_Info.ViewModels
                 Task.Run(async () => await LoadAllCountriesInfo());
 
                 SearchCountry = new DelegateCommand(() => FilterSearch());
-                UpdateAndGetData = new DelegateCommand(async () => await RefreshListView());
+                UpdateAndGetData = new DelegateCommand(async () => await LoadAllCountriesInfo());
                 UpdateDataonSwipe = new DelegateCommand(async () => await RefreshListView());
                 goFiltersView = new DelegateCommand(async () => await Sorting());
             }
@@ -72,11 +71,6 @@ namespace Covid_Info.ViewModels
         {
             get { return _isRefreshing; }
             set { SetProperty(ref _isRefreshing, value); }
-        }
-        public bool SFIndicator
-        {
-            get { return _sfIndicator; }
-            set { SetProperty(ref _sfIndicator, value); }
         }
         public Country SelectedCountry
         {
@@ -123,7 +117,7 @@ namespace Covid_Info.ViewModels
         {
             try
             {
-                SFIndicator = true;
+                UserDialogs.Instance.ShowLoading(Resource.loading, MaskType.Black);
 
 
                 IsVisibleCountries = false;
@@ -137,7 +131,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.noInter;
-                    SFIndicator = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -148,7 +142,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.limitedConnection;
-                    SFIndicator = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
                 lstCountriesInfo = await _apiRequest.countriesInfoAPIRequest();
@@ -161,7 +155,7 @@ namespace Covid_Info.ViewModels
                     IsVisibleLoadingPage = true;
                     IsVisibleBTNTryAgaing = true;
                     LoadMessage = Resource.errorConectionServer;
-                    SFIndicator = false;
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -172,7 +166,7 @@ namespace Covid_Info.ViewModels
                 IsVisibleLoadingPage = false;
                 IsVisibleBTNTryAgaing = true;
                 IsVisibleCountries = true;
-                SFIndicator = false;
+                UserDialogs.Instance.HideLoading();
 
 
             }
