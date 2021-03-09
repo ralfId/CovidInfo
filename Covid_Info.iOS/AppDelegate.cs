@@ -1,4 +1,3 @@
-using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Foundation;
 using Prism;
 using Prism.Ioc;
@@ -21,12 +20,8 @@ namespace Covid_Info.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk2NTUyQDMxMzgyZTMyMmUzMEg5YnVxSWhrN21oWjdpd0tEQ1M3UVBqV1N6K0todU9sd3lDeU8wREJKZXM9");
             global::Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();
-            SfBusyIndicatorRenderer.Init();
-            global::Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App(new iOSInitializer()));
             return base.FinishedLaunching(app, options);
         }

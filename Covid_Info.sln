@@ -13,16 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{111ACAEA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resx", "Resx\Resx.csproj", "{1C65C297-D309-4566-A4B2-F1DF8D740CD6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signed", "Signed", "{2CCD741F-231E-4B31-8DEE-EDC49C8BE981}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{1412ECEF-9982-4FE3-B926-1C75C94DFB49}"
-	ProjectSection(SolutionItems) = preProject
-		..\XFCovidDocs\SingAPK\Captura.PNG = ..\XFCovidDocs\SingAPK\Captura.PNG
-		..\XFCovidDocs\SingAPK\passKey.txt = ..\XFCovidDocs\SingAPK\passKey.txt
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS", "iOS", "{7716E1BF-8525-4413-9A8C-11E30BE9B1D8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -149,12 +139,10 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1C65C297-D309-4566-A4B2-F1DF8D740CD6} = {111ACAEA-A393-4041-8841-0D9978F9AFD8}
-		{1412ECEF-9982-4FE3-B926-1C75C94DFB49} = {2CCD741F-231E-4B31-8DEE-EDC49C8BE981}
-		{7716E1BF-8525-4413-9A8C-11E30BE9B1D8} = {2CCD741F-231E-4B31-8DEE-EDC49C8BE981}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {915119B2-469E-4EA7-AB29-1129846373E4}
-		RESX_ConfirmAddLanguageFile = True
 		RESX_PrefixTranslations = False
+		RESX_ConfirmAddLanguageFile = True
+		SolutionGuid = {915119B2-469E-4EA7-AB29-1129846373E4}
 	EndGlobalSection
 EndGlobal
