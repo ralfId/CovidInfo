@@ -13,6 +13,7 @@ public class MainActivity
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onRequestPermissionsResult:(I[Ljava/lang/String;[I)V:GetOnRequestPermissionsResult_IarrayLjava_lang_String_arrayIHandler\n" +
 			"n_onBackPressed:()V:GetOnBackPressedHandler\n" +
+			"n_attachBaseContext:(Landroid/content/Context;)V:GetAttachBaseContext_Landroid_content_Context_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Covid_Info.Droid.MainActivity, Covid_Info.Android", MainActivity.class, __md_methods);
 	}
@@ -56,6 +57,14 @@ public class MainActivity
 	}
 
 	private native void n_onBackPressed ();
+
+
+	public void attachBaseContext (android.content.Context p0)
+	{
+		n_attachBaseContext (p0);
+	}
+
+	private native void n_attachBaseContext (android.content.Context p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

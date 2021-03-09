@@ -1,6 +1,8 @@
 ﻿using Acr.UserDialogs;
 using Android.App;
+using Android.Content;
 using Android.Content.PM;
+using Android.Content.Res;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
@@ -37,6 +39,17 @@ namespace Covid_Info.Droid
             {
             }
 
+        }
+
+        //override method to prevent modify app fontsize
+        protected override void AttachBaseContext(Context @base)
+        {
+            var config = new Configuration(@base.Resources.Configuration);
+            config.FontScale = 1f;
+
+            var config2 = Application.Context.CreateConfigurationContext(config);
+
+            base.AttachBaseContext(config2);
         }
     }
 
