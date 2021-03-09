@@ -50,7 +50,7 @@
                                 Grid.Column="1"
                                 FontAttributes="Bold"
                                 FontSize="Body"
-                                Text="rafael.ideveloper@gmail.com"
+                                Text="ralf_raid@outlook.es"
                                 TextColor="{StaticResource SecundaryDarkColor}"
                                 VerticalOptions="CenterAndExpand" />
                         </Grid>

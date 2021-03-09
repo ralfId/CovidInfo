@@ -97,12 +97,6 @@ public class MonoPackageManager_Resources {
 		"SQLitePCLRaw.core.dll",
 		"SQLitePCLRaw.lib.e_sqlite3.android.dll",
 		"SQLitePCLRaw.provider.e_sqlite3.dll",
-		"Syncfusion.Core.XForms.Android.dll",
-		"Syncfusion.Core.XForms.dll",
-		"Syncfusion.Licensing.dll",
-		"Syncfusion.SfBusyIndicator.Android.dll",
-		"Syncfusion.SfBusyIndicator.XForms.Android.dll",
-		"Syncfusion.SfBusyIndicator.XForms.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.SavedState.dll",
 		"Xamarin.Essentials.dll",
@@ -117,5 +111,4 @@ public class MonoPackageManager_Resources {
 	};
 	public static String[] Dependencies = new String[]{
 	};
-	public static String ApiPackageName = null;
 }

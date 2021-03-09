@@ -68,8 +68,8 @@
                         VerticalOptions="Center" />
                     <Image
                         Grid.Column="1"
-                        Aspect="Fill"
-                        HeightRequest="20"
+                        Aspect="AspectFit"
+                        HeightRequest="50"
                         HorizontalOptions="End"
                         Source="{helpers:ImageResource Covid_Info.Images.global.png}"
                         WidthRequest="110" />

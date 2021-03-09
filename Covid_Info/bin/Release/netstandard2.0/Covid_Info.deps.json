@@ -15,8 +15,6 @@
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
           "Resx": "1.0.0",
-          "Syncfusion.Licensing": "18.2.0.48",
-          "Syncfusion.Xamarin.SfBusyIndicator": "18.2.0.48",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1451",
@@ -160,38 +158,6 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {
             "assemblyVersion": "2.0.3.851",
             "fileVersion": "2.0.3.851"
-          }
-        }
-      },
-      "Syncfusion.Licensing/18.2.0.48": {
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "18.2.0.48",
-            "fileVersion": "18.2.0.48"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.Core/18.2.0.48": {
-        "dependencies": {
-          "Syncfusion.Licensing": "18.2.0.48",
-          "Xamarin.Forms": "4.8.0.1451"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
-            "assemblyVersion": "18.2451.0.48",
-            "fileVersion": "18.2451.0.48"
-          }
-        }
-      },
-      "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.48": {
-        "dependencies": {
-          "Syncfusion.Xamarin.Core": "18.2.0.48",
-          "Xamarin.Forms": "4.8.0.1451"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {
-            "assemblyVersion": "18.2451.0.48",
-            "fileVersion": "18.2451.0.48"
           }
         }
       },
@@ -511,27 +477,6 @@
       "sha512": "sha512-f2bwfPhD91dJ6KnjOw01KDT68zl7qpeX4+lC0mmKa+eA91Huya8hdNan73B3q7jEDLMFU/dkv7l5wqrqGB4QoQ==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.0.3",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512"
-    },
-    "Syncfusion.Licensing/18.2.0.48": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qzaQC1D6V+a3PbySvrR1exN0u0Lh716xL1ffUc1eFHKU6uy0+Q7mas/31nZMG//dOydhQXT/9Vni/vRWYKCZvQ==",
-      "path": "syncfusion.licensing/18.2.0.48",
-      "hashPath": "syncfusion.licensing.18.2.0.48.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.Core/18.2.0.48": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4Ki3dUjybiD+Xt8RqqWGiPI1e4xBX8pq3P2fit+1BTVEYaWLlhIfled8Z3/19mdK9bN6hKbnuh9O9mqJYXwFrg==",
-      "path": "syncfusion.xamarin.core/18.2.0.48",
-      "hashPath": "syncfusion.xamarin.core.18.2.0.48.nupkg.sha512"
-    },
-    "Syncfusion.Xamarin.SfBusyIndicator/18.2.0.48": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LkRAamhYSloSqwS7C1/56lFqm7ZCjMbBYEzRfd9c/oLGJW4bMkyjd6aPgelT8+33VVcrWqW2bOtNxB4d6dl7FQ==",
-      "path": "syncfusion.xamarin.sfbusyindicator/18.2.0.48",
-      "hashPath": "syncfusion.xamarin.sfbusyindicator.18.2.0.48.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",
