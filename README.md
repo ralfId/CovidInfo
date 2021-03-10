@@ -3,6 +3,16 @@ This application is a personal project with two purposes:
 the first is to practice mobile development with Xamarin Forms
 and the second is to provide reliable information on the progress of Covid-19.
 
+## Some screenshots
+![Country selection screenshot](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_1.jpg)
+![Main page app screenshot 1](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_2.jpg)
+![Main page app screenshot 2](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_3.jpg)
+![countries page app screenshot](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_4.jpg)
+![External information about COVID19 screenshot ](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_5.jpg)
+![Advices page screenshot ](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_6.jpg)
+![Symptoms page screenshot ](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_7.jpg)
+
+
 ## Features:
 * Xamarin Forms
 * MVVM.
