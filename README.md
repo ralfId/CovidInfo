@@ -4,7 +4,8 @@ the first is to practice mobile development with Xamarin Forms
 and the second is to provide reliable information on the progress of Covid-19.
 
 ## Some screenshots
-![Country selection screenshot](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_1.jpg | width=50)
+
+<img alt="Country selection screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_1.jpg" width="50"/>
 ![Main page app screenshot 1](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_2.jpg)
 ![Main page app screenshot 2](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_3.jpg)
 ![countries page app screenshot](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_4.jpg)
