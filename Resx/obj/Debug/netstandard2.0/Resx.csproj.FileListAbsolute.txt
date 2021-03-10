@@ -28,7 +28,6 @@ E:\Archivos\Rafael\Proyectos\XFCovid\Resx\bin\Debug\netstandard2.0\es\Resx.resou
 E:\Archivos\Rafael\Proyectos\XFCovid\Resx\bin\Debug\netstandard2.0\fr\Resx.resources.dll
 E:\Archivos\Rafael\Proyectos\XFCovid\Resx\bin\Debug\netstandard2.0\it\Resx.resources.dll
 E:\Archivos\Rafael\Proyectos\XFCovid\Resx\bin\Debug\netstandard2.0\pt\Resx.resources.dll
-E:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.csprojAssemblyReference.cache
 E:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.Resource.resources
 E:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.Resource.es.resources
 E:\Archivos\Rafael\Proyectos\XFCovid\Resx\obj\Debug\netstandard2.0\Resx.Resource.fr.resources
