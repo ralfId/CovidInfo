@@ -5,13 +5,13 @@ and the second is to provide reliable information on the progress of Covid-19.
 
 ## Some screenshots
 
-<img alt="Country selection screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_1.jpg" width="50"/>
-![Main page app screenshot 1](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_2.jpg)
-![Main page app screenshot 2](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_3.jpg)
-![countries page app screenshot](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_4.jpg)
-![External information about COVID19 screenshot ](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_5.jpg)
-![Advices page screenshot ](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_6.jpg)
-![Symptoms page screenshot ](https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_7.jpg)
+<img alt="Country selection screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_1.jpg" width="100"/>
+<img alt="Main page app screenshot 1" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_2.jpg" width="100"/>
+<img alt="Main page app screenshot 2" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_3.jpg" width="100"/>
+<img alt="countries page app screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_4.jpg" width="100"/>
+<img alt="External information about COVID19 screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_5.jpg" width="100"/>
+<img alt="Advices page screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_6.jpg" width="100"/>
+<img alt="Symptoms page screenshot" src="https://raw.githubusercontent.com/ralfId/AppScreenshots/main/App_Covi_Info/screen_7.jpg" width="100"/>
 
 
 ## Features:
