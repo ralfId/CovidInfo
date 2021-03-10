@@ -13,17 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{111ACAEA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resx", "Resx\Resx.csproj", "{1C65C297-D309-4566-A4B2-F1DF8D740CD6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{30BECFA4-066F-4C21-A4B3-C11DBD0877B2}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\ID\Downloads\screen_1.jpg = C:\Users\ID\Downloads\screen_1.jpg
-		C:\Users\ID\Downloads\screen_2.jpg = C:\Users\ID\Downloads\screen_2.jpg
-		C:\Users\ID\Downloads\screen_3.jpg = C:\Users\ID\Downloads\screen_3.jpg
-		C:\Users\ID\Downloads\screen_4.jpg = C:\Users\ID\Downloads\screen_4.jpg
-		C:\Users\ID\Downloads\screen_5.jpg = C:\Users\ID\Downloads\screen_5.jpg
-		C:\Users\ID\Downloads\screen_6.jpg = C:\Users\ID\Downloads\screen_6.jpg
-		C:\Users\ID\Downloads\screen_7.jpg = C:\Users\ID\Downloads\screen_7.jpg
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
