@@ -83,7 +83,7 @@
       <Version>7.1.0.446</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
+      <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="Prism.Plugin.Popups">
       <Version>7.2.0.1046</Version>

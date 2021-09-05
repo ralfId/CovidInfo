@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QotLNnzdU1ovZkU9iKS+1sXx9bkfbCEuf+ihuMSnHz+BcS5f8pmT9jl0pUme36MuGPZ4HEBKtpGISk83kp2U4g==",
+  "dgSpecHash": "XNisp+aNuZRUsmsQ0L5W0OWIPjhnSHChumRhV/11RfvdMxUPzTlPYRvZ4NFk4/1XkcfmK+wL/nFEq9fPSjbv+Q==",
   "success": true,
-  "projectFilePath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj",
+  "projectFilePath": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Resx\\Resx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

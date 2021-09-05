@@ -17,9 +17,10 @@ namespace Covid_Info.Models
         public int critical { get; set; }
         public double casesPerOneMillion { get; set; }
         public double deathsPerOneMillion { get; set; }
-        public int tests { get; set; }
+        public long tests { get; set; }
         public double testsPerOneMillion { get; set; }
         public int affectedCountries { get; set; }
     }
+
 
 }

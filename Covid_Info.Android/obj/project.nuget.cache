@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "c+J0UnQtYkshhbJmG06P6RF0Bspk4GF6cM7TMqYwLNUihOTn5leeUr9HlrVmSVlZAOcTlk6Yjd2AEGGomJ6saw==",
+  "dgSpecHash": "waK3eSXMrBPuTQUj9/iA5vaWQ+INiBcZsZqb9/eJ+C6gLgRHQsodV/233i5XLYB/8u50Z8d5w4QSYzzhokAduA==",
   "success": true,
-  "projectFilePath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
+  "projectFilePath": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Covid_Info.Android\\Covid_Info.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ID\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
-    "C:\\Users\\ID\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ID\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\ID\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",

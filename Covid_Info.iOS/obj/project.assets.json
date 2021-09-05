@@ -38,7 +38,7 @@
           "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -372,7 +372,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
           "Resx": "1.0.0",
@@ -441,7 +441,7 @@
           "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -775,7 +775,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
           "Resx": "1.0.0",
@@ -844,7 +844,7 @@
           "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1178,7 +1178,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
           "Resx": "1.0.0",
@@ -1247,7 +1247,7 @@
           "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1581,7 +1581,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Prism.Plugin.Popups": "7.2.0.1046",
           "Resx": "1.0.0",
@@ -1700,10 +1700,10 @@
         "lib/portable-net45+win8+wp8+wpa81/DryIoc.xml"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
+      "path": "newtonsoft.json/13.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1722,11 +1722,7 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
@@ -2538,7 +2534,7 @@
     "Xamarin.iOS,Version=v1.0": [
       "Acr.UserDialogs >= 7.1.0.446",
       "Covid_Info >= 1.0.0",
-      "Newtonsoft.Json >= 12.0.3",
+      "Newtonsoft.Json >= 13.0.1",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
       "Prism.Plugin.Popups >= 7.2.0.1046",
       "Resx >= 1.0.0",
@@ -2551,23 +2547,26 @@
   },
   "packageFolders": {
     "C:\\Users\\ID\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+      "projectUniqueName": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
       "projectName": "Covid_Info.iOS",
-      "projectPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
+      "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Covid_Info.iOS\\Covid_Info.iOS.csproj",
       "packagesPath": "C:\\Users\\ID\\.nuget\\packages\\",
-      "outputPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info.iOS\\obj\\",
+      "outputPath": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Covid_Info.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2581,11 +2580,11 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
-              "projectPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Covid_Info\\Covid_Info.csproj"
+            "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Covid_Info\\Covid_Info.csproj": {
+              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Covid_Info\\Covid_Info.csproj"
             },
-            "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj": {
-              "projectPath": "E:\\Archivos\\Rafael\\Proyectos\\XFCovid\\Resx\\Resx.csproj"
+            "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Resx\\Resx.csproj": {
+              "projectPath": "D:\\Archivos\\Rafael\\Proyectos\\Apps\\XFCovid\\Resx\\Resx.csproj"
             }
           }
         }
@@ -2600,7 +2599,7 @@
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[12.0.3, )"
+            "version": "[13.0.1, )"
           },
           "Prism.DryIoc.Forms": {
             "target": "Package",
