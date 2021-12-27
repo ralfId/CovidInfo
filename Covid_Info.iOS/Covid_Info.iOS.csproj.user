@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Local Device</SelectedDevice>
     <ActiveDebugProfile>Local Device</ActiveDebugProfile>
+    <DeveloperId>ralf_raid%40outlook.es</DeveloperId>
+    <DevelopmentTeamId>49F9WJ5NSW</DevelopmentTeamId>
   </PropertyGroup>
 </Project>
