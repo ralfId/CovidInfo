@@ -25,8 +25,7 @@
 
     <pkv:PancakeView
         BackgroundColor="{StaticResource WhiteColor}"
-        CornerRadius="10,10,0,0"
-        HasShadow="True">
+        CornerRadius="10,10,0,0">
         <pkv:PancakeView.GestureRecognizers>
             <SwipeGestureRecognizer Command="{Binding ClosePopup}" Direction="Down" />
         </pkv:PancakeView.GestureRecognizers>
