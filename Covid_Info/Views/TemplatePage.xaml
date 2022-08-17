@@ -7,13 +7,6 @@
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True"
     BackgroundColor="{StaticResource BackgroundColorPage}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Command="{Binding NavToSettingsPageCommand}"
-            Order="Secondary"
-            Priority="0"
-            Text="{i18n:Translate Config}" />
-    </ContentPage.ToolbarItems>
     <NavigationPage.TitleView>
         <Grid RowSpacing="0">
             <Grid
