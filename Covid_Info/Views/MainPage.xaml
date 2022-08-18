@@ -8,7 +8,6 @@
     xmlns:i18n="clr-namespace:Resx;assembly=Resx"
     xmlns:pkv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:views="clr-namespace:Covid_Info.Views">
-
     <RefreshView
         AbsoluteLayout.LayoutBounds="0,0,1,1"
         AbsoluteLayout.LayoutFlags="All"

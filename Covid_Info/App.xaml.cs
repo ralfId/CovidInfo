@@ -39,8 +39,6 @@ namespace Covid_Info
             {
                 InitializeComponent();
 
-                Xamarin.Forms.Device.SetFlags(new string[] { "Shapes_Experimental" });
-
                 await CheckAppLaunch();
 
             }
