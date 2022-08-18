@@ -5,7 +5,7 @@ and the second is to provide reliable information on the progress of Covid-19.
 <br>
 
 
-:file_folder: <a src="https://github.com/ralfId/CovidInfo/releases/download/untagged-f435f4b793559daecbed/covidinfo.apk"><b>download android app</b></a>
+:file_folder: [download android app](https://github.com/ralfId/CovidInfo/releases/download/untagged-f435f4b793559daecbed/covidinfo.apk)
 
 
 <br>
