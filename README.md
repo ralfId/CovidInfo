@@ -2,6 +2,13 @@
 This application is a personal project with two purposes: 
 the first is to practice mobile development with Xamarin Forms
 and the second is to provide reliable information on the progress of Covid-19.
+<br>
+
+
+:file_folder: <a src="https://github.com/ralfId/CovidInfo/releases/download/untagged-f435f4b793559daecbed/covidinfo.apk"><b>download android app</b></a>
+
+
+<br>
 
 ##### Some screenshots
 
@@ -10,9 +17,10 @@ and the second is to provide reliable information on the progress of Covid-19.
 
 
 ##### Features:
-* Xamarin Forms 5
+* Xamarin Forms 5.
 * MVVM.
-* Prism Library 
+* Bindable Layouts.
+* Prism Library.
 * PancakeView.
 * Shapes.
 * SQLite.
